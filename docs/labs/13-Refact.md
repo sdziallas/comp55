@@ -204,7 +204,7 @@ if(x > 5) {
     takeAction("subtract", -10);
 }
 
-…
+// Meanwhile, in some other part of the code... (future snippets will use -------)
 
 private void takeAction(String action, int amount) {
     System.out.println("I'm going to " + action +
@@ -237,7 +237,7 @@ if(x > 5) {
     takeAction(-10);
 }
 
-…
+// ----------------------------------
 
 private void takeAction(int amount) {
     String action = "add";
@@ -350,7 +350,7 @@ you could change up top.
 ```java
 public static final int SIZE = 100;
 
-…
+// ----------------------------------
 
 body = new GOval(200, 400, SIZE, SIZE);
 head = new GOval(225, 350, 50, 50);
@@ -365,7 +365,7 @@ public static final int SIZE = 100;
 public static final int BODY_X = 200;
 public static final int BODY_Y = 400;
 
-…
+// ----------------------------------
 
 body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
 head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
@@ -392,7 +392,7 @@ public static final String IMG_EXTENSION = ".png";
 public static final String V_IMG_ENDING = "_vert";
 public static final String IMG_PATH = "images/";
 
-//lots of code left out here
+// ----------------------------------
 
 private void drawCar(Vehicle v) {
 
