@@ -20,7 +20,30 @@ Once imported, open **ACMLab.java** in the editor. This file contains
 additional features that we have yet to talk about. Here's the contents
 of the ACMLab.java file.
 
-![Some code](lab4media/media/image1.png)
+```java
+import acm.graphics.*;
+import acm.program.*;
+import acm.util.*;
+import java.awt.*;
+
+public class ACMLab extends GraphicsProgram {
+    public static final int PROGRAM_HEIGHT = 600;
+    public static final int PROGRAM_WIDTH = 800;
+
+    public void init() {
+        setSize(PROGRAM_WIDTH, PROGRAM_HEIGHT);
+        requestFocus();
+    }
+
+    public void run() {
+        add(new GLabel("Hello World", 300, 400));
+    }
+
+    public static void main(String[] args) {
+        new ACMLab().start();
+    }
+}
+```
 
 **Imports:** Lines 1-4 contain ```import``` statements: ```import``` calls are
 similar to ```#include```s that we had in C++ in that they help Java figure
