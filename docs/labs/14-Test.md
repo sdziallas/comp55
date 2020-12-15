@@ -100,7 +100,6 @@ public class Date {
         return true;
     }
 }
-
 ```
 
 ![](lab14media/media/image1.png)
