@@ -260,8 +260,8 @@ program and click a couple of times, you'll get a
 ```ConcurrentModificationException```. This exception means that you are
 trying to modify the list of balls, while the program is currently
 cycling through and moving them, something that you cannot do when you
-use the for loop with the : operator. I've given the bad example below
-of what your run shouldn't do (unless you want to get the ```ConcurrentModificationException```.
+use the for loop with the ```:``` operator. I've given the bad example below
+of what your run shouldn't do (unless you want to get the ```ConcurrentModificationException```).
 ```java
 // This is buggy code
 public void run() {
