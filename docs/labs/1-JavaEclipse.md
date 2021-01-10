@@ -80,7 +80,7 @@ Since all of you have had some previous experiences with other IDEs, Eclipse all
 
 ![](lab1media/media/reviewprefs.png)
 
-The next thing we are going to do is change eclipse's appearance.  I have been using eclipse for a long time now, and did not change this until this year.  Because eclipse is written in Java it does not have as clean of an interface as some of the other programs that you have had, but remember, this is open source and it is used heavily in industry.  I would not play around too much with the colors, but I will walk you through this one option, because when we get to using some of the other features, and when we start building code, I will be using the skin here and so it will be easiest to follow along with tutorials and such if you change the appearance to match mine. **Please follow the options here to get full credit for the image you upload**
+The next thing we are going to do is change eclipse's appearance.  I have been using eclipse for a long time now, and did not change this until this year.  Eclipse is written in Java and so it does not have as clean of an interface as some of the other programs that you have grown to love by now.  Nonetheless, remember, this is open source, it is used heavily in the industry (and I'm sure you've probably come across at least a few open source projects that just don't look as pretty but get the job done).  I would not play around too much with the colors, but I will walk you through this one option, because when we get to using some of the other features, and when we start building code, I will be using the skin here and so it will be easiest to follow along with tutorials and such if you change the appearance to match mine. **Please follow the options here to get full credit for the image you upload for credit at the end of this lab**
 
 ## STEP 5: Installing Darkest Dark Theme
 
@@ -228,7 +228,7 @@ Hello, PutYourName Here!
 But with your own name there instead.
 
 If you don't remember how to do a ```for``` loop, here's a snippet from
-Princeton's java cheatsheet.
+Princeton's java cheatsheet.[   ]
 
 (<http://introcs.cs.princeton.edu/java/11cheatsheet/>)
 
