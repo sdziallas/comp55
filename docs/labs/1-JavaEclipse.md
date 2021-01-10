@@ -205,9 +205,17 @@ on the bottom of the screen.
 
 Congrats you've written and run your first Java application\! Java
 doesn't have a separate compile and run step like you did in C++, it's
-all combined into one step.  Like I mentioned to you before, the whole colors thing is a big rabbit hole.  If you notice in the picture that I ran, the text that should be colored is not, which may happen.  That is ok.  Once you start editing it again it will re-apply the color scheme.  It's not pretty but it's what we have, so just let it be for now. 
+all combined into one step.  Like I mentioned to you before, the whole colors thing is a big rabbit hole.  If you notice in the picture that I ran, the text that should be colored is not, which may happen.  That is ok.  Once you start editing it again it will re-apply the color scheme.  But in order to be completely in line with this class and the color theme, we are going to do one last set of steps.
 
-# STEP 8 – Submit confirmation by uploading a picture to Canvas
+## STEP 8 - One Last Customization to the Color Theme
+
+If I get to this, I will try to make this match as much as possible the site, with a couple of added preferences to keep it in line with some of the things that I've seen with Eclipse.  So to that end, I'd like you to **[download this file](lab1media/media/COMP55LabColorScheme.xml)** which you'll have to do by right clicking and saying *File->Save as...* Make sure you have the XML extension when you save the file.  
+
+Then once you have that, you're going to go to *Window->preferences->DevStyle->Color Themes*.  Once there I made two changes.  I decided I wanted my icons to be a little bit more subdued, so I went with the pastels option.  More importantly though let's get the color scheme to be closer to the theme here on this site.  Simply choose the xml file you downloaded and then click apply.  Eclipse will ask to restart and once you do, you'll notice that the colors changed and have the same style as the final ones in this little image walkthrough below.
+
+While you are in those preferences, there is also a devstyle privacy option that should you wish, you can opt out of.  Ultimately for my eyes, I went with the pastels icon colors and the github lab jekyll dark scheme, and that is what I will be using so if you want the easiest thing to follow, I would suggest doing the same.   
+
+# STEP 9 – Submit confirmation by uploading a picture to Canvas
 
 To get credit for this lab, what you'll do is submit an image of you
 running this hello world program to canvas, but using your own name

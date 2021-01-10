@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="61322" name="Github Labs Jekyll Hacker Dark" modified="2021-01-06 05:23:38" author="Osvaldo Jimenez">
+    <searchResultIndication color="#395EB1" />
+    <filteredSearchResultIndication color="#395EB1" />
+    <occurrenceIndication color="#5E5C56" />
+    <writeOccurrenceIndication color="#527D5D" />
+    <findScope color="#FFFF00" />
+    <deletionIndication color="#DE6546" bold="false" />
+    <sourceHoverBackground color="#FF00FF" />
+    <singleLineComment color="#83786E" bold="false" />
+    <multiLineComment color="#83786E" bold="false" />
+    <commentTaskTag color="#83786E" bold="false" />
+    <javadoc color="#83786E" bold="false" />
+    <javadocLink color="#83786E" bold="false" />
+    <javadocTag color="#A19387" bold="false" />
+    <javadocKeyword color="#83786E" bold="false" />
+    <class color="#F4BF75" bold="false" underline="false" strikethrough="false" />
+    <interface color="#527D5D" bold="true" />
+    <method color="#6A9FB5" bold="false" />
+    <methodDeclaration color="#D0D0D0" bold="false" />
+    <bracket color="#F8E1AA" bold="false" />
+    <number color="#90A959" bold="false" />
+    <string color="#90A959" bold="false" />
+    <operator color="#D6C248" bold="false" />
+    <keyword color="#D28445" bold="true" />
+    <annotation color="#FFFFFF" bold="false" />
+    <staticMethod color="#A4B0C0" bold="false" />
+    <localVariable color="#D0D0D0" bold="false" />
+    <localVariableDeclaration color="#F8E1AA" bold="false" />
+    <field color="#A0D0FF" bold="false" />
+    <staticField color="#F8E1A3" bold="false" italic="false" />
+    <staticFinalField color="#F8E1A3" bold="false" italic="true" />
+    <deprecatedMember color="#DE6546" bold="false" underline="false" strikethrough="true" />
+    <enum color="#527D5D" bold="true" />
+    <inheritedMethod color="#A4B0C0" bold="false" />
+    <abstractMethod color="#A4B0C0" bold="false" />
+    <parameterVariable color="#A4B0C0" bold="false" />
+    <typeArgument color="#BFA4A4" bold="false" />
+    <typeParameter color="#BFA4A4" bold="false" />
+    <constant color="#EFC090" bold="false" />
+    <background color="#000000" />
+    <currentLine color="#2A2A2A" />
+    <foreground color="#F8E1AA" />
+    <lineNumber color="#C97138" />
+    <selectionBackground color="#527D5D" />
+    <selectionForeground color="#F8E1AA" />
+</colorTheme>
