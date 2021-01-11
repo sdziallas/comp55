@@ -10,17 +10,18 @@ range from very philosophical to very practical. We'll start with
 debugging tips. READ THESE before you start on the lab, which are taken
 from the maker of codingbat, Nick Parlante.
 
-Your grade for this lab will be based on your answers to a google form,
+Your grade for this lab will be based on your answers to a [google form](http://go.djosv.com/debuglab),
 your answers will include the number of bugs that you find and detail in
-the last section of that form. The form will be at
-<http://j.mp/55debug>. (Alternate link <http://go.djosv.com/debuglab>)
+the last section of that form. 
 As you read the lab, you'll be asked at times to visit the form at that
 moment, which will be in bold. You can work with one other person
 throughout the lab, **but each person must submit their own form**.
 
 ## Some advice
 
-#### Keep a calm mindset – You can do this\!
+### Keep a calm mindset – You can do this\!
+
+<img align="right" src="lab3media/media/image1.png" />
 
 > Bugs may appear hopeless and impossible, but your code has a logical
 > structure. The evidence may be obscure, but consistent in pointing to
@@ -28,16 +29,14 @@ throughout the lab, **but each person must submit their own form**.
 > figure it out, and they don't know more about your code than you do.
 > You can sift through it.
 
-#### Follow the symptom backwards through the code
+### Follow the symptom backwards through the code (see right)
 
 > You observe a symptom -- bad output, wrong function calls an
 > exception. Track the symptom backwards through the code path to find
 > the bug.
 
-![](lab3media/media/image1.wmf)
 
-  - 
-#### Ask these questions when debugging
+### Ask these questions when debugging
 
 1)  What method shows the symptom? What lines of code produce that
     symptom?
@@ -52,7 +51,7 @@ throughout the lab, **but each person must submit their own form**.
     parameters have? (a breakpoint is a quick way of seeing all those
     values)
 
-#### Invest time into learning how to use the debugger
+### Invest time into learning how to use the debugger
 
 > Is an exception giving you the blues? Use the debugger\! On exceptions
 > eclipse will stop at the line throwing the exception, which will let
@@ -74,9 +73,9 @@ throughout the lab, **but each person must submit their own form**.
 > can get a faster way to view important details about an object,
 > ```toString``` works both in the console and in the debugger.
 
-### Debugging Mechanics...Things to ask yourself when you encounter a bug:
+## Debugging Mechanics...Things to ask yourself when you encounter a bug:
 
-#### 1\. If an exception was raised, What does the exception say? What line number, and method is it from?
+### 1\. If an exception was raised, What does the exception say? What line number, and method is it from?
 
 > Exception printouts can look a bit cryptic, but there's often actual
 > info in them -- ```nullPointer``` vs. ```arrayOutOfBounds```. Usually, the
@@ -91,12 +90,12 @@ here once you are done.***
 > The screenshot in the online form is very similar to what you'll see
 > as you program.
 
-#### 2\. If an error occurred, what is the state of the object (AKA receiver), parameters?
+### 2\. If an error occurred, what is the state of the object (AKA receiver), parameters?
 
 You can examine this in the variables window while the debugger is
 active or in the source, and then think…How did that happen?
 
-#### 3\. Comment Out / Mess With Code
+### 3\. Comment Out / Mess With Code
 
 Suppose you know that one of your objects has bad data, and you are
 trying to figure out which code is messing it up. Commenting out calls
@@ -119,23 +118,22 @@ Be willing to alter your code into absurd states to test a hypothesis.
 **Problem 2) Go back to the form to think of ways of altering your
 program to debug faster**
 
-## The Debugging Lab
+# The Debugging Lab
 
-For today's code, we're going to be using the Debugging Lab that has
-been posted on Canvas. The code from the lab expands on the fraction
-code you wrote in the previous lab. Your trusty mascot Powercat (who
+For today's code, we're going to be using the **DebuggingLab.zip** that has
+been posted on Canvas. Use the import functionality like you used in [Lab 2](http://onzfonz.github.io/comp55/labs/2-JavaIntro.html). The code from the lab expands on the fraction
+code you wrote in the previous lab. Your trusty mascot *Powercat* (who
 also is a budding programmer) wrote a fractions aid for little kids,
 providing simplified fractions and decimal equivalents for kids when
-they specify numerators and denominators. Unfortunately, Powercat's
+they specify numerators and denominators. Unfortunately, *Powercat*'s
 program has some bugs that you need to help find. The program should
 allow kids to specify a numerator and a denominator and then
 automatically simplify the fraction as you move along. There's also an
 option to provide the decimal equivalent for the fraction. Go ahead and
-try use the application for a bit. Your first bug should be an
+try use the application. Running the code will reveal your first bug in the console, which is an
 exception. To fix this, let's use the debugger.
 
-To run the debugger click on the bug to the left of the play button (the
-little bug button), You can instead just use the ***F11*** shortcut
+To run the debugger click on the bug to the left of the play button ![](lab3media/media/debugicon.png), You can instead just use the ***F11*** shortcut
 (instead of ***Ctrl-F11*** to run the program.
 
 ![](lab3media/media/image2.png)
@@ -145,7 +143,7 @@ immediately back into the editor or eclipse might ask if you want to
 switch to a Debug perspective, check ***Remember my decision*** and then
 click yes. Your screen then may look something like this.
 
-![](lab3media/media/image3.png)
+![](lab3media/media/image3.gif)
 
 Let's explain a couple of things about this window.
 
@@ -160,8 +158,7 @@ rearranging the windows, just click between them in the upper-left. If
 you've already closed some windows, you can always reset the perspective
 by going to ***Window-\>Perspective-\>Reset Perspective***. If you don't
 see java or debug listed you can use the open perspective icon to add
-the perspective. When in debug perspective you'll have a couple of
-windows that we should discuss. The first is the **Debug** View:
+the perspective (labeled as add above). When in debug perspective you'll have a couple of windows that we should discuss. The first is the **Debug** View, which we'll show using the class interface:
 
 ![](lab3media/media/image5.png)
 
@@ -172,7 +169,7 @@ to run. If you have a lot of windows open it may be that you keep
 running the program, but forget to terminate the programs that you've
 run. I default to having one instance of the program running. To
 terminate other instances so you don't get confused, it's good to right
-click on the other windows and select ***Terminate.*** You'll know that
+click on the other windows and select ***Terminate.*** ![](lab3media/media/terminate.png) You'll know that
 a window is terminated if you see a marker like this:
 
 ![](lab3media/media/image6.png)
@@ -181,8 +178,10 @@ Window 2 is the instance of the program that we care about as it shows
 us that there was in fact an **ArrayIndexOutOfBoundsException**, and a
 stack trace showing you which methods called what to cause that
 exception. If you ever want to see the code at any of these lines, you
-can click on the stack trace in the Debug view and eclipse will jump to
-the line in the editor
+can click on the stack trace in the *Debug* view and eclipse will jump to
+the line in the editor, like this:
+
+![](lab3media/media/stacktrace.gif)
 
 The second window to notice is to in the top right, and is called the
 **Variables** view.
@@ -195,22 +194,26 @@ the down arrow on ```this``` and then scrolling through to click the down
 arrow on ```options``` will reveal the length of the options array. Another
 option that you have is that you can also simply move your hover your
 mouse cursor over particular variables while the program is being
-debugged to see their values.
+debugged to see their values.  See here:
 
-**Use that and the other information to edit printOptions in
+![](lab3media/media/image8.gif)
+
+**Use that and the other information to edit ```printOptions``` in
 BuggyProgram.java. Once you hit the debug button
-(**![](lab3media/media/image8.png)**) and the program runs without
+(**![](lab3media/media/debugicon.png)**) and the program runs without
 immediately crashing then you can move on**.
 
-If you need help, make sure to ask your neighbors or the instructor.
-Once that's fixed and you run the program, you'll at least get to an
-option. Try to set the denominator or pick any option, and watch another
+If you need help, make sure to ask your classmates or the instructor.
+
+## I fixed it!  Now it's gonna work! Wait what? Oh no...
+
+Once that's fixed and you run the program, you'll at least be able to enter an option. Try to set the denominator or pick any option, and watch another
 exception pop up. I added this in here because this is another common
 exception. Name the exception, understand why it is being thrown
 (instance variables when declared in java are set to 0 AKA null), and
 then fix it. To fix it, you'll need to add a line to the ```run``` method of
-```BuggyProgram```. **Do not edit private instance variable, instead add the
-line that contains the necessary info to that run method (if you have
+```BuggyProgram```. **Do not edit the private instance variable, instead add the
+line that contains the necessary info to that ```run``` method (if you have
 spent more than 10 minutes, raise your hand to get help to move on).**
 **Also** remember that this code may be very undateable, to the point
 that there are many issues with the program. Do not try to fix all of
@@ -219,18 +222,17 @@ continue is that you do not get an array index out of bounds or null
 pointer exception after asking to set the denominator. The program still
 has many bugs.
 
+## I can now run the program without getting exceptions right away!
+
 You'll be able to run the program but won't have exceptions, but you may
 notice that there are some issues with the program. While we could use
 ```System.out.println()``` statements to debug, let's instead invest in the
 debugger. Using the debugger can be extremely useful.
 
-#### Setting a breakpoint
+## Setting a breakpoint
 
 Double click on the left bar in eclipse, if you do this correctly and in
-the right area, you should see a little circle pop up, like shown on
-line 21 in the image below.
-
-![](lab3media/media/image9.png)
+the right area, you should see a little circle pop up ![](lab3media/media/breakpoint.png), to the left of the line of code where you set it.
 
 Now, everytime the program runs in debug mode, the program will run up
 until it reaches that point.
@@ -255,32 +257,33 @@ know that it is currently waiting to execute that particular line. To
 execute that line, you can use the commands shown in Eclipse's toolbar.
 ![](lab3media/media/image10.png)
 
-The red stop button above is something you want to hit whenever you want
-to stop debugging, while the yellow/green play button (to the left) will
+The red stop button ![](lab3media/media/terminate.png) above is something you want to hit whenever you want
+to stop debugging, while the rectangle-play button (to the left) ![](lab3media/media/resumeicon.png) will
 have the program continue until it reaches the next breakpoint. Notice
 the three toolbar buttons that have arrows and are circled in the
-picture above. Each of those is called *Step Into*, *Step Over* and
-*Step Return*. To explain these steps we are going to jump to this next
-piece of code…shown below.
+picture above. Each of those is called *Step Into*![](lab3media/media/stepinto.png), *Step Over*![](lab3media/media/stepover.png) and
+*Step Return*![](lab3media/media/stepreturn.png). To explain these steps we are going to jump to this next
+piece of code…shown below using the classic interface.
 
-![](lab3media/media/image11.png)
+![](lab3media/media/image11old.png)
 
-Notice the green bar on line 39? That is telling us that the debugger is
+Notice the green bar on line 39 with the arrow on the left? That is equivalent to the gray line in darkest dark that has the yellow arrow ![](lab3media/media/yellowarrow.png), it is telling us that the debugger is
 about to execute the function ```doMove```. We can ask the debugger to
 execute code line by line and then pause after each line of execution.
-Move your mouse over those toolbar buttons circled above…**Step Into**
+Move your mouse over those toolbar buttons circled above…
+- **Step Into**![](lab3media/media/stepinto.png)
 (F5) will cause you to, if you were on a line that had a function call
 on it, jump into the line. So in our case it would move into
-```DotPanel```'s ```doMove``` function. If you don't want the computer to jump
+```DotPanel```'s ```doMove``` function. 
+- **Step Over**![](lab3media/media/stepover.png) (F6) when you don't want the computer to jump
 into that function, but would rather just have the computer execute the
-entire function and move to the next line, you can say **Step Over**,
-(F6). Finally, if you are done looking at a function and want to jump
+entire function and move to the next line. 
+- **Step Return** ![](lab3media/media/stepreturn.png) (F7) when you are done looking at a function and want to jump
 back out to the function that called it, rather than try to step over
-all the lines, you can execute them all and jump back by clicking on
-**Step Return** (F7).
+all the lines, you can execute them all and jump back.
 
 While stepping through the function, it's important to continually check
-the variables window, though eclipse will highlight in yellow any
+the variables window, though eclipse will highlight any
 variables that changed as a result of executing that call.
 
 The variables window will show you both the local variables and
@@ -288,11 +291,11 @@ parameters that are associated with that function. To view other
 variables and their state, you can just click on the function name in
 the *Debug* window and you'll be shown that function's variables. To see
 the instance variables (the variables colored in blue), you'll have to
-click the down arrow for the ```this``` variable, like we did with options.
+click the down arrow for the ```this``` variable, like we did with ```options```.
 Here's a different screenshot from another program of what the variables
 window might look like.
 
-![](lab3media/media/image12.png)
+![](lab3media/media/image12old.png)
 
 Notice also that when you click on a variable, a string representation
 of that variable is presented in the area just below the variables, in
@@ -306,7 +309,7 @@ memory.
 
 <br>***Go online and answer the questions 4-6***<br><br>
 
-### The Debug Shell/Display Pane
+## The Debug Shell/Display Pane
 
 Lastly the most important and cool pane I'd like to show you is the
 Display pane, which they have also renamed as the Debug Shell Pane. To
@@ -330,16 +333,15 @@ code, if in fact, you had a ```board```, ```start```, and ```numSpaces```
 variables)…but if you were to debug your traffic jam and had a
 breakpoint in ```canMoveNumSpaces``` you could examine any piece of that
 line to determine what the code would evaluate to. Coming back to the
-example we are using here, which has variables like ```curManX```, ```curManY```
-and ```numTimesMoved```, we could say something like what is present on the
-second line in the image below…
+initial bug that we had, you can write some pretty creative expressions and evaluate each piece, which may also be helpful when you have really confusing lines.  See here for example on how to examine different parts of your code that get evaluated to a value, which with any expression you could highlight part of the statement to see how the different parts get calculated (this is very useful when checking if statement conditions for example).
 
-![](lab3media/media/image13.png)In the display, you can highlight
+![](lab3media/media/debugshell.gif)
+
+In the display, you can highlight
 **any** part of that line and *right click-\>inspect*
-(***Ctrl-Shift-I***), or click the magnifying glass to the right of the
-display panel (For macs you may have to add a return statement). Eclipse
-will then execute that line and then let you know what the result is of
-the part that you highlighted. This becomes extremely useful in letting
+(***Ctrl-Shift-I***), or click the magnifying glass ![](lab3media/media/maglens.png) to the right of the
+display panel (For macs you may have to add a ```return``` statement). Eclipse
+will then execute that line (or selected text) and then let you know what the result is. This becomes extremely useful in letting
 you try stuff out as you are programming to make sure that you get it
 right rather than having to continually rewrite your code run and then
 get to the point you need to…This is one of the most powerful tools to
@@ -348,8 +350,7 @@ the fly. Imagine being able to check if your formula for checking a
 particular space in ```moveNumSpaces``` could be evaluated without having to
 keep re-running the code\! I think as soon as I run into a problem when
 I'm debugging something that I'm unsure about it working, I jump into
-this mode when I have to rewrite a line to make sure that it works
-before I make the change in the code.
+this mode when I have to rewrite a line to make sure that it works.  Rather than make the change and hope that it works.  I set a breakpoint on whichever line of code I'm running, debug, and then use the debug shell to figure out the exact code before writing it in.
 
 **Problem 7 – Go online to answer the next question**
 
