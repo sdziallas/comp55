@@ -373,4 +373,6 @@ can be simple print statements like we've done with Traffic Jam.
 **Problem 8: Start debugging the code in full now, use the instructions
 provided online to document what you try.**
 
+The last thing that I do want to mention is that with good debugging, comes good testing.  Notice that SimplifiedFraction has a main class, why not start with that rather than to try and run the whole program?  You could try out some of the different methods and see what they return to make sure that things are running correctly.  By having such testing you reduce the amount of time looking for clues, in a way if we are thinking of the detective mindset, you are asking good questions to your suspects rather than waiting around for something to happen again.
+
 If you have any questions let me know. Good luck finding the bugs\!
