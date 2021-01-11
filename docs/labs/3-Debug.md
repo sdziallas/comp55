@@ -203,6 +203,8 @@ BuggyProgram.java. Once you hit the debug button
 (**![](lab3media/media/debugicon.png)**) and the program runs without
 immediately crashing then you can move on**.
 
+- Remember that when you start modifying the code you should consider switching back to the java perspective ![](lab3media/media/javaperspective.png)
+
 If you need help, make sure to ask your classmates or the instructor.
 
 ## I fixed it!  Now it's gonna work! Wait what? Oh no...
