@@ -105,7 +105,7 @@ Make sure the option to create the constructor is selected and click
 public class Fraction {
 
     public Fraction(int i, int j) {
-        // **TODO** Auto-generated constructor stub
+        // <pre><b>TODO</b></pre> Auto-generated constructor stub
     }
 }
 ```
