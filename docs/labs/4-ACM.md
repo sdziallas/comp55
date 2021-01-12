@@ -37,7 +37,7 @@ public class ACMLab extends GraphicsProgram {
     }
 
     public void run() {
-        add(new GLabel("Hello World", 300, 400));
+        add(new GLabel("Hello World", 300, 300));
     }
 
     public static void main(String[] args) {
