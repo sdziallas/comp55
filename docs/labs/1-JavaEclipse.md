@@ -84,7 +84,7 @@ The next thing we are going to do is change eclipse's appearance.  I have been u
 
 ## STEP 5: Installing Darkest Dark Theme
 
-Once you are back you should be at the main page where we clicked to review the IDE preferences.  Go ahead and click to go the eclipse marketplace.  This will launch a variety of plugins and tools that have been developed to integrate into eclipse.  Here what we will do is download the darkest dark theme.  So search for "dark" in the marketplace and it should be the first option, which has 1.5M downloads, click install, and then confirm.  You'll have to accept another license agreement by picking the option before being ablet to finish. 
+Once you are back you should be at the main page where we clicked to review the IDE preferences.  Go ahead and click to go the eclipse marketplace.  This will launch a variety of plugins and tools that have been developed to integrate into eclipse.  Here what we will do is download the darkest dark theme.  So search for "dark" in the marketplace and it should be the first option, which has 1.5M downloads, click install, and then confirm.  You'll have to accept another license agreement by picking the option before being able to finish.  **Make sure to uncheck the codetogether devstyle bundle** 
 
 ![](lab1media/media/darkestdark.gif)
 
