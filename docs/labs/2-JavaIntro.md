@@ -33,7 +33,7 @@ Once you've located the zip file or directory, you'll be able to hit
 
 ![](lab2media/media/image2.gif)
 
-Once you do that, the project will be shown on the left hand
+Once you do that, notice that you'll have two projects now in the project explorer.  It's OK to leave the other projects there.  You should leave all projects that you'd like to see or reference in the future in your workspace, so keep them there until you run out of space in the package explorer window.  If you are somehow against having so many projects open, you can right click on the project, and say close project, instead of delete, which will keep the project in your workspace, but make files disappear from being edited or run.  If you notice your COMP55IntroJava project will be shown on the left hand
 side, but it will have several red X's, ![](lab2media/media/redx.png) that means that Java has found
 some issues for you.
 
