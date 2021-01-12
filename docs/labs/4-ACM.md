@@ -6,15 +6,16 @@ run in a new language is no easy task. With your love/hate relationship
 with java already budding, it's time to for us to learn a special
 library that we will be using this semester that will let us easily
 incorporate graphics into our programs. This library is called the ACM
-library, a library built by a special task force for the Association for
-Computing Machinery, a large trade organization for Computer Science
-Professionals. We are going to use this library because it is easy to
-learn and because the knowledge you accumulate can be easily leveraged
-in other languages and libraries in the future.
+library, a library built by a [special task force](https://dl.acm.org/doi/abs/10.1145/1121341.1121384) for the [Association for
+Computing Machinery](https://www.acm.org/about-acm/about-the-acm-organization), a large trade organization for Computer Science
+Professionals. The version that we'll be using is a special adapted version of the library, which has since been modified by [Eric Roberts](https://profiles.stanford.edu/eric-roberts), a professor from Stanford who was a part of that ACM Project.  We are using a modified version of that library.  We are going to use this library because:
+- it is easy to learn
+- it's structure follows OOP programming well
+- the way it's laid out will well prepare you to learn other languages and libraries in the future
 
 First, download **IntroACMLab.zip** from canvas and then import that
-file as an existing project into Eclipse, like we did in the *Intro to
-Java* lab.
+file as an existing project into Eclipse, like we did in the [*Intro to
+Java*](http://onzfonz.github.io/comp55/labs/2-JavaIntro.html) lab.
 
 Once imported, open **ACMLab.java** in the editor. This file contains
 additional features that we have yet to talk about. Here's the contents
@@ -45,7 +46,7 @@ public class ACMLab extends GraphicsProgram {
 }
 ```
 
-**Imports:** Lines 1-4 contain ```import``` statements: ```import``` calls are
+- **Imports:** Lines 1-4 contain ```import``` statements: ```import``` calls are
 similar to ```#include```s that we had in C++ in that they help Java figure
 out what libraries you will be using. One of the nice features of Java
 is that it allows you to reference a folder of classes all at once, so
@@ -62,22 +63,17 @@ class that is defined differently in multiple libraries, eclipse will
 prompt you to choose. The majority of imports we'll use start with
 "java." or "acm."
 
-**extends:** Line 6 should be of interest as you see the word extends
+- **extends:** Line 6 should be of interest as you see the word extends
 followed by ```GraphicsProgram```. ```extends``` is a special keyword in Java
 that lets you inherit capabilities from another class. In our case, what
 we want to do is inherit from the special ACM class, ```GraphicsProgram```,
 which will do a lot of the necessary legwork to get ourselves ready to
 deal with graphics. By saying ```ACMLab extends GraphicsProgram```, we are
 telling Java that the ```ACMLab``` **IS** a ```GraphicsProgram```, and so we get
-all of the benefits and tribulations of being a ```GraphicsProgram```. One
-of the consequences is that we have to change how we run this type of
-program. Rather than using ```public static void main(String[] args)```,
-we now use ```public void run()``` as our starting point. To run ```ACMLab```,
-we also instead say *Run As-\>Java Applet*, rather than Java
-Application, which means we have to use the shortcut ***Alt-Shift-X,
-A*** (rather than ***Alt-Shift-X, J***)
+all of the benefits and tribulations of being a ```GraphicsProgram```. This means that we'll need to leverage and write few additional methods in order to make our program work.  Rather than using ```public static void main(String[] args)```,
+I want you to conisder ```public void run()``` as our starting point for now.  
 
-**public static final int:** Lines 7 & 8 declare constants for the
+- **public static final int:** Lines 7 & 8 declare constants for the
 program to reference. **It is good programming practice to declare any
 number that is not 0 , 1, or 2, as a constant**. We're going to break
 with that convention for the opening part of the tutorial as we are
@@ -92,11 +88,10 @@ on other constants like this:
 
 ```java
 public static final int NUM_PIXELS = PROGRAM_HEIGHT / PROGRAM_WIDTH;
+// This makes constants very useful - make them often!
 ```
 
-This makes constants very useful to create.
-
-**public void init():** It doesn't make sense to get too into the
+- **public void init():** It doesn't make sense to get too into the
 internals of this method on lines 10-13, but be aware that it allows us
 to specify the size of the window before it gets created. This is useful
 in our case as we want to start with a larger window. The size is
@@ -106,13 +101,14 @@ and 600 pixels high. While for some of you this might create a
 decent-sized window, for others of you with 4K screens, the window might
 still be extremely small, for now you could try to make the screen
 relatively big, but this will be something you may have to continually
-adjust. You also may be able to fix this by visiting this URL
-<http://stackoverflow.com/questions/30555401/java-disable-dpi-aware-not-working/39372897#39372897>.
+adjust. You also may be able to fix this by [visiting this URL](http://stackoverflow.com/questions/30555401/java-disable-dpi-aware-not-working/39372897#39372897).
 The ```requestFocus``` call just allows the window to be the active window
 for both the mouse and the keyboard, which will be useful in the future.
 Other than changing the size, you should leave the ```init``` method alone.
 
-**public void run():** Lines 15-17 have the method that you should
+- **public static void main(String args[])**  You've seen line 19 and 21 before, but what may be interesting here is how empty our main is, and Line 20.  **Please don't spend too much time thinking about or copying Line 20 for your own future code**.  Think of this main function that we have as template (aka boilerplate) code that will be in most graphical programs, you should not need to modify the mains for the graphical programs that you create.  This small function tells java how to start your program.  If you notice, it just creates a ```new ACMLab``` (which it does not even save into a variable! :disappointed:) and then calls ```start```, which is an internal call that helps set up the graphics window and get everything started.  You should in most cases, leave this main alone.  Instead, just focus on putting your code for graphics programs in the method we'll discuss below, ```run```.
+
+- **public void run():** Lines 15-17 have the method that you should
 consider the starting point for your program, and it is in here that we
 will be putting most of our code as well as function calls to the rest
 of our code. Currently there is only one call on line 16, which is this
@@ -137,7 +133,7 @@ the lower left hand corner, as shown by the picture below.
 run, along with the message Hello World (using the always appropriate
 and highly underutilized Comic Sans font).*
 
-**Modifying our label (Changing font, size and style)**
+### Modifying our label (Changing font, size and style)
 
 If we wanted to make additional changes to the ```GLabel```, it would make
 sense to store that ```GLabel``` into a variable that we could then refer
