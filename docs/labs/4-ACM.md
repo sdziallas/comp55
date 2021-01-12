@@ -106,7 +106,7 @@ The ```requestFocus``` call just allows the window to be the active window
 for both the mouse and the keyboard, which will be useful in the future.
 Other than changing the size, you should leave the ```init``` method alone.
 
-- **public static void main(String args[])**  You've seen line 19 and 21 before, but what may be interesting here is how empty our main is, and Line 20.  **Please don't spend too much time thinking about or copying Line 20 for your own future code**.  Think of this main function that we have as template (aka boilerplate) code that will be in most graphical programs, you should not need to modify the mains for the graphical programs that you create.  This small function tells java how to start your program.  If you notice, it just creates a ```new ACMLab``` (which it does not even save into a variable! :disappointed:) and then calls ```start```, which is an internal call that helps set up the graphics window and get everything started.  You should in most cases, leave this main alone.  Instead, just focus on putting your code for graphics programs in the method we'll discuss below, ```run```.
+- **public static void main(String args[])**  You've seen line 19 and 21 before, but what may be interesting here is how empty our main is, and Line 20.  **Please don't spend too much time thinking about or copying Line 20 for your own future code**.  Think of this main function that we have as template (aka boilerplate) code that will be in most graphical programs, you should not need to modify the mains for the graphical programs that you create.  This small function tells java how to start your program.  If you notice, it just creates a ```new ACMLab``` (which it does not even save into a variable! :disappointed:).  Then on the same line, it calls ```start```, which is an internal call for graphics program that helps set up the graphics window and get everything started.  You should in most cases, *leave the ```main``` alone for any graphics programs*.  Instead, just focus on putting your code for graphics programs in the method, ```run```, which we'll discuss next.
 
 - **public void run():** Lines 15-17 have the method that you should
 consider the starting point for your program, and it is in here that we
@@ -117,7 +117,7 @@ follows what one can think of as being a *collage model* for making
 graphics. Rather than creating graphics with a pen where you give
 commands to move the pen around the screen to draw things, the graphics
 package allows you to create objects which one can think of as cutting
-out shapes from a magazine. Once the objects are created, you then need
+out shapes from a piece of paper. Once the objects are created, you then need
 to add them to your canvas. The ```add``` command at the beginning of the
 line is reminiscent of that. On the other hand, what's inside the ```add```
 command – ```new GLabel("Hello World", 300, 300)```- can be thought of as
@@ -151,6 +151,12 @@ style and size, separated by hyphens. The style is optional (and will be
 left out in examples), and the font needs to match a font on your
 computer for it to work.
 
+### Extracting constants
+
+Remember that when we have numbers that we keep using, it makes sense to create final variables, which are constants in Java.  Constants are nice becuase they make the code more readable, and they allow us to make more changes that make more sense based on the code.  Let me show you an easy way that eclipse allows us to extract constants.  Click anywhere on the first 300 your label, right click and choose *source->extract constant*.  There, you'll get an option to name it something, I just named it ```START_X``` in caps, to denote that it's a constant and that it represents the starting X point for the code.  Notice there was an option to have it change all versions of 300 to that variable.  In our case, I think it makes sense to keep them separate, so **go ahead and do another extract constant of the other 300 to separate the x and y**.  From here on out I will refer to those as ```START_X``` and ```START_Y```.  Other things that folks end up extracting as constants would be things like the font and the color, which you should also practice with
+
+![](lab4media/media/extractconstant.gif)
+
 ## Adding Shapes
 
 Let's move on to work with the three most basic shapes in the ACM
@@ -160,8 +166,8 @@ how things behave. Let's start with a rectangle. To make a rectangle,
 create a ```GRect``` and then add it to the canvas. A ```new GRect``` takes in
 four arguments, the **x** and **y** position of where the Rectangle
 should be placed, and its **width** and **height** all in pixels. So for
-example, let's place a rectangle at ***300,300*** with a width of
-***200***, and a height of ***100***. You can place this code after
+example, let's place a rectangle at ```START_X, START_Y``` with a width of
+***200***, and a height of ***100*** (You can also consider extracting these constants as well). You can place this code after
 adding the label. Run your program again, and you should get something
 like the picture shown on the next page.
 
@@ -173,19 +179,19 @@ at 300, 300, each used it as a different anchor for where to place its
 object. In the rectangle, 300, 300, is the upper left of the rectangle,
 while for the text, it's the lower left. To understand how the oval
 works, let's go ahead and add an oval with the same arguments as the
-rectangle, so you're code inside run should look something like what's
-below…
+rectangle, so you're code inside ```run``` should look something like what's
+below…**but hopefully with more constants!**
 
 ```java
-GLabel label = new GLabel("Hello World", 300, 300);
+GLabel label = new GLabel("Hello World", START_X, START_Y);
 label.setColor(Color.red);
 label.setFont("Arial-24");
 add(label);
 
-GRect rect = new GRect(300, 300, 200, 100);
+GRect rect = new GRect(START_X, START_Y, 200, 100); //200 and 100 should be constants
 add(rect);
 
-GOval oval = new GOval(300, 300, 200, 100);
+GOval oval = new GOval(START_X, START_Y, 200, 100);
 add(oval);
 ```
 
@@ -213,10 +219,9 @@ this.
 
 The last class this lab will introduce today is ```GImage``` class, which
 lets us add rectangular images. ```GImage```s take three parameters, a
-filename, an x and y coordinate. The one difference is that the first
-parameter passed to an image must be the name of the image. Since it's
-like a file, that image should be in the same directory as your project.
-If it's somewhere else or you want your images to be in a folder, you
+filename, an x and y coordinate.
+The one difference is that the first parameter passed to an image must be the name of the image, including the extension. However, since we are loading something that is different than code, images will need to be in a media directory that is at the same level as src and bin folders.
+If it's somewhere else or you want an additional folder inside of your media folder, you
 should prefix any image with that folder name, like
 ```foldername/image.png```. If you'd like to get the size of any image
 object, after it's been created, you can call ```getWidth()``` or
