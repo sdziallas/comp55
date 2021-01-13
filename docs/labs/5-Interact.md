@@ -3,7 +3,7 @@
 (Deliverable – export the entire interactivity lab as a zip file when
 you're done)
 
-If you still feel uncomfortable with either the ACM or the Intro to Java
+If you still feel uncomfortable with either the [ACM](4-ACM.html) or the [Intro to Java](2-JavaIntro.html)
 Labs, you should go back and revisit what was done in each. Today we're
 going to get you started on learning and additional topic events that
 will allow us to add some dynamic content to our upcoming graphics
