@@ -54,7 +54,7 @@ create a class to represent a Fraction. We'll go ahead and do that now.
 Go ahead and create a **Fraction** class file. While you can do this as
 a *quick fix*. Let's do it the regular way. Right-click on the **COMP55IntroJava** project
 label itself in the Project Explorer, and then go *New-\>Class*. Once
-you do that, Eclipse will bring up another form to fill out (Just like you had with [Lab 1](https://onzfonz.github.io/comp55/labs/lab1media/media/image9.gif)). This time, only change the class name to *Fraction* and then click *Finish*,
+you do that, Eclipse will bring up another form to fill out (Just like you had with [Lab 1](lab1media/media/image9.gif)). This time, only change the class name to *Fraction* and then click *Finish*,
 which will bring you back to the main window.
 
 A couple of the options that would be relevant are including the main

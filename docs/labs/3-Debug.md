@@ -121,7 +121,7 @@ program to debug faster**
 # The Debugging Lab
 
 For today's code, we're going to be using the **DebuggingLab.zip** that has
-been posted on Canvas. Use the import functionality like you used in [Lab 2](http://onzfonz.github.io/comp55/labs/2-JavaIntro.html). The code from the lab expands on the fraction
+been posted on Canvas. Use the import functionality like you used in [Lab 2](2-JavaIntro.html). The code from the lab expands on the fraction
 code you wrote in the previous lab. Your trusty mascot *Powercat* (who
 also is a budding programmer) wrote a fractions aid for little kids,
 providing simplified fractions and decimal equivalents for kids when
