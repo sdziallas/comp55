@@ -19,30 +19,48 @@ enter before moving on. The program controlled when users could input
 information. The *program* would run through its statements, and when it
 reached the command to get input from the user, it would then wait for
 the user to type in some piece of information. While it was waiting,
-**the program would not be able to do anything**. This also happened
+**the program would not be able to do anything**. 
+
+### Your computer once it needs to waits for your input:
+
+![](https://media.giphy.com/media/UxREcFThpSEqk/giphy.gif)
+<br>
+[_from Giphy_](https://giphy.com)
+
+This also happened
 with the user, as they had to wait until the program told them it was
 their turn. If a program had a ```cin``` statement, the program would stay
 waiting there, until the user pressed the *Enter* key, at which time
 your program was able to continue its execution. This *"either you or
 the computer is in control"* is not typically the way we think about
-software. Most modern software allows you to make decisions at any time.
+software. 
+
+![](lab5media/media/commandline.gif)
+<br>
+[_modded from Giphy/Try Crypto_](https://giphy.com/gifs/blockchain-cli-commandline-KFzfVmSB0bhTKg5Ybp)
+
+Most modern software allows you to make decisions at any time.
 For example, with a media player, if you click play, the media starts
 playing, but you are also given a stop button, rewind, as well as other
 features, that you can click on at any time. Rather than you or the
 computer having sole control of the program at a certain time, modern
 programs make it feel like we can take over control at any time, which
-is great. The question is…how can they do this? To help explain how, we
-need to understand the notion of an *event*.
+is great. The question is…*how can they do this?* To help explain how, we
+need to understand the notion of an ***event***.
 
 ## What's an event?
 
 A **computer event** is a special "happening" that a program may find
 important. A good real-life analogy is an unexpected real-life event
-(like finding out that there is a flash sale at your favorite store). In
+(like a friend telling you that your parents just posted an embarrassing childhood photo of you on social media). In
 that case, you (or the computer) might be currently occupied with a
-task. However, if you were to find out that there was an **event**, like
-this flash sale, you may have to stop what you are doing, **handle the
-event**, and then resume what you were doing. There are several
+task. However, if you were to find out that this **event** occurred, you may have to stop what you are doing, **handle the
+event**, and then resume what you were doing. 
+
+![](https://media.giphy.com/media/gg9VEZFh6MA9FrZXMD/giphy.gif)
+<br>[_from Giphy_](https://giphy.com)
+
+There are several
 different computer events out there, which each program can decide how
 to handle. Some examples of computer events are the mouse moving or a
 keyboard key being pressed. When users move the mouse or press a key on
@@ -53,19 +71,28 @@ explain how to do in a bit.
 
 You can find the starter files for this project by going to the starter
 files section in Canvas, and looking for the **InteractivityLab.zip**.
-Go ahead and import the project and open up *Ball.java* and run the
-program as an applet. What you'll notice in the program is a very rough
-animation of a ball bouncing horizontally. Once you finish this lab you
+**Import the project and open up *Ball.java* and run the
+program.** What you'll notice in the program is a very rough
+animation of a ball bouncing horizontally. 
+Here's what you should see:
+
+![](lab5media/media/ballmotion.gif)
+
+Once you finish this lab you
 can think about how to make the ball bounce more cleanly off the window.
 
 The ACM libraries have made it easy for you to subscribe to mouse event
 notifications - one can subscribe by calling ```addMouseListeners()```. Once
 that line is called, your program will be notified of all mouse events.
 This is typically done towards the end of the run method, and only needs
-to be done once. You can go ahead and call this method now in ```run```, but
-BEFORE the ```animateBall()``` function, which is an infinite loop that is
+to be done once. Enter the line:
+```java
+        addMouseListeners();
+```
+in your ```run()``` method, but
+**BEFORE the ```animateBall()``` function**, which is an infinite loop that is
 taking care of moving the ball. If we make the call to
-```addMouseListeners``` after ```animateBall```, it will never be called.
+```addMouseListeners``` after ```animateBall```, it will never be called.  Think of addMouseListeners as setting you up to get notified in case anything happens.
 
 ## The Five Mouse Events
 
@@ -90,10 +117,9 @@ program
 
 When we are notified of each of these events we need to decide how we
 want the program to respond. For example, going back to our real world
-event about the flash sale, if a flash sale started you need to choose
+event about the embarassing photo, if the embarassing photo was posted by your parents, you need to choose
 how you would handle that situation. Some of you may decide to ignore
-the sale, others may check it out and buy everything you're interested
-in, while others of you may tell your friends. How you handle the event
+the photo, others may decide to talk to your parents about social media, while others of you may hack into your parents account and delete the photo, and instead leave an embarrassing photo of your siblings in its place. How you handle the event
 is up to you.
 
 If we want the computer to do something special when an event happens,
@@ -104,10 +130,12 @@ when I've mentioned before that Java notifies us about any of the events
 listed above, what it really does is call the event method name listed
 above for all objects that added themselves as a listener.
 
+### Our first event handler in Ball.java
+
 For this lab we will define our response like this: when user presses a
 button, we will change the ball's color to a random color. To do this we
 are going to write a definition for ```mousePressed```. To do that,
-introduce the following method definition in your code:
+**introduce the following method definition in your Ball.java code**:
 
 ```java
 @Override
@@ -137,17 +165,17 @@ ball.setColor(rgen.nextColor());
 ```
 
 After you make this change, go ahead and run the program. Make sure that
-as the ball is moving, you click on the mouse with fury. Notice the
+as the ball is moving, you click on that mouse with unbridled fury. Notice the
 color of the ball is randomly changing every time you click the mouse.
 If we want to make changes to any objects, they must be listed as
 instance variables (like ```ball``` is). Remember that "Java" is the one
 calling this method, and it has no clue of what information you'll need.
 If you need to change a value or object inside a mouse handler, you need
 to make sure that object is listed as an instance variable, otherwise
-you won't be able to make the necessary changes. Before you move on,
-make sure that you are able to change the colors.
+you won't be able to make the necessary changes. **Before you move on,
+make sure that you are able to change the colors.**
 
-### The MouseEvent parameter
+## The MouseEvent parameter
 
 Each of these mouse events has a parameter object that accompanies the
 event. That object, which is of type ```MouseEvent```, carries useful
@@ -176,7 +204,9 @@ feel like the ball is immediately responding and then continuing back to
 moving from side to side. If you'd like the ball to be placed in the
 center of where the mouse cursor is, you'll have to do a little bit of
 math on the y coordinate to make that happen, but we'll leave that for
-later.
+later.  When you run the program, you should get behavior that is similar to this:
+
+![](lab5media/media/colorY.gif)
 
 Being able to retrieve information about the cursor location when the
 mouse is clicked is nice, because we can use that information to make
@@ -187,21 +217,25 @@ not, it will return ```null```. Let's use ```getElementAt``` to only change the
 color of the ball when we actually click on the ball, which would mean
 that if we call ```getElementAt``` and pass in the coordinates for the
 ```mousePressed``` event, ```getElementAt``` can detect whether or not we
-clicked on the ball. To do this, let's change our ```mousePressed``` method
+clicked on the ball. 
+
+**To do this, let's change our ```mousePressed``` method
 to have an ```if``` statement where we check if the element at the mouse
-coordinates is in fact, the ball, if it is, then we'll change the color.
+coordinates is in fact, the ball.** If it is, then we'll change the color.
 Otherwise, we'll move it to where our mouse cursor is. The tricky part
 is generating the condition for the ```if``` statement here which should be
 something like ```if(getElementAt(e.getX(), e.getY()) == ball)```, which
-essentially says, is the ```x``` and ```y``` coordinates of where I pressed the
-mouse on top of the ball? If so, change the color and otherwise set the
+essentially says, *is the ```x``` and ```y``` coordinates of where I pressed the
+mouse on top of the ball?* If so, change the color and otherwise set the
 ball's location. Once you make the changes, test it again, making sure
 that you understand how ```getElementAt``` works here. We can compare or use
 the double equals because as you'll remember, we are dealing with
 pointers, so it will check to see if the objects are the same object in
-this situation by comparing address locations.
+this situation by comparing address locations.  Here's what it should behave like at the end (it would continue bouncing too)
 
-### Understanding when all events are called.
+![](lab5media/media/finalball.gif)
+
+## Understanding when all events are called.
 
 The easiest way for us to understand how and when all of the mouse
 events are called is to do one of my favorite things when I'm first
@@ -210,11 +244,27 @@ For this part, what we are going to do is override all of the mouse
 events by writing method definitions for all five mouse events so far.
 In every method definition, make a ```System.out.println()``` call with a
 unique message in each method – things like "mouse pressed" for the
-```mousePressed``` method. All of the methods take the same ```MouseEvent e```
+```mousePressed``` method. You can just add the call at the end of mouse pressed.  Here's what the code would look like for mouseReleased:
+
+```java
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		System.out.println("mouse released");
+	}
+```
+
+All of the methods take the same ```MouseEvent e```
 parameter, so you can leverage that and change your code a bit for each
 method. Once you do that, run the java applet and click once. Notice how
 many events get generated\! You can also try to see if you can get it so
-that ```mouseClicked``` is not generated.
+that ```mouseClicked``` is not generated.  **Override all of the mouse event handlers in java before continuing**.  Again here they are so you can use the names:
+
+- ```mousePressed```
+- ```mouseReleased```
+- ```mouseClicked```
+- ```mouseEntered```
+- ```mouseExited```
+
 
 ## Mouse Motion Events:
 
@@ -237,9 +287,13 @@ buttons are pressed
 ```mouseDragged``` – called whenever the mouse is moved on the screen and a
 button is pressed
 
-Go ahead and use the ```println``` statements like you did in the previous
-portion to handle these two events, which both also take in the
-```MouseEvent e``` as a parameter. Notice how so many events are being
+**Go ahead and use the ```println``` statements to override these two event handlers in Ball.java.**  
+
+- ```mouseMoved```
+- ```mouseDragged```
+
+Both of these events take in the
+```MouseEvent e``` as a parameter. Notice how so many more events are being
 generated\! It's not just that one mouse movement event is being
 generated for when you move the mouse, but java is continually spamming
 you with event notifications even during what you would consider to be
@@ -250,29 +304,41 @@ a bit.
 
 ## The Rubber Band
 
-To start us off with dealing with these movements, let's do a code
+Let's move to another code
 example that really helps us to understand how dynamic our programs can
 become by doing something as simple as working with a line and dragging
-it. Go ahead and open up your *RubberBand.java*, which looks almost
+it. **Go ahead and open up your *RubberBand.java***, which looks almost
 identical to *Ball.java* when it was first created, except that there is
-no code in ```run()```. This is because all of the action here will
-generated when the user clicks and drags the mouse. The first thing we
-will do is call ```addMouseListeners()```, to allow ```RubberBand``` to receive
-notifications about the mouse events. In this situation we are going to
-handle two events, when the user first presses a mouse button, and when
-the user drags. Write a method for ```mousePressed``` that will create a new
-```GLine``` and then add it to the screen. We want to have access to that
-line later on, so an important step here is to create an **instance**
+nothing in ```run```.  **So add the line ```addMouseListeners()``` to the ```run``` method**.  Now that notifications about mouse events are setup, your job will be to 
+handle two events: 
+1) When the user first presses a mouse button, and 
+2) When the user drags. 
+
+When the user clicks and drags we are hoping to modify an existing line.  So because we need it to persist between event calls, we need to make a line object as an instance variable.  
+
+So let's create an **instance**
 variable (not local variable) of type ```GLine``` (we'll call the instance
-variable ```newLine```), after the constants. Inside of ```mousePressed```,
-assign your newly created ```GLine``` to the instance variable ```newLine```.
+variable ```newLine```), after the constants. 
+
+```java
+private GLine newLine;
+```
+
+**Now, let's write a method for ```mousePressed```**.  This method will:
+1) Create a new
+```GLine```
+2) call ```add``` on that new line to have it appear on the screen.
+
+
+Inside of ```mousePressed```,
+assign a newly created ```GLine``` to the instance variable ```newLine```.
 Remember that the parameters for a new ```GLine``` are ```x1, y1, x2, y2```. We
 need to provide actual values there, so for this example, let's create a
 line with zero length. We can do this by passing in the parameter for
 where the mouse button was clicked to each of the four parameters
 ```(e.getX(), e.getY(), e.getX(), e.getY())```. Once we create the ```GLine```
 and ```add``` it to screen, if we were to run the program, we would see
-nothing happen if we were to click. The screen will still be empty.
+nothing happen if we were to click. The screen will still be empty.  Make sure to check that you did not redeclare ```newLine``` inside of mousePressed.
 
 The trick that we are going to add here is what we do on dragging. Go
 ahead and define the ```mouseDragged(MouseEvent e)``` method. When we drag,
@@ -286,24 +352,26 @@ keep the mouse down, like if you were playing with a rubber band. Once
 you release the button, you are no longer able to change anything about
 the line, with the code that we have. Now, every time that we press the
 mouse button, we create a new line, this means that our users can create
-a multitude of lines to form a picture. Go ahead and make a small
-picture and show me your proud artistic accomplishment before you
-continue.
+a multitude of lines to form a picture. **Go ahead and make a small
+picture and send me a screenshot of your proud artistic accomplishment in teams before you
+continue.**
+
+![](lab5media/media/rubberband.gif)
 
 ## Real Dragging
 
 We're almost there and then you can work on getting everything going\!
 Before we continue, we have to do one more thing, which is to talk about
-dragging. Let's open up the *Dragging.java* file. This program has two
-objects, an oval and a rectangle, on the screen. If you look at the
+*dragging*. **Let's open up the *Dragging.java* file**. This program has two
+objects, an ```oval``` and a ```rect```, on the screen. If you look at the
 code, I've already written the method definitions for the three mouse
 events, as well as call ```addMouseListeners``` for you here. What you have
 to do is concentrate on getting the dragging to work properly. The first
 thing that people tend to do from a dragging standpoint, is to simply
 override mouse dragged by getting the location of the object and
-possibly calling ```setLocatio```n. Go ahead and try to do this first. Add
+possibly calling ```setLocation```. Go ahead and try to do this first. **Add
 these two lines to the ```mouseDragged``` event handler and then run the
-program.
+program, which will be buggy.**
 
 ```java
 toDrag = getElementAt(e.getX(), e.getY());
@@ -324,20 +392,24 @@ you'll notice this happen a lot. An easy way for us to stop generating
 the exceptions is to add an ```if``` statement after our ```getElementAt```. We
 only want to set the location of ```toDrag``` if in fact, ```toDrag``` is not
 ```null```. Otherwise, we are trying to set the location of a *null* object.
-Go ahead and add an **if** statement to only call ```setLocation``` on
-```toDrag``` if ```toDrag``` is not null and then run the program again
+Go ahead and **add an ```if``` statement to only call ```setLocation``` on
+```toDrag``` if ```toDrag``` is not null** and then run the program again
 (***Ctrl-F11***). What you'll notice now is that no more exceptions are
 being generated but the behavior is pretty much the same - we can't drag
 upwards and to the left. The reason for this is what happens with
 ```setLocation```. Remember that here ```setLocation``` is being called on the
 upper-left hand corner of the object, which could make it so that once
 we call a drag event, the mouse cursor is already outside the bounds of
-the object, and so it is not on top of an object anymore. One easy fix
+the object, and so it is not on top of an object anymore. 
+
+**One easy fix
 that we can use is to change our ```setLocation``` so that we set the
-location to be the center of the object. Thus rather than say
+location to be the center of the object.** Thus rather than say
 ```setLocation (x, y)``` we need to subtract half of the shape's width and
-height from x and y, which are defined as ```SHAPE_SIZE```. Go ahead and
-make that change now and re-run the applet.
+height from x and y, which are both defined as ```SHAPE_SIZE```. Go ahead and
+make that change now and re-run the program, your program should now behave like this:
+
+![](lab5media/media/buggydragging.gif)
 
 Now it starts to feel a little better\! There are still a couple of
 things that are off. One of the big ones that can occur is when you drag
@@ -364,7 +436,7 @@ we barely click on one of the corners. To make this more evident, let's
 go ahead and change ```SHAPE_SIZE``` to be ```300``` so that we have a large
 Circle and oval and run the program again. Slowly drag the blue oval
 from its edge, and you'll notice the oval almost immediately jump to its
-center. In reality, what we want is not for it to jump like this but if
+center. *(You may also see this in the video above when you click on one of the corners)*.  In reality, what we want is not for it to jump like this but if
 we grab the oval from one of the edges and move, we really want it to
 move however much the mouse moved.
 
@@ -384,7 +456,7 @@ object, we can use those calculations to figure out how much to ```move```
 the object by in the x and y direction. Then after moving the object,
 the last thing we want to do in ```mouseDragged``` is to update the last
 known coordinates for the mouse cursor to be the current ones. We'll
-leave it as an exercise to use your neighbors and others to figure out
+leave it as an exercise to use your classmates to figure out
 the code that should be in ```mousePressed``` and ```mouseDragged``` (your hint
 is that ```mousePressed``` should have 3 lines of code and ```mouseDragged```
 should have 4-5 lines of code). You could do something nice like set
