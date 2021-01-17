@@ -115,20 +115,26 @@ Because we have
 an ArrayList, we looped through to create the balls, *but we did not loop
 through to create the balls in different places*, as each time through
 the loop we are giving the ovals the same coordinates to start at, which
-simply puts them on top of each other. An easy way to solve this is that
-rather than having the x in the new ```GOval``` always be ```WINDOW_WIDTH/2 –
-BALL_SIZE/2``` , we can make the oval be: <br>```(i*(WINDOW_WIDTH/3)) –
-BALL_SIZE/2```, then have the ```for``` loop start at one and go to three. By
+simply puts them on top of each other. 
+
+An easy way to solve this is to change the ```x``` when the new ```GOval``` is created
+
+from:
+- ```WINDOW_WIDTH/2 –BALL_SIZE/2```
+
+to:
+- ```(i*(WINDOW_WIDTH/3)) – BALL_SIZE/2```
+
+*If you wanted to have a general solution, you would replace the ```3``` in the previous line with ```NUM_BALLS + 1```*.  Then we need to have the ```for``` loop start at one and go to three (which is ```NUM_BALLS + 1```). By
 doing this, it would place the first ball at 1/3 of the width of the
 window and the second ball and 2/3 of the width of the window. Run the
-program again and the two balls should now be at different positions,
-and one ball will be the only one moving.
+program again and the two balls should now start at different positions.  However, only one ball is moving and eventually for a little bit they overlap.  If we make all balls move however now that they are spread out, we won't have them overlap anymore.
 
 ## **Making all balls move**
 
 Just like you did in creating multiple GOvals, the trick with making all
-the balls move is to go through the list and call move on each one. You
-can do this **by surrounding the code that moves the ball and changes
+the balls move is to go through the list and call ```move``` on each one. You
+can do this **by surrounding the code that moves ```ball``` and changes
 the direction inside of a for loop**. Because it's very common to
 iterate through a list, Java has provided an alternate loop syntax for
 cycling through a list.
@@ -145,7 +151,7 @@ In our case, you would write
 
 ```for(GOval ball:balls)```, which would now allow you to reference each
 oval in that list and call it ```ball``` **while inside the** ```for```
-**loop**.
+**loop**.  Because we have redeclared ball, notice that it is no longer blue, (*we created a local variable with the same name so that we wouldn't have to modify our existing code*).  
 
 To be sure you understand what is happening, the above for loop is
 equivalent to writing this:
@@ -161,11 +167,17 @@ loop, so that you change the color of the ball that you clicked on. One
 thing to know about the simplified version of the for loop is that you
 **cannot use remove elements from the list while iterating through it.**
 Doing so would raise an exception, so if you are at all confused, you
-can always go back to using the standard for loop syntax shown above to
+can always go back to using the standard ```for``` loop syntax shown above to
 iterate through a list instead.
 
+Lastly, in order to make sure that we convert all the code from working on the instance variable ball instead of the arraylist of balls.  We should delete or remove the instance variable ```private GOval ball;```.  Once you do that, you may notice other errors that pop up.  Those should be indications of places where you should work with the local variable.  For example, one such error that you should come in is from outOfBounds()
+
 When you run the program, you'll notice that the balls are all moving in
-the same direction and don't work independently. That is all you need
+the same direction and don't work independently. It should look something like the image below.
+
+![](lab6media/media/finalstep.gif)
+
+That is all you need
 for this mini-lab. When that is done, you can submit the text of the
 java file online via canvas. Just copy and paste the code into the
 editor into the canvas submission page for Ball.java.
@@ -184,9 +196,6 @@ loop that uses an ```i``` variable, so that you can use the same index (```i```)
 to link a particular ```GOval``` with an ```xVelocity``` and ```yVelocity``` if
 you'd want. If you do this while passing in a ```Goval``` into
 ```outOfBounds``` called ```ball```, then you should be good to go. You can also
-have them move in random locations by using a ```RandomGenerator``` like you
-had in Roulette and then use ```nextInt``` to generate a low and high, which
-could be used for the x and y velocity for each ball. Let me know if you
-have any questions.
+have them move in random locations by using a ```RandomGenerator```.  This is the same as you have in this lab for asking for colors, but instead we'll use a method called ```nextInt(low, high)``` to generate a random number between a low and high. This random generation could be used for the x and y velocity for each ball. Let me know if you have any questions.
 
 Good luck\!
