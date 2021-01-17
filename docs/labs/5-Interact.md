@@ -463,6 +463,8 @@ should have 4-5 lines of code). You could do something nice like set
 ```toDrag``` to be ```null``` in ```mouseReleased```, but in this situation it's not
 needed.
 
+![](lab5media/media/dragging.gif)
+
 At this point you can submit the project, by submitting just the java
 files via canvas.
 
