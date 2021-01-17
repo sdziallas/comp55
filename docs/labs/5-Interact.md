@@ -21,7 +21,7 @@ reached the command to get input from the user, it would then wait for
 the user to type in some piece of information. While it was waiting,
 **the program would not be able to do anything**. 
 
-### Your computer once it needs to waits for your input:
+### Your computer once it needs to wait for your input:
 
 ![](https://media.giphy.com/media/UxREcFThpSEqk/giphy.gif)
 <br>
