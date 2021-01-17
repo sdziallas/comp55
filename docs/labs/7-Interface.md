@@ -45,7 +45,7 @@ programming. Calm before programming, then a happiness as we are writing
 code and excited with what we want, followed by Anger based off of the
 frustration of having to spend more time than we anticipated looking for
 bugs. Once we fix all of those bugs, then we will return back to being
-calm.
+calm, which lets us write more code.
 
 All entities will share the same state.
 
@@ -62,4 +62,4 @@ Step 5: Make an ```EmotionalCharacte```r
 
 You have to figure out what the goal is going to be of the interface lab
 and how to improve it. What am I going to ask them to do? Make a new
-class that they can then
+class that they can then implement so that they create their own emotional state. 
