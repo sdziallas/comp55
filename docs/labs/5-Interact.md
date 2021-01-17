@@ -74,7 +74,7 @@ files section in Canvas, and looking for the **InteractivityLab.zip**.
 **Import the project and open up *Ball.java* and run the
 program.** What you'll notice in the program is a very rough
 animation of a ball bouncing horizontally. 
-Here's what you should see approximately:
+Here's what you should see (approximately)):
 
 ![](lab5media/media/ballmotion.gif)
 
