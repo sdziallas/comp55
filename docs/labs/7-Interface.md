@@ -21,11 +21,10 @@ functionality for those methods. Java allows classes to implement as
 many interfaces as they like, which will become useful when you want to
 tie two classes together in a more flexible way.
 
-Let's start by downloading the **interfaces.zip** file, which you can do
-from [go.djosv.com/interface](http://www.djosv.com/interface)
+Let's start by downloading the **InterfacesLab.zip** file, which you can do
+from canvas or [directly from here](http://go.djosv.com/interface)
 
-Import that zip file like you normally would, through the _file-\>import_
-menu and existing projects into workspace selection.
+Import that zip file [like you normally would](lab2media/media/image2.gif).
 
 Let's do a quick representation of how the project works, you can scan
 through the files if you like, but this is what we would like to have.
