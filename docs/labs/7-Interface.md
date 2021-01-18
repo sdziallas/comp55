@@ -9,15 +9,23 @@ single class, while other languages that support multiple inheritance
 often have some clunky constructs to help determine what to inherit from
 which object. For example, if you wanted to create a ```ToyGuitar``` Class
 that inherited from both ```Toy``` and ```Guitar``` and they both have a
-variable called ```timesPlayed``` (where for toys it's the \# of times the
-toy is switched on and off and for the guitar it's the \# of times
-"Stairway to Heaven" has been performed), which ```timesPlayed``` should
+variable called ```timesPlayed```.  However:
+- In ```Toy```, ```timesPlayed``` is counting the \# of times the
+toy has been switched on while
+- In ```Guitar```, ```timesPlayed``` is counting the \# of times
+*Stairway to Heaven* has been performed
+
+![](https://media.giphy.com/media/fxLuTQsx3zQKk/giphy-downsized-large.gif)
+<br>
+*Source: [Giphy](https://giphy.com/gifs/fxLuTQsx3zQKk/media)*
+
+In this case, which version of ```timesPlayed``` should
 ```ToyGuitar``` inherit or modify when you reference ```ToyGuitar```? This can
 become messy and quite buggy. However, one thing that that Java has
-realized is that you should be able to "inherit" multiple sets of
+realized is that you should be able to *inherit* multiple sets of
 behaviors. This is where interfaces come in. **Interfaces** are special
-java files that allow us to declare methods, but provide no
-functionality for those methods. Java allows classes to implement as
+java files that allow us to declare methods, *but provide no
+functionality for those methods*. Java allows classes to implement as
 many interfaces as they like, which will become useful when you want to
 tie two classes together in a more flexible way.
 
@@ -57,8 +65,8 @@ Step 3: Make an ```EmotionalRect``` (can be a copy of ```EmotionalOval```)
 
 Step 4: Change ```ExpressionManager``` to pass in ```Emotional```
 
-Step 5: Make an ```EmotionalCharacte```r
+Step 5: Make an ```EmotionalCharacter```
 
 You have to figure out what the goal is going to be of the interface lab
 and how to improve it. What am I going to ask them to do? Make a new
-class that they can then implement so that they create their own emotional state. 
+class that they can then implement so that they create their own emotional state or have them build them build something completely new.
