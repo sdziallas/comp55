@@ -148,7 +148,7 @@ click yes. Your screen then may look something like this.
 
 ![](lab3media/media/image3.gif)
 
-Let's explain a couple of things about this window.
+*If you get an UnsupportedClassVersionError, make sure to use the latest version of eclipse or message me.*  Let's explain a couple of things about this window.
 
 Eclipse has different layouts for different activities that you would be
 doing, which it calls perspectives. When you are debugging, it switches
