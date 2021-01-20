@@ -10,11 +10,8 @@ range from very philosophical to very practical. We'll start with
 debugging tips. READ THESE before you start on the lab, which are taken
 from the maker of codingbat, Nick Parlante.
 
-Your grade for this lab will be based on your answers to a [google form](http://go.djosv.com/debuglab),
-your answers will include the number of bugs that you find and detail in
-the last section of that form. 
-As you read the lab, you'll be asked at times to visit the form at that
-moment, which will be in bold. You can work with one other person
+You'll get credit for the lab for answering questions in the form.  In order to encourage reading, I have moved the link to where the form is (you'll find out the link to the form as you read).  As you read the lab, you'll be asked at times to visit a form at that
+moment, with a single problem being an entire section in the google form, which will be in bold. You can work with one other person
 throughout the lab, **but each person must submit their own form**.
 
 ## Some advice
@@ -82,13 +79,19 @@ throughout the lab, **but each person must submit their own form**.
 > exception will list the file and line number where the exception
 > occurred. Anything that is blue and underlined acts like hyperlinks,
 > so clicking on them will immediately jump your editor to that file and
-> line.
+> line.  The lines also show a stack trace of who called which method, so that a
+> function on a lower line will be directly responsible for calling the line above it 
+> in that particular exception's case.   
 
-***Problem 1) Go to the online form and complete Problem 1. Continue
+Your grade for this lab will be based on your answers to a [google form](http://go.djosv.com/debuglab),
+your answers will include the number of bugs that you find and detail in
+the last section of that form. 
+
+***Problem 1) Go to the online form and complete Problem 1 (the entire section of it). Continue
 here once you are done.***
 
 > The screenshot in the online form is very similar to what you'll see
-> as you program.
+> as you program.  
 
 ### 2\. If an error occurred, what is the state of the object (AKA receiver), parameters?
 
