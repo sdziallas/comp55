@@ -312,8 +312,8 @@ identical to *Ball.java* when it was first created, except that there is
 nothing in ```run```.  **So add the line ```addMouseListeners()``` to the ```run``` method**.  Now that notifications about mouse events are setup, your job will be to 
 handle two events: 
 
-1) When the user first presses a mouse button, and 
-2) When the user drags. 
+1. When the user first presses a mouse button, and 
+2. When the user drags. 
 
 When the user clicks and drags we are hoping to modify an existing line.  So because we need it to persist between event calls, we need to make a line object as an instance variable.  
 
@@ -327,8 +327,8 @@ private GLine newLine;
 
 **Now, let's write a method for ```mousePressed```**.  This method will:
 
-1) Create a new ```GLine```
-2) call ```add``` on that new line to have it appear on the screen.
+1. Create a new ```GLine```
+2. call ```add``` on that new line to have it appear on the screen.
 
 
 Inside of ```mousePressed```,
