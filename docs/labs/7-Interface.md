@@ -1,5 +1,6 @@
 # Interface Lab
 
+## Why Interfaces?
 The purpose of this lab is to introduce you to interfaces, which is a
 neat way to be able to use some of the benefits of polymorphism without
 having the headaches of inheritance. While inheritance has its uses, one
@@ -15,7 +16,7 @@ toy has been switched on while
 - In ```Guitar```, ```timesPlayed``` is counting the \# of times
 *Stairway to Heaven* has been performed
 
-![](https://media.giphy.com/media/fxLuTQsx3zQKk/giphy-downsized-large.gif)
+![](lab7media/media/nostairway.png)
 <br>
 *Source: [Giphy](https://giphy.com/gifs/fxLuTQsx3zQKk/media)*
 
@@ -29,12 +30,19 @@ functionality for those methods*. Java allows classes to implement as
 many interfaces as they like, which will become useful when you want to
 tie two classes together in a more flexible way.
 
+## Working on our Simulator for this lab
 Let's start by downloading the **InterfacesLab.zip** file, which you can do
 from canvas or [directly from here](http://go.djosv.com/interface)
 
 Import that zip file [like you normally would](lab2media/media/image2.gif).
 
-Let's do a quick representation of how the project works, you can scan
+In today's lab, what we are going to do is simulate the typical programming process, and so we are going to create an office programming simulator.  The goal of the simulator is to display the three most common emotional states in programming.  I would say that these three emotional states often happen in this particular order:
+
+Before you beging programming there may be a sense of calmness or possibly a neutral feeling.  That calmness then changes to happiness as we are being productive and writing
+code that we think will work.  That happiness then changes to anger/frustration when we encounter a bug.  Once we fix the bug, then we return back to being
+calm, which lets us write more code and the cycle repeats.  Our program will be responsible for showing different graphical representations for each of these different states.
+
+Let's do a quick representation of how this project works, you can scan
 through the files if you like, but this is what we would like to have.
 
   - Once user opens the application, all entities are in a calm state.
@@ -47,12 +55,7 @@ through the files if you like, but this is what we would like to have.
 
   - The emotional states go from one to the next in a cyclical order.
 
-For our program we are going to cycle through the three states common to
-programming. Calm before programming, then a happiness as we are writing
-code and excited with what we want, followed by Anger based off of the
-frustration of having to spend more time than we anticipated looking for
-bugs. Once we fix all of those bugs, then we will return back to being
-calm, which lets us write more code.
+
 
 All entities will share the same state.
 
