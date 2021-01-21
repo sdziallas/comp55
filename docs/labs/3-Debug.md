@@ -236,7 +236,7 @@ debugger. Using the debugger can be extremely useful.
 
 ## Setting a breakpoint
 
-Double click on the left bar in eclipse, if you do this correctly and in
+Double click on the left bar just to the left of the line numbers in eclipse ![](lab3media/media/leftbareclipse.png), if you do this correctly and in
 the right area, you should see a little circle pop up ![](lab3media/media/breakpoint.png), to the left of the line of code where you set it.
 
 Now, everytime the program runs in debug mode, the program will run up
