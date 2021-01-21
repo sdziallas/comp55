@@ -248,10 +248,10 @@ occurring, go ahead and set that breakpoint, and then debug the program.
 
 Now your program will stop when it reaches that line
 
-**Problem 3) Provide a screenshot that shows the program stopped at the
+**Problem 3) Provide a full eclipse screenshot that shows the program stopped at the
 line ```takeAction(option);``` which is in the ```infiniteMenu```
 method.** *Make sure that you are in the debug perspective, that the line
-is highlighted in its debug color and the Debug and variables panes are showing
+has a highlight on the line number (slight gray if using our color theme, this highlight tell us we have stopped on that line ![](lab3media/media/highlightingray.png) and the Debug and variables panes are showing
 the relevant information.*
 
 Once here you can inspect variables. But you can also ask the debugger
@@ -263,7 +263,7 @@ execute that line, you can use the commands shown in Eclipse's toolbar.
 ![](lab3media/media/image10.png)
 
 The red stop button ![](lab3media/media/terminate.png) above is something you want to hit whenever you want
-to stop debugging, while the rectangle-play button (to the left) ![](lab3media/media/resumeicon.png) will
+to stop debugging (*or to terminate any program that you left running*), while the rectangle-play button (to the left) ![](lab3media/media/resumeicon.png) will
 have the program continue until it reaches the next breakpoint. Notice
 the three toolbar buttons that have arrows and are circled in the
 picture above. Each of those is called *Step Into*![](lab3media/media/stepinto.png), *Step Over*![](lab3media/media/stepover.png) and
