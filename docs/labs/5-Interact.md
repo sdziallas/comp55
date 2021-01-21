@@ -311,6 +311,7 @@ it. **Go ahead and open up your *RubberBand.java***, which looks almost
 identical to *Ball.java* when it was first created, except that there is
 nothing in ```run```.  **So add the line ```addMouseListeners()``` to the ```run``` method**.  Now that notifications about mouse events are setup, your job will be to 
 handle two events: 
+
 1) When the user first presses a mouse button, and 
 2) When the user drags. 
 
@@ -325,8 +326,8 @@ private GLine newLine;
 ```
 
 **Now, let's write a method for ```mousePressed```**.  This method will:
-1) Create a new
-```GLine```
+
+1) Create a new ```GLine```
 2) call ```add``` on that new line to have it appear on the screen.
 
 
