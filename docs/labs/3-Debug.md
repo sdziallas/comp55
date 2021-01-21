@@ -251,8 +251,9 @@ Now your program will stop when it reaches that line
 **Problem 3) Provide a full eclipse screenshot that shows the program stopped at the
 line ```takeAction(option);``` which is in the ```infiniteMenu```
 method.** *Make sure that you are in the debug perspective, that the line
-has a highlight on the line number (slight gray if using our color theme, this highlight tell us we have stopped on that line ![](lab3media/media/highlightingray.png) and the Debug and variables panes are showing
-the relevant information.*
+has a highlight on the line number (slight gray if using our color theme, see below) and the Debug and variables panes are showing the relevant information.*
+
+![](lab3media/media/highlightingray.png)
 
 Once here you can inspect variables. But you can also ask the debugger
 to execute the following line, as if you the computer were executing
