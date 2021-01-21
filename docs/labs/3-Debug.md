@@ -249,10 +249,10 @@ occurring, go ahead and set that breakpoint, and then debug the program.
 Now your program will stop when it reaches that line
 
 **Problem 3) Provide a screenshot that shows the program stopped at the
-line** ```**takeAction(option);``` which is in the** ```**infiniteMenu```
-method. Make sure that you are in the debug perspective, that the line
-is highlighted in green and the Debug and variables panes are showing
-the relevant information.**
+line ```takeAction(option);``` which is in the ```infiniteMenu```
+method.** *Make sure that you are in the debug perspective, that the line
+is highlighted in its debug color and the Debug and variables panes are showing
+the relevant information.*
 
 Once here you can inspect variables. But you can also ask the debugger
 to execute the following line, as if you the computer were executing
