@@ -79,9 +79,9 @@ throughout the lab, **but each person must submit their own form**.
 > exception will list the file and line number where the exception
 > occurred. Anything that is blue and underlined acts like hyperlinks,
 > so clicking on them will immediately jump your editor to that file and
-> line.  The lines also show a stack trace of who called which method, so that a
+> line.  The lines also show a stack trace of who called which method, *so that a
 > function on a lower line will be directly responsible for calling the line above it 
-> in that particular exception's case.   
+> in that particular exception's case.*   
 
 Your grade for this lab will be based on your answers to a [google form](http://go.djosv.com/debuglab),
 your answers will include the number of bugs that you find and detail in
