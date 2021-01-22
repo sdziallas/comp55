@@ -81,7 +81,7 @@ throughout the lab, **but each person must submit their own form**.
 > so clicking on them will immediately jump your editor to that file and
 > line.  The lines also show a stack trace of who called which method, *so that a
 > function on a lower line will be directly responsible for calling the line above it 
-> in that particular exception's case.*   
+> in that particular exception's case.*   Remember also that there is a [video on null pointer exceptions I did a while back](https://youtu.be/x9JArfGJb8c) that explains more about what exceptions mean in general.
 
 Your grade for this lab will be based on your answers to a [google form](http://go.djosv.com/debuglab),
 your answers will include the number of bugs that you find and detail in
@@ -303,10 +303,10 @@ window might look like.
 
 ![](lab3media/media/image12old.png)
 
-Notice also that when you click on a variable, a string representation
+**Notice also that when you click on a variable, a string representation
 of that variable is presented in the area just below the variables, in
 this case it's just the ```DotMover``` class and the memory address where it
-resides. If ```DotMover``` had overridden ```toString()```, the ```String```
+resides.** If ```DotMover``` had overridden ```toString()```, the ```String```
 equivalent would be there. You don't have to remember the memory
 address, usually it's easier to use the id values that eclipse gives in
 the value column (like *id=40*) which work like a memory address.
