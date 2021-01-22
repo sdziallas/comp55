@@ -56,7 +56,25 @@ Currently when you run the program, you'll notice that the program goes through 
 
 ![](lab7media/media/initialUMLSequence.png)
 
-In this lab, we want to add more objections that show emotion so that they are displayed on the screen when the user clicks on the mouse.  Currently, all we have is a single ```EmotionalOval```.  While we could try to add a second EmotionalOval or three or four, having just a bunch of emotional ovals that do the exact same thing isn't that exciting.  Let's introduce a new class called an ```EmotionalRect```.  One thing you may be tempted to do is just copy and paste EmotionalOval.  I will look away :eyes: from the screen while you do so.
+In this lab, we want to add more objections that show emotion so that they are displayed on the screen when the user clicks on the mouse.  Currently, all we have is a single ```EmotionalOval```.  While we could try to add a second EmotionalOval or three or four, having just a bunch of emotional ovals that do the exact same thing isn't that exciting.  Let's introduce a new class called an ```EmotionalRect```.  One thing you may be tempted to do is just copy and paste ```EmotionalOval```.  I will look away from your screen while you do so 👀.
+
+Once you copied ```EmotionalOval``` and renamed it to ```EmotionalRect```, let's go ahead and edit the new file to have it extend ```GRect``` instead of ```GOval```, which is on line 5.  So at this point our UML may look like this.  
+
+![](lab7media/media/UMLRectHow.png)
+
+If this is the case, then we have to think about how we are going to connect this GRect with the rest of our program?  One solution is just to keep copying and pasting like we already did (and I looked away from 🙈), and copy and paste things like expressNewEmotions, introduce a new method in EmotionalState for expressEmotion specifically tied to EmotionalRects, as well as have a new ArrayList for EmotionalRects.  This is what the new potential diagram would look like.  
+
+![](lab7media/media/UMLRectHow1.png)
+
+While that may sound ok, what if we wanted to have another different emotional being?  It sounds like a lot of copying and pasting, and we are better people that that.  We don't want to harm anyone.  So another solution would be to perhaps not have EmotionalRect and EmotionalOval subclass from GRect and GOval, but maybe instead from an EmotionalObject.  Then we could change all of our instances from EmotionalOval to EmotionalObjects and then still potentially make it work?  So here is a UML of that proposition.
+
+![](lab7media/media/UMLRectHow2.png)
+The problem with such an approach is that if we have both now subclass off of EmotionalObject, how will they get the properties of GOval and GRect, and how will we be add them on the screen and call all the wonderful methods we want to use like setColor and such?  There has to be a better way.  
+
+## Introducing the Interface
+
+
+
 
   - Many different entities can be displayed on the screen (via editing
     code)
