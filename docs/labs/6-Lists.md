@@ -1,3 +1,9 @@
+Before working on this lab, you'll need to make sure that you finish at least the [Ball portion of the interactivity lab](5-Interact.html), so that when you run that file, you are able to do this:
+
+![](lab5media/media/finalball.gif)
+
+If your program has not gotten to that stage, please [go back](5-Interact.html) and get there first.  You've been warned.
+
 # ArrayLists
 
 **```ArrayList```** is a special Java collection that makes keeping track of
