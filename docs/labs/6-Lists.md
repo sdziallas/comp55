@@ -86,7 +86,7 @@ To complete this lab, you are going to copy your **Ball.java** file from
 the Interactivity lab and paste it in that same project (*Make sure to
 cover the Ball portion of the Interactivity Lab before attempting this
 lab*). You can rename the file **Balls.java**, since your end goal will
-be to have multiple balls bouncing off the screen. You'll also have the
+be to have multiple balls bouncing off the screen. If you decide to copy and paste the code into another project, you should make sure to change the ```main``` method at the bottom, which should change from ```newBall().start()``` to ```new Balls().start()```.  You'll also have the
 program change a single ball's color when that particular ball is
 picked. Let's start by introducing a constant in your file ```NUM_BALLS```
 that will store 2.
