@@ -1,7 +1,7 @@
-# Preparation for Git Team Lab (Take out egit stuff, just explain, but add direct hash for git credentials)
+# Preparation for Git Team Lab (Add direct hash for git credentials)
 
 This lab are a mishmash of steps that need to be completed individually
-before we meet again in class.
+before we meet again in class.  What we are doing is joining the wide world of sharing code repositories.  To do that, we're going learn about git, which is a way being able to keep track of our changes in code, and we're also going to learn about and use github, which is one of the leading companies to hosts git repositories (think projects) online.  *Some of the images that are here are taken directly from or sourced directly from github itself.*
 
 ## Step-1
 
@@ -14,13 +14,12 @@ Easiest way to do this is by going here:
 If you already have a github account, you can still get the pack (and
 you should\!), but you can also just go to the next step. Some of these
 are just awesome technologies that might be of use later when you are
-writing programs to take over the world. One thing you'll need to do for
-certain is to verify your email address. You can check to see if your
-email is verified by going to the github settings clicking on the icon
-on the upper right, going to *Settings*, and then clicking on *Emails*
-in the Personal Settings list on the left. The other thing you should do
-is give youself an icon, it can be the same one as from basecamp if
-you'd like. You can also change this in settings.
+writing programs to take over the world. **One thing you'll need to do for
+certain is to [verify your email address](https://docs.github.com/en/github/getting-started-with-github/verifying-your-email-address).** You can check to see if your
+email is verified by checking the Emails tab of your account settings in github.
+If you have a warning icon like this picture, then you'll want to ask to resend the verification email and verify your email with them.
+![](https://docs.github.com/assets/images/help/settings/email-verify-button.png)  <br> *Source: github*<br>If you do not have a warning sign or the label does not say *Resend Verification email*, then your email is verified.  The other thing you should do
+is give youself an icon picture, which is always fun to do and can be done from the profile option in settings. 
 
 ## Step-2
 
@@ -43,58 +42,9 @@ You will need it for Step 8.
 
 ## Step-3
 
-Now we are going to follow the rules that I adapted from this crunchify
-site
-(http://crunchify.com/how-to-configure-bitbucket-git-repository-in-you-eclipse/),
-however, I had to modify their directions so that they would work for
-GitHub instead of the site they used (bitbucket).
+![](lab8media/media/importrepo.gif)
 
-Now let's make Eclipse ready for Git.
-
-  - > Open Eclipse
-
-  - > Click on **Help** menu
-
-  - > Click **Install New Software**
-
-![Eclipse Install New Software](lab8media/media/image2.png)
-
-## Step-4
-
-Let's Install eGit
-into [Eclipse](http://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/). 
-
-Click the Add Button in the upper right of the Install Window to add a
-repository
-
-URL: **http://download.eclipse.org/egit/updates**
-
-![Eclipse - Add Repository](lab8media/media/image3.png)
-
-## Step-5
-
-Select **Eclipse Git** (1<sup>st</sup> option) and **Java Implementation
-of Git** (3<sup>rd</sup> option) form option and click **Next** a few
-times accept the agreement and **Finish** the install.
-
-![](lab8media/media/image4.png)
-
-## Step-6
-
-After it finishes, restart eclipse. Once eclipse restarts, Click
-**Window -\> Perspective -\> Open Perspective -\> Other** and then
-choose **Git** from list and click **OK**. The other option is to click
-the highlighted button below which is in the toolbar in the upper right.
-
-![Eclipse Git Prospective](lab8media/media/image5.png)
-
-## Step-7
-
-Click Clone
-Repository [Button](http://crunchify.com/simple-scroll-to-top-button-in-wordpress-footer-without-any-javascript-loading-genesis-framework-tips/).
-
-![Clone Git Repository to Eclipse and Add to
-View](lab8media/media/image6.png)
+Enter in your own URL that you created by going to this site.
 
 ## Step-8
 
@@ -112,39 +62,26 @@ Click the Green button that says *"Clone or Download"* and then click
 this button ![](lab8media/media/image8.png)(the clipboard icon to the
 right of the URL) to get automatically copy that URL to your clipboard.
 Once you do this it may actually automatically paste the URL into
-eclipse for you. Also check the option **Store in Secure Store** so that
-way your password is saved. As part of this, it might ask you for some
-recovery questions, which you can provide if you want.
+eclipse for you. 
+
+## Step 8 - Follow Secure Store Message Prompts
+Because you'll be need to enter your credentials often, it may make sense to just store them in the secure store, which means that the credentials are stored on your computer.  If you are super worried about safety, please just store them there and use a student account for this class.  I've had to deal with many more students forgetting their github passwords and locking themselves over their accounts, then having students whose computers have been hacked and whose github credentials have been rickrolled.  So please check the option **Store in Secure Store** so that
+way your password is saved. As part of this, eclipse may ask you for some
+recovery questions, which you can provide if you want, but nonetheless *save your password in the secure store*, the only scenario where I can see this being an issue if you are sharing an eclipse program with another developer who has a different login, and that should be quite scarce. s
 
 ![](lab8media/media/image9.png)
 
-Click **Next**, which will bring you to a branch selection window, which
-you can just click **Next** again. This will lead you to this Local
-Destination Window, which looks like this:
+Follow the following steps to get the project loaded into your computer. **Make sure to uncheck the box that does not have the eclipse project.** 
 
-![](lab8media/media/image10.png)![](lab8media/media/image11.png)
+![](lab8media/media/importfromgit.gif)
 
-Make the option **Import all existing Eclipse projects after the clones
-finishes** is selected and then click **Finish**
+When you click Finish, you'll see that your project is now in the package explorer and will look something like this.
+
+![](lab8media/media/nameofproject.png)
+
+Notice that there is this brackets and text ![](lab8media/media/brackets4.png) that is to the right of the name of our project.  That information is showing us the repository name as well as the name of our branch, which is called main.  For this class we will not discuss much about branching, so we will work exclusively on the main branch.
 
 ## Step-9
-
-You should see your GitHub repository now in eclipse's Git Repositories
-window. This is part of the Git View.
-
-![](lab8media/media/image12.png)
-
-## Step-10 – Running the downloaded project
-
-Now you can switch back to the Java Perspective which is the little
-toolbar button with the ***J*** that is in the upper right
-
-> ![](lab8media/media/image13.png)
-
-You should now see your java project, but it will look slightly
-differently. Because the project is connected to the repository now
-you're going to see the project name followed by some brackets and the
-repository name.
 
 Go ahead and open up the project *COMP55GitPrepLab* and double click on
 *SimplePicture.java* . You'll see that it will behave like if you
@@ -153,7 +90,7 @@ picture. At this point the project should work and run. If it doesn't,
 you may have to change some preferences on your eclipse, but this is
 very rare.
 
-# Step-11 Editing your Git Preferences
+## Step-11 Editing your Git Preferences
 
 So that we can make sure that you get credit for committing and working
 on the project, we're going to have you make one additional change to
