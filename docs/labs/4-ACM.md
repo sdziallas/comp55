@@ -220,7 +220,7 @@ this.
 The last class this lab will introduce today is ```GImage``` class, which
 lets us add rectangular images. ```GImage```s take three parameters, a
 filename, an x and y coordinate.
-The one difference is that the first parameter passed to an image must be the name of the image, including the extension. However, since we are loading something that is different than code, images will need to be in a media directory that is at the same level as src and bin folders.
+The one difference is that the first parameter passed to an image must be the name of the image, including the extension. However, since we are loading something that is different than code, **images will need to be inside the media folder**.  The media is at the same level as src and bin folders in your project.
 If it's somewhere else or you want an additional folder inside of your media folder, you
 should prefix any image with that folder name, like
 ```foldername/image.png```. If you'd like to get the size of any image
