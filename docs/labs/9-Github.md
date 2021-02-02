@@ -1,51 +1,52 @@
-# Git Team Lab (Points given based on completing all steps with team)
+# Git Team Lab 
+## Points given based on completing all steps with team
 
 While this is a team lab, each of you will need to do this on your own
 computer. Your points for this lab will be based off of both your own
 and your team's ability to finish this lab, so it's important to work
-together. **Make sure that you sit in a way where you can see what
+together. **Make sure that you can see what
 everyone else is doing, so that you can provide each other help.** It's
-also important that all of you finished the Git Prep Mini-Lab, which was
+also important that all of you finished the [Git Prep Mini-Lab](8-Github-Prep.html), which was
 necessary to finish before starting here. You should also be part of
 this class's github organization, if you didn't accept the invite, let
 me know and I can send you another one.
 
-## Step-0 
+## Step 0 
 
-*Setup your computers so you can all see each other's screens, and
-decide on labelling the people on your team: 1) git team admin 2)
-hackslash 3) procrastinator 4) martyr*
+Setup your computers so you can all see each other's screens, and
+decide on labelling the people on your team: Each one of you will take on one of these four roles:
+
+1. git team admin
+2. hackslash
+3. procrastinator 
+4. martyr (git team admin will take on this role for 3 person teams)
 
 Choose one git team admin – this person should feel comfortable with
 git, or have a fully working laptop that hasn't had any issues in the
 past couple of weeks, the git team admin should also feel comfortable
 searching for things in google. Once you decide on an admin notify me.
-The others don't matter, if you only have 3 people on your team, have
-the git team admin also server the martyr role.
 
-## Step-1 (For team admins only – others review the mini-lab)
+## Step 1 (For team admins only – others review the mini-lab)
 
-Team Admins, go to this site: http://go.djosv.com/teamlab. There you'll
+Team Admins, [go to this site](http://go.djosv.com/teamlab). There you'll
 accept the assignment, and it will ask you to create a team. Make the
 team with your original name. Once you click to finish and a repository
 is created, you'll get the default files that I have provided for all of
 you for this lab. The next thing will be to let everyone know that they
-can now signup.
+can now signup.  
 
-## Step-2 (for everyone)
-
-Checking out the new project
+## Step 3 (for everyone) - Cloning the new project
 
 Once your team admin has notified you that the team has been created,
 visit **go.djosv.com/teamlab**. There make sure **that you choose your
 correct group**. Once you've chosen the group and accepted the group
 assignment, you'll then be led to your new repository. At this point
-you'll want to **checkout** your team's new project.
+you'll want to **clone** your team's new project.
 
 To checkout the project, you'll need the URL from github, so once you
 are on the project page via github's site, you should arrive to a page
-that looks something like this: ![](lab9media/media/image1.png)Once
-there, you'll see a green button called clone or download, click it and
+that looks something like this: ![](lab9media/media/image1.png)
+Once there, you'll see a green button called clone or download, click it and
 you'll see a URL and what looks like a clipboard button, use that or
 select the URL to copy the entire URL.
 
@@ -63,9 +64,7 @@ step 3 make sure everyone on your team has the group project and that it
 looks the same on everyone's computers when you expand and see the
 source files*.
 
-## Step-3 (for everyone)
-
-Let's all make a change and reset
+## Step-3 (for everyone) - Let's all make a change and reset
 
 This may seem silly, but part of this will be just to make sure that all
 of you are used to making small changes and that all of you get practice
