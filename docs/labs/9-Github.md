@@ -276,7 +276,9 @@ you this:
 Why was it rejected? Let's have a quick drawing to see what's going on
 here.
 
-![](lab9media/media/image11.png)Think of the two sides here as being a
+![](lab9media/media/image11.png)
+
+Think of the two sides here as being a
 simplified view of the two competing histories. On the one hand the left
 side represents the history of commits that the server has, as well as
 martyr & hackslash. For example, first everyone was on the original
@@ -292,7 +294,9 @@ changes, and therefore rejected the change, saying it couldn't update
 the server since they don't have the latest information. A more accurate
 representation of this graph, which we'll get to is this:
 
-![](lab9media/media/image12.png)Notice that here we are more accurately
+![](lab9media/media/image12.png)
+
+Notice that here we are more accurately
 reflecting that the procrastinator and the martyr commits are both based
 off of the original commit. Because the procrastinator's build is not
 based off of the latest version, it won't allow it to say that it is in
@@ -307,7 +311,9 @@ thing and merge the procrastinator's changes with the hack's changes and
 create a new version based on the changes. That new change or the merge
 would theoretically look like the following graph below.
 
-![](lab9media/media/image13.png)As you can see what git is doing is
+![](lab9media/media/image13.png)
+
+As you can see what git is doing is
 basing the new commit off of the two changes, what was on the server and
 the changes that the procrastinator did. As mentioned previously when
 you pull, git will automatically try to create a merged version. Based
@@ -389,7 +395,9 @@ they'll get a conflicting results instead of merging.
 Now, this is going to look a little bit scarier as well, since your
 project explorer will have some red icons that are next to it.
 
-![](lab9media/media/image18.png)This is eclipse letting you know that
+![](lab9media/media/image18.png)
+
+This is eclipse letting you know that
 you have conflicts or changes that it doesn't know how to resolve.
 Because it doesn't know how to resolve the changes, you will be tasked
 with solving them and updating the server. If SimplePicture.java is not
@@ -417,7 +425,9 @@ after editing and saving the file, it should look something like this.
 
 ![](lab9media/media/image20.png)
 
-![](lab9media/media/image21.png)(The white x's to the left of the line
+![](lab9media/media/image21.png)
+
+(The white x's to the left of the line
 numbers are only there if you haven't saved the file yet) While the
 syntax errors went away, you'll notice that the red icons in the project
 explorer for martyr have not. To get rid of the red marks, the martyr
