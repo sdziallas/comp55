@@ -16,91 +16,82 @@ me know and I can send you another one.
 Setup your computers so you can all see each other's screens, and
 decide on labelling the people on your team: Each one of you will take on one of these four roles:
 
-1. git team admin
+1. git team admin (team member without computer issues)
 2. hackslash
 3. procrastinator 
 4. martyr (git team admin will take on this role for 3 person teams)
 
-Choose one git team admin – this person should feel comfortable with
-git, or have a fully working laptop that hasn't had any issues in the
-past couple of weeks, the git team admin should also feel comfortable
+In addition to feeling comfortable with computers, your git team admin should also feel comfortable
 searching for things in google. Once you decide on an admin notify me.
 
 ## Step 1 (For team admins only – others review the mini-lab)
 
 Team Admins, [go to this site](http://go.djosv.com/teamlab). There you'll
-accept the assignment, and it will ask you to create a team. Make the
-team with your original name. Once you click to finish and a repository
-is created, you'll get the default files that I have provided for all of
+accept the assignment, and it will ask you to create a team. Make a team with your team's name. Once you [continue](lab9media/media/acceptteam.gif), you'll eventually be asked to wait a little bit while github creates the repository.  [After refreshing the page](lab9media/media/repomade.gif) you'll get the default files that I have provided for all of
 you for this lab. The next thing will be to let everyone know that they
 can now signup.  
 
-## Step 3 (for everyone) - Cloning the new project
+## Step 2 (for everyone) - Cloning the new project
 
 Once your team admin has notified you that the team has been created,
-visit **go.djosv.com/teamlab**. There make sure **that you choose your
+visit **go.djosv.com/teamlab**. Make sure that you **choose your
 correct group**. Once you've chosen the group and accepted the group
 assignment, you'll then be led to your new repository. At this point
 you'll want to **clone** your team's new project.
 
 To checkout the project, you'll need the URL from github, so once you
-are on the project page via github's site, you should arrive to a page
-that looks something like this: ![](lab9media/media/image1.png)
-Once there, you'll see a green button called clone or download, click it and
-you'll see a URL and what looks like a clipboard button, use that or
-select the URL to copy the entire URL.
+are on the project page via github's site, remember that you can copy the URL using the copy button ![](lab8media/media/image8.png) next to the URL that is revealed after clicking on the ![](lab8media/media/greencode.png) button on your group repo page.  
 
-![](lab9media/media/image2.png)
-
-With that URL in your clipboard, you should use the same guidelines that
+With that URL in your clipboard, you should use the [same guidelines from our previous lab](8-Github-Prep.html##importing-your-new-repository-in-eclipse) that
 we posted previously about cloning a git repository via eclipse, so go
 into eclipse, open up the git perspective and clone a repository.
 
-If the URL was copied correctly, it should autofill when cloning the new
-repository. Make sure that as you check out the repository you place a
-checkmark on **import the project**. If you've forgotten the steps here,
-it's best if you go back and look at the mini lab. *Before moving to
+If you've forgotten the steps here, it's best if you go back and refer to the images about [importing into eclipse](lab8media/media/importrepo.gif) and [following the import wizard](lab8media/media/importfromgit.gif). 
+
+*Before moving to
 step 3 make sure everyone on your team has the group project and that it
-looks the same on everyone's computers when you expand and see the
-source files*.
+looks the same on everyone's computers*, which means it should look something like this: ![](lab9media/media/step2check.png).  There should be nothing to the left of the folder.
 
-## Step-3 (for everyone) - Let's all make a change and reset
+## Step-3 (for everyone) - Let's all make a change and reset (undo)
 
-This may seem silly, but part of this will be just to make sure that all
-of you are used to making small changes and that all of you get practice
-pulling and making changes to the project. For many of you, this will be
+This may seem silly, but mistakes happen.  Changes also become more difficult when you have accidentally made changes and you want to receive the latest version of the project.  For many of you, this will be
 the first time where you will be working with other people to write
-functional code. Mistakes can happen.
+code, which is exciting, but can also lead to some trouble. 
 
-What I'd like you to do is simply add one line to the graphics program
-java file. It can be changing a color adding a comment or doing
-anything. Make sure you don't spend too much time coming up with the
-change. The change is not important, what's important is getting used to
+What I'd like you to do is simply add one line to the 
+java file in this project and **save the file**. It can be changing a color, adding a comment or anything else you'd like to do that will only take a minute.  The change is not important, what's important is getting used to
 using git with a team before you start working on a much more
 complicated project.
 
-Once that person has made the changes and saved, you'll notice that
-their project, along with the file that they modified, now have a
-greater than sign (```>```) next to all projects and directories that have
-contain changes that are different than the latest commit.
+Once all of you have made the changes and saved the file, you'll notice that
+your project, along with the file that they modified, now have a
+greater than sign (```>```) next to all projects and directories that
+contain changes that differ from the latest **commit**, which is a named revision of your code.  Study this image here and what happens after saving.
+
+![](lab9media/media/singlechange.gif)
+
+More specifically look at what happened to the file after saving, which is that you have the sign next to all the changes.  
 
 ![](lab9media/media/image3.png)
 
 If you ever want to see what's different you can right click on the file
-and select *compare to-\>HEAD revision*. Anytime you see a greater than
+and select *compare to-\>HEAD revision*. 
+
+![](lab9media/media/comparewith.png)
+
+Anytime you see a greater than
 sign, it means that if you have something that is different than the
 latest version, and you have two choices to make: commit or **reset a
 directory**, which would revert your changes back to what the latest
-version is, thereby losing the changes you've made. Let's all do this
+version is, thereby *losing the changes you've made since your last commit*. Let's all do this
 right now. To do this, right click on the project, and say
-*Team-\>Reset*. Once you are in the reset menu, you'll see a menu like
-this.
+*Team-\>Reset*. And follow this example here.
 
-![](lab9media/media/image4.png)
+![](lab9media/media/teamreset.gif)
 
-Make sure that as part of that, you select the **Hard option** at the
-bottom to do a *Hard reset*, which will replace your current files with
-the previous files that were committed. Click the **Reset** Button, and
+Selecting the **Hard option** at the
+bottom will do a *Hard reset*, which will replace your current files with
+the previous files that were committed. Notice that after clicking the **Reset** Button, 
 you'll see that the changes you just made will go away and the **\>**
 symbol will be gone from the project, which lets you know that you are
 back to how the project was initially. Doing a reset is useful in
@@ -112,17 +103,15 @@ can move on to step 4.
 
 ## Step 4 (Martyr to commit, Hackslash to pull afterwards)
 
-Let's have the Martyr make a commit
+Let's have the Martyr make a commit - **if you don't remember your roles please review them now.**
 
-Remember how in grade school you sometimes had a talking stick where the
-person holding the stick was able to talk? For this lab we're going to
-start by doing something similar, where I want your team to take turns
-making a change, committing the change and pushing it to the repository,
-to help with this. **make sure everyone remembers who they are according
-to the labels up top.** While one person is holding the talking stick
+Remember how in grade school sometimes when discussions were unruly you had a *talking stick* where the
+person holding the stick was the only one able to talk? For this lab we're going to
+mimic this behavior, where I want your team to take turns
+with the *programming stick*.  While one person is holding the programming stick
 they will be the only ones making changes to code, everyone else should
 just watch them. Now this isn't realistic, but this is just meant to
-again get us used to the workflow of how to use leverage this software
+again get us used to the workflow of how to leverage this software
 while working on a group project. Let's have the martyr make a change to
 the code and then **commit and push** the change. One note on
 committing. When committing in the git staging view you end up seeing
@@ -141,7 +130,7 @@ picture of yourself to the project so that you could use it. You may not
 necessarily want that picture to be added into git and stored on github
 as once you add it to the repository, it's a bit more difficult to get
 it out. Another thing could be certain development preferences that you
-have like having a dark color theme. Git is agnostic about tracking
+have like having a certain text coloring theme. Git is agnostic about tracking
 changes it does not know much about your project, all it does is checks
 all the directories in your git repository for new files or files that
 are different than what's on the server and asks if you want to commit
