@@ -130,14 +130,12 @@ picture of yourself to the project so that you could use it. You may not
 necessarily want that picture to be added into git and stored on github
 as once you add it to the repository, it's a bit more difficult to get
 it out. Another thing could be certain development preferences that you
-have like having a certain text coloring theme. Git is agnostic about tracking
-changes it does not know much about your project, all it does is checks
-all the directories in your git repository for new files or files that
-are different than what's on the server and asks if you want to commit
+have like having a certain text coloring theme. Git may not know much about your project, it merely checks your git repository for new files or files that
+have changed and asks if you want to commit
 them. If you don't want git to track certain files, you can ask git to
 **ignore** those files. On the other hand, your java files should
 typically be in staged changes everytime you commit though, as you want
-to git to keep track of those changes in each commit. Remember that when
+git to keep track of those changes in each commit. Remember that when
 you commit, you will have to enter a commit message which is just a
 simple message that describes what the change they made was. Once the
 martyr commits and pushes, if it was successful they'll get a message
