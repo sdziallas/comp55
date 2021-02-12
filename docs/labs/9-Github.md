@@ -136,8 +136,7 @@ them. If you don't want git to track certain files, you can ask git to
 **ignore** those files. On the other hand, your java files should
 typically be in staged changes everytime you commit though, as you want
 git to keep track of those changes in each commit. Remember that when
-you commit, you will have to enter a commit message which is just a
-simple message that describes what the change they made was. Once the
+you commit, you will have to enter a **commit message** which summarizes what was done. Once the
 martyr commits and pushes, if it was successful they'll get a message
 like this.
 
@@ -164,26 +163,23 @@ Open up the history view to view the changes
 Everyone can open up the **History view** which can be done by right
 clicking on the project and selecting *Team-\>Show In History*. This
 will bring up the history of commits, along with the authors and the
-little messages detailing what happened.
+little messages detailing what happened.  If you click on the history and
+file that is present, scrolling through the lower left window will show you
+the changes made.
 
-![](lab9media/media/image7.png)
+![](lab9media/media/egithistory.gif)
 
 The history will show you the list of all the changes that were made for
 a particular project and when they were committed, along with an ID that
-you can just think of as being a version number. In the lower right
-panel of the history view you'll see the files that were changed as part
-of that commit, In this commit, only one file was changed, but when you
-click on one of the files down there, you'll see that file with more
-details in the opposite panel. That panel will highlight the additions
+you can just think of as being a version number. Notice how in the picture above clicking on the different files will highlight the additions
 and deletions that were made to that file as part of that commit. Git
 will keep track for you line by line of each change on each file that
 was made as part of that commit.
 
-When you do a history view, also notice that the martyr has different
-commits than everyone else. You can verify with your team members that
-their history might have a different commit at the top, depending on
-whether they pulled or committed or did nothing. That is because git
-uses your local copy of the repository to bring up the history. It does
+When you do a history view, also notice that **the martyr has the same history as the hackslash, but different than the procrastinator and the git team admin.** You can verify with your team members that
+their history has a different commit ID at the top, depending on
+whether they pulled or committed or did nothing. That is because *git
+uses your local copy of the repository to bring up the history.* It does
 not give you the latest version unless you ask it to fetch the latest
 version or pull.
 
@@ -202,11 +198,12 @@ the top. Hackslash should also not edit any other lines\! Once the
 hackslash has this, they should open up their history view to verify
 that they have two commits that their teammates don't have. The other
 option would be to have the hackslash just check in the package explorer
-where their project is for up arrow with a number next to it, which
-shows how many commits have yet to be pushed to the server (in this
-case, 2 commits).
+where their project is:
 
-![](lab9media/media/image8.png)
+![](lab9media/media/image8far.png)
+
+Notice how at the end of ![](lab9media/media/image8.png) you see ![](lab9media/media/2commits.png), the up arrow means commits need to be sent to the server and the number 2 denotes how many changes need to be sent (in this case, 2 commits).
+
 
 Once the hackslash has the two commits, they can then right click on
 their project and say *Team-\>Push to upstream*. Pushing to upstream
