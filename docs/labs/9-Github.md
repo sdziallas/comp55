@@ -112,10 +112,10 @@ with the *programming stick*.  While one person is holding the programming stick
 they will be the only ones making changes to code, everyone else should
 just watch them. Now this isn't realistic, but this is just meant to
 again get us used to the workflow of how to leverage this software
-while working on a group project. Let's have the martyr make a change to
-the code and then **commit and push** the change. One note on
+while working on a group project. ***Let's have the martyr 
+refactor the String filename for our GImage as a constant.***  Save, and next, **commit and push** the change. One note on
 committing. When committing in the git staging view you end up seeing
-two areas, Staged Changes and Unstaged Changes. Files that have been
+two areas, ***Staged Changes*** and ***Unstaged Changes***. Files that have been
 saved after being modified will show up in one of these two areas.
 ![](lab9media/media/image5.png)
 
@@ -206,14 +206,13 @@ Notice how at the end of ![](lab9media/media/image8.png) you see ![](lab9media/m
 
 
 Once the hackslash has the two commits, they can then right click on
-their project and say *Team-\>Push to upstream*. Pushing to upstream
+their project and say *Team-\>Push to origin*. Pushing to upstream
 takes those local commits that they have on their computer and sends
 them over to the github server, making them visible to everyone.
 Hackslash, make sure you get a message that does not say it was
-rejected, but rather, something that has this in the top window, which
-represents the two different commits:
+rejected, but rather, that you got a successful push, which means your screen should look similar to this and the ![](lab9media/media/2commits.png) you had in your repo should disappear.
 
-![](lab9media/media/image9.png)
+![](lab9media/media/pushtoorigin.gif)
 
 About committing…You should think of committing as being like a
 meta-save. Generally you want to commit every time you add some new
@@ -224,7 +223,7 @@ commit very often.** Committing code is going to be an important factor
 in your grade. While you shouldn't commit after doing every line like
 I'm going to ask you to do here, I would say once you've added
 something that makes the program different than what you had before (say
-a difference or change of 20 or 30 lines of code just to give a rough
+a difference or change of 10 or 20 lines of code just to give a rough
 estimate) it would make sense to commit. It makes sense that when you
 have something that can be described in a short message as being
 different than what you had before, you should commit it. Then after
@@ -233,13 +232,13 @@ well enough that it won't break other people's code and is bug free and
 that they should now have, that is when you should push the code to
 github.
 
-Once hacklash has pushed, have the martyr pull the latest results, and
-verify that they have the same history. Notice that when the martyr
+With the hacklash successfully pushing, have the martyr pull the latest results, and
+verify that they both have the same history. Notice that when the martyr
 pulled, their version of the code was replaced with the newest version.
-This is what generally happens when you pull, it will not only fetch the
+This is what generally happens when you **pull**, it will not only fetch the
 information from the server, but also change your code so that you have
-the latest changes in your project's files. So far the hackslash and
-martyr should have the latest changes, and the others should not. This
+the latest changes in your project's files. *So far the hackslash and
+martyr should have the latest changes, and the others should not.* This
 is important before moving on, if not you can just repeat this step to
 make additional changes to the code. No need to revert back.
 
