@@ -392,7 +392,7 @@ notation of having
 your changes
 =======
 change on server
->>>>>>> branch 'main' of https://urlhere
+>>>>>>> branch 'main' of https://url-for-your-git-repos-here
 ``` 
 
 in there to let you know
