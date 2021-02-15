@@ -91,7 +91,7 @@ One thing we can do is simply move the label horizontally every 1000ms.
 Go ahead and have ```myLabel``` move 5 pixels to the right, while moving it zero
 pixels in the y direction. Lastly, make sure that you call ```start()``` on the timer you created in ```run()```.  If you added in all three of these steps, you should see this when you run the program.
 
-
+![](lab10media/media/timerinitcut.gif)
 
 If you don't see it move, make sure that you have done the three steps we outlined above.  
 
@@ -102,37 +102,39 @@ variable ```numTimes``` that keeps track of how many times ```actionPerformed```
 has been called.**
 
 To do this in ```run()```, make sure to initialize that number to 0, and
-increment it at the end of ```actionPerformed```. Now just for fun, let's
+increment ```numTimes``` at the start of ```actionPerformed```. Now just for fun, let's
 change the text of the label so that it updates the label with the
-```numTimes```, we can do this by calling ```setLabel```, or something like
+```numTimes```, we can do this by calling ```setLabel``` like
 this:
 
 ```java
 myLabel.setLabel("times called? " + numTimes);
 ```
 
-When you run this again, you'll notice the text will slowly move and
+When you run the program again, you'll notice the text will slowly move and
 will also update every second or so with the number of times that it has
 been called.
 
+![](lab10media/media/timerinitmidcut.gif)
+
 The **Timer** objects in java have a lot of flexibility, and so I
 encourage you to later look at all the ways you can use and leverage a
-timer. But for now I want to direct you to two methods, one is **stop**
-which would stop the timer and the other is ```setInitialDelay```, which
-takes an integer for how much you want to delay before starting the
+timer. But for now I want to direct you to two methods, one is **```stop```**
+which would stop the timer and the other is **```setInitialDelay```**, which
+takes an integer for how many milliseconds you want to delay before starting the
 constantly running the timer. It's best to add the delay before you
-call. Try to add a three second delay before the timer starts. While the
+call ```start```. Add a three second delay before the timer starts. While the
 concept of **stop** seems simple enough, it may not always make sense as
 to when or who should be able to make the timer stop. Let's add a call
 to stop the timer in ```actionPerformed```. However, if we declared our
-Timer as a local variable, we'll have to switch it to be an instance
-variable instead. Since ```actionPerformed``` is called many times, there is
+Timer as a local variable, **switch the timer to be an instance
+variable** instead. Since ```actionPerformed``` is called many times, there is
 probably a special time when we would want to stop the timer. In this
 situation, use an ```if``` statement to say that we want to stop the timer
-when ```numTimes``` has reached 20. When you run your program, you should
-get to a screenshot that looks like this.
+when ```numTimes``` has reached 10. When you run your program, you should
+get to a screenshot that looks like this (if you add a return statement, then you may end without it moving one final time)
 
-![](lab10media/media/image1.png)
+![](lab10media/media/timerinitdone.gif)
 
 Once you have that, **commit and push your work**, make sure to **put a
 brief message in the commit that explains what you did** and then move
