@@ -6,19 +6,20 @@ it works, and how we can make something that is pretty cool using it.
 For this demo we're going to start with a very basic timer. You'll be
 able to get timers lab by checking out the repository from github here:
 <http://go.djosv.com/timer> . Once you accept the assignment, make sure
-to clone the repository in eclipse, making sure to select the ***import
-existing projects into eclipse*** checkbox. Be sure to read the entire
+to from eclipse use the [***File-\>Import-\>Git-\>Projects from Git*** process](lab8media/media/importrepo.gif) that we outlined previously, [making sure to select the appropriate actions as you move through](lab8media/media/importfromgit.gif). Be sure to read the entire
 document, as I'll be asking you to commit and push at various parts
 while you're working on the project.
 
 ## What is a timer?
 
-A **timer** is a Java class whose sole responsibility is to wake up
+A **```Timer```** is a Java class whose sole responsibility is to wake up
 every X milliseconds. You end up specifying how often you want a timer
 to wake up. From an analogy standpoint, it's very much like a repeating
 alarm. Since a ```Timer``` is a class, to create one of these alarms, we
-have to create a timer using similar syntax that we've used with any
-other class:
+have to follow three steps.
+
+### 1. Create a timer object
+We create timers using similar syntax that we've used previously to create other Java objects:
 
 ```java
 Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
@@ -35,7 +36,10 @@ another class or object altogether (like I have written with
 ```objectToBeWokenUp```). If you would like the same class where you are
 writing the Timer code to wake up instead, then you would use the
 special keyword ```this``` … ```this``` refers to yourself, the object that you
-are currently in. Any class that would like to be responsible party for
+are currently in. 
+
+### 2. Setup event handlers - ```ActionLister``` and ```actionPerformed``` - in the appropriate class
+Any class that would like to be responsible party for
 handling the alarm must implement the ```ActionListener``` interface. The
 ```ActionListener``` interface has just one method, ```public void
 actionPerformed(ActionEvent e)```. So every time the timer wakes up, it
@@ -53,6 +57,7 @@ handlers are finished. So what you do in each should be small, and not
 have too many nested for loops or very long loops, so that your program
 doesn't hang.
 
+### 3. Call the timer's ```start``` method
 While the new ```Timer``` line shown at the top of the page sets up the
 ```Timer```, it does not actually turn the timer on. To start the timer so
 that it repeatedly calls ```actionPerformed```, you must tell that
@@ -69,14 +74,11 @@ someTimerVar.start();
 Let's go ahead and open up **MyFirstTimer.java** to start writing in the
 code. Notice that here we have a simple ```GraphicsProgram``` with a
 ```GLabel``` added to the screen. If you run the program, you'll get a
-simple window with a label that does nothing. Let's first start by
-adding a Timer to the **run** method. You can name the timer anything
-you want, but have the 1<sup>st</sup> argument be ```1000``` and then place
-**this** as the 2<sup>nd</sup> argument. So ```MyFirstTimer``` will be
-notified every second or 1000ms. Because of this, you'll see some errors
-at the moment, which just means that if we want to be notified, we need
-to implement the ```ActionListener``` interface. Let's add ```implements
-ActionListener``` to the top of the class, as well as an ```actionPerformed```
+simple window with a label that does nothing. **Let's first start by
+creating a Timer in the ```**run**``` method**. You can name the timer anything
+you want, but have the 1<sup>st</sup> argument be ```1000``` and the 2<sup>nd</sup> argument be **```this```**. Having these two arguments means ```MyFirstTimer``` (```this```) will be
+notified every second (```1000```ms). The next step will be to implement the ```ActionListener``` interface. Let's add ```implements
+ActionListener``` to line 8, as well as an ```actionPerformed```
 method.
 
 ```java
@@ -86,14 +88,18 @@ public void actionPerformed(ActionEvent e) {
 ```
 
 One thing we can do is simply move the label horizontally every 1000ms.
-Go ahead and have it move 5 pixels to the right, while moving it zero
-pixels in the y direction. Run the program again to watch it change.
+Go ahead and have ```myLabel``` move 5 pixels to the right, while moving it zero
+pixels in the y direction. Lastly, make sure that you call ```start()``` on the timer you created in ```run()```.  If you added in all three of these steps, you should see this when you run the program.
+
+
+
+If you don't see it move, make sure that you have done the three steps we outlined above.  
 
 Before we move on to the next program, it's important to understand a
 classic procedure, which is to have a variable that keeps track of how
-many times ```actionPerformed``` has been called. Let's create a private
+many times ```actionPerformed``` has been called. **Let's create a private
 variable ```numTimes``` that keeps track of how many times ```actionPerformed```
-has been called.
+has been called.**
 
 To do this in ```run()```, make sure to initialize that number to 0, and
 increment it at the end of ```actionPerformed```. Now just for fun, let's
