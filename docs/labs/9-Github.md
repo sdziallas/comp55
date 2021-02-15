@@ -339,6 +339,8 @@ should also look at the history view and notice their history matches the procra
 If you notice the left, it shows a similar diverging graph that comes
 back together with the merge at the end.
 
+Here's a [full walkthrough](lab9media/media/resolvemerge.gif) for the procrastinator on solving the merge steps, which just consists of pulling and then pushing, when a push is rejected.
+
 ## Step 8: Martyr & Hackslash - commit and push the same line
 
 Let's cause some havoc :fire:
