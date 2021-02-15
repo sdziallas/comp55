@@ -11,7 +11,7 @@ necessary to finish before starting here. You should also be part of
 this class's github organization, if you didn't accept the invite, let
 me know and I can send you another one.
 
-## Step 0 
+## Step 0: Everyone - Pick roles and setup room
 
 Setup your computers so you can all see each other's screens, and
 decide on labelling the people on your team: Each one of you will take on one of these four roles:
@@ -24,14 +24,15 @@ decide on labelling the people on your team: Each one of you will take on one of
 In addition to feeling comfortable with computers, your git team admin should also feel comfortable
 searching for things in google. Once you decide on an admin notify me.
 
-## Step 1 (For team admins only – others review the mini-lab)
+## Step 1: Team Admins - setup repo
+## Everyone else – Review the mini-lab steps
 
 Team Admins, [go to this site](http://go.djosv.com/teamlab). There you'll
 accept the assignment, and it will ask you to create a team. Make a team with your team's name. Once you [continue](lab9media/media/acceptteam.gif), you'll eventually be asked to wait a little bit while github creates the repository.  [After refreshing the page](lab9media/media/repomade.gif) you'll get the default files that I have provided for all of
 you for this lab. The next thing will be to let everyone know that they
 can now signup.  
 
-## Step 2 (for everyone) - Cloning the new project
+## Step 2: Everyone - Clone the new project
 
 Once your team admin has notified you that the team has been created,
 visit **go.djosv.com/teamlab**. Make sure that you **choose your
@@ -52,7 +53,7 @@ If you've forgotten the steps here, it's best if you go back and refer to the im
 step 3 make sure everyone on your team has the group project and that it
 looks the same on everyone's computers*, which means it should look something like this: ![](lab9media/media/step2check.png).  There should be nothing to the left of the folder.
 
-## Step-3 (for everyone) - Let's all make a change and reset (undo)
+## Step 3: Everyone - make a change and reset (undo)
 
 This may seem silly, but mistakes happen.  Changes also become more difficult when you have accidentally made changes and you want to receive the latest version of the project.  For many of you, this will be
 the first time where you will be working with other people to write
@@ -101,7 +102,7 @@ you've done much with the code. Once all your team members make a change
 and reset so that they *no longer have a \> sign on their project*, you
 can move on to step 4.
 
-## Step 4 (Martyr to commit, Hackslash to pull afterwards)
+## Step 4: Martyr commits, and Hackslash pulls afterwards
 
 Let's have the Martyr make a commit - **if you don't remember your roles please review them now.**
 
@@ -113,7 +114,7 @@ they will be the only ones making changes to code, everyone else should
 just watch them. Now this isn't realistic, but this is just meant to
 again get us used to the workflow of how to leverage this software
 while working on a group project. ***Let's have the martyr 
-refactor the String filename for our GImage as a constant.***  Save, and next, **commit and push** the change. One note on
+refactor the String filename for our GImage as a constant (~Line 14).***  Save, and next, **commit and push** the change. One note on
 committing. When committing in the git staging view you end up seeing
 two areas, ***Staged Changes*** and ***Unstaged Changes***. Files that have been
 saved after being modified will show up in one of these two areas.
@@ -156,7 +157,7 @@ selecting the Pull option that does not have the three dots next to it).
 If hackslash does have the \> sign on their project, have them do a hard
 reset like we did in step 2 before pulling.
 
-## Step 5: Looking at the results (Everyone)
+## Step 5: Everyone - Look at the results in the History
 
 Open up the history view to view the changes
 
@@ -183,9 +184,7 @@ uses your local copy of the repository to bring up the history.* It does
 not give you the latest version unless you ask it to fetch the latest
 version or pull.
 
-## Step 6:
-
-Hackslash commits multiple times and then pushes
+## Step 6: Hackslash - commit multiple times and then push
 
 Let's have the hackslash, who just pulled in the previous step, now add
 a comment at the top of the java file, **but not push.** After
@@ -194,7 +193,7 @@ beginning of java file and commit again without pushing. If the
 hackslash did push that's ok, just start the process over. What the
 hackslash should have is a series of two commits that have not been
 pushed onto the server, where the changes are only in the comments at
-the top. Hackslash should also not edit any other lines\! Once the
+the top (lines 1 & 2). Hackslash should also not edit any other lines\! Once the
 hackslash has this, they should open up their history view to verify
 that they have two commits that their teammates don't have. The other
 option would be to have the hackslash just check in the package explorer
@@ -242,16 +241,16 @@ martyr should have the latest changes, and the others should not.* This
 is important before moving on, if not you can just repeat this step to
 make additional changes to the code. No need to revert back.
 
-## Step 7
+## Step 7: Procrastinator - Commit and Unsucessfully Push
 
 Let's have the procrastinator push changes
 
-Now it's the procastinator's turn. Let's have them make a change to the
-file in run. For our purposes, let's have them change the text of the
-GLabel to whatever they want. Then save the file, commit
+Now it's the procastinator's turn. ***Procrastinator, make a change to the
+the text of the
+GLabel (~Line 18) to whatever you want.*** Then **save** the file, commit
 (*Team-\>Commit*) and try to push the changes they just made to that
-file. While the commit will have been successful, the push would not,
-eclipse will very subtly tell you the push was unsuccessful, by showing
+file. *While the commit will have been successful, the push will not.*
+Eclipse very subtly tell you the push was unsuccessful, by showing
 you this:
 
 ![](lab9media/media/image10.png)
@@ -259,42 +258,32 @@ you this:
 Why was it rejected? Let's have a quick drawing to see what's going on
 here.
 
-![](lab9media/media/image11.png)
+![](lab9media/media/trees.gif)
 
-Think of the two sides here as being a
+In this drawing, think of the two sides here as being a
 simplified view of the two competing histories. On the one hand the left
 side represents the history of commits that the server has, as well as
 martyr & hackslash. For example, first everyone was on the original
-version. Then martyr ended up making a commit based off of that version
-which would be the little M and it's based off of that original commit.
-Then the hackslash, who pulled, received the latest commit, so then they
-made 2 commits that were based off of martyr's changes (which we are
-calling H1 and H2). Meanwhile, the procrastinator, who never pulled,
-ended up committing a change that was based on the original. When they
+version. Then martyr ended up making a commit based off of that original commit.
+The martyr pushed their changes.  Next the hackslash, who pulled the code received the latest commit, so their commits were based off of martyr's changes. Meanwhile, the procrastinator, who never pulled,
+committed a change based on the original commit. When the procrastinator
 tried to push their changes. The server noticed that their newest change
 was based on the original, but that they did not have the latest
 changes, and therefore rejected the change, saying it couldn't update
-the server since they don't have the latest information. A more accurate
-representation of this graph, which we'll get to is this:
-
-![](lab9media/media/image12.png)
-
-Notice that here we are more accurately
-reflecting that the procrastinator and the martyr commits are both based
+the server since they don't have the latest information. One way to view this is when both sides have a different version of their history each with their own original copy.  A more accurate
+representation of this graph, which is transformed based off of what happens in the image, reveals that the procrastinator and the martyr commits are both based
 off of the original commit. Because the procrastinator's build is not
 based off of the latest version, it won't allow it to say that it is in
 fact the latest version. This is completely reasonable behavior, and so
 you should not worry as much about getting into this situation but
-rather just know how to get out. The most important thing to not do is
-to save the project and have a greater than symbol and then try to pull
-in the latest code. To resolve this, what the procrastinator is going to
-have to do is to pull the code (*Right click-\>Team-\>Pull)*. Because
+rather just know how to get out. To resolve this, what the procrastinator is going to
+have to do is to pull the code, **[ensuring they don't have a \> symbol before pulling.]** (*Right click-\>Team-\>Pull)*. Because
 they have already committed, git will do its darndest to do the right
 thing and merge the procrastinator's changes with the hack's changes and
 create a new version based on the changes. That new change or the merge
 would theoretically look like the following graph below.
 
-![](lab9media/media/image13.png)
+![](lab9media/media/treemerge.png)
 
 As you can see what git is doing is
 basing the new commit off of the two changes, what was on the server and
@@ -317,10 +306,10 @@ of you to be aware of and to at least try it. If you did you yourself
 into that mess already, congratulations\! You can move on to the next
 step, just read this part here until you get the picture that has the
 **Conflicting** result. If git knew how to merge the two files, then
-you'll get a success message to pop up, where the result will say
+the procrastinator will get a success message to pop up, where the result will say
 **Merged**, like this:
 
-![](lab9media/media/image14.png)
+![](lab9media/media/mergeresult.png)
 
 In this case, the Procrastinator, after clicking OK, will now have the
 representation on their own machine like the graph that I placed up at
@@ -328,31 +317,29 @@ the top, they can confirm this by showing the history of the git commits
 in their history, (they can get here by right clicking on the project,
 and then going to *Team-\>Show Repository in History View*.)
 
-Before moving on to the next step if the Procrastinator did get the
-Merged result, before all of you move on, *the procrastinator will want
-to push that merged branch back to the server*, to let folks know that
-the procrastinator has the right updated version. To do this, the
-procrastinator won't commit at all, since git already committed the
-merged branch for them as soon as they pulled. The procrastinator will
-now have on their screen two commits with the arrow to upwards saying
-those commits need to be pushed to the server. To do this, one simply
+![](lab9media/media/pbeforepush.png)
+
+In this view, notice the ![](lab9media/media/originmain.png) label.  It is attached to the commit that is the latest one that github has for the main branch.  That tag is different, but shows how your main version is based off of the origin main and that the hackslash 2 commit that was made is the one that the server thinks is currently the most recent.  This is also where the ![](lab9media/media/2commits.png) comes into play, as it is saying
+that the version of the git history that the procrastinator has, contains two commits that need to be pushed to the server (the difference between ![](lab9media/media/originmain.png) and ![](lab9media/media/main.png)). 
+
+![](lab9media/media/image8far.png)
+
+To do this, one simply
 right clicks on the project and says *Team-\>Push To Upstream*. Once
 they do that they should verify it was a success by looking at the
-results.
+results. The procrastinator will
+see that the origin main tag is now at the top, indicating github has the version that they have as the latest on their computer.   
 
-![](lab9media/media/image15.png)
+Now the rest of the team can pull the latest changes, **making sure they
+don't have any greater than signs on their projects**. Once they pull they
+should also look at the history view and notice their history matches the procrastinators, with all of them looking now something like this:
 
-Now the rest of the team can pull the latest changes, making sure they
-don't have any greater than signs on their projects. Once they pull they
-should also look at the history view to notice how there was the
-branching figure that I just showed on the previous page.
-
-![](lab9media/media/image16.png)
+![](lab9media/media/pafterpush.png)
 
 If you notice the left, it shows a similar diverging graph that comes
-back together with the merge at the end.
+back together with the merge at  the end.
 
-## Step 8
+## Step 8: Martyr & Hackslash - commit and push the same line
 
 Let's cause some havoc
 
@@ -423,7 +410,7 @@ have conflicts, though if they committed changes and they disappear,
 those changes will always be tracked and they are viewable so that you
 can get them and change your code back if needed.
 
-## Step 9
+## Step 9: Everyone - Successfully resolve a merge conflict
 
 Wreak More Havoc
 
@@ -439,7 +426,7 @@ make sure that no one tries to pull after each push, assume they don't
 know the changes have been pushed. So that the last person will be
 possibly many commits behind everyone else.
 
-## Step 10
+## Step 10: Everyone - Be aware of a conflict exception
 
 Checkout conflict exceptions
 
@@ -467,7 +454,7 @@ try to pull the code again. Remember that if you did commit after
 pulling and merging it's best for you to push the code back on the
 server so that you let the server know that you have the latest changes.
 
-## Step 11
+## Step 11: Everyone - Practice pushing and pulling!
 
 Practice the workflow\!
 
