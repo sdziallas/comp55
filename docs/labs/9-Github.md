@@ -337,24 +337,23 @@ should also look at the history view and notice their history matches the procra
 ![](lab9media/media/pafterpush.png)
 
 If you notice the left, it shows a similar diverging graph that comes
-back together with the merge at  the end.
+back together with the merge at the end.
 
 ## Step 8: Martyr & Hackslash - commit and push the same line
 
-Let's cause some havoc
+Let's cause some havoc :fire:
 
 So at this point you either had success getting git to merge something
 for you or git failed at being able to merge things for you. If git was
 successful in merging, let's have you get into a situation where git
 can't figure out what the latest version or the best lines to have in
 the file are. To do this we're going to set it up so that the martyr and
-the hackslash try to modify the same line in the same file. Ensuring
-both of them have pulled the latest changes from the server, have both
-hackslash and the martyr change the GLabel's text. The easiest thing to
+the hackslash try to modify the same line in the same file. **After having pulled, have both
+hackslash and the martyr change the GLabel's text.** The easiest thing to
 do in this case is to change the text by adding in your name as part of
 the label. You can use your own real name or you can use the name I've
-assigned you. Then go ahead and commit. Let's have hackslash push their
-commit to the server and then try to have the martyr push theirs. The
+assigned you. Then go ahead and commit. *Let's have hackslash push their
+commit to the server and then try to have the martyr push theirs.* The
 martyr will notice that they will be rejected from pushing their
 changes. When they pull to get the latest changes from the server,
 they'll notice that the result will be slightly different, where
@@ -367,52 +366,59 @@ project explorer will have some red icons that are next to it.
 
 ![](lab9media/media/image18.png)
 
-This is eclipse letting you know that
+Also take a look at the status message in the package explorer - 
+![](lab9media/media/conflictstatus.png).  Here notice that it is telling you you are in the conflicting state, with one change yet to be pushed to the server, while you also need to incorporate one change from the server.  
+
+If you also notice the git staging view has also changed to give you some type of indication that something is wrong.  
+![](lab9media/media/gitstagingconflict.png)
+
+These are the numerous ways that eclipse is letting you know that
 you have conflicts or changes that it doesn't know how to resolve.
-Because it doesn't know how to resolve the changes, you will be tasked
-with solving them and updating the server. If SimplePicture.java is not
-open already go ahead and open it up. When you open it, you'll notice a
-lot of scary red, but don't worry about it\! Git has replaced your java
+Since it can't automatically merge them like before, **it is the task of whoever gets the merge conflict to carefully solve the issues**. In this case, if you followed the instructions, it will be the martyr's job.  Open TeamPicture.java. Once opened, notice the scary red, but don't worry about it\! Git has replaced your java
 file with a text version of the one it needs help resolving, the java
 file when opened up will look something like this:
 
 ![](lab9media/media/image19.png)
 
-The important parts to look at are lines 18 and 20. Line 18 shows the
-version that you made, while line 20 shows the version that was on the
+The important parts to look at are lines 18-22. Line 19 shows the
+version that you made, while line 21 shows the version that was on the
 server. When it doesn't know which change is right, git will use this
-notation of having the ```<<<<<<< HEAD``` in there to let you know
-you need to make a decision. Everything above the line of equals signs
-on line 18 is the changes you made, and everything below the line of
-equals and up to the ```>>>>>``` branch label are the changes that the
-server has. If you are the one in the conflicting state, it's your job
-to decide whether to keep the code above the equals sign, below the
-equals sign or some mix of the two. Once you decide what lines are the
+notation of having 
+
+```<<<<<<< HEAD
+your changes
+=======
+change on server
+>>>>>>> branch 'main' of https://urlhere
+``` 
+
+in there to let you know
+you need to make a decision for all places where it notices a conflict on what she be used.  If you get into a conflicting state, it's your job
+to decide what code to keep (yours, the servers or some mix of the two). Once you decide what lines are the
 right ones, you will go ahead and delete the rest of the markings so
 that the errors go away and it looks like a java file. In this case,
-let's have the martyr use hackslash's line 20 instead. This means that
+let's have the martyr use hackslash's line 21 instead. This means that
 after editing and saving the file, it should look something like this.
 
 ![](lab9media/media/image20.png)
 
-![](lab9media/media/image21.png)
-
-(The white x's to the left of the line
+(The gray x's to the left of the line
 numbers are only there if you haven't saved the file yet) While the
-syntax errors went away, you'll notice that the red icons in the project
-explorer for martyr have not. To get rid of the red marks, the martyr
-will need to right click, then go to *Team-\>Add to Index*. The icons
-will update to looking something like this: Once they have turned to
-brown, they'll then want to commit and push the changes to update the
-server. If this all sounds scary to you, then you should certainly have
-your team members with you to decide what is the best version when you
-have conflicts, though if they committed changes and they disappear,
-those changes will always be tracked and they are viewable so that you
-can get them and change your code back if needed.
+syntax errors went away, you'll notice that the repo still says that it is in conflicting mode.  Notice the red icons in the project
+explorer for martyr have not disappeared, and all the previous places that mentioned conflict are still there. To get rid of the red marks, the martyr
+should drag the file from unstaged to staged changes, in the git staging view. (Alternatively, they could also right click on the file and choose *Team-\>Add To Index* after saving)  The icons
+will update to indicate that the file will be added to the repository ![](lab9media/media/addicon.png): Once the icons have changed, the **martyr will commit and push the changes** to update the
+server. So click the button like this picture is showing here to get rid of being in the merge state.  Make sure to push, as you may not be able to pull additional code until the conflict and merge have been resolved.  Once they have been pushed, the arrows and merged status will go away.
+
+![](lab9media/media/resolvedconflict.png)
+
+**If you ever get to a conflict and aren't sure what to keep, ask your team members.** If your team members do ever commit changes that later disappear,
+those changes will be tracked and viewable so that you
+can get them and change your code back if needed.  (You can always feel free to ask me if you run into that type of issue as well.  But the safest thing is always to save and commit your code.)  Note that in certain situations after committing you may have to resolve multiple conflicts.  This happens when you haven't touched or been active in working with the code in a long time.  
 
 ## Step 9: Everyone - Successfully resolve a merge conflict
 
-Wreak More Havoc
+Wreak More Havoc :fire: :fire: :fire:
 
 This part about resolving conflicts is so integral that I now want you
 to as a team to all try to make a change on the same line and go through
@@ -426,26 +432,26 @@ make sure that no one tries to pull after each push, assume they don't
 know the changes have been pushed. So that the last person will be
 possibly many commits behind everyone else.
 
-## Step 10: Everyone - Be aware of a conflict exception
+## Step 10: Everyone - Be aware of a conflict problems
 
-Checkout conflict exceptions
 
 While this is the end of the official lab, I want you to be aware of one
 more issue that seems to pop up a lot when folks are using git, which is
-a git conflict exception. This tends to happen when you have uncommitted
+a git conflict problems. This tends to happen when you have uncommitted
 changes, and then you decide to try to pull in the latest changes. Git
 has issues with this because pulling replaces your code and files with
 the latest versions. However, if you have work that you saved, but did
 not commit, it would be throwing this code potentially away. This is not
 the case when you commit, since those changes are stored on the database
 if you ever need to go back to them, which you can view in the history.
-If you do have **\>** signs on the project explorer and decide to pull
-in changes from the server (and the server has changes to give you)
-you'll raise this scary looking error.
+**If you do have **\>** signs on the project explorer and decide to pull
+in changes from the server** (and the server has changes to give you)
+you'll raise these scary messages one on top of the other.
 
-![](lab9media/media/image22.png)
+![](lab9media/media/conflictproblem.png)
+![](lab9media/media/pullcanceled.png)
 
-If you do get that error, you have two options, you can either commit
+If you do get that error, you have a few options, you can either commit
 your latest changes, or if you feel like you didn't really make any
 changes and they must be by accident or say you were just playing around
 with the code, then it would be best for you to do a hard reset like we
@@ -453,6 +459,8 @@ did in Step 2. Once you either commit or reset the code, you can then
 try to pull the code again. Remember that if you did commit after
 pulling and merging it's best for you to push the code back on the
 server so that you let the server know that you have the latest changes.
+
+If you ever want to find out if changes have been made but aren't ready to replace your code with those changes (but just want to see how many changes have been made or how many changes you need to incorporate, you can instead right click on the project and select *Team-\>Fetch from Origin*).  Then just like you saw before in the package explorer, you'll be able to see the number of commits that are you behind from your server, with a down arrow to show them.  
 
 ## Step 11: Everyone - Practice pushing and pulling!
 
