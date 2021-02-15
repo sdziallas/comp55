@@ -387,7 +387,8 @@ version that you made, while line 21 shows the version that was on the
 server. When it doesn't know which change is right, git will use this
 notation of having 
 
-```<<<<<<< HEAD
+```
+<<<<<<< HEAD
 your changes
 =======
 change on server
