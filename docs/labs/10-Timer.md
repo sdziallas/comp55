@@ -28,7 +28,7 @@ Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
 Since the java library is so vast, there are actually multiple classes
 that are named ```Timer```. The reason for this is outside the scope of this
 lab, but we will use the ```javax.swing.Timer``` class, so you should
-```import javax.swing.*;```
+```import javax.swing.*;```  Instead of writing that line, remember that you can use ***Ctrl-Shift-O*** to have eclipse add the necessary imports for you.  You may need it below for ```ActionEvent```, which is a class we'll be using.
 
 The two arguments that a ```Timer``` takes is the number of ms that should
 pass before it wakes up, and which class should be woken up. This can be
@@ -137,14 +137,14 @@ get to a screenshot that looks like this (if you add a return statement, then yo
 ![](lab10media/media/timerinitdone.gif)
 
 Once you have that, **commit and push your work**, make sure to **put a
-brief message in the commit that explains what you did** and then move
+brief message in the commit that explains the three things a timer needs** and then move
 on to the next task.
 
 ## BallLauncher.java
 
 So far, we've mostly been showing the basics of Timers, however, Timers
 end up being extremely useful in many situations, since what they allow
-you to do is to have a separate process (which I'll call thread) that is
+you to do is to have a separate process (which we'll call **thread**) that is
 running independently of the program's main loop. This is going to be
 useful for creating animations or having any movement so that the
 movement and animations can be made independently of what the user
@@ -153,9 +153,9 @@ clicks on or interacts with.
 Similar to mouse events, the timer events happen independently of what
 is going on in other parts of the game, this allows us to create some
 very flexible & awesome programs. While it may be tempting to have many
-different timers, *I would instead suggest for now you have one timer
-and have it be called more often*. If you only need something to happen
-every second and your timer is happening every 500 ms, just have a
+different timers, *I suggest for now that you have a single timer
+and call it more often*. If you only need something to happen
+every second (1000ms) and your timer is happening every 500 ms, just have a
 ```numTimes``` variable and check to see if ```numTimes``` is even. Let's go
 through a slightly more complicated example by opening up
 **BallLauncher.java**:
@@ -163,11 +163,10 @@ through a slightly more complicated example by opening up
 If you run at this point, what you'll notice is something similar to our
 earlier interactivity lab. When we are clicking the mouse button, it is
 making a ball at the same height as our mouse cursor but on the left
-hand of the screen. For example, if you click near the top, middle and
-bottom of the screen, you'll get three red circles on the left hand side
+hand of the screen. For example, if you click in different areas of the screen, you'll notice red circles on the left hand side based on where your cursor is when you click,
 like so:
 
-![](lab10media/media/image2.png)
+![](lab10media/media/ballstart.gif)
 
 The code that is in the file is the following:
 
@@ -194,58 +193,49 @@ public class BallLauncher extends GraphicsProgram {
 ```
 
 Most of this should be a refresher, the one thing to notice is how we
-are using a constant ```SIZE``` to create a circle. If you remember the
-reason why in ```GOval``` we are doing subtracting ```SIZE/2``` is because we
-want the x and y coordinates given to be the center of the circle,
-instead of the top left, which is what happens whenever we create an
-oval or rect, (the x and y given end up representing the top left), so
-subtracting half makes it the center). ```makeBall``` is just a convenience
+are using a constant ```SIZE``` to create a circle. Remember that since we want the circle to appear at the center of where we click, we are subtracting ```SIZE/2```, from where we click, which will cause where we click to be the center of the circle instead of the top left. ```makeBall``` is just a convenience
 method to help make a red filled ball. What we are going to do is to
 move all of the balls that are created to the right. To start this, we
 want to make an ```ArrayList``` of ```GOval```s, which we can call ```balls```. Go
 ahead and declare a new ```ArrayList``` as a private instance variable at
 the top, initializing it in ```run```. The other thing we want to do is
 after ```makeBall``` is called, we want to add that ball to our list of
-balls by calling the ```add``` method. If you run the program now everything
-would still be the same. Let's change that by telling the program to
+balls by calling the ```add``` method that pertains to the ```ArrayList```. Visually at this point, nothing would have changed if you run the program. Let's add something visual  by having the program 
 setup a timer that moves all of the balls in our ```ArrayList```.
 
-Do this by making a **Timer** object and starting it. To help us with
-the timer object, make two more constants, ```public static final int```,
-just like the ```SIZE``` constant. One constant should store how often we
-want the timer to be woken up (set it to 50), and another should tell us
-how much to move each ball by each time (set this to 2). Like in
-```MyFirstTimer```, we will make ourselves the ones to respond to the timer,
-which means we will have to implement ```ActionListener``` and define the
-```actionPerformed``` method. Our ```actionPerformed``` method will be fairly
+To help us with
+our future functionality, make two more constants, ```public static final int```,
+just like the ```SIZE``` constant. One constant (call it ```MS``` if you want) should store how often we
+want the timer to be woken up (set it to 50), and another (I called it ```SPEED```) should tell us
+how much to move each ball by each time (set this to 2). Now make a **Timer** object and start it. (Can't remember how to do this?  [Go back and review.](##myfirsttimer.java)) Just like in the first file, you will make BallLauncher the one to respond to the timer,
+Our ```actionPerformed``` method will be fairly
 simple, we will have it iterate through the balls ```ArrayList``` and move
-each one. If you haven't tried doing a for loop using the **:** operator
+each one by SPEED in the X direction and 0 in the y. If you haven't tried doing a for loop using the **:** operator
 to iterate through a list, now would be a good time to try.
 
 Once you handled the ```actionPerformed``` event by moving all the balls in
 the list, created and started the timer, you should run your program
 again, and click around and notice how you have something that feels
-much more dynamic and expressive\! Once this is working, you should
-**commit and push your code** again using the message **"all balls move
-across the screen"**. If it's not behaving how you would expect, some
-things to check are that you added everything to the list (and to the
-screen), you created and started the timer, your ```actionPerformed```
-method is being called.
+much more dynamic and expressive\! If you are still curious how my version behaves (or you just want to observe your professor's antiquated clicking habits for 15 seconds), you can [click here](lab10media/media/ballnextdemo.gif).
 
-The last thing we are going to add is a limit to the number of balls
-that someone can launch at any given time. While there are many ways to
+Once this is working, you should
+**commit and push your code** again using the message **"all balls move
+across the screen"**. If it's not behaving how you would expect, review the [three step checklist above](##what-is-a-timer).
+
+**The last thing we are going to add is a limit to the number of balls
+that someone can launch at any given time.** While there are many ways to
 do this, what we are going to do is simply cycle through the list of
 balls, and look to see if any have an x coordinate that is less than 100
 (by calling ```getX()``` on a single ball). If there is a ball that has an x
 coordinate that is less than 100, then we know ```mousePressed``` was just
 recently launched, so we can just return from ```mousePressed```, and ignore
-the user's press of the mouse button, once you fix that and read the
-note below, commit and push your latest change. **However, as part of
-your commit, *in your own words ****write a sentence or two in the
+the user's press of the mouse button.  Doing this will cause your program [to behave as if it has a cooldown, like this gif shows](lab10media/media/ballcooldown.gif). Once you fix that and read the
+note below, **commit and push** this next change. However, as part of
+your commit, *in your own words*, ***write a sentence or two in the
 commit message text that would describe what would happen if you were to
-use ```pause``` in an ```actionPerformed``` method**.***
+use ```pause``` in an ```actionPerformed``` method.***
 
-***Additional note on Ball Launcher:*** One thing some of you might have
+***"OK, Bye ```pause```!"*** One thing some of you might have
 remembered is that ```GraphicsProgram``` has a ```pause()``` method that would
 simply pause the program for a certain amount of time. Why do we have to
 go through all this trouble of doing timers if we can simply call
@@ -261,8 +251,8 @@ both work at the same time (aka concurrently). Because mouse events and
 our timers both involve the user interface, java will know enough that
 it can coordinate between the two. However, if you decide to use
 ```pause```, java does not realize that you are just pausing to add some
-pizzazz to your movement. So if the mouse is pressed, it will interrupt
-whatever loop it is in at the moment. If you try to replace your timer
+pizzazz to your movement. **So if the mouse is pressed, it will interrupt
+whatever loop it is in at the moment.** If you try to replace your timer
 with a pause and a while loop, you'll notice that once you run the
 program and click a couple of times, you'll get a
 ```ConcurrentModificationException```. This exception means that you are
@@ -306,19 +296,17 @@ make it easier to use, I only have it provide a **y** coordinate, and
 the method automatically places the enemy on the right hand side of the
 screen. You'll also notice that we have a ```RandomGenerator rgen``` that we
 have created. One last refactoring that you'll see is that I created
-both an ```addABall``` and ```addAnEnemy``` function, each of which will call
+both ```addABall``` and ```addAnEnemy``` functions, each of which will call
 their respective ```make____``` functions, and then add them to the
 screen and their respective lists. Lastly, I moved the ball movement for
-loop into its own method, ```moveAllBallsOnce()```, which will just go
-through that for loop once. The last thing is that you'll see that I
-have an if statement to ignore mouse presses if the user tries to click
-too soon.
+loop into its own method, ```moveAllBallsOnce()```. The last thing is that you'll see that I
+have an ```if``` statement that acts like the cooldown you wrote earlier.
 
 Our first step is to call ```addAnEnemy``` in our timer. However, we don't
 want to call ```addAnEnemy```, everytime ```actionPerformed``` is called, but
 rather every once in a while. This is where something like that ```%```
-operator works great with a ```numTimes``` variable like we discussed in the
-first timer example. Because we are keeping track of the number of times
+operator works great if we add a ```numTimes``` instance variable that works similar to what we implemented in the
+[first timer example](##myfirsttimer.java), (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster, or to decrease it from 40 to say 5, [like I did here](lab10media/media/greenpopulate.gif)). Because we are keeping track of the number of times
 ```actionPerformed``` is called, we can simply say every 40<sup>th</sup>
 time, go ahead and make a new enemy,
 
@@ -335,8 +323,6 @@ like this for today (or you can just click on 40 and then click
 take over\! When the squares appear **commit and push your code again**
 with the message **"enemies populate screen regularly"**.
 
-![](lab10media/media/image3.png)![](lab10media/media/image4.png)
-
 You can still have circles appear but right now they will just run over
 the squares. We'll get to that in a bit. The next thing we want to do
 however is to make the enemies have some type of movement. The easiest
@@ -348,8 +334,10 @@ cycle through the list of enemies and call move on each one, moving it 0
 pixels in the ```x``` direction and a random integer (```SPEED```) in the ```y```
 direction. Then make sure that you call ```moveAllEnemiesOnce``` in
 ```actionPerformed```. Once you run the program now, the enemies will come
-to life\! They will be very wiggly. At this point you should **commit
+to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  They will be very wiggly. At this point you should **commit
 and push again,** with the message **"added wiggly enemy movement"**.
+
+## One last addition
 
 At this point I'm guessing that you probably want some way to get rid of
 these green squares using the ball. While there are many ways for
@@ -359,16 +347,19 @@ see if the ball may have hit a square. One thing you can do is that for
 every red ball, when it's their time to move, check a point just outside
 of the ball and call ```getElementAt```. If the object that is given back is
 an instance of a ```GRect```, we could say it's an enemy and then make that
-enemy disappear. In this, case we'll want to check the point that is
-highlighted in red below.
+enemy disappear. In this, case we'll want to check the red point in the picture below:
+
+![](lab10media/media/checkball.png)
 
 If it turns out that we do have potential enemy in front of us (by
 calling ```getElementAt``` using the measurements shown above), then we want
 to remove it not only from the screen (by calling **remove**) but also
 from the ```enemies```. Once you run this you should be able to make the
-green squares disappear by having the balls hit them\! Once again,
+green squares disappear by having the balls hit them\! [You may also notice that some balls will not completely disappear unless the ball collides with that midpoint](lab10media/media/greenfinal.gif), but that is sufficient for this lab.  Once again,
 **commit and push** since you've added something cool, in the commit
 message detail what it is you added.
+
+## Bonus - "Hey! This is almost a game!"
 
 While this does not yet have the polish of some of the games you may
 tend to play, there are many things you can do to make it more polished.
