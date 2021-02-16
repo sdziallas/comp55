@@ -369,14 +369,14 @@ deadline.
 While this does not yet have the polish of some of the games you may
 tend to play, there are many things you can do to make it more polished.
 For example, you could add a label that is continually updated or set in
-```actionPerformed``` that would update the number of green squares on the
-screen (see bottom left). You could also add in checks to say if there
+```actionPerformed``` that would update the number of green squares that you have removed from the
+screen (see version on the left). Or you could instead (or in addition) add in checks to say if there
 are more than ```MAX\_ENEMIES``` on the screen, then stop the timer, remove
 everything an add a message telling them they lost. Lastly, it's fairly
 simple to give them some indicator of progress or score by simply on the
 lose screen presenting them with the ```numTimes``` variable, which is in a
 way, representative of how long they were able to last in playing the
-game. Hopefully you can see how easy this is to extend and how much fun
+game (see version on the right). Hopefully you can see how easy this is to extend and how much fun
 you can start to have in creating these things and making the game your
 own, with your own changes. Hopefully you see the powers that timers can
 have in making your programs more dynamic and more expressive.
