@@ -359,6 +359,11 @@ green squares disappear by having the balls hit them\! [You may also notice that
 **commit and push** since you've added something cool, in the commit
 message detail what it is you added.
 
+To get full credit for this lab, you should have your program make the
+squares disappear **and follow all the directions on when to push your
+code**. Make sure to push your final changes to your repository by the
+deadline.
+
 ## Bonus - "Hey! This is almost a game!"
 
 While this does not yet have the polish of some of the games you may
@@ -375,10 +380,5 @@ game. Hopefully you can see how easy this is to extend and how much fun
 you can start to have in creating these things and making the game your
 own, with your own changes. Hopefully you see the powers that timers can
 have in making your programs more dynamic and more expressive.
-
-To get full credit for this lab, you should have your program make the
-squares disappear **and follow all the directions on when to push your
-code**. Make sure to push your final changes to your repository by the
-deadline.
 
 ![](lab10media/media/image5.png)![](lab10media/media/image6.png)
