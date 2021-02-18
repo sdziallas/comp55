@@ -1,8 +1,8 @@
 # Decomposition Lab
 
-Today you are going to recreate the animation and behavior I just showed
-you in class. If you haven't seen it or I didn't show it, make sure to
-ask me to run the program again.
+Today you are going to recreate theis animation and behavior:
+
+![](lab11media/media/swirl.gif)
 
 Hopefully what I'm asking you to make today isn't trivial. My true hope
 is that you don't immediately think *"oh this is easy"*. Even if you do
