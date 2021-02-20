@@ -15,11 +15,11 @@ point that you may feel *frozen* as to where to begin. This paralysis
 doesn't just happen in programming but in all aspects of life. I've
 often found that it happens to me anytime there is something large
 enough that I don't feel comfortable being able to say that I can
-accomplish. Having this feeling, where you end up avoiding or delaying
+accomplish it. Having this feeling, where you end up avoiding or delaying
 work, can come from many factors, some are just to protect yourself
 (also called **self-handicapping**) but other times it happens because
-you don't know where to start. While self-handicapping is something you
-should read about, today we're going to provide advice on how to figure
+you don't know where to start. While self-handicapping is [something](https://sites.psu.edu/aspsy/tag/self-handicapping/) you
+should [read about](https://hbr.org/2012/05/dont-sabotage-yourself), today we're going to provide advice on how to figure
 out where to start with a large problem. It comes down to a technique
 called **decomposition**.
 
@@ -38,23 +38,24 @@ much interaction with (yet may be useful for your projects), like custom
 colors as well as movement using polar coordinates.
 
 For this lab it may make sense to break down the problem initially into
-two parts 1) the circular movement, and 2) the way that it changes
-color. Now, if instead of asking you to build the whole thing, what if I
-asked you to build one of the two parts? *For example, just build any
-object that moves in a circle, or make a stationary GObject that changes
-color*. Either of those by themselves is less daunting than the whole.
+two parts 1) the circular movement, and 2) the color changing. Now, if instead of asking you to build the whole thing, what if I
+asked you to build one of the two parts? 
+
+ Just circular movement | Just change the color
+ :----------------:|:-----------------:
+![](lab11media/media/polar.gif) | ![](lab11media/media/ballstill.gif). 
+
+Either of those by themselves is less daunting than the whole.
 Breaking problems down helps us more easily tackle a hard project, and
 the art of finding a good way to break them down is important and one
 that you should practice when programming from here on out.
 
 Decomposing programming tasks not only makes it easier to tackle the
-problem, but it also makes it easier to test, since we have to test more
-often we can make sure that we are on the right track. In a way, you are
+problem, but it also makes it easier to test - frequent testing ensures that we are on the right track. In a way, you are
 following the ***Test Early and Often*** mantra from unit testing (more
 on that to come). The trick is to test things that feel tricky earlier
 on, so you don't wait until the end to see if they work. Testing only at
-the end makes it harder to figure out what is wrong. So let's start with
-part 1.
+the end makes it harder to figure out what is wrong. So let's start with the circular movement (though if you were doing this yourself, pick whichever one is more prudent).
 
 ## Let's get movement going
 
@@ -65,24 +66,31 @@ moving it into the project's folder via your OS and then *right
 clicking* on the project and hitting *refresh*.
 
 Since the circular movement might feel complicated in and of itself,
-let's break that down into two or three steps, 1) getting an oval on
-the screen, 2) getting the oval to move in a straight line, and then 3)
-getting the ball to move along a circular path. Let's start with the
+let's break that down into two or three steps:
+1. Adding an oval on
+the screen 
+2. Animating the oval to move in a straight line
+3. Animating the ball to move along a circular path. 
+
+Let's start with the
 first. Open up **ColorCircleDecomp** after it's been added to the
 project and make a private ```GOval```, which you can name ```ball```. Create
 the ```GOval``` object in ```run``` (place it at 300, 300, or anywhere and use
-```BALL_SIZE``` as the width and height), make sure to add the ball to the
-screen and then on each ```actionPerformed```, move ```ball``` by a pixel or
+```BALL_SIZE``` as the width and height), make sure to ```add``` the ball to the
+screen.  Run the program and make sure that you get a ball on the screen.  
+
+![](lab11media/media/step1ball.png)
+
+Now for step 2, on each ```actionPerformed```, move ```ball``` by a pixel or
 two. Don't' worry about setting the ball's color or anything. Run the
 program and fix anything to make sure that have a ball that is just
-moving across the screen continuously. **Don't move to the next
-paragraph until you get the ball moving in a straight line across the
-screen.**
+moving across the screen continuously. **Don't continue until you get the ball moving in a straight line across the screen.**
+
+![](lab11media/media/step2ballblackv2forever.gif)
 
 Now with a ball that's moving, congratulations\! We are closer to our
-ultimate goal. This is the beauty of decomposition, as we make all the
-tasks manageable. Now, let's focus on changing that movement to be
-circular. *Do you see how the circular movement should feel more
+ultimate goal. This is the beauty of decomposition, and we feel better about accomplishing things. Now, let's focus on changing that movement to be
+circular. *Do you notice how the circular movement feels just a tad more
 achievable since we have already made some progress?* While the circular
 movement may still feel tricky, getting the ball to move across the
 screen with a timer shouldn't have felt insurmountable, so we worked on
@@ -92,9 +100,10 @@ feel slightly less daunting.
 To help you think about a circular movement let me introduce a little
 function that is already a part of the acm graphics library called
 ```movePolar```. Rather than dive into some huge explanation, it's important
-to play around and to try to figure out behavior, so first I'm just
-going to ask you to change the ```move``` that you have in your
-```actionPerformed``` to ```movePolar``` instead, using the same arguments as
+to play around and to try to figure out behavior, so...
+
+**Change the ```move``` that you have in your
+```actionPerformed``` to ```movePolar``` instead**, using the same arguments as
 you had in move. If you aren't aware or don't remember polar
 coordinates, **polar coordinates** are expressed using two values, one
 is the *distance* that you want to move, while the other is the *angle*
@@ -114,22 +123,21 @@ For this acm ```movePolar``` function, the angle is expressed in degrees
 from ```0``` to ```360```. Look at this handy chart below to understand how the
 angles translate to different directions.
 
-![Image result for polar coordinates](lab11media/media/image1.png)
+![Image result for polar coordinates](lab11media/media/image1inv.png)
 
 Instead of me trying to tell you which argument is which, use some
-different values, like 45 in the different arguments for ```movePolar``` to
+different values, like **45** in the different arguments for ```movePolar``` to
 figure out order of the arguments. Once you've figured that out, then
-think about this: *what would happen if we ask the ball to move the same
-distance around, but keep changing the degrees each time*? What would
+think about this: ***what would happen if we ask the ball to move the same
+distance around, but keep changing the degrees each time***? What would
 happen? Try not to introduce very large numbers in each and play with it
-until you get a circle. Once you do get a circle, you can in advance of
-later, think of using the remainder operator to reset the angle back to
-zero once it goes past 360 degrees.
+until you get a circle. Once you do get a circle, you can if you want to do the challenge, think of using the remainder operator to reset the angle back to
+zero once it goes past 360 degrees.  Otherwise you can use an if statement if this all feels very rough.
 
 Finally, you can then tweak the values of the circular movement so that
 you can get the oval to start at the bottom of the screen and to move in
 a circular movement around the screen to better match what was shown to
-you. No need to have the square that I showed in class, though you can
+you. No need to have the square in the image above, though you can
 add it if you want.
 
 Now that you have that movement, you can now go on to tackle the
