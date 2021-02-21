@@ -149,31 +149,29 @@ While smooth color changing has become all the rage recently especially
 with the adoption of LED lights in EVERYTHING, this wasn't always the
 case. In fact, slowly transforming colors used to generate a sense of
 awe. For this lab, let's pretend to be back in those olden times of yore
-(early 2000's). Before we start trying to change the colors, we need to
+(you know, the early 2000's). Before we start trying to change the colors, we need to
 understand how colors are represented in computers. For the most part,
 colors for each pixel are represented using 3 values, red, green, and
-blue (RGB). In computers, you can mix intensities of each of these three
+blue, where each value corresponds to the intensity of each of those three colors(RGB). In computers, you can adjust these three
 values to get different colors. The intensity of each color is
 represented by a value from 0 to 255 in most applications. For example,
 you could open up a paint program or anything else that has a color
 picker, and you would be able to see this change. If you don't believe
-me, spend a little bit of time on this color picker:
+me, spend a little bit of time on this [color picker](https://www.w3schools.com/colors/colors_picker.asp).
 
-<https://www.w3schools.com/colors/colors_picker.asp>
-
-Here look at the RGB values that are shown here, which show those
-intensities. For example to get white, you would have 255 in all three
+Look at the RGB values highlighted in the picture below, which shows the
+intensities. This example shows that for the color white, you would have the value 255 in all three
 values of red, green, and blue.
 
 ![](lab11media/media/image2.png)
 
-If you are curious what all the *f*'s are and the *\#* prefix above,
+If you are curious what all the *f*'s are and the *\#* prefix are in the section between the highlighted values,
 that is just the representation or the HTML code for *white*, which is
 also represented as three values, except that those values are stored in
 hexadecimal format (Base 16) where 10 is represented as *a,* 11 *b,* 12
 *c*, etc. So ```ff``` turns out to be ```255```.
 
-Here's one more example just for kicks, which is *blue*. Notice that
+Here's one more example which shows *blue*. Notice that
 ```ff``` or ```255``` is only on the end, which represents the fully intense
 blue component of the color)
 
@@ -198,25 +196,25 @@ before moving forward.
 
 As for me, some ideas are.
 
-1)  Just get the program to use some custom RGB color using the ```Color```
+1.  Just get the program to use some custom RGB color using the ```Color```
     class, in which a ```new Color``` takes 3 integers to represent the red,
     green, and blue values for that color. You can then call ```setColor```
     on the ball with that new Color variable.
 
-2)  In ```actionPerformed()```, change the value slightly for the first
+2.  In ```actionPerformed()```, change the value slightly for the first
     value (red), so that it gradually increments from black to red. If
     you get an ```IllegalArgumentException```, that's OK, we will change
     that in the next part. Remember baby steps\!
 
-3)  Have it so that you cycle back to zero to get out of the
+3.  Have it so that you cycle back to zero to get out of the
     ```IllegalArgumentException``` (this happens when you provide a value
     outside of the 255 range)
 
-4)  Comment out the ```setColor``` call and Introduce a ```println``` statement
+4.  Comment out the ```setColor``` call and Introduce a ```println``` statement
     where you print out the one value and comment out the ```setColor```
     statement
 
-5)  Get the program to print out values from 0 to 3 and then back down
+5.  Get the program to print out values from 0 to 3 and then back down
     to 0 in a zig zag format (if you want to be fancy, you can do this
     without an if statement at all - to try this, write down the numbers
     from say 0 to 7 and then start with 3, have it go down to zero and
@@ -231,21 +229,21 @@ And then it keeps going. It doesn't matter what it starts with, just as
 long as it keeps moving back and forth between 3 and 0 and doesn't go
 past that.
 
-6)  Change your ```println``` statements so that they go from 0 to 255 and
+6.  Change your ```println``` statements so that they go from 0 to 255 and
     then back down to 0. Run it long enough that you can check to make
     sure that you don't go past 0 or 255.
 
-7)  Use the calculation or value that you have that is being printed and
+7.  Use the calculation or value that you have that is being printed and
     place that in your ```setColor``` instead, which you may comment out
     now. This should have it now move back and forth between 0 and 255
     using the color mode for that single color. Running the program
     again should have it move between black and red and black and red
     continuously without crashing.
 
-8)  Do that with the green and blue values, which will have it move from
+8.  Do that with the green and blue values, which will have it move from
     black to white to black
 
-9)  Change the values in green and blue so that they start at a
+9.  Change the values in green and blue so that they start at a
     different starting point. Since it's a collection of red green and
     blue values, have them all independently move, but have them start
     at different starting points for the colors (like 85 and 170). If
