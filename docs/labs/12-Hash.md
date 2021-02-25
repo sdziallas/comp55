@@ -17,7 +17,7 @@ Similar to an ```ArrayList```, a ```HashMap``` stores a collection of items. A
 ```HashMap``` is a standard part of the Java Library, similar to what some
 of you may remember with the **map** STL library in C++. In COMP 53, you
 may have some faint recollection of what a hashtable is, which was a
-data structure that would allow us to search and store items into a
+data structure that would compute a **hash** based on a value, and then use that hashed value as index to be used to locate the index in an array.  Hashtables allowed us to search and store items into a
 collection in constant O(1) time, which means that no matter the size of
 the hashtable, you would be able to count on the running time not
 increasing (as long as the number of buckets is roughly equal to the
@@ -25,37 +25,35 @@ number of items and you have a full hash function yada yada)
 
 ## Why didn't they just call it a hashtable then?
 
-By calling it a ```HashMap``` java wants to make clear that ```HashMaps``` are
+By calling it a ```HashMap``` Java wants to make clear that ```HashMaps``` are
 meant to form a bond between two items, whereas a hashtable might just
-be a mechanism for having something in a collection and giving you a way
-to look into the collection to quickly see if it exists. ```HashMaps``` are
-often thought of or referred to as **dictionaries**. Like a dictionary,
+be a mechanism for identifying whether items exist in a collection. ```HashMaps``` are
+often thought of or referred to as **dictionaries**, where the key is what is hashed. Like a dictionary,
 when you end up looking up a word in a dictionary, you get a definition
 for that word. In a way it links or maps the word with the definition.
 In computer science lingo, the word would end up being called the
 **key**, while the definition would be called the **value**. In order to
-make ```HashMaps``` truly work, ```HashMaps``` have a condition that a key can
-only correspond to one value. So for example, going back to the
+make ```HashMaps``` truly work, ```HashMaps``` have a condition that a **key can
+only correspond to one value**. So for example, going back to the
 dictionary example the key *nomophobia* would be linked to a specific
 value: in our case, the value will be "*the fear of losing mobile phone
-service*". For a HashMap, what you would do is put the key and value
+service*". For a ```HashMap```, what you would do is put the key and value
 pairs into a map and then retrieve them in the future.
 
 ## Basic HashMap Usage
 
-Like an ```ArrayList```, we need to first let java know that we want to use
+Like an ```ArrayList```, we need to first let Java know that we want to use
 one of these data structures. One syntactical difference is that Java
 would like to know the type for both the key and the value in the angle
 brackets. While I have only shown strings, the keys and values can be
 any type of Object. In this particular case though since the type of
-both the definition and word are both strings we'll declare them in this
-manner.
+both the definition (*value*) and word (*key*) are both strings we'll declare them in the HashMap like this:
 
 ```java
 HashMap<String, String> phobias = new HashMap<String, String>();
 ```
 
-Now to create a linkage in the ```HashMap```. One would use the put call to
+Now to create a linkage in the ```HashMap```. One would use the ```put``` call to
 place something into the ```HashMap```.
 
 ```java
@@ -63,15 +61,14 @@ phobias.put("nomophobia", "the fear of losing mobile phone service");
 ```
 
 to put more definitions, you would simply keep using the put call to
-create more mappings between two objects.
+create more mappings between keys and values.
 
 ```java
 phobias.put("pentheraphobia", "the fear of your mother-in-law")
 phobias.put("ergophobia", "the abnormal fear of work")
 ```
 
-Then to get back the definition in the future, you would simply look up
-the word again by using the get feature.
+Once in the HashMap, you can use ```get``` to retrieve the definition in the future.
 
 ```java
 String def = phobias.get("ergophobia")
@@ -85,13 +82,13 @@ particular phobias map like say this one
 String possibleDef = phobias.get("osvaldophobia")
 ```
 
-The ```HashMap``` will return ```null``` for any key that has not been
-explicitly put in.
+The ```HashMap``` will return ```null```, which it does for any key that has not been
+explicitly put into the corresponding HashMap object (in our case, ```phobias```).
 
 ## More advanced rules for HashMaps
 
-So one thing to remember that is that each key corresponds to one and
-only one value object. So how does this work when you have multiple
+Remember, ***each key corresponds to one and
+only one value object***. So how does this work when you have multiple
 objects that you want with similar values. Let's try this first.
 
 ```java
@@ -99,34 +96,31 @@ phobias.put("ponophobia", "the abnormal fear of work")
 ```
 
 If you have been reading this document closely you may notice that we
-already have a name for the abnormal fear of work in ergophobia. So now
+already have a name for the abnormal fear of work in *ergophobia*. So now
 we have two different keys that use the same value. This is OK. This
 does not violate anything from a HashMap standpoint, since both keys
-still have just one value. The opposite is where things get dicey,
-however, let's explore how java will introduce this.
+still have just one value. However, the opposite would not hold.  Let's explore that notion with the following statement.
 
 ```java
 phobias.put("nomophobia", "the fear of losing mobile phone service or
 your mobile phone device")
 ```
 
-Since our ```phobias``` HashMap already has a linkage with *nomophobia*,
+Since our ```phobias``` HashMap has already linked *nomophobia*,
 Java will **replace** that linkage with the one given here. Thus, no
-longer would the shorter definition be linked to *nomophobia*, but
-rather the longer definition would. Each key can only correspond to one
-value
+longer would the shorter definition be linked to *nomophobia*, it would be replaced with this longer definition. **Each key can only correspond to one
+value.**
 
-## You said this was like a dictionary though, what if there are multiple meanings to the same word?
+## But...what if there are multiple meanings to the same word?
 
 In that case if you want to store multiple meanings, you'll have to
 select an object or class that will allow you to store multiple
 meanings. For example, you can have a word that has multiple meanings
 sometimes even contradictory. Let's start up another ```HashMap```, this
 time for contronyms which are words that often have opposite meanings.
-For example, think about the word "dust". Usually it means to take off
+For example, think about the word ***dust***. Usually it means to take off
 something right? For example, when you want to *dust* the furniture.
-However, dusting a pan, may mean that rather than you taking something
-away you are adding something to the pan, like you want to *dust* a pan
+However, the word *dust* can also mean to add something instead of taking away! For example you may want to *dust* a pan
 with flour. In this case the word **dust** has two meanings. Let's say
 we want to create a map that has both. How would this be done? In this
 situation we could create some really long string, but what we can do is
@@ -161,53 +155,9 @@ ArrayList<String> wordDefs = contronyms.get("dust");
 
 ## Ok, so how do we really use this?
 
-The possibilities are endless here\! Remember how we had some difficulty
-with like getting all the properties for Rick's guitar into the
-application? We kept having to change our structure to because of all
-the fields that he had. Well what if instead of defining the fields
-explicitly for each instrument if it became so flexible why not just
-have a ```HashMap``` that contains all of the fields for the spec? Then you
-would have something like this:
+The possibilities are endless here\! 
 
-![](lab12media/media/image1.png)
-
-Image taken from Head First Object Oriented and Analysis Book for
-educational purposes.
-
-Look at the properties Map. Map is the overall idea of linking to
-things, we say ```HashMap```, because we want to use hash functions to allow
-us to build something that will do these retrievals in constant time.
-
-Then inside of ```InstrumentSpe```c, our properties variable would be a
-```HashMap```, where we could say something like
-
-```java
-String builderName = properties.get("builder")
-```
-
-and we would return back ```"Builder.Martin"```
-
-Then in our ```matches``` function for searching for specs we would have
-something like this instead
-
-```java
-for(String key:properties.keySet()) {
-    if(!properties.get(key).equals(otherSpec.getProperty(key))) {
-        return false;
-    }
-}
-return true;
-```
-
-Isn't that beautiful? We do lose something here by doing this which is
-some type safety, but we add so much flexibility by not having to bind
-which properties are with which instrument. Each instrument spec can
-flexibly declare its own set of linkages between keys and values for
-each of the properties that it wants to hold.
-
-Similarly, here's something else that I see often that I think you guys
-can think of doing in a nicer way (which in a way follows the instrument
-example above)
+Here is a sample piece of code that I see often that I think can be done more nicely by using hashmaps.  First study the code below.  
 
 ```java
 if(state == "up") {
@@ -237,9 +187,12 @@ public class Movement {
     private String direction;
     private int dy;
     private int dx;
-    private GOval;
+    private GOval oval;
 
     //getters and such
+    public void move() {
+        oval.move(dx, dy);
+    }
 
 }
 ```
@@ -264,7 +217,7 @@ this.
 ```java
 Movement moveData = moveMap.get(state);
 if(moveData != null) {
-    moveData.getOval().move(moveData.getDX(), moveData.getDY());
+    moveData.move(); 
     sendMessage(moveData.getDirection());
 }
 ```
@@ -276,11 +229,11 @@ directions? And then we also forgot that we need to add two more lines
 of code inside of our if statement that needs more movement data?
 Hopefully you start to see that this would be a cleaner solution.
 
-# How do I get credit for this lab?
+## Getting credit for part 1
 
 Part of the credit for this lab, will be talking with your teammates
-first. What I'd like you to do as a team is to answer the four questions
-at the beginning of the document and submit on canvas. For the useful
+first. What I'd like you to do as a team is to **answer the four questions
+at the beginning of the document and post it in your teams notebook**. For the useful
 part, you will come up with at least three different potential places
 where you could use a ```HashMap``` in your project, and to provide code for
 what that would look like in terms of helping you make the project
@@ -291,20 +244,19 @@ vice-versa. HashMaps are pretty cool and can save us a lot of work. If
 you are the first one to finish reading, then go ahead and follow the
 next set of steps, which is how to get additional credit for the lab.
 
-# After you read
+# Part 2 of the lab
 
-Go ahead and follow the link for <http://go.djosv.com/hashmap> and clone
-the repository into eclipse, just like you've done before in the other
-labs. What we are going to try to build today is an accessory that is a
-very "essential" part of a DJ set (sarcastic voice here). What we are
+[**Click here to start this part of the lab**](http://go.djosv.com/hashmap) and clone
+the repository into eclipse, [just like you've done](lab8media/media/importrepo.gif) before in [the other
+labs](lab8media/media/importfromgit.gif). What we are going to try to build today is an accessory that is a
+very *essential* part of a DJ set :upside_down_face: :smirk: :roll_eyes:. What we are
 going to do is create a very simple **Sampler**, or as I've called it a
-**SoundBoard**, where we will create a couple of different ```GLabels``` and
-when those different ```GLabels``` are clicked, we are going to play a
+**SoundBoard**, where we will create a couple of different ```GLabel```s and
+when those different ```GLabel```s are clicked, we are going to play a
 different sound effect. If this doesn't at all make sense, it will once
-you start hearing the sound effects that we will be playing that you've
-probably heard at some party. To start you off, you'll have two classes,
+you start hearing the sounds, as they will make you reminisce about those days at a party. To start you off, you'll have two classes,
 the ```SoundBoard```, which is a ```GraphicsProgram``` skeleton with a
-```statusLabel``` and an ```AudioPlaye```r, which is a pretty nifty class that
+```statusLabel``` and an ```AudioPlayer```, which is a pretty nifty class that
 you'll be able to use to play mp3's. All you'll need to do is to call
 the AudioPlayer variable (in ```SoundBoard```, it's called ```player```) and
 call the method ```playSound```. ```playSound``` takes in two arguments, a
@@ -313,8 +265,8 @@ call the method ```playSound```. ```playSound``` takes in two arguments, a
 ```AudioPlayer``` does in fact contain a ```HashMap``` that links a ```String``` in
 this case a *filename*, to a ```MediaPlayer``` object.
 
-The basic goal of extending the soundboard is to get add two ```GLabels```
-and then when each of those ```GLabels``` is clicked, to play a particular
+The basic goal of extending the soundboard is to get add two ```GLabel```s
+and then when each of those ```GLabel```s is clicked, to play a particular
 sound effect. While we could use a strategy of just creating the labels
 and then having a gigantic if statement at the bottom that would try to
 link a label to a sound, let's leverage using a ```HashMap``` instead. In
