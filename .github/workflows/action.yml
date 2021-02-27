@@ -10,6 +10,6 @@ jobs:
     - uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         config-file: '.github/workflows/mlc_config.json'
-        use-quiet-mode: 'yes'
+        use-quiet-mode: 'no'
         check-modified-files-only: 'no'
         base-branch: 'main'
