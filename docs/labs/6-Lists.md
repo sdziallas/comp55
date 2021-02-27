@@ -59,7 +59,7 @@ more information on the different methods that you can call on an
 ```ArrayList```, you can visit the java documentation (aka *javadoc*) by googling **"java arraylist
 api"** which should take you to a site like this
 
-<https://docs.oracle.com/javase/11/docs/api/java/util/ArrayList.html>
+<https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html>
 
 Here is some sample ArrayList code.
 

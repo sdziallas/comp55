@@ -169,7 +169,7 @@ your disposal. Ever wanted to have a class that stores a Date correctly?
 Done. Want to make an http request? Done. Want to sort an array? Done.
 To see, just go to this link.
 
-http://docs.oracle.com/javase/11/docs/api/
+<https://docs.oracle.com/en/java/javase/11/docs/api/index.html>
 
 Those are all java files that have been implemented, are stable and get
 leveraged by folks who work in Java so that they don't reinvent the
