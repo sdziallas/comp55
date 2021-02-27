@@ -261,7 +261,6 @@ your program line by line. You'll see the line that eclipse is currently
 paused at highlighted in green, which is eclipse's way of letting you
 know that it is currently waiting to execute that particular line. To
 execute that line, you can use the commands shown in Eclipse's toolbar.
-![](lab3media/media/image10.png)
 
 The red stop button ![](lab3media/media/terminate.png) above is something you want to hit whenever you want
 to stop debugging (*or to terminate any program that you left running*), while the rectangle-play button (to the left) ![](lab3media/media/resumeicon.png) will
