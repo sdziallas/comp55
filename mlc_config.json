@@ -1,7 +1,8 @@
-{
-  "ignorePatterns": [
-    {
-      "pattern": "^https://non-existing-domain.com"
-    }
-  ]
-}
+"replacementPatterns": [
+	{
+		"pattern":"^[0-9]{1,2}-[0-9A-Za-z-]+.html",
+		"replacement": "{{BASEURL}}/"
+	}
+],
+"retryOn429": true,
+"aliveStatusCodes": [200, 429]
