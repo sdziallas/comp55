@@ -1,8 +1,7 @@
 {
-  "replacementPatterns": [
+  "ignorePatterns": [
 	{
 		"pattern":"^[0-9]{1,2}-[0-9A-Za-z-]+.html",
-		"replacement": "{{BASEURL}}/"
 	}
   ],
   "retryOn429": true,
