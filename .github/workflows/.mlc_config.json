@@ -4,5 +4,9 @@
 		"pattern":"^[0-9]{1,2}-[\w\d-]+\.html",
 		"replacement": "{{BASEURL}}/"
 	}
-]
+],
+"aliveStatusCodes": [
+	200,
+	429
+	]
 }
