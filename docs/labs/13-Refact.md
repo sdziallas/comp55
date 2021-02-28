@@ -303,8 +303,8 @@ create all of the objects and store them in a list, or potentially a
 create a loop and function that will create a series of these objects,
 like for example buttons, where you extract out to the method all of the
 common things needed for a button. I mean if you are creating 5 buttons,
-wouldn't it be nice to have a function that was like makeButton(30, 30,
-100, 100, "OK", Color.BLUE) and then know it that it will just show up?
+wouldn't it be nice to have a function that was like ```makeButton(30, 30,
+100, 100, "OK", Color.BLUE)``` and then know it that it will just show up?
 
 7)  **Does the code look confusing? Consider making methods to help you
     make parts more readable.**
