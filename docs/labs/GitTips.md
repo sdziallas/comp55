@@ -96,8 +96,10 @@ with this window:
 ![](gittips/media/propertiesPage.png)
 
     1) Cick *Java Build Path*
-    2) Click on the *Source* tab
-    3) Click on *Add Folder*
+
+    3) Click on the *Source* tab
+
+    5) Click on *Add Folder*
 
     
 
