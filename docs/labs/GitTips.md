@@ -32,6 +32,8 @@ indicates that the project and subsequently, some files (in this case
 repository. Normally as soon as you make changes, you'll see differences
 here.
 
+Next, we'll talk about **untracked** files.
+
 ![](gittips/media/untracked.png)
 
 Untracked means that the file is currently not being kept track of in
