@@ -89,11 +89,15 @@ The consoloe will return an error telling you it cannot find the image.
 
 ![](gittips/media/cannotFindImage.png)
 
-    First thing you want to do is right click your *project-name* in 
-    your project explorer and click on the *properties*. You will be greeted
-    with this window: 
+First thing you want to do is right click your *project-name* in 
+your project explorer and click on the *properties*. You will be greeted
+with this window: 
     
 ![](gittips/media/)
+
+You want to click *Java Build Path*(1), once done you will see some tabs
+on the top of the properties page. You want to click on the *Source*(2) tab. 
+Next click on *Add Folder*(3).
 
     
 
