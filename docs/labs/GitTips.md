@@ -27,7 +27,7 @@ mess with you.
 
 Some of the most important icons here are the "\>" symbol. This
 indicates that the project and subsequently, some files (in this case
-```conflict```, ```dirty```, and ```partially-staged``` as well as ```folder```) are
+```conflict.txt```, ```dirty.txt```, and ```partially-staged.txt``` as well as ```folder```) are
 **dirty**, which is that they are different than the current head of the
 repository. Normally as soon as you make changes, you'll see differences
 here.
