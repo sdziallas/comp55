@@ -109,8 +109,6 @@ Now you are met with the Source Folder Selection
 
 ![](gittips/media/sourceFolderSelection.png)
 
-All you have to do now is check the folder you want to add and click *Ok*, and 
-*Apply and Close* and you are done!
 
 
 
