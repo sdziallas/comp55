@@ -21,27 +21,33 @@ mess with you.
 
 3)  Look at the icons in your project closely: Here is a list of icons
     with filenames that give a partial explanation of what is happening
-    with files in your project.
+    with files in your project. **Do note that the following icons are 
+    the ones seen in classic eclipse view and their appearance
+    changes when using other themes!** 
 
 ![](gittips/media/image1.png)
 
 Some of the most important icons here are the "\>" symbol. This
 indicates that the project and subsequently, some files (in this case
-```conflict```, ```dirty```, and ```partially-staged``` as well as ```folder```) are
+```conflict.txt```, ```dirty.txt```, and ```partially-staged.txt``` as well as ```folder```) are
 **dirty**, which is that they are different than the current head of the
 repository. Normally as soon as you make changes, you'll see differences
 here.
 
-![](gittips/media/image1.png)
+Next, we'll talk about **untracked** files.
+
+![](gittips/media/untracked.png)
 
 Untracked means that the file is currently not being kept track of in
 the repository, decide whether or not you want to keep track of it. If
 you do, then you can add it to the index.
 
-![](gittips/media/image1.png)The last one conflict is an important one
-to take notice of, as you'll have to resolve any conflicts there before
-you're allowed to continue contributing to the project. It's best if you
-resolve the conflicts by following the steps in Tip\#4.
+![](gittips/media/conflict.PNG)
+
+The last one, **conflict**, is an important one to take notice of, as you'll 
+have to resolve any conflicts there before you're allowed to continue 
+contributing to the project. It's best if you resolve the conflicts 
+by following the steps in Tip \#4.
 
 4)  If your project isn't being pushed, look at the errors that are
     being given\! Read what git is telling you. Sometimes you'll need to
