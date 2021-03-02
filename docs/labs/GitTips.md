@@ -40,7 +40,7 @@ Untracked means that the file is currently not being kept track of in
 the repository, decide whether or not you want to keep track of it. If
 you do, then you can add it to the index.
 
-![](gittips/media/conflict.png)
+![](gittips/media/conflict.PNG)
 
 The last one, **conflict**, is an important one to take notice of, as you'll 
 have to resolve any conflicts there before you're allowed to continue 
