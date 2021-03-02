@@ -32,7 +32,7 @@ indicates that the project and subsequently, some files (in this case
 repository. Normally as soon as you make changes, you'll see differences
 here.
 
-![](gittips/media/image1.png)
+![](gittips/media/untracked.png)
 
 Untracked means that the file is currently not being kept track of in
 the repository, decide whether or not you want to keep track of it. If
