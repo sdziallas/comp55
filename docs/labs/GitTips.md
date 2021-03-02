@@ -38,10 +38,12 @@ Untracked means that the file is currently not being kept track of in
 the repository, decide whether or not you want to keep track of it. If
 you do, then you can add it to the index.
 
-![](gittips/media/image1.png)The last one conflict is an important one
-to take notice of, as you'll have to resolve any conflicts there before
-you're allowed to continue contributing to the project. It's best if you
-resolve the conflicts by following the steps in Tip\#4.
+![](gittips/media/image1.png)
+
+The last one conflict is an important one to take notice of, as you'll 
+have to resolve any conflicts there before you're allowed to continue 
+contributing to the project. It's best if you resolve the conflicts 
+by following the steps in Tip \#4.
 
 4)  If your project isn't being pushed, look at the errors that are
     being given\! Read what git is telling you. Sometimes you'll need to
