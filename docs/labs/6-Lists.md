@@ -7,7 +7,7 @@ If your program has not gotten to that stage, please [go back](5-Interact.html) 
 # ArrayLists
 
 **```ArrayList```** is a special Java collection that makes keeping track of
-multiple items (what we normally use Arrays for) much much easier.
+multiple items (what we normally use Arrays for) **!MUCH MUCH!** easier.
 ```ArrayList```s are similar to ```Vector``` in C++ in that they:
 
   - Don't have some absolute size limit like arrays, they just keep
