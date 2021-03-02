@@ -93,7 +93,7 @@ First thing you want to do is right click your *project-name* in
 your project explorer and click on the *properties*. You will be greeted
 with this window: 
     
-![](gittips/media/)
+![](gittips/media/propertiesPage.png)
 
 You want to click *Java Build Path*(1), once done you will see some tabs
 on the top of the properties page. You want to click on the *Source*(2) tab. 
