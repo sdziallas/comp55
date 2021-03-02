@@ -87,13 +87,13 @@ folders are not in the java build path. Lets take for example a media folder
 containing images for you project that's not in your java build path. 
 The consoloe will return an error telling you it cannot find the image.
 
-    ![](gittips/media/cannotFindImage.png)
+![](gittips/media/cannotFindImage.png)
 
 First thing you want to do is right click your *project-name* in 
 your project explorer and click on the *properties*. You will be greeted
 with this window: 
     
-    ![](gittips/media/propertiesPage.png)
+![](gittips/media/propertiesPage.png)
 
     1) Cick *Java Build Path*
 
