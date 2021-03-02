@@ -85,7 +85,7 @@ by following the steps in Tip \#4.
 When importing your project into Eclipse there are times where certain 
 folders are not in the java build path. Lets take for example a media folder 
 containing images for you project that's not in your java build path. 
-The consoloe will return an error telling you it cannot find the image.
+The console will return an error telling you it cannot find the image.
 
 
 ![](gittips/media/cannotFindImage.png)
