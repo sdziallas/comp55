@@ -93,7 +93,7 @@ First thing you want to do is right click your *project-name* in
 your project explorer and click on the *properties*. You will be greeted
 with this window: 
     
-![](gittips/media/propertiesPage.png)
+![](gittips/media/propertiesPage.png | width=100)
 
     1) Cick *Java Build Path*
 
