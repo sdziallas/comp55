@@ -21,7 +21,9 @@ mess with you.
 
 3)  Look at the icons in your project closely: Here is a list of icons
     with filenames that give a partial explanation of what is happening
-    with files in your project.
+    with files in your project. **Do note that the following icons are 
+    the ones seen in classic eclipse view and their appearance might
+    change in dark theme!** 
 
 ![](gittips/media/image1.png)
 
