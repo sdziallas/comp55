@@ -93,7 +93,7 @@ To debug in eclipse
 
 >> ![](eclipseloot/media/image2.png)
 
-  - Use *Debug* (shown below) instead of the adjacent *Run* to run in
+  - Use *Debug* ![](eclipseloot/media/debug.PNG) instead of the adjacent *Run* ![](eclipseloot/media/run.PNG) to run in
     the debugger (Note: "Run" is different from "Debug" -- Run ignores
     the breakpoints).
 
