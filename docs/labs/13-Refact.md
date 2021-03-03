@@ -329,17 +329,17 @@ public void mouseMoved(MouseEvent e) {
 }
 ```
 
-Is it immediately clear what the above if statement does? Maybe, maybe not. It's not impossible to understand with some context that the conditions check the location of ```e``` relative to ```frame```. However, using a function could make this code clearer. Rewriting the code above using a function could look something like this:
+Is it immediately clear what the above if statement does? Maybe, maybe not. It's difficult to understand without some context that the conditions check the location of ```e``` relative to ```frame```. However, using a function could make this code clearer. Rewriting the code above using a function could look something like this:
 
 ```java
-private boolean outside(GImage frame, MouseEvent e) {
-    return e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || e.getY() < frame.getY() ||
-    e.getY() > frame.getY() + frame.getHeight()
+private boolean outsideOf(GImage frame, MouseEvent e) {
+    return e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || 
+           e.getY() < frame.getY() || e.getY() > frame.getY() + frame.getHeight();
 }
 
 @Override
 public void mouseMoved(MouseEvent e) {
-    if(outside(frame, e))
+    if(outsideOf(frame, e))
     {
         // do something
     }
@@ -347,7 +347,7 @@ public void mouseMoved(MouseEvent e) {
 ```
 
 With this change, the ```if``` statement remains functionally the same.
-However, by removing the content of the if statement and putting it in a function, the ```if``` statement becomes more readable. Additionally, the ```outside``` function will be easy to test, and can be called again as needed in other ```if``` statements.
+However, by removing the content of the if statement and putting it into a function, the ```if``` statement becomes more readable. Additionally, the ```outsideOf``` function will be easy to test, and can be called again as needed in other parts of the code.
 
 To be honest, I think a lot of the issues that I see with student code
 in COMP 55 is the lack of methods/functions that they tend to create for
