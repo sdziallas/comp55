@@ -99,7 +99,6 @@ that indicates whether it's empty or not.
 
 ```java
 boolean empty = phobias.isEmpty();
-// empty is set to false since phobias is not empty
 ```
 
 To check whether all your phobias are defined correctly, you can do so by traversing 
