@@ -90,8 +90,6 @@ stored in the ```HashMap```.
 
 ```java
 int number_of_phobias = phobias.size();
-// number_of_phobias now has the value of 3 since there are 3 definitions in the HashMap
-```
 
 To check if a ```HashMap``` is empty, you can call ```isEmpty``` to return a boolean
 that indicates whether it's empty or not.
