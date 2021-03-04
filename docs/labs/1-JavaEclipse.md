@@ -82,6 +82,10 @@ Since all of you have had some previous experiences with other IDEs, Eclipse all
 
 The next thing we are going to do is change eclipse's appearance.  I have been using eclipse for a long time now, and did not change this until this year.  Eclipse is written in Java and so it does not have as clean of an interface as some of the other programs that you have grown to love by now.  Nonetheless, remember, this is open source, it is used heavily in the industry (and I'm sure you've probably come across at least a few open source projects that just don't look as pretty but get the job done).  I would not play around too much with the colors, but I will walk you through this one option, because when we get to using some of the other features, and when we start building code, I will be using the skin here and so it will be easiest to follow along with tutorials and such if you change the appearance to match mine. **Please follow the options here to get full credit for the image you upload for credit at the end of this lab**
 
+### OPTIONAL: If you prefer light theme, skip to step 6. 
+
+You don't need to download from the Eclipse Marketplace if you prefer the default theme. 
+
 ## STEP 5: Installing Darkest Dark Theme
 
 Once you are back you should be at the main page where we clicked to review the IDE preferences.  Go ahead and click to go the eclipse marketplace.  This will launch a variety of plugins and tools that have been developed to integrate into eclipse.  Here what we will do is download the darkest dark theme.  So search for "dark" in the marketplace and it should be the first option, which has 1.5M downloads, click install, and then confirm.  You'll have to accept another license agreement by picking the option before being able to finish.  **Be sure to uncheck the devstyle with codetogether bundle option, watch the video a few times** 
