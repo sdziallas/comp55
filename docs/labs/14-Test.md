@@ -303,12 +303,19 @@ the day, 15 for the month, and you can avoid changing the year for now. After wh
 goal for this implementation is to use only 2 ```if``` statements and no ```&&``` symbols. While this example is a little contrived, **I want to make sure that you have a very simple solution so you can understand the
 value of the tests for later, so do not have more than 2 if statements in your solution.** All your code needs to do right now is pass these basic tests. Once you have a simple solution that passes the simple 
 tests, you can move on to the next part.
+
+## Assertions
+An advance tool for testing is using Assertions similiar to the assert functions you have used previously, but can be run during run time instead of debugging. In java ```assert``` keyword signifies an assertion. Next to the assertion should be a boolean, and if the boolean is false it lets the programmer know during runtime.  If not false it will continue running the program. Below is an example of the assert function at work.
+<img width="636" alt="Screen Shot 2021-03-03 at 10 51 55 PM" src="https://user-images.githubusercontent.com/61761333/109923023-11ffeb80-7c73-11eb-8cff-f83572691eb9.png">
+
+
 ## Coming up with Advanced Tests
 
 While there are some that say you must write all your tests before writing code, I want to show you how nice it is to have tests when you have to refactor code.
 So, lets come up with some more complicated examples of tests for Dates.
 1. Create a new method in our DateTest.java file and name it ```testDatesAdvanced()```.
 2. Put the ```@Test``` annotation beforehand to make sure that JUnit runs it. For example: 
+
    ```Java
 ```java
     @Test
