@@ -157,6 +157,46 @@ Notice that Java doesn't have the ```endl``` at the end of the statement. It
 has been replaced with the ```println``` statement, if you don't want to go
 to the next line, call ```print``` instead of ```println```.
 
+## Const/Final variables
+
+**a. Constant variables:**
+
+Both Java and C++ allow a variable declaration to specify that the variable is really 
+a constant. C++ uses the word ```const``` for this, while Java uses ```final```.
+When the variable is a **primitive type**, ```final```/```const``` work the same.
+
+```cpp
+const int a = 10; //C++
+final int a = 10; //Java
+a = 11; //Invalid in both languages
+```
+
+**b. Const and final are NOT equivalent when applied to methods:**
+
+One place where the C++ ```const``` and Java ```final``` have very different meanings 
+occurs when they are **applied to methods**.
+
+A ```const``` object can only call ```const``` methods, and is generally considered 
+immutable.
+
+```cpp
+const Person* person = myself;
+person = otherPerson; //Valid... unless we declared it const Person* const!
+person->setAge(20); //Invalid, assuming setAge isn't a const method (it shouldn't be)
+```
+
+A ```final``` object cannot be set to a new object, but it is not immutable - there is 
+nothing stopping someone from calling any ```set``` methods.
+
+```java
+final Person person = myself;
+person = otherPerson; //Invalid
+person.setAge(20); //Valid!
+```
+
+Java has no inherent way of declaring objects immutable; you need to design the class 
+as immutable yourself.
+
 ## Java has programmed many things for you
 
 In addition to things like ArrayLists, which is an infinitely expandable
