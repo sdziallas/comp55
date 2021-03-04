@@ -85,6 +85,38 @@ String possibleDef = phobias.get("osvaldophobia")
 The ```HashMap``` will return ```null```, which it does for any key that has not been
 explicitly put into the corresponding HashMap object (in our case, ```phobias```).
 
+## Intermediate HashMap Usage
+
+Similar to an ```ArrayList```, you can use ```size``` to obtain the number of definitions
+stored in the ```HashMap```.
+
+```java
+int numPhobias = phobias.size();
+```
+
+To check if a ```HashMap``` is empty, you can call ```isEmpty``` to return a boolean
+that indicates whether it's empty or not.
+
+```java
+boolean empty = phobias.isEmpty();
+```
+
+To check whether all your phobias are defined correctly, you can do so by traversing 
+through the ```HashMap``` using a ```for-each``` loop like this
+
+```java
+phobias.forEach((key, value) -> {
+  System.out.println(key + " : " + value);
+});
+```
+
+This should output:
+```java
+ergophobia : the abnormal fear of work
+nomophobia : the fear of losing mobile phone service
+pentheraphobia : the fear of your mother-in-law
+```
+
 ## More advanced rules for HashMaps
 
 Remember, ***each key corresponds to one and
