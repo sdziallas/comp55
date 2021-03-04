@@ -89,7 +89,7 @@ Similar to an ```ArrayList```, you can use ```size``` to obtain the number of de
 stored in the ```HashMap```.
 
 ```java
-int number_of_phobias = phobias.size();
+int numPhobias = phobias.size();
 
 To check if a ```HashMap``` is empty, you can call ```isEmpty``` to return a boolean
 that indicates whether it's empty or not.
