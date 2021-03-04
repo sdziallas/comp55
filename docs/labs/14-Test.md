@@ -306,8 +306,20 @@ tests, you can move on to the next part.
 
 ## Assertions
 An advance tool for testing is using Assertions similiar to the assert functions you have used previously, but can be run during run time instead of debugging. In java ```assert``` keyword signifies an assertion. Next to the assertion should be a boolean, and if the boolean is false it lets the programmer know during runtime.  If not false it will continue running the program. Below is an example of the assert function at work.
+
 <img width="636" alt="Screen Shot 2021-03-03 at 10 51 55 PM" src="https://user-images.githubusercontent.com/61761333/109923023-11ffeb80-7c73-11eb-8cff-f83572691eb9.png">
 
+How to Enable?
+The great part about Assert expressions are that you can either turn them on or off in your code. Turning all asserts off makes them similiar to comments, while enabeling them allows you to error check on the fly. In the command line Java –ea MainClass enables assertions in all your classes. While java –da MainClass disables them. Assertions can also be controlled by scope, but I will let you read that on your own. 
+
+NOTE: Asserts are off by default in Java you must enable them with the java command line using the command listed above
+
+When to use Asserts?
+Why not use Exceptions you may be wondering? Well im glad you asked. Assertions are only used in Pre-Production code not production code. They are a fast easy way to see errors in your program before going to production. Exceptions allow certain actions to be taken when something is caught, while assertions do not ( Assertions shut off your program until you fix your data). Assertions main function is as a watchdog paying attention to important variables, and seeing if impossible values pop up such as NULL alerting programmers that there is a bug in the code.
+
+In a nutshell Assertions are used for bug checking for data that should NEVER be out of the norm, can be turned on and off, and is never used in production code.
+
+While Exceptions are more flexible and can take actions after catching the desired data. 
 
 ## Coming up with Advanced Tests
 
