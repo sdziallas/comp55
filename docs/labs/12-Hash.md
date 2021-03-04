@@ -248,8 +248,8 @@ next set of steps, which is how to get additional credit for the lab.
 
 [**Click here to start this part of the lab**](http://go.djosv.com/hashmap) and clone
 the repository into eclipse, [just like you've done](lab8media/media/importrepo.gif) before in [the other
-labs](lab8media/media/importfromgit.gif). What we are going to try to build today is an accessory that is a
-very *essential* part of a DJ set 🙃😏🙄. What we are
+labs](lab8media/media/importfromgit.gif). What we are going to try to build today is a ***SoundBoard***, an accessory that is
+an *essential* part of a DJ set 🙃😏🙄. What we are
 going to do is create a very simple **Sampler**, or as I've called it a
 **SoundBoard**, where we will create a couple of different ```GLabel```s and
 when those different ```GLabel```s are clicked, we are going to play a
