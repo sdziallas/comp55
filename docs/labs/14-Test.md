@@ -289,15 +289,14 @@ would change to something like this.
 ```java
 assertTrue(Date.isValidDate(4, 15, 2017));
 ```
-
 Once you change this, just to see what it would look like to pass all your tests, you can run your unit tests again. While this example is a bit contrived (your ```isValidDate```) right now returns ```true```, 
 it will give you an indication of what a passing set of tests looks like in JUnit. Notice the green bar that is present once you run. Now, come up with many different tests so that you ensure that 
-your code is doing what you expect it to do and is working without many bugs. To help us make sure that our code is working, let's come up with a test that where ```isValidDate``` should return ```false```. 
+your code is doing what you expect it to do and is working without many bugs. To help us make sure that our code is working, let's come up with a test where ```isValidDate``` should return ```false```. 
 You can come up with any type of basic result, but even something like ```55-8-2017``` should not be considered a valid Date. At its simplest terms, such a thing would be considered a simple test.  At 
-this point you could copy and paste line 8, but then change the ```assertTrue``` to an ```assertFalse``` instead, and change ```[4,15,2017](mailto:holler@gmail.com)``` to ```55,8,2017```. There are some disadvantages to 
+this point you could copy and paste line 8, but then change the ```assertTrue``` to an ```assertFalse``` instead, and change ```[4,15,2017]``` to ```55,8,2017```. There are some disadvantages to 
 copying and pasting code (like not thinking out of the box with your testing), but just having more tests outweigh some of the potential drawbacks in this scenario. In addition to ```assertTrue``` and 
-```assertFalse```, you also have available an ```assertEquals``` method, which compares the two parameters to make sure that they are equal to each other. There are also assertNull and **```**assertNotNull```, which
-will just check for null or not null on a particular object. If you are ever unsure about what assert statements the JUnit framework has made available to you, the best thing to do is to use Ctrl-Space
+```assertFalse```, you also have available an ```assertEquals``` method, which compares the two parameters to make sure that they are equal to each other. There are also assertNull and ```assertNotNull```, which
+will just check for null or not null on a particular object. If you are ever unsure about what assert statements the JUnit framework has made available to you, the best thing to do is to use ***Ctrl-Space***
 to look up the different assert statements that Java has made available to you already. Now, I'm going to ask you to try to do two more ```assertTrue``` and two more ```assertFalse``` examples that look very similar
 to the ones you've done. For now, keep the true statements with days below say 25, the months from 1 to 11. Likewise, don't try to do anything crazy for ```assertFalse```, just have numbers greater than 35 for
 the day, 15 for the month, and you can avoid changing the year for now. After which, go ahead and come up with a simple solution to the ```isValidDate``` problem that will satisfy this set of basic tests. Your 
@@ -309,31 +308,32 @@ tests, you can move on to the next part.
 While there are some that say you must write all your tests before writing code, I want to show you how nice it is to have tests when you have to refactor code.
 So, lets come up with some more complicated examples of tests for Dates.
 1. Create a new method in our DateTest.java file and name it ```testDatesAdvanced()```.
-2. Put the ```@Test``` annotation beforehand to make sure that JUnit runs it. For examples: 
+2. Put the ```@Test``` annotation beforehand to make sure that JUnit runs it. For example: 
+   ```Java
     @Test
-    public void testDatesAdvanced(){}
-3. Think about some of the more nuanced Dates that you've seen out there and come up with 4 or 5 examples. Keep quesitons such as are these actual dates or not? and
-   What do those look like? in mind. Some good example might be Feb 30, Dec 32, and so on. 
-4. Once you've done that add them to the method by using the ```assertTrue``` or ```assertFalse``` calls depending on what you have. (You can simply copy and paste it here).
-5. Once you have that, you can run your JUnit Test again.
+    public void testDatesAdvanced(){}```
+3. Think about some of the more nuanced Dates that you've seen out there and come up with 4 or 5 examples. Ask yourself, "Are these actual dates or not?" and What do those look like? in mind. Some good example might be Feb 30, Dec 32, and so on. 
+4. Once you've done that, add them to the method by using the ```assertTrue``` or ```assertFalse``` calls depending on what you have. (You can simply copy and paste it here).
+5. Once you have that, you can run your JUnit test again.
 6. This time you'll notice that it passed the simple tests, but it fails this advanced one.
-7. So, now let's go ahead and do one more set of tests, these would be known as edge tests, tests, where really you're just trying to cause havoc or get the program to crash.
-   Things like passing in zero, negative numbers, or other craziness, for this example you should not worry about trying to put in the wrong types for the program, things like 
+7. So, now let's go ahead and do one more set of tests, these would be known as *edge tests* - tests where really you're just trying to cause havoc or get the program to crash.
+   Examples of edge would be zero, negative numbers, or other craziness, for this example you should not worry about trying to put in the wrong types for the program, things like 
    characters for example.
-8. Keep in mind that f you were testing a function that had objects or strings as parameters instead, in the edge case you would do things like pass in an empty string or pass in null.
-9. For these were you are trying to them in a separate test method called ```testDatesEdge()```.
+8. Keep in mind that if you were testing a function that had objects or strings as parameters instead, in the edge case you would do things like pass in an empty string (```""```) or pass in ```null```.
+9. Place these examples into a separate test method called ```testDatesEdge()```.
 10.Once you have that, you can then go back and work on the ```isValidDate``` test. 
-11. Now you have tests that help you figure out whether or not your implementation is right, therefore, you can simply keep reworking your solution until you get the correct result
-12.  If you haven't thought of February 29th and when things are a leap year, it's worth reading this short article to help you understand or learn more about leap years. <https://www.infoplease.com/leap-year-explained>
+11. Now you have tests that help you figure out whether or not your implementation is right. Therefore, you can simply keep reworking your solution until you get the correct result.
+12.  If you haven't thought of February 29th and when things are a leap year, it's worth reading [this short article about leap years](https://www.infoplease.com/leap-year-explained).
 Let me know if you have any other questions.
 <br><br>
 ## Some GUI Testing
-We have discuss and worked on enough of code testing. Now, is the time for you to work on application interface testing. As am aaplication developers, you must keep the user in mind. What you
-design is what they see. Hence, for your application to be user-friendly. You must learn to test your graphical user interface (GUIs) too. Therefore, I want you to check out few exercises posted on the website link below: <br>
-<https://www.testingementor.com/software-testing-online-resources/software-testing-exercises/#Software_Testing_Exercise_1_-_How_many_bugs_can_you_find_on_this_buggy_windows_calculator>. <br> This exercises will teaches you to look 
-at the application interfaces and find bugs in them.
-The key objective of Software Testing Exercises is to leverage Manual Testing & Automation Testing Skills gained from our project based Manual Testing Training & Test Automation Training. Especially from a hands-on and project
-perspective, so you could crack Testing Interviews and land a Software Tester Job. This strategy helps those aspiring to break into Software Testing in order to think laterally and moreover helps improve analytical skills & attention to details.
+We have discussed and worked on enough of code testing. Now is the time for you to work on application interface testing. As an aplication developers, you must keep the user in mind. What you
+design is what they see. Hence, for your application to be user-friendly. You must learn to test your graphical user interface (GUIs) too. Therefore, I want you to check out a few exercises posted on the website link below: 
+<https://www.testingementor.com/software-testing-online-resources/software-testing-exercises/#Software_Testing_Exercise_1_-_How_many_bugs_can_you_find_on_this_buggy_windows_calculator>.
+
+This exercises will teaches you to look at the application interfaces and find bugs in them.
+The key objective of Software Testing Exercises is to leverage *Manual Testing & Automation Testing Skills* gained from our project-based *Manual Testing Training* & Test Automation Training. Especially from a hands-on and project
+perspective, so you could crack Testing Interviews and land a Software Tester job. This strategy helps those aspiring to break into Software Testing in order to think laterally and helps improve analytical skills and attention to details.
 # Review Questions 
 
 ### (*Place your answers to these questions as comments in the TestDate.java file and upload to canvas*)
