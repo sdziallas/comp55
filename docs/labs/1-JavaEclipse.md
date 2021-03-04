@@ -84,7 +84,7 @@ The next thing we are going to do is change eclipse's appearance.  I have been u
 
 ### OPTIONAL: If you prefer light theme, skip to step 6. 
 
-You don't need to download from the Eclipse Marketplace if you prefer the default theme. 
+You don't need to download from the Eclipse Marketplace if you prefer the default theme. [Anchor](#anchor)
 
 ## STEP 5: Installing Darkest Dark Theme
 
@@ -126,7 +126,7 @@ listed, which I think makes it easier for you to look at past projects
 and explore other files you have written, in case you need to look back
 at anything. I would encourage you to not think o
 
-## STEP 6: Let's get a Hello World going.
+## STEP 6: Let's get a Hello World going. 
 
 To start programming in any language, it's best to start with a simple
 thing like "Hello, world", so let's do that. Go ahead and right click on
