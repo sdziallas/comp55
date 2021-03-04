@@ -293,7 +293,7 @@ Once you change this, just to see what it would look like to pass all your tests
 it will give you an indication of what a passing set of tests looks like in JUnit. Notice the green bar that is present once you run. Now, come up with many different tests so that you ensure that 
 your code is doing what you expect it to do and is working without many bugs. To help us make sure that our code is working, let's come up with a test where ```isValidDate``` should return ```false```. 
 You can come up with any type of basic result, but even something like ```55-8-2017``` should not be considered a valid Date. At its simplest terms, such a thing would be considered a simple test.  At 
-this point you could copy and paste line 8, but then change the ```assertTrue``` to an ```assertFalse``` instead, and change ```[4,15,2017]``` to ```55,8,2017```. There are some disadvantages to 
+this point you could copy and paste line 8, but then change the ```assertTrue``` to an ```assertFalse``` instead, and change ```4,15,2017``` to ```55,8,2017```. There are some disadvantages to 
 copying and pasting code (like not thinking out of the box with your testing), but just having more tests outweigh some of the potential drawbacks in this scenario. In addition to ```assertTrue``` and 
 ```assertFalse```, you also have available an ```assertEquals``` method, which compares the two parameters to make sure that they are equal to each other. There are also assertNull and ```assertNotNull```, which
 will just check for null or not null on a particular object. If you are ever unsure about what assert statements the JUnit framework has made available to you, the best thing to do is to use ***Ctrl-Space***
