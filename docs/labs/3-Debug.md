@@ -31,6 +31,7 @@ throughout the lab, **but each person must submit their own form**.
 > You observe a symptom -- bad output, wrong function calls an
 > exception. Track the symptom backwards through the code path to find
 > the bug.
+> It may be helpful to draw it out on paper.
 
 
 ### Ask these questions when debugging
