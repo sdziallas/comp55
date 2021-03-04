@@ -304,20 +304,20 @@ multiple ```GObject```s on the screen, it may make more sense for you to
 create all of the objects and store them in a list, or potentially a
 ```HashMap```. This also makes it nice because then you could possibly
 create a loop and function that will create a series of these objects,
-like for example buttons, where you extract out to the method all of the
-common things needed for a button. 
+like, for example, where you can pass in (label, x, y, width, height, color) 
+as parameters in a function to create buttons. 
 
 Here is a pseudo code as an example:
 
-```
+```java
 void makeButton(String label, double x, double y, double width, double height, Color col) {
-       ....
+       int size = 5;
        List <GButton> listOfButtons = new ArrayList <GRect>();
-       for (int i = 0; i < 5 < i++) {
+       for (int i = 0; i < size; i++) {
           GButton knob = new GButton (label, x, y, width, height, color);
           listOfButtons.add(knob);
         }
-        ...
+        System.out.println(listOfButtons);
 }
 ```
 
