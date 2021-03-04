@@ -106,12 +106,6 @@ through the ```HashMap``` using a ```for-each``` loop like this
 phobias.forEach((key, value) -> {
   System.out.println(key + " : " + value);
 });
-// should output:
-// ergophobia : the abnormal fear of work
-// nomophobia : the fear of losing mobile phone service
-// pentheraphobia : the fear of your mother-in-law
-```
-
 ## More advanced rules for HashMaps
 
 Remember, ***each key corresponds to one and
