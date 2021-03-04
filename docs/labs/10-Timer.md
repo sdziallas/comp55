@@ -38,7 +38,7 @@ writing the Timer code to wake up instead, then you would use the
 special keyword ```this``` … ```this``` refers to yourself, the object that you
 are currently in. 
 
-### 2. Setup event handlers - ```ActionLister``` and ```actionPerformed``` - in the appropriate class
+### 2. Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
 Any class that would like to be responsible party for
 handling the alarm must implement the ```ActionListener``` interface. The
 ```ActionListener``` interface has just one method, ```public void
@@ -382,3 +382,35 @@ own, with your own changes. Hopefully you see the powers that timers can
 have in making your programs more dynamic and more expressive.
 
 ![](lab10media/media/image5.png)![](lab10media/media/image6.png)
+
+## Dealing with Multiple Timers
+
+As you continue working with timers, you may eventually want to utilize multiple within the same class
+for different purposes. For example, say you initialize the following timers and have ```actionPerformed```
+set up as shown previously:
+```java
+Timer myFirstTimer = new Timer(1000, objectToUseTimer);
+Timer mySecondTimer = new Timer(1000, objectToUseTimer);
+```
+
+```java
+public void actionPerformed(ActionEvent e) {
+    //...
+}
+```
+With the way ```actionPerformed``` is currently set up, there is no way to differentiate between tasks that
+should be completed for each timer. To properly handle this, you want to use the ```getSource```
+function and compare its return value to the timers you created:
+```java
+public void actionPerformed(ActionEvent e) {
+    Object source = e.getSource();
+    if (source == myFirstTimer) {
+        //Tasks for the first timer
+    }
+    else if (source == mySecondTimer) {
+        //Tasks for the second timer
+    }
+}
+```
+
+
