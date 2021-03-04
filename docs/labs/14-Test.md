@@ -318,7 +318,7 @@ So, lets come up with some more complicated examples of tests for Dates.
 5. Once you have that, you can run your JUnit test again.
 6. This time you'll notice that it passed the simple tests, but it fails this advanced one.
 7. So, now let's go ahead and do one more set of tests, these would be known as *edge tests* - tests where really you're just trying to cause havoc or get the program to crash.
-   Examples of edge would be zero, negative numbers, or other craziness, for this example you should not worry about trying to put in the wrong types for the program, things like 
+   Examples of edge cases would be zero, negative numbers, or other craziness, for this example you should not worry about trying to put in the wrong types for the program, things like 
    characters for example.
 8. Keep in mind that if you were testing a function that had objects or strings as parameters instead, in the edge case you would do things like pass in an empty string (```""```) or pass in ```null```.
 9. Place these examples into a separate test method called ```testDatesEdge()```.
