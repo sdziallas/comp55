@@ -233,28 +233,18 @@ object to be placed in a particular area.
 
 Once you have created your shape or image, the ACM library gives you the abiliy to fill it with a wild variety of colors. Depending on what you created, the procress for applying the desired color you want vary between each other. The different options that will be dicussed are ```GParagraph```, ```GLabel```, ```GObject```, and ```GRect```. ```GRect``` is interchangeable with ```GOval```.
 
-If you want to apply color to a ```GParagraph``` or ```GLabel``` look at the following code snipet:
-```java
-GParagraph text1 = new GParagraph("Hello World", START_X, START_Y);
-text1.setFont("Arial-24");
-text1.setColor(Color.BLUE);
-add(text1);
-```
+If you want to apply color to a ```GParagraph``` or ```GLabel``` look at the following table to compare code snippets:
 
-As a result of this code, your ```GParagraph``` or ```GLabel``` will be changed to the color blue. 
+| GParagraph | GRect |
+| :---: | :---: |
+| `GParagraph text1 = new GParagraph("Hello World", START_X, START_Y);` | `GRect rect = new GRect(START_X, START_Y, 200, 100); //200 and 100 should be constants` |
+| `text1.setFont("Arial-24");` | `rect.setFillColor(Color.YELLOW);` |
+| `text1.setColor(Color.BLUE);` | `rect.setFilled(true);   //This will apply the color you have chosen` |
+| `add(text1);` | `add(rect);`| 
 
-This procress is roughly the same when it comes to ```GRect``` or ```GOval``` just with a few changes. If you want to apply color to a ```GRect``` or ```GOval``` look at the following code snipet:
-```java
-GRect rect = new GRect(START_X, START_Y, 200, 100); //200 and 100 should be constants
-rect.setColor(Color.YELLOW);    //This changed the outline from default black to yellow
-rect.setFillColor(Color.YELLOW);
-rect.setFilled(true);   //This will apply the color you have chosen
-add(rect);
-```
+As a result of the first column, your ```GParagraph``` or ```GLabel``` will be changed to the color blue. As a result of the second column, your ```GRect``` or ```GOval``` will be changed to the color yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor```, you change the color of the outlines, not the shape itself. Since ```GParagraph``` is not a shape in the ACM library, you have to change the color of the font outlines. When dealing with ```GObject``` or a shape, you use ```.setFillColor(Color.INSERT COLOR HERE)``` to fill the shape with the color of your chosing, but it wont be shown just yet. Addtionally, the outlines will be defaulted to black, but that will be explained in the next example. Next you must use ```.setFilled(true)``` to apply the color to your shape and it will now show when running the program when using ```add()```.
 
-As a result of this code, your ```GRect``` or ```GOval``` will be changed to the color yellow. The main difference between this code snipet and the previous snipet of code is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor```, you change the color of the outlines, not the shape itself. When you use ```.setFillColor```, the color within the shape changes but ```.setFilled(true)``` is needed to apply the color. 
-
-Lastly, you can also change the color to an assgined ```GObject``` but the order is a bit different. If you want to apply color to a ```GObject``` look at the following code snipet:
+Here is an example of assigning a ```GRect``` to a ```GObject``` and manipulating it's color
 ```java
 GRect rect = new GRect(START_X, START_Y, 200, 100); //200 and 100 should be constants
 GObject obj = rect;
@@ -263,7 +253,7 @@ rect.setFilled(true);
 add(obj);
 ```
 
-As a result of this code, your ```GObject``` will be changed to the color green. In order for the ```GObject```'s color to be change, you must assign the object to the ```GRect```. After, you can change the object's color directly. You would need to use ```.setFilled(true)``` on the ```rect``` variable. Lastly you can add the object to the screen using ```add(obj)```.
+As a result of this code, your ```GObject``` will be changed to the color green. In order for the ```GObject```'s color to be change, you must assign the object to the ```GRect```. After ```GRect``` has been asigned to ```GObject``` you can now manipulate the color of the object. In this case ```obj.setColor``` was used. This changes the color outlines of the object and replaces them with the color green, resulting in a white box with a green border around it. Next ```.setFilled(true)``` is called, filling the shape with the color previously stated and applying it simultaneously. This will produce a fully green box with the same color border. Using ```add(obj)``` will show the green box on screen.
 
 ## Overlapping Objects
 
