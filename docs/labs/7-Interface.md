@@ -91,6 +91,9 @@ public interface Emotional {
 
 This file is quite empty and while the topic of *Interfaces* may sound intimidating, interface files are typically quite empty and only hold method declarations.  The methods do not define implementations in the interface so many interface files are less than 10 lines of code.  Interfaces are inherently simple and the benefit will come when we have other classes refer to these files in the future.  What we are going to do in our scenario is to add the three methods from our UML diagram.  Go ahead and do that now.  **Add the three method declarations to the interface**.  Not sure which three methods I'm referring to?  Look at the UML diagram.  The declaration will look just like the method definitions from ```EmotionalOval```, except that instead of having a definition with curly braces, it will end with a semi-colon.  Once you add those three lines of code, you can move on to the next step.
 
+Connection To Visual:
+On the UML diagram, ```GRect```, ```GOval```, ```EmotionalRect```, and ```EmotionalOval``` are all part of the shapes that get displayed with the colors changing inside them. The ```EmotionSimulator``` takes in the information of the three emotions to display the colors corresponding to each emotion to display them inside the shapes when the mouse is clicked.  
+
 ### Step 2: Change ```EmotionalOval``` and Rect so that they both implement the interface
 Open up ```EmotionalOval``` and locate the start of the class definition, which looks like this:
 ```java
