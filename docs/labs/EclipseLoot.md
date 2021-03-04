@@ -125,7 +125,7 @@ To debug in eclipse
 > window will list all of the variables present in this scope. Notice
 > that the variable ```s``` has the value ```"Hello"```
 
-  - Eclipse has the typical Step-over, Step-in, Step-out controls to advance the program in little steps.
+  - Eclipse has the typical ***Step-Over***, ***Step-In***, ***Step-Out*** controls to advance the program in little steps.
     ![](eclipseloot/media/image8.png)
 
   - Before you can make those steps, you have to set a breakpoint in a
