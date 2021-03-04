@@ -317,6 +317,38 @@ easier to generate test methods for as well, since you'll be able to
 say, *when I expect this, I should get back this*, which is the basis of
 unit testing that we went over in the previous lab.
 
+Take the following code as an example.
+```java
+@Override
+public void mouseMoved(MouseEvent e) {
+    if(e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || e.getY() < frame.getY() ||
+       e.getY() > frame.getY() + frame.getHeight()) 
+    {
+        // do something
+    }
+}
+```
+
+Is it immediately clear what the above if statement does? Maybe, maybe not. It's difficult to understand without some context that the conditions check the location of ```e``` relative to ```frame```. However, using a function could make this code clearer. Rewriting the code above using a function could look something like this:
+
+```java
+private boolean outsideOf(GImage frame, MouseEvent e) {
+    return e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || 
+           e.getY() < frame.getY() || e.getY() > frame.getY() + frame.getHeight();
+}
+
+@Override
+public void mouseMoved(MouseEvent e) {
+    if(outsideOf(frame, e))
+    {
+        // do something
+    }
+}
+```
+
+With this change, the ```if``` statement remains functionally the same.
+However, by removing the content of the if statement and putting it into a function, the ```if``` statement becomes more readable. Additionally, the ```outsideOf``` function will be easy to test, and can be called again as needed in other parts of the code.
+
 To be honest, I think a lot of the issues that I see with student code
 in COMP 55 is the lack of methods/functions that they tend to create for
 a variety of reasons. I understand that making them takes time, but
