@@ -87,7 +87,7 @@ picture. At this point the project should work and run. If it doesn't,
 you may have to change some preferences on your eclipse, but this is
 very rare.
 
-## user.name and user.email to your Git Preferences
+## Examining ```user.name``` and ```user.email``` to your Git Preferences
 
 So that we can make sure that you get credit for committing and working
 on the project, we're going to have you make one additional change to
