@@ -26,7 +26,7 @@ number of items and you have a full hash function yada yada)
 ## Why didn't they just call it a hashtable then?
 
 In Java, there are a number of data structures that approximate the C++ **map** library.
-The one you will be working with is the ```HashMap``` library. The Java ```HashMap```
+The one you will be working with is the ```HashMap``` library. Java ```HashMap```
 implements the ```Map``` interface. By doing that Java is making it clear that ```HashMaps``` form
 a bond, or mapping, between two items. Java actually does have a ```HashTable``` class that is
 nearly identical to the ```HashMap``` class, but ```HashTable``` is now considered a legacy class,
