@@ -307,7 +307,7 @@ create a loop and function that will create a series of these objects,
 like, for example, where you can pass in (label, x, y, width, height, color) 
 as parameters in a function to create buttons. 
 
-Here is a pseudo code as an example:
+Here is an example written in pseudocode
 
 ```java
 void makeButton(String label, double x, double y, double width, double height, Color col) {
