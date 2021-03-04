@@ -236,11 +236,8 @@ Once you have created your shape or image, the ACM library gives you the abiliy 
 If you want to apply color to a ```GParagraph``` or ```GLabel``` look at the following table to compare code snippets:
 
 | GParagraph | GRect |
-| :---: | :---: |
-| `GParagraph text1 = new GParagraph("Hello World", START_X, START_Y);` | `GRect rect = new GRect(START_X, START_Y, 200, 100); //200 and 100 should be constants` |
-| `text1.setFont("Arial-24");` | `rect.setFillColor(Color.YELLOW);` |
-| `text1.setColor(Color.BLUE);` | `rect.setFilled(true);   //This will apply the color you have chosen` |
-| `add(text1);` | `add(rect);`| 
+| :--- | :--- |
+| `GParagraph text1 = new GParagraph("Hello World", START_X, START_Y);`<br>`text1.setFont("Arial-24");`<br>`text1.setColor(Color.BLUE);`<br>`add(text1);` | `GRect rect = new GRect(START_X, START_Y, 200, 100);`<br>`//200 and 100 should be constants`<br>`rect.setFillColor(Color.YELLOW);`<br>`rect.setFilled(true);`<br>`//This will apply the color you have chosen`<br>`add(rect);`| 
 
 As a result of the first column, your ```GParagraph``` or ```GLabel``` will be changed to the color blue. As a result of the second column, your ```GRect``` or ```GOval``` will be changed to the color yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor```, you change the color of the outlines, not the shape itself. Since ```GParagraph``` is not a shape in the ACM library, you have to change the color of the font outlines. When dealing with ```GObject``` or a shape, you use ```.setFillColor(Color.INSERT COLOR HERE)``` to fill the shape with the color of your chosing, but it wont be shown just yet. Addtionally, the outlines will be defaulted to black, but that will be explained in the next example. Next you must use ```.setFilled(true)``` to apply the color to your shape and it will now show when running the program when using ```add()```.
 
