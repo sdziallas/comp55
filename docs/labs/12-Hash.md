@@ -30,7 +30,10 @@ The one you will be working with is the ```HashMap``` library. Java ```HashMap``
 implements the ```Map``` interface. By doing that Java is making it clear that ```HashMaps``` form
 a bond, or mapping, between two items. Java actually does have a ```HashTable``` class that is
 nearly identical to the ```HashMap``` class, but ```HashTable``` is now considered a legacy class,
-and should generally not be used.
+and should generally not be used. These two classes are not to be confused with Java's ```HashSet```
+data structure, which uses hashing to implement the **set** data type. All three data structures
+use a hashing function (a function that is used to map data of arbitrary size to
+fixed-size values[*](https://computersciencewiki.org/index.php/Hashing)) for different purposes.
 
 Java's ```HashMap``` is often thought of or referred to as a **dictionary** or **associative array**,
 where the key is hashed. Like a dictionary, when you end up looking up a word in a dictionary,
