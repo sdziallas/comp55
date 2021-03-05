@@ -310,7 +310,7 @@ An advance tool for testing is using Assertions similiar to the assert functions
 ![](lab14media/media/Image6.png)
 
 How to Enable?
-The great part about Assert expressions are that you can either turn them on or off in your code. Turning all asserts off makes them similiar to comments, while enabeling them allows you to error check on the fly. In the command line Java –ea MainClass enables assertions in all your classes. While java –da MainClass disables them. Assertions can also be controlled by scope, but I will let you read that on your own. 
+The great part about Assert expressions are that you can either turn them on or off in your code. Turning all asserts off makes them similiar to comments, while enabeling them allows you to error check on the fly. In the command line Java –ea MainClass enables assertions in all your classes. While java –da MainClass disables them. Assertions can also be controlled by scope. This is achieved similiar to the command above, but instead of MainClass you would enter your targeted class like 
 
 NOTE: Asserts are off by default in Java you must enable them with the java command line using the command listed above
 
