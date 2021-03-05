@@ -410,7 +410,7 @@ Timer myTimer = new Timer(1000, objectToUseTimer);
 ```
 ### 3. Handle the different tasks in ```actionPerformed```.
 First increment the value of ```timesCalled```.
-Then make use of the modulo operator and if-statements to differentiate the tasks:
+Then make use of the modulo operator (```%```) and if-statements to differentiate the tasks:
 ```java
 ++timesCalled;
 if (timesCalled % 3 == 0) {
@@ -465,4 +465,3 @@ public void actionPerformed(ActionEvent e) {
 ```
 
 Now you should have a better understanding of how to deal with multiple timer-related tasks!
-
