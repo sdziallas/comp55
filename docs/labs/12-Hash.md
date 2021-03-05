@@ -117,7 +117,7 @@ This will delete this section of the ```HashMap```. If you want it back just add
 phobias.put("pentheraphobia", "...");
 ```
 
-But wait, it seems your ```HashMap``` now has an error, how might you edit this? Simple.. we just use ```put```!!
+But wait, it seems your ```HashMap``` now has a wrong value, how might you edit this? Simple.. we just use ```put```!!
 
 ```java
 phobias.put("pentheraphobia", "the fear of your mother-in-law");
