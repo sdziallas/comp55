@@ -304,7 +304,7 @@ goal for this implementation is to use only 2 ```if``` statements and no ```&&``
 value of the tests for later, so do not have more than 2 if statements in your solution.** All your code needs to do right now is pass these basic tests. Once you have a simple solution that passes the simple 
 tests, you can move on to the next part.
 
-## Assertions
+[https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html.]## Assertions
 An advance tool for testing is using Assertions similiar to the assert functions you have used previously, but can be run during run time instead of debugging. In java ```assert``` keyword signifies an assertion. Next to the assertion should be a boolean, and if the boolean is false it lets the programmer know during runtime.  If not false it will continue running the program. Below is an example of the assert function at work.
 
 ![](lab14media/media/Image6.png)
@@ -315,7 +315,7 @@ The great part about Assert expressions are that you can either turn them on or 
 NOTE: Asserts are off by default in Java you must enable them with the java command line using the command listed above
 
 When to use Asserts?
-Why not use Exceptions you may be wondering? Well im glad you asked. Assertions are only used in Pre-Production code not production code. They are a fast easy way to see errors in your program before going to production. Exceptions allow certain actions to be taken when something is caught, while assertions do not ( Assertions shut off your program until you fix your data). Assertions main function is as a watchdog paying attention to important variables, and seeing if impossible values pop up such as NULL alerting programmers that there is a bug in the code.
+Why not use Exceptions you may be wondering? Well im glad you asked. Assertions are only used in Pre-Production code not production code. They are a fast easy way to see errors in your program before going to production. Assertions is a watch-dog for programmers only watchin data. while Exceptions is like a mailman that gets data and does a certain aciton. Here is more reading on Assertions:
 
 In a nutshell Assertions are used for bug checking for data that should NEVER be out of the norm, can be turned on and off, and is never used in production code.
 
