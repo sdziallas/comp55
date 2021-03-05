@@ -159,43 +159,40 @@ to the next line, call ```print``` instead of ```println```.
 
 ## Const/Final variables
 
-**a. Constant variables:**
+A constant is a variable that cannot change its value during the program execution.
+Java and C++ have different syntax for the constant variable. 
+Java uses ```final``` while C++ uses ```const```. These two words could be equivalent 
+and work the same and could be not. This difference depends on what they are referred to.
 
-Both Java and C++ allow a variable declaration to specify that the variable is really 
-a constant. C++ uses the word ```const``` for this, while Java uses ```final```.
-When the variable is a **primitive type**, ```final```/```const``` work the same.
+### Final and const are equivalent:
 
-```cpp
-const int a = 10; //C++
-final int a = 10; //Java
-a = 11; //Invalid in both languages
-```
-
-**b. Const and final are NOT equivalent when applied to methods:**
-
-One place where the C++ ```const``` and Java ```final``` have very different meanings 
-occurs when they are **applied to methods**.
-
-A ```const``` object can only call ```const``` methods, and is generally considered 
-immutable.
+When the variable is a primitive type (int, float, double, char, boolean...), 
+```final``` and ```const``` have the same work. 
 
 ```cpp
-const Person* person = myself;
-person = otherPerson; //Valid... unless we declared it const Person* const!
-person->setAge(20); //Invalid, assuming setAge isn't a const method (it shouldn't be)
+final int SIZE = 100; // java
+const int SIZE = 100; // C++
+SIZE = 500; // Assigning variable SIZE to different value is Invalid in both languages
 ```
 
-A ```final``` object cannot be set to a new object, but it is not immutable - there is 
-nothing stopping someone from calling any ```set``` methods.
+### Final and const are not equivalent:
+
+When ```final```/```const``` refers to methods, they have different meanings, 
+and we can't make them work the same anymore.
+
+In Java, we can use ```final``` with other function even if it's not a constant function:
 
 ```java
-final Person person = myself;
-person = otherPerson; //Invalid
-person.setAge(20); //Valid!
+final Customer customer = name;
+customer.setAddress("123 abc"); // Valid
 ```
 
-Java has no inherent way of declaring objects immutable; you need to design the class 
-as immutable yourself.
+While in C++, we only can call ```const``` with another const function:
+
+```cpp
+const Customer* customer = name;
+customer->setAddress("123 abc"); // Invalid
+```
 
 ## Java has programmed many things for you
 
