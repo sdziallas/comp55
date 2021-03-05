@@ -111,7 +111,7 @@ To delete an item from a ```HashMap``` you can call ```remove'''.
 ```java
 phobias.remove("pentheraphobia");
 ```
-This will delete this section of the ```HashMap```. If you want it back just add it again!!
+This will remove both the word and definition from the ```HashMap```. If you want it back just add it again!!
 
 ```java
 phobias.put("pentheraphobia", "...");
