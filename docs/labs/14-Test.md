@@ -303,12 +303,33 @@ the day, 15 for the month, and you can avoid changing the year for now. After wh
 goal for this implementation is to use only 2 ```if``` statements and no ```&&``` symbols. While this example is a little contrived, **I want to make sure that you have a very simple solution so you can understand the
 value of the tests for later, so do not have more than 2 if statements in your solution.** All your code needs to do right now is pass these basic tests. Once you have a simple solution that passes the simple 
 tests, you can move on to the next part.
+
+## Assertions 
+An advanced tool for testing is using Assertions similar to the assert functions you have used previously, but can be done during run time instead of debugging. In java ```assert``` keyword signifies an assertion. Next to the assertion should be a boolean, and if the boolean is false it lets the programmer know during runtime.  If not false it will continue running the program. Below is an example of the assert function at work.
+
+![](lab14media/media/Image6.png)
+Ref:[Source](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html)
+
+
+#### How to Enable?
+The great part about Assert expressions are that you can either turn them on or off in your code. Turning all asserts off makes them similiar to comments, while enabeling them allows you to error check on the fly. In the command line Java –ea MainClass enables assertions in all your classes. While java –da MainClass disables them. Assertions can also be controlled by scope. This is achieved similiar to the command above, but instead of MainClass you would enter your targeted class like 
+
+NOTE: Asserts are off by default in Java you must enable them with the java command line using the command listed above
+
+#### When to use Asserts?
+*Why not use Exceptions* you may be wondering? Well I'm glad you asked. *Assertions are only used in pre-production code not production code.* They are an easy way to see errors in your program before going to production. Assertions is a watch-dog for programmers only watching data. while Exceptions is like a mailman that gets data and does a certain action. Here is more reading on [assertions](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html).
+
+In a nutshell, Assertions are used for bug checking for data that should NEVER be out of the norm, can be turned on and off, and is never used in production code.
+
+While Exceptions are more flexible and can take actions after catching the desired data. 
+
 ## Coming up with Advanced Tests
 
 While there are some that say you must write all your tests before writing code, I want to show you how nice it is to have tests when you have to refactor code.
 So, lets come up with some more complicated examples of tests for Dates.
 1. Create a new method in our DateTest.java file and name it ```testDatesAdvanced()```.
 2. Put the ```@Test``` annotation beforehand to make sure that JUnit runs it. For example: 
+
    ```Java
 ```java
     @Test
