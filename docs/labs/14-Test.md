@@ -307,7 +307,7 @@ tests, you can move on to the next part.
 ## Assertions
 An advance tool for testing is using Assertions similiar to the assert functions you have used previously, but can be run during run time instead of debugging. In java ```assert``` keyword signifies an assertion. Next to the assertion should be a boolean, and if the boolean is false it lets the programmer know during runtime.  If not false it will continue running the program. Below is an example of the assert function at work.
 
-![](lab14media/media/image6.png)
+![](lab14media/media/Image6.png)
 
 How to Enable?
 The great part about Assert expressions are that you can either turn them on or off in your code. Turning all asserts off makes them similiar to comments, while enabeling them allows you to error check on the fly. In the command line Java –ea MainClass enables assertions in all your classes. While java –da MainClass disables them. Assertions can also be controlled by scope, but I will let you read that on your own. 
