@@ -70,8 +70,8 @@ to put more definitions, you would simply keep using the put call to
 create more mappings between keys and values.
 
 ```java
-phobias.put("pentheraphobia", "the fear of your mother-in-law")
-phobias.put("ergophobia", "the abnormal fear of work")
+phobias.put("pentheraphobia", "the fear of your mother-in-law");
+phobias.put("ergophobia", "the abnormal fear of work");
 ```
 
 Once in the HashMap, you can use ```get``` to retrieve the definition in the future.
@@ -106,6 +106,24 @@ that indicates whether it's empty or not.
 ```java
 boolean empty = phobias.isEmpty();
 ```
+To delete an item from a ```HashMap``` you can call ```remove'''.
+
+```java
+phobias.remove("pentheraphobia");
+```
+This will delete this section of the ```HashMap```. If you want it back just add it again!!
+
+```java
+phobias.put("pentheraphobia", "...");
+```
+
+But wait, it seems your ```HashMap``` now has an error, how might you edit this? Simple.. we just use ```put```!!
+
+```java
+phobias.put("pentheraphobia", "the fear of your mother-in-law");
+```
+
+Now the ```HashMap``` should be back to where it was, well done!!
 
 To check whether all your phobias are defined correctly, you can do so by traversing 
 through the ```HashMap``` using a ```for-each``` loop like this
@@ -249,7 +267,7 @@ moveMap.put("left", new Movement(leftOval, -7, 0, "west"));
 moveMap.put("right", new Movement(rightOval, 8, 0, "east"));
 ```
 
-Then when you get to actually having to do this code, then you can write
+Then when you get to actually having to do this code, you can write
 this.
 
 ```java
@@ -262,7 +280,7 @@ if(moveData != null) {
 
 Now some of you may rightfully say that this is more code, but think
 about what this represents. We are putting all of the code that deals
-with changes in one place. And what would happen if we move to 8
+with changes into one place. And what would happen if we move to 8
 directions? And then we also forgot that we need to add two more lines
 of code inside of our if statement that needs more movement data?
 Hopefully you start to see that this would be a cleaner solution.
@@ -277,7 +295,7 @@ where you could use a ```HashMap``` in your project, and to provide code for
 what that would look like in terms of helping you make the project
 better. Remember that what I've shown you here has been using mostly
 strings as keys, however, your key can be any object that you choose.
-Thing about how you could implement or link a ```GObject``` with a class, or
+Think about how you could implement or link a ```GObject``` with a class, or
 vice-versa. HashMaps are pretty cool and can save us a lot of work. If
 you are the first one to finish reading, then go ahead and follow the
 next set of steps, which is how to get additional credit for the lab.
