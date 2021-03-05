@@ -117,7 +117,7 @@ This will remove both the word and definition from the ```HashMap```. If you wan
 phobias.put("pentheraphobia", "...");
 ```
 
-But wait, it seems your ```HashMap``` now has a wrong value, how might you edit this? Simple.. we just use ```put```!!
+But wait, it seems your ```HashMap``` now has a wrong value, how might you edit this? Simple.. just use ```put``` again!!
 
 ```java
 phobias.put("pentheraphobia", "the fear of your mother-in-law");
