@@ -253,17 +253,20 @@ unique message in each method – things like "mouse pressed" for the
 	}
 ```
 
+One of the most unused methods in the mouse events is ```mouseEntered```. This method will get invoked when the mouse cursor enters the bounds of the component to which we are listening. It will never be called while the mouse continues to be within the component. You can implement it like any other mouse listener handler. Here is an example showing what ```mouseEntered``` looks like.
+
+```java
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		System.out.println("mouse entered", e);
+	}
+```
+
 All of the methods take the same ```MouseEvent e```
 parameter, so you can leverage that and change your code a bit for each
 method. Once you do that, run the java applet and click once. Notice how
 many events get generated\! You can also try to see if you can get it so
-that ```mouseClicked``` is not generated.  **Override all of the mouse event handlers in java before continuing**.  Again here they are so you can use the names:
-
-- ```mousePressed```
-- ```mouseReleased```
-- ```mouseClicked```
-- ```mouseEntered```
-- ```mouseExited```
+that ```mouseClicked``` is not generated.  **Override all of the mouse event handlers in java before continuing**.
 
 
 ## Mouse Motion Events:
@@ -288,9 +291,6 @@ buttons are pressed
 button is pressed
 
 **Go ahead and use the ```println``` statements to override these two event handlers in Ball.java.**  
-
-- ```mouseMoved```
-- ```mouseDragged```
 
 Both of these events take in the
 ```MouseEvent e``` as a parameter. Notice how so many more events are being
@@ -346,16 +346,13 @@ ahead and define the ```mouseDragged(MouseEvent e)``` method. When we drag,
 we are going to change one of the line's endpoints to reflect the new
 position of the mouse cursor. This can be done by calling ```GLine```'s
 inbuilt function ```setEndPoint``` which takes in an ```x``` and a ```y```
-parameter. We can get the ```**x```** and ```**y```** from the ```MouseEvent```.
-Once you write this correctly you should be able to click and then drag,
-and you will see a line that is growing and shrinking as long as you
+parameter. We set the new endpoints ```x``` and ```y``` coordinates from the ```MouseEvent```. Once you write this correctly you should be able to click and then drag, and you will see a line that is growing and shrinking as long as you
 keep the mouse down, like if you were playing with a rubber band. Once
 you release the button, you are no longer able to change anything about
 the line, with the code that we have. Now, every time that we press the
 mouse button, we create a new line, this means that our users can create
 a multitude of lines to form a picture. **Go ahead and make a small
-picture and send me a screenshot of your proud artistic accomplishment in teams before you
-continue.**
+picture and send me a screenshot of your proud artistic accomplishment in teams before you continue.**
 
 ![](lab5media/media/rubberband.gif)
 
