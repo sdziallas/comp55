@@ -488,6 +488,22 @@ based on the smallest number of commits and merges done by the team
 member with the smallest amount of activity before the due date. Also
 for this class I want all of you to only use the single master branch.
 
+
+Here is a helpful illustration from the [Eclipse Foundation](https://www.eclipse.org/) to demonstrate the git-change-commit process:
+
+![](lab9media/media/Egit-lifecycle.png)
+
+The above illustration can be read like this:
+
+* Once you **add a file**, even if it is **unmodified**/has no changes, Git will begin to **track** it. 
+* Once you change/**modify** the file, you are set to **stage** the changes.
+* Once you stage the changes, you can **commit**.
+* After a commit, the illustration points back to ‘unmodified’ because Git now considers the files up-to-date with respect to the last commit.
+* The cycle repeats. 
+
+For more information regarding the illustration and using Git with Eclipse, check out the [EGit/User Guide](https://wiki.eclipse.org/EGit/User_Guide#Branches).
+
+
 Also if any of this confuses you, you may start searching google for
 more resources to learn git. There is some good stuff out there (and
 also lots of bad stuff), however, most of it revolves around using the
