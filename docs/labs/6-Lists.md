@@ -32,7 +32,7 @@ them like arrays, except instead of using the bracket notation we use
 *```get```* and *```set```* methods. In order to use ArrayLists, you'll need to
 ```import java.util.*;``` which is the package that has the ArrayList code.
 
-What's the catch? Well, one disadvantage is the additional syntax. You have seen
+What's the catch? Well, one drawback is the additional syntax. You have seen
 this syntax before in C++, which is specifying the type of ArrayLists by
 using *angle brackets* ```<>```. So to make an ```ArrayList``` of type ```String```,
 you would do: 
@@ -43,7 +43,7 @@ This would create an empty list called ```ids``` that can hold Strings. If you w
 ```GOval```s instead, you would have to change the type inside the angle
 brackets to be a ```GOval``` on both ends.
 
-The other disadvantage is that they don't work directly with primitives like
+The other drawback is that they don't work directly with primitives like
 ```int``` and ```double```. To use primitives as lists it is a little bit more
 cumbersome. To create an ```ArrayList``` of ```int```s, we have to use an object
 type called ```Integer```. After doing so, Java will then take the integers
