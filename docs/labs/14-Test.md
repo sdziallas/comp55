@@ -315,7 +315,7 @@ The great part about Assert expressions are that you can either turn them on or 
 NOTE: Asserts are off by default in Java you must enable them with the java command line using the command listed above
 
 When to use Asserts?
-Why not use Exceptions you may be wondering? Well im glad you asked. Assertions are only used in Pre-Production code not production code. They are a fast easy way to see errors in your program before going to production. Assertions is a watch-dog for programmers only watchin data. while Exceptions is like a mailman that gets data and does a certain aciton. Here is more reading on [assertions](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html.).
+Why not use Exceptions you may be wondering? Well im glad you asked. Assertions are only used in Pre-Production code not production code. They are a fast easy way to see errors in your program before going to production. Assertions is a watch-dog for programmers only watchin data. while Exceptions is like a mailman that gets data and does a certain aciton. Here is more reading on [assertions](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html).
 
 In a nutshell Assertions are used for bug checking for data that should NEVER be out of the norm, can be turned on and off, and is never used in production code.
 
