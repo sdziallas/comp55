@@ -25,12 +25,18 @@ number of items and you have a full hash function yada yada)
 
 ## Why didn't they just call it a hashtable then?
 
-By calling it a ```HashMap``` Java wants to make clear that ```HashMaps``` are
-meant to form a bond between two items, whereas a hashtable might just
-be a mechanism for identifying whether items exist in a collection. ```HashMaps``` are
-often thought of or referred to as **dictionaries**, where the key is what is hashed. Like a dictionary,
-when you end up looking up a word in a dictionary, you get a definition
-for that word. In a way it links or maps the word with the definition.
+In Java, there are a number of data structures that approximate the C++ **map** library.
+The one you will be working with is the ```HashMap``` library. Java ```HashMap```
+implements the ```Map``` interface. By doing that Java is making it clear that ```HashMaps``` form
+a bond, or mapping, between two items. Java actually does have a ```HashTable``` class that is
+nearly identical to the ```HashMap``` class, but ```HashTable``` is now considered a legacy class,
+and should generally not be used. These two classes are not to be confused with Java's ```HashSet```
+data structure, which uses hashing to implement Java's **Set** interface. All three data structures
+use a [hashing function](https://computersciencewiki.org/index.php/Hashing) for different purposes.
+
+Java's ```HashMap``` is often thought of or referred to as a **dictionary** or **associative array**,
+where the key is hashed. Like a dictionary, when you end up looking up a word in a dictionary,
+you get a definition for that word. In a way it links or maps the word with the definition.
 In computer science lingo, the word would end up being called the
 **key**, while the definition would be called the **value**. In order to
 make ```HashMaps``` truly work, ```HashMaps``` have a condition that a **key can
@@ -84,6 +90,38 @@ String possibleDef = phobias.get("osvaldophobia")
 
 The ```HashMap``` will return ```null```, which it does for any key that has not been
 explicitly put into the corresponding HashMap object (in our case, ```phobias```).
+
+## Intermediate HashMap Usage
+
+Similar to an ```ArrayList```, you can use ```size``` to obtain the number of definitions
+stored in the ```HashMap```.
+
+```java
+int numPhobias = phobias.size();
+```
+
+To check if a ```HashMap``` is empty, you can call ```isEmpty``` to return a boolean
+that indicates whether it's empty or not.
+
+```java
+boolean empty = phobias.isEmpty();
+```
+
+To check whether all your phobias are defined correctly, you can do so by traversing 
+through the ```HashMap``` using a ```for-each``` loop like this
+
+```java
+phobias.forEach((key, value) -> {
+  System.out.println(key + " : " + value);
+});
+```
+
+This should output:
+```java
+ergophobia : the abnormal fear of work
+nomophobia : the fear of losing mobile phone service
+pentheraphobia : the fear of your mother-in-law
+```
 
 ## More advanced rules for HashMaps
 
