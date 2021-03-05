@@ -253,7 +253,7 @@ unique message in each method – things like "mouse pressed" for the
 	}
 ```
 
-One of the most unused methods in the mouse events is mouseEntered. We usually ignore this method and later not learn why do we use this. This method will get invoked when the mouse cursor enters the bounds of the component to which we are listening. It will never be called while the mouse continues to be within the component. You can implement it like any other method from Mouse Listener. There is an example code to show how would mouseEntered looks like.
+One of the most unused methods in the mouse events is ```mouseEntered```. This method will get invoked when the mouse cursor enters the bounds of the component to which we are listening. It will never be called while the mouse continues to be within the component. You can implement it like any other mouse listener handler. Here is an example showing what ```mouseEntered``` looks like.
 
 ```java
 	@Override
