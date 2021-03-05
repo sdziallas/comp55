@@ -31,7 +31,7 @@ implements the ```Map``` interface. By doing that Java is making it clear that `
 a bond, or mapping, between two items. Java actually does have a ```HashTable``` class that is
 nearly identical to the ```HashMap``` class, but ```HashTable``` is now considered a legacy class,
 and should generally not be used. These two classes are not to be confused with Java's ```HashSet```
-data structure, which uses hashing to implement the **set** data type. All three data structures
+data structure, which uses hashing to implement Java's **Set** interface. All three data structures
 use a [hashing function](https://computersciencewiki.org/index.php/Hashing) for different purposes.
 
 Java's ```HashMap``` is often thought of or referred to as a **dictionary** or **associative array**,
