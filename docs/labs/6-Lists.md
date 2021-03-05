@@ -13,7 +13,7 @@ multiple items (what we normally use Arrays for) much *MUCH* easier.
   - Don't have some absolute size limit like arrays, they just keep
     growing as you add more items.
 
-  - Can tack items to the end of an array by simply calling ```add``` along
+  - Can add items to the end of an array by simply calling ```add``` along
     with the item to be added.
 
   - Can ```insert``` items into the middle of the list without worrying about
@@ -32,7 +32,7 @@ them like arrays, except instead of using the bracket notation we use
 *```get```* and *```set```* methods. In order to use ArrayLists, you'll need to
 ```import java.util.*;``` which is the package that has the ArrayList code.
 
-What's the con? Well one con is the additional syntax. You have seen
+What's the catch? Well, one drawback is the additional syntax. You have seen
 this syntax before in C++, which is specifying the type of ArrayLists by
 using *angle brackets* ```<>```. So to make an ```ArrayList``` of type ```String```,
 you would do: 
@@ -43,7 +43,7 @@ This would create an empty list called ```ids``` that can hold Strings. If you w
 ```GOval```s instead, you would have to change the type inside the angle
 brackets to be a ```GOval``` on both ends.
 
-The other con is that they don't work directly with primitives like
+The other drawback is that they don't work directly with primitives like
 ```int``` and ```double```. To use primitives as lists it is a little bit more
 cumbersome. To create an ```ArrayList``` of ```int```s, we have to use an object
 type called ```Integer```. After doing so, Java will then take the integers
@@ -86,7 +86,7 @@ To complete this lab, you are going to copy your **Ball.java** file from
 the Interactivity lab and paste it in that same project (*Make sure to
 cover the Ball portion of the Interactivity Lab before attempting this
 lab*). You can rename the file **Balls.java**, since your end goal will
-be to have multiple balls bouncing off the screen. **If you decide to copy and paste the code into another project, you should make sure to change the ```main``` method at the bottom, which should change from ```newBall().start()``` to ```new Balls().start()```.  You should also delete all mouse handlers except ```mousePressed```.**  You'll also have the
+be to have multiple balls bouncing off the screen. **If you decide to copy and paste the code into another project, you should make sure to change the ```main``` method at the bottom, which should change from ```new Ball().start()``` to ```new Balls().start()``` - note the change from Ball to Ball*s*.  You should also delete all mouse handlers except ```mousePressed```.**  You'll also have the
 program change a single ball's color when that particular ball is
 picked. Let's start by introducing a constant in your file ```NUM_BALLS```
 that will store 2.
@@ -188,7 +188,7 @@ for this mini-lab. When that is done, you can submit the text of the
 java file online via canvas. Just copy and paste the code into the
 editor into the canvas submission page for Balls.java.
 
-## **Bonus: What? The balls don't move independently\! I gotta make them all bounce around the screen.**
+## **Bonus: What? The balls don't move independently?\! I gotta make them all bounce around the screen\!\!\!**
 
 Well that's outside of the scope of learning about Arraylists for this
 lab. But to get each one to bounce around the screen, that means that
