@@ -254,7 +254,7 @@ enough that I don't feel comfortable being able to say that I can
 accomplish it. Having this feeling, where you end up avoiding or delaying
 work, can come from many factors, some are just to protect yourself
 (also called **self-handicapping**) but other times it happens because
-you don't know where to start, which decomposition may help to get started on your project. 
+you don't know where to start, which decomposition may help you to get started on your project. 
 
 To learn more about self-handicapping, here are some references:
 - https://sites.psu.edu/aspsy/tag/self-handicapping/ 
