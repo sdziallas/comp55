@@ -422,7 +422,7 @@ body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
 head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
 ```
 
-Here, we are linking previously these previous arbitrary numbers in your equations 
+Here, we are linking these previous arbitrary numbers in your equations 
 to constant variables. Now, this new relation does several things for you as the 
 developer. Firstly, your code becomes much easier to understand! Since all of
 your parameters are labeled, a reader can quickly ascertain the relationships
