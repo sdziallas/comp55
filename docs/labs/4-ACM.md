@@ -70,8 +70,8 @@ we want to do is inherit from the special ACM class, ```GraphicsProgram```,
 which will do a lot of the necessary legwork to get ourselves ready to
 deal with graphics. By saying ```ACMLab extends GraphicsProgram```, we are
 telling Java that the ```ACMLab``` **IS** a ```GraphicsProgram```, and so we get
-all of the benefits and tribulations of being a ```GraphicsProgram```. This means that we'll need to leverage and write few additional methods in order to make our program work.  Rather than using ```public static void main(String[] args)```,
-I want you to conisder ```public void run()``` as our starting point for now.  
+all of the benefits and tribulations of being a ```GraphicsProgram```. This means that we'll need to leverage and write few additional methods to make our program work.  Rather than using ```public static void main(String[] args)```,
+consider ```public void run()``` as our starting point for now.  
 
 - **public static final int:** Lines 7 & 8 declare constants for the
 program to reference. **It is good programming practice to declare any
