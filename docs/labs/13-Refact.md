@@ -425,7 +425,7 @@ head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
 Here, we are linking previously these previous arbitrary numbers in your equations 
 to constant variables. Now, this new relation does several things for you as the 
 developer. Firstly, your code becomes much easier to understand! Since all of
-your parameters are labeled, a reader can quickly assertain the relationships
+your parameters are labeled, a reader can quickly ascertain the relationships
 between the parameters. Secondly, you can now efficiently and reliably change
 the values of the constant variables, and your program will calculate the same equations
 but with new values. This will save you lots of time when the alternative is searching every
