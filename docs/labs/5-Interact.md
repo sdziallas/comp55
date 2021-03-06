@@ -64,10 +64,8 @@ There are several
 different computer events out there, which each program can decide how
 to handle. Some examples of computer events are the mouse moving or a
 keyboard key being pressed. When users move the mouse or press a key on
-the keyboard, Java can be setup to immediately notify any active program
-about that event. Just like with a flash sale, In order to receive that
-information, you must sign up to receive that notification, which we'll
-explain how to do in a bit.
+the keyboard, Java can be setup to immediately notify any subscribed object
+about that event.
 
 You can find the starter files for this project by going to the starter
 files section in Canvas, and looking for the **InteractivityLab.zip**.
