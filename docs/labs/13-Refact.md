@@ -422,19 +422,17 @@ body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
 head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
 ```
 
-Here, we are establishing, other norms for your program that help you
-think of how the numbers relate to each other. Now we make it easier for
-you to increase the size as well as move the ovals and not have to do
-any of the calculations yourselves. Now, how you work this, you may
-decide that the two 100's here are merely a coincidence. If that's the
-case, then you could create two variables instead. Declaring constants
-makes your code more readable and more readily changeable. While the
-previous example is on the extreme end, there are many situations where
-code tends to have the same number egregiously littered everywhere.
-Convert that number to a constant, since if you change it one place, it
-should change in the others as well. This makes a lot of sense to do as
-well with filenames, to make them string constants or even to
-concatenate strings. For example, here was my traffic jam way of reading
+Here, we are linking these previous arbitrary numbers in your equations 
+to constant variables. Now, this new relation does several things for you as the 
+developer. Firstly, your code becomes much easier to understand! Since all of
+your parameters are labeled, a reader can quickly ascertain the relationships
+between the parameters. Secondly, you can now efficiently and reliably change
+the values of the constant variables, and your program will calculate the same equations
+but with new values. This will save you lots of time when the alternative is searching every
+instance of your old number, trying to remember if this particular instance is related to
+the change you want to make, and then praying nothing was missed or overlooked.
+This concept makes a lot of sense when applied to filenames, making them string constants for 
+ease of editing when a filepath is changed. For example, here was my traffic jam way of reading
 files from the project. Which were *images/car.png,
 images/car\_vert.png, images/truck.png, images/truck\_vert.png*, etc.
 
