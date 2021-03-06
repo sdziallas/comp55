@@ -278,20 +278,23 @@ your final project grade.</u>**
 6)  **Are you making a lot of variables? Consider using a list or other
     data structure to store them instead.**
 
-I think for the purposes of this project, it's pretty easy to start
+I think for the purpose of this project, it's pretty easy to start
 thinking of making instance variables for everything. Instance variables
 are nice because they are visible in all methods of every method in a
 class, which means you don't have to worry about passing information to
-and from a function. However, the ability to pass information back and
+and from a function. 
+
+However, the ability to pass information back and
 forth between methods and understanding scope is an important tenet in
 developing software. Otherwise, having so many instance variables is
 akin to giving everyone in your dorm a key to your room. Sure it's
 convenient to give everyone a key, but it's not secure, and more
 importantly when you're trying to debug and figure out who borrowed your
-playstation, it makes it that much more difficult to find out who it was
-and when it happened, it also could lead to situations where people
+Playstation, it makes it that much more difficult to find out who it was
+and when it happened. Also, it could lead to situations where people
 start using your room for other purposes that you wouldn't necessarily
 want (feel free to let your imagine roam for a minute here if you want).
+
 Like with your dorm room, there are situations in which your program and
 all of your functions do not need to have access to every single one of
 those instance variables, so consider using local variables when a
@@ -301,8 +304,24 @@ multiple ```GObject```s on the screen, it may make more sense for you to
 create all of the objects and store them in a list, or potentially a
 ```HashMap```. This also makes it nice because then you could possibly
 create a loop and function that will create a series of these objects,
-like for example buttons, where you extract out to the method all of the
-common things needed for a button. I mean if you are creating 5 buttons,
+like, for example, where you can pass in (label, x, y, width, height, color) 
+as parameters in a function to create buttons. 
+
+Here is an example written in pseudocode
+
+```java
+void makeButton(String label, double x, double y, double width, double height, Color col) {
+       int size = 5;
+       List <GButton> listOfButtons = new ArrayList <GRect>();
+       for (int i = 0; i < size; i++) {
+          GButton knob = new GButton (label, x, y, width, height, color);
+          listOfButtons.add(knob);
+        }
+        System.out.println(listOfButtons);
+}
+```
+
+If you are creating 5 buttons,
 wouldn't it be nice to have a function that was like makeButton(30, 30,
 100, 100, "OK", Color.BLUE) and then know it that it will just show up?
 
@@ -403,19 +422,17 @@ body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
 head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
 ```
 
-Here, we are establishing, other norms for your program that help you
-think of how the numbers relate to each other. Now we make it easier for
-you to increase the size as well as move the ovals and not have to do
-any of the calculations yourselves. Now, how you work this, you may
-decide that the two 100's here are merely a coincidence. If that's the
-case, then you could create two variables instead. Declaring constants
-makes your code more readable and more readily changeable. While the
-previous example is on the extreme end, there are many situations where
-code tends to have the same number egregiously littered everywhere.
-Convert that number to a constant, since if you change it one place, it
-should change in the others as well. This makes a lot of sense to do as
-well with filenames, to make them string constants or even to
-concatenate strings. For example, here was my traffic jam way of reading
+Here, we are linking these previous arbitrary numbers in your equations 
+to constant variables. Now, this new relation does several things for you as the 
+developer. Firstly, your code becomes much easier to understand! Since all of
+your parameters are labeled, a reader can quickly ascertain the relationships
+between the parameters. Secondly, you can now efficiently and reliably change
+the values of the constant variables, and your program will calculate the same equations
+but with new values. This will save you lots of time when the alternative is searching every
+instance of your old number, trying to remember if this particular instance is related to
+the change you want to make, and then praying nothing was missed or overlooked.
+This concept makes a lot of sense when applied to filenames, making them string constants for 
+ease of editing when a filepath is changed. For example, here was my traffic jam way of reading
 files from the project. Which were *images/car.png,
 images/car\_vert.png, images/truck.png, images/truck\_vert.png*, etc.
 
