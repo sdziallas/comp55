@@ -93,7 +93,6 @@ be to have multiple balls bouncing off the screen. **If you decide to copy and p
 
 program change a single ball's color when that particular ball is
 picked. Let's start by introducing a constant in your file ```NUM_BALLS```
-
 that will store 2.
 
 Go ahead and place this value as a constant before your instance
