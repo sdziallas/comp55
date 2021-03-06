@@ -1,25 +1,10 @@
 # Decomposition Lab
 
-Today you are going to recreate theis animation and behavior:
+Today you are going to recreate this animation and behavior:
 
 ![](lab11media/media/swirl.gif)
 
-Hopefully what I'm asking you to make today isn't trivial. My true hope
-is that you don't immediately think *"oh this is easy"*. Even if you do
-feel that way, it shouldn't feel *extremely* trivial, especially if you
-take the **added challenge of making a solution that doesn't use any if
-statements or conditionals**.
-
-Programming projects can get quite large and unwieldy, so much to the
-point that you may feel *frozen* as to where to begin. This paralysis
-doesn't just happen in programming but in all aspects of life. I've
-often found that it happens to me anytime there is something large
-enough that I don't feel comfortable being able to say that I can
-accomplish it. Having this feeling, where you end up avoiding or delaying
-work, can come from many factors, some are just to protect yourself
-(also called **self-handicapping**) but other times it happens because
-you don't know where to start. While self-handicapping is [something](https://sites.psu.edu/aspsy/tag/self-handicapping/) you
-should [read about](https://hbr.org/2012/05/dont-sabotage-yourself), today we're going to provide advice on how to figure
+To achieve this, today we're going to provide advice on how to figure
 out where to start with a large problem. It comes down to a technique
 called **decomposition**.
 
@@ -56,6 +41,12 @@ following the ***Test Early and Often*** mantra from unit testing (more
 on that to come). The trick is to test things that feel tricky earlier
 on, so you don't wait until the end to see if they work. Testing only at
 the end makes it harder to figure out what is wrong. So let's start with the circular movement (though if you were doing this yourself, pick whichever one is more prudent).
+
+Hopefully what I'm asking you to make today isn't trivial. My true hope
+is that you don't immediately think *"oh this is easy"*. Even if you do
+feel that way, it shouldn't feel *extremely* trivial, especially if you
+take the **added challenge of making a solution that doesn't use any if
+statements or conditionals**.
 
 ## Let's get movement going
 
@@ -254,3 +245,17 @@ past that.
     your resulting code in text format. Good luck\!
 
 ![](lab11media/media/image5.png)
+
+Programming projects can get quite large and unwieldy, so much to the
+point that you may feel *frozen* as to where to begin. This paralysis
+doesn't just happen in programming but in all aspects of life. I've
+often found that it happens to me anytime there is something large
+enough that I don't feel comfortable being able to say that I can
+accomplish it. Having this feeling, where you end up avoiding or delaying
+work, can come from many factors, some are just to protect yourself
+(also called **self-handicapping**) but other times it happens because
+you don't know where to start, which decomposition may help you to get started on your project. 
+
+To learn more about self-handicapping, here are some references:
+- https://sites.psu.edu/aspsy/tag/self-handicapping/ 
+- https://hbr.org/2012/05/dont-sabotage-yourself
