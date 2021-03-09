@@ -1,0 +1,9 @@
+{
+  "ignorePatterns": [
+	{
+		"pattern":"^[0-9]{1,2}-[0-9A-Za-z-]+.html"
+	}
+  ],
+  "retryOn429": true,
+  "aliveStatusCodes": [200, 429]
+}

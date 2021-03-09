@@ -25,12 +25,18 @@ number of items and you have a full hash function yada yada)
 
 ## Why didn't they just call it a hashtable then?
 
-By calling it a ```HashMap``` Java wants to make clear that ```HashMaps``` are
-meant to form a bond between two items, whereas a hashtable might just
-be a mechanism for identifying whether items exist in a collection. ```HashMaps``` are
-often thought of or referred to as **dictionaries**, where the key is what is hashed. Like a dictionary,
-when you end up looking up a word in a dictionary, you get a definition
-for that word. In a way it links or maps the word with the definition.
+In Java, there are a number of data structures that approximate the C++ **map** library.
+The one you will be working with is the ```HashMap``` library. Java ```HashMap```
+implements the ```Map``` interface. By doing that Java is making it clear that ```HashMaps``` form
+a bond, or mapping, between two items. Java actually does have a ```HashTable``` class that is
+nearly identical to the ```HashMap``` class, but ```HashTable``` is now considered a legacy class,
+and should generally not be used. These two classes are not to be confused with Java's ```HashSet```
+data structure, which uses hashing to implement Java's **Set** interface. All three data structures
+use a [hashing function](https://computersciencewiki.org/index.php/Hashing) for different purposes.
+
+Java's ```HashMap``` is often thought of or referred to as a **dictionary** or **associative array**,
+where the key is hashed. Like a dictionary, when you end up looking up a word in a dictionary,
+you get a definition for that word. In a way it links or maps the word with the definition.
 In computer science lingo, the word would end up being called the
 **key**, while the definition would be called the **value**. In order to
 make ```HashMaps``` truly work, ```HashMaps``` have a condition that a **key can
@@ -64,8 +70,8 @@ to put more definitions, you would simply keep using the put call to
 create more mappings between keys and values.
 
 ```java
-phobias.put("pentheraphobia", "the fear of your mother-in-law")
-phobias.put("ergophobia", "the abnormal fear of work")
+phobias.put("pentheraphobia", "the fear of your mother-in-law");
+phobias.put("ergophobia", "the abnormal fear of work");
 ```
 
 Once in the HashMap, you can use ```get``` to retrieve the definition in the future.
@@ -84,6 +90,56 @@ String possibleDef = phobias.get("osvaldophobia")
 
 The ```HashMap``` will return ```null```, which it does for any key that has not been
 explicitly put into the corresponding HashMap object (in our case, ```phobias```).
+
+## Intermediate HashMap Usage
+
+Similar to an ```ArrayList```, you can use ```size``` to obtain the number of definitions
+stored in the ```HashMap```.
+
+```java
+int numPhobias = phobias.size();
+```
+
+To check if a ```HashMap``` is empty, you can call ```isEmpty``` to return a boolean
+that indicates whether it's empty or not.
+
+```java
+boolean empty = phobias.isEmpty();
+```
+To delete an item from a ```HashMap``` you can call ```remove'''.
+
+```java
+phobias.remove("pentheraphobia");
+```
+This will remove both the word and definition from the ```HashMap```. If you want it back just add it again!!
+
+```java
+phobias.put("pentheraphobia", "...");
+```
+
+But wait, it seems your ```HashMap``` now has a wrong value, how might you edit this? Simple.. just use ```put``` again!!
+
+```java
+phobias.put("pentheraphobia", "the fear of your mother-in-law");
+```
+
+Now the ```HashMap``` should be back to where it was, well done!!
+
+To check whether all your phobias are defined correctly, you can do so by traversing 
+through the ```HashMap``` using a ```for-each``` loop like this
+
+```java
+phobias.forEach((key, value) -> {
+  System.out.println(key + " : " + value);
+});
+```
+
+This should output:
+```java
+ergophobia : the abnormal fear of work
+nomophobia : the fear of losing mobile phone service
+pentheraphobia : the fear of your mother-in-law
+```
 
 ## More advanced rules for HashMaps
 
@@ -211,7 +267,7 @@ moveMap.put("left", new Movement(leftOval, -7, 0, "west"));
 moveMap.put("right", new Movement(rightOval, 8, 0, "east"));
 ```
 
-Then when you get to actually having to do this code, then you can write
+Then when you get to actually having to do this code, you can write
 this.
 
 ```java
@@ -224,7 +280,7 @@ if(moveData != null) {
 
 Now some of you may rightfully say that this is more code, but think
 about what this represents. We are putting all of the code that deals
-with changes in one place. And what would happen if we move to 8
+with changes into one place. And what would happen if we move to 8
 directions? And then we also forgot that we need to add two more lines
 of code inside of our if statement that needs more movement data?
 Hopefully you start to see that this would be a cleaner solution.
@@ -239,7 +295,7 @@ where you could use a ```HashMap``` in your project, and to provide code for
 what that would look like in terms of helping you make the project
 better. Remember that what I've shown you here has been using mostly
 strings as keys, however, your key can be any object that you choose.
-Thing about how you could implement or link a ```GObject``` with a class, or
+Think about how you could implement or link a ```GObject``` with a class, or
 vice-versa. HashMaps are pretty cool and can save us a lot of work. If
 you are the first one to finish reading, then go ahead and follow the
 next set of steps, which is how to get additional credit for the lab.

@@ -70,8 +70,8 @@ we want to do is inherit from the special ACM class, ```GraphicsProgram```,
 which will do a lot of the necessary legwork to get ourselves ready to
 deal with graphics. By saying ```ACMLab extends GraphicsProgram```, we are
 telling Java that the ```ACMLab``` **IS** a ```GraphicsProgram```, and so we get
-all of the benefits and tribulations of being a ```GraphicsProgram```. This means that we'll need to leverage and write few additional methods in order to make our program work.  Rather than using ```public static void main(String[] args)```,
-I want you to conisder ```public void run()``` as our starting point for now.  
+all of the benefits and tribulations of being a ```GraphicsProgram```. This means that we'll need to leverage and write few additional methods to make our program work.  Rather than using ```public static void main(String[] args)```,
+consider ```public void run()``` as our starting point for now.  
 
 - **public static final int:** Lines 7 & 8 declare constants for the
 program to reference. **It is good programming practice to declare any
@@ -228,6 +228,29 @@ object, after it's been created, you can call ```getWidth()``` or
 ```getHeight()```. You can use this in combination with a ```setLocation(x,
 y)``` that will change the location of where an object is if you want the
 object to be placed in a particular area.
+
+## Applying Color
+
+Once you have created your shape or image, the ACM library gives you the abiliy to fill it with a wild variety of colors. Depending on what you created, the procress for applying the desired color you want vary between each other. The different options that will be dicussed are ```GParagraph```, ```GLabel```, ```GObject```, and ```GRect```. ```GRect``` is interchangeable with ```GOval```.
+
+If you want to apply color to a ```GParagraph``` or ```GLabel``` look at the following table to compare code snippets:
+
+| GParagraph | GRect |
+| :--- | :--- |
+| `GParagraph text1 = new GParagraph("Hello World", START_X, START_Y);`<br>`text1.setFont("Arial-24");`<br>`text1.setColor(Color.BLUE);`<br>`add(text1);` | `GRect rect = new GRect(START_X, START_Y, 200, 100);`<br>`//200 and 100 should be constants`<br>`rect.setFillColor(Color.YELLOW);`<br>`rect.setFilled(true);`<br>`//This will apply the color you have chosen`<br>`add(rect);`| 
+
+As a result of the first column, your ```GParagraph``` or ```GLabel``` will be changed to the color blue. As a result of the second column, your ```GRect``` or ```GOval``` will be changed to the color yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor```, you change the color of the outlines, not the shape itself. Since ```GParagraph``` is not a shape in the ACM library, you have to change the color of the font outlines. When dealing with ```GObject``` or a shape, you use ```.setFillColor(Color.INSERT COLOR HERE)``` to fill the shape with the color of your chosing, but it wont be shown just yet. Addtionally, the outlines will be defaulted to black, but that will be explained in the next example. Next you must use ```.setFilled(true)``` to apply the color to your shape and it will now show when running the program when using ```add()```.
+
+Here is an example of assigning a ```GRect``` to a ```GObject``` and manipulating it's color
+```java
+GRect rect = new GRect(START_X, START_Y, 200, 100); //200 and 100 should be constants
+GObject obj = rect;
+obj.setColor(Color.GREEN);
+rect.setFilled(true);
+add(obj);
+```
+
+As a result of this code, your ```GObject``` will be changed to the color green. In order for the ```GObject```'s color to be change, you must assign the object to the ```GRect```. After ```GRect``` has been asigned to ```GObject``` you can now manipulate the color of the object. In this case ```obj.setColor``` was used. This changes the color outlines of the object and replaces them with the color green, resulting in a white box with a green border around it. Next ```.setFilled(true)``` is called, filling the shape with the color previously stated and applying it simultaneously. This will produce a fully green box with the same color border. Using ```add(obj)``` will show the green box on screen.
 
 ## Overlapping Objects
 

@@ -157,6 +157,43 @@ Notice that Java doesn't have the ```endl``` at the end of the statement. It
 has been replaced with the ```println``` statement, if you don't want to go
 to the next line, call ```print``` instead of ```println```.
 
+## Const/Final variables
+
+A constant is a variable that cannot change its value during the program execution.
+Java and C++ have different syntax for the constant variable. 
+Java uses ```final``` while C++ uses ```const```. These two words could be equivalent 
+and work the same and could be not. This difference depends on what they are referred to.
+
+### Final and const are equivalent:
+
+When the variable is a primitive type (int, float, double, char, boolean...), 
+```final``` and ```const``` have the same work. 
+
+```cpp
+final int SIZE = 100; // java
+const int SIZE = 100; // C++
+SIZE = 500; // Assigning variable SIZE to different value is Invalid in both languages
+```
+
+### Final and const are not equivalent:
+
+When ```final```/```const``` refers to methods, they have different meanings, 
+and we can't make them work the same anymore.
+
+In Java, we can use ```final``` with other function even if it's not a constant function:
+
+```java
+final Customer customer = name;
+customer.setAddress("123 abc"); // Valid
+```
+
+While in C++, we only can call ```const``` with another const function:
+
+```cpp
+const Customer* customer = name;
+customer->setAddress("123 abc"); // Invalid
+```
+
 ## Java has programmed many things for you
 
 In addition to things like ArrayLists, which is an infinitely expandable
@@ -169,7 +206,7 @@ your disposal. Ever wanted to have a class that stores a Date correctly?
 Done. Want to make an http request? Done. Want to sort an array? Done.
 To see, just go to this link.
 
-http://docs.oracle.com/javase/11/docs/api/
+<https://docs.oracle.com/en/java/javase/11/docs/api/index.html>
 
 Those are all java files that have been implemented, are stable and get
 leveraged by folks who work in Java so that they don't reinvent the

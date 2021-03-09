@@ -38,7 +38,7 @@ writing the Timer code to wake up instead, then you would use the
 special keyword ```this``` … ```this``` refers to yourself, the object that you
 are currently in. 
 
-### 2. Setup event handlers - ```ActionLister``` and ```actionPerformed``` - in the appropriate class
+### 2. Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
 Any class that would like to be responsible party for
 handling the alarm must implement the ```ActionListener``` interface. The
 ```ActionListener``` interface has just one method, ```public void
@@ -382,3 +382,86 @@ own, with your own changes. Hopefully you see the powers that timers can
 have in making your programs more dynamic and more expressive.
 
 ![](lab10media/media/image5.png)![](lab10media/media/image6.png)
+
+## Dealing with Multiple Timers
+
+As you continue working with timers, you may eventually want to utilize multiple timers within the same class
+for different purposes. 
+
+**Note: There are two categories that you must distinguish when considering the idea of "multiple timers":**
+
+**1) You have different tasks that affect the *same* resources, with timing being an important deciding factor.**
+
+**2) You have different tasks that affect their own *unique* resources, with timing being trivial.**
+
+For the first category, you do **not** actually need more than one timer. As a matter of fact, introducing
+more than one timer variable can create concurrency issues as the timers are not guaranteed to affect the
+shared resources in a specific order every time the program executes. To handle different timer tasks that
+use the same resources, follow one of the following two approaches depending on timing:
+
+## *1a: Different tasks should each occur at different times (ex: Task A should occur every 3 sec, Task B should occur every 4 sec)*
+### 1. Create and initialize a variable that keeps track of the number of times the timer is called.
+```java
+int timesCalled = 0;
+```
+### 2. Ensure that the timer runs every second through its delay value (1000).
+```java
+Timer myTimer = new Timer(1000, objectToUseTimer);
+```
+### 3. Handle the different tasks in ```actionPerformed```.
+First increment the value of ```timesCalled```.
+Then make use of the modulo operator (```%```) and if-statements to differentiate the tasks:
+```java
+++timesCalled;
+if (timesCalled % 3 == 0) {
+    //Task A
+}
+if (timesCalled % 4 == 0) {
+    //Task B
+}
+```
+
+## *1b: Different tasks should occur at the same time (ex: Task A and Task B should both occur every 3 seconds)*
+### 1: Place the tasks based on your program's intended functionality.
+With tasks that should happen at the same time intervals, you can simply add them to ```actionPerformed```
+as explained earlier. The only thing you need to consider is whether Task A or Task B should take place first
+in order for your program to behave as intended:
+```java
+//I have a variable called "myNum" and on every timer run, it should be increased by 5 THEN decreased by 2.
+public void actionPerformed(ActionEvent e) {
+    myNum += 5;     //Task A
+    myNum -= 2;     //Task B
+}
+```
+
+
+For the second category, multiple timers are acceptable and will not cause concurrency issues because none of the timers
+will be accessing shared resources.
+
+## *2: Different tasks affect different resources REGARDLESS of time in which they should occur*
+Say you initialize the following timers and have ```actionPerformed``` set up as shown previously:
+```java
+Timer myFirstTimer = new Timer(1000, objectToUseTimer);
+Timer mySecondTimer = new Timer(1000, objectToUseTimer);
+```
+```java
+public void actionPerformed(ActionEvent e) {
+    //...
+}
+```
+With the way ```actionPerformed``` is currently set up, there is no way to differentiate between tasks that
+should be completed for each timer. To properly handle this, you want to use the ```getSource```
+function and compare its return value to the timers you created:
+```java
+public void actionPerformed(ActionEvent e) {
+    Object source = e.getSource();
+    if (source == myFirstTimer) {
+        //Tasks for the first timer which affect item X
+    }
+    else if (source == mySecondTimer) {
+        //Tasks for the second timer which affect item Y
+    }
+}
+```
+
+Now you should have a better understanding of how to deal with multiple timer-related tasks!
