@@ -365,7 +365,7 @@ code**. Make sure to push your final changes to your repository by the
 deadline.
 
 ## Advanced reading on multiple timers
-If you're curious, [here's an explanation on how to implement multiple timers in your program](10A-MultTimers.html)
+If you're curious, [here's an explanation on how to implement multiple timers in your program](10-A-Mult-Timers.html)
 
 ## Bonus
 ### *"Hey! This is almost a game!"*
