@@ -25,14 +25,12 @@ number of items and you have a full hash function yada yada)
 
 ## Why didn't they just call it a hashtable then?
 
-In Java, there are a number of data structures that approximate the C++ **map** library.
-The one you will be working with is the ```HashMap``` library. Java ```HashMap```
-implements the ```Map``` interface. By doing that Java is making it clear that ```HashMaps``` form
+By calling it a ```HashMap```, Java is trying to make clear that ```HashMap```
+implements the ```Map``` interface. ```Map```s are meant to form
 a bond, or mapping, between two items. Java actually does have a ```HashTable``` class that is
-nearly identical to the ```HashMap``` class, but ```HashTable``` is now considered a legacy class,
-and should generally not be used. These two classes are not to be confused with Java's ```HashSet```
+nearly identical to the ```HashMap``` class, but ```HashTable``` is now obsolete and still available for legacy reasons. These two classes are not to be confused with Java's ```HashSet```
 data structure, which uses hashing to implement Java's **Set** interface. All three data structures
-use a [hashing function](https://computersciencewiki.org/index.php/Hashing) for different purposes.
+use a [hashing function](https://computersciencewiki.org/index.php/Hashing) for different purposes, and there are still other [hashtable-esque objects meant for thread-safe operations](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html).
 
 Java's ```HashMap``` is often thought of or referred to as a **dictionary** or **associative array**,
 where the key is hashed. Like a dictionary, when you end up looking up a word in a dictionary,
@@ -106,7 +104,7 @@ that indicates whether it's empty or not.
 ```java
 boolean empty = phobias.isEmpty();
 ```
-To delete an item from a ```HashMap``` you can call ```remove'''.
+To delete an item from a ```HashMap``` you can call ```remove```.
 
 ```java
 phobias.remove("pentheraphobia");
@@ -126,16 +124,16 @@ phobias.put("pentheraphobia", "the fear of your mother-in-law");
 Now the ```HashMap``` should be back to where it was, well done!!
 
 To check whether all your phobias are defined correctly, you can do so by traversing 
-through the ```HashMap``` using a ```for-each``` loop like this
+through the ```HashMap``` using a ```for``` loop over the set of keys, like so
 
 ```java
-phobias.forEach((key, value) -> {
-  System.out.println(key + " : " + value);
-});
+for(String key: phobias.keySet()) {
+    System.out.println(key + " : " + phobias.get(key));
+}
 ```
 
 This should output:
-```java
+```
 ergophobia : the abnormal fear of work
 nomophobia : the fear of losing mobile phone service
 pentheraphobia : the fear of your mother-in-law
