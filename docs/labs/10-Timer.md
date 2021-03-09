@@ -385,7 +385,7 @@ have in making your programs more dynamic and more expressive.
 
 ## Dealing with Multiple Timers
 
-As you continue working with timers, you may eventually want to utilize multiple within the same class
+As you continue working with timers, you may eventually want to utilize multiple timers within the same class
 for different purposes. 
 
 **Note: There are two categories that you must distinguish when considering the idea of "multiple timers":**
