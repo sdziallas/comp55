@@ -350,9 +350,7 @@ Take the following code as an example.
 ```java
 @Override
 public void mouseMoved(MouseEvent e) {
-    if(e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || e.getY() < frame.getY() ||
-       e.getY() > frame.getY() + frame.getHeight()) 
-    {
+    if(e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || e.getY() < frame.getY() || e.getY() > frame.getY() + frame.getHeight()) {
         // do something
     }
 }
@@ -368,8 +366,7 @@ private boolean outsideOf(GImage frame, MouseEvent e) {
 
 @Override
 public void mouseMoved(MouseEvent e) {
-    if(outsideOf(frame, e))
-    {
+    if(outsideOf(frame, e)) {
         // do something
     }
 }
@@ -434,7 +431,7 @@ head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
 
 Here, we are linking these previous arbitrary numbers in your equations 
 to constant variables. Now, this new relation does several things for you as the 
-developer. Firstly, your code becomes much easier to understand! Since all of
+developer. First, your code becomes much easier to understand! Since all of
 your parameters are labeled, a reader can quickly ascertain the relationships
 between the parameters. Secondly, you can now efficiently and reliably change
 the values of the constant variables, and your program will calculate the same equations
