@@ -289,39 +289,40 @@ would change to something like this.
 ```java
 assertTrue(Date.isValidDate(4, 15, 2017));
 ```
-Once you change this, just to see what it would look like to pass all your tests, you can run your unit tests again. While this example is a bit contrived (your ```isValidDate```) right now returns ```true```, 
-it will give you an indication of what a passing set of tests looks like in JUnit. Notice the green bar that is present once you run. Now, come up with many different tests so that you ensure that 
-your code is doing what you expect it to do and is working without many bugs. To help us make sure that our code is working, let's come up with a test where ```isValidDate``` should return ```false```. 
-You can come up with any type of basic result, but even something like ```55-8-2017``` should not be considered a valid Date. At its simplest terms, such a thing would be considered a simple test.  At 
-this point you could copy and paste line 8, but then change the ```assertTrue``` to an ```assertFalse``` instead, and change ```4,15,2017``` to ```55,8,2017```. There are some disadvantages to 
-copying and pasting code (like not thinking out of the box with your testing), but just having more tests outweigh some of the potential drawbacks in this scenario. In addition to ```assertTrue``` and 
-```assertFalse```, you also have available an ```assertEquals``` method, which compares the two parameters to make sure that they are equal to each other. There are also assertNull and ```assertNotNull```, which
-will just check for null or not null on a particular object. If you are ever unsure about what assert statements the JUnit framework has made available to you, the best thing to do is to use ***Ctrl-Space***
-to look up the different assert statements that Java has made available to you already. Now, I'm going to ask you to try to do two more ```assertTrue``` and two more ```assertFalse``` examples that look very similar
-to the ones you've done. For now, keep the true statements with days below say 25, the months from 1 to 11. Likewise, don't try to do anything crazy for ```assertFalse```, just have numbers greater than 35 for
+Once you change this, just to see what it would look like to pass all 
+your tests, you can run your unit tests again. While this example is a 
+bit contrived (your ```isValidDate```) right now returns ```true```, it will 
+give you an indication of what a passing set of tests looks like in 
+JUnit. Notice the green bar that is present once you run. Now, come up 
+with many different tests so that you ensure that your code is doing what 
+you expect it to do and is working without many bugs. To help us make sure 
+that our code is working, let's come up with a test where ```isValidDate``` 
+should return ```false```. 
+
+You can come up with any type of basic result, but even something like 
+```55-8-2017``` should not be considered a valid Date. At its simplest 
+terms, such a thing would be considered a simple test.  At this point 
+you could copy and paste line 8, but then change the ```assertTrue``` 
+to an ```assertFalse``` instead, and change ```4,15,2017``` to 
+```55,8,2017```. There are some disadvantages to copying and pasting 
+code (like not thinking out of the box with your testing), but just having 
+more tests outweigh some of the potential drawbacks in this scenario. 
+In addition to ```assertTrue``` and ```assertFalse```, you also have 
+available an ```assertEquals``` method, which compares the two parameters 
+to make sure that they are equal to each other. There are also assertNull 
+and ```assertNotNull```, which will just check for null or not null on a 
+particular object. If you are ever unsure about what assert statements the 
+JUnit framework has made available to you, the best thing to do is to use 
+***Ctrl-Space*** to look up the different assert statements that Java has 
+made available to you already. Now, I'm going to ask you to try to do two 
+more ```assertTrue``` and two more ```assertFalse``` examples that look very 
+similar to the ones you've done. For now, keep the true statements with days 
+below say 25, the months from 1 to 11. Likewise, don't try to do anything 
+crazy for ```assertFalse```, just have numbers greater than 35 for
 the day, 15 for the month, and you can avoid changing the year for now. After which, go ahead and come up with a simple solution to the ```isValidDate``` problem that will satisfy this set of basic tests. Your 
 goal for this implementation is to use only 2 ```if``` statements and no ```&&``` symbols. While this example is a little contrived, **I want to make sure that you have a very simple solution so you can understand the
 value of the tests for later, so do not have more than 2 if statements in your solution.** All your code needs to do right now is pass these basic tests. Once you have a simple solution that passes the simple 
 tests, you can move on to the next part.
-
-## Assertions 
-An advanced tool for testing is using Assertions similar to the assert functions you have used previously, but can be done during run time instead of debugging. In java ```assert``` keyword signifies an assertion. Next to the assertion should be a boolean, and if the boolean is false it lets the programmer know during runtime.  If not false it will continue running the program. Below is an example of the assert function at work.
-
-![](lab14media/media/Image6.png)
-Ref:[Source](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html)
-
-
-#### How to Enable?
-The great part about Assert expressions are that you can either turn them on or off in your code. Turning all asserts off makes them similiar to comments, while enabeling them allows you to error check on the fly. In the command line Java –ea MainClass enables assertions in all your classes. While java –da MainClass disables them. Assertions can also be controlled by scope. This is achieved similiar to the command above, but instead of MainClass you would enter your targeted class like 
-
-NOTE: Asserts are off by default in Java you must enable them with the java command line using the command listed above
-
-#### When to use Asserts?
-*Why not use Exceptions* you may be wondering? Well I'm glad you asked. *Assertions are only used in pre-production code not production code.* They are an easy way to see errors in your program before going to production. Assertions is a watch-dog for programmers only watching data. while Exceptions is like a mailman that gets data and does a certain action. Here is more reading on [assertions](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html).
-
-In a nutshell, Assertions are used for bug checking for data that should NEVER be out of the norm, can be turned on and off, and is never used in production code.
-
-While Exceptions are more flexible and can take actions after catching the desired data. 
 
 ## Coming up with Advanced Tests
 
@@ -330,32 +331,46 @@ So, lets come up with some more complicated examples of tests for Dates.
 1. Create a new method in our DateTest.java file and name it ```testDatesAdvanced()```.
 2. Put the ```@Test``` annotation beforehand to make sure that JUnit runs it. For example: 
 
-   ```Java
 ```java
     @Test
-    public void testDatesAdvanced(){}```
-3. Think about some of the more nuanced Dates that you've seen out there and come up with 4 or 5 examples. Ask yourself, "Are these actual dates or not?" and What do those look like? in mind. Some good example might be Feb 30, Dec 32, and so on. 
-4. Once you've done that, add them to the method by using the ```assertTrue``` or ```assertFalse``` calls depending on what you have. (You can simply copy and paste it here).
-5. Once you have that, you can run your JUnit test again.
-6. This time you'll notice that it passed the simple tests, but it fails this advanced one.
-7. So, now let's go ahead and do one more set of tests, these would be known as *edge tests* - tests where really you're just trying to cause havoc or get the program to crash.
-   Examples of edge cases would be zero, negative numbers, or other craziness, for this example you should not worry about trying to put in the wrong types for the program, things like 
-   characters for example.
-8. Keep in mind that if you were testing a function that had objects or strings as parameters instead, in the edge case you would do things like pass in an empty string (```""```) or pass in ```null```.
+    public void testDatesAdvanced(){
+        // test code here
+    }
+```
+3. Think about some of the more nuanced dates that you've seen out there and come up
+ with 4 or 5 examples. Ask yourself, "*Are these actual dates or not?*" or "
+ *What dates could I use to possibly fool a computer?*". Some good examples might be 
+ ```Feb 30```, ```Dec 32```, and so on. 
+4. Once you've come up with examples, create code that will test them by using the 
+```assertTrue``` or ```assertFalse``` calls depending on what you have. (You can 
+simply copy and paste it here).
+5. Once you have a call and no compiler errors, you can run your JUnit test again.
+6. This time you'll notice that it passed the simple tests (if you've been following along with the lab), but it fails this advanced one.
+7. So, now let's go ahead and do one more set of tests, these would be known as *edge 
+tests* - tests where really you're just trying to cause havoc or get the program to 
+crash.
+   
+   - Examples of edge cases would be zero, negative numbers, or other craziness, for 
+   this example do not worry about testing incorrect types like ```char``` or 
+   ```boolean```
+8. Keep in mind that if you were testing a function that had objects or strings as 
+parameters instead, in the edge case you would do things like pass in an empty string 
+(```""```) or pass in ```null```.
 9. Place these examples into a separate test method called ```testDatesEdge()```.
 10.Once you have that, you can then go back and work on the ```isValidDate``` test. 
 11. Now you have tests that help you figure out whether or not your implementation is right. Therefore, you can simply keep reworking your solution until you get the correct result.
 12.  If you haven't thought of February 29th and when things are a leap year, it's worth reading [this short article about leap years](https://www.infoplease.com/leap-year-explained).
 Let me know if you have any other questions.
-<br><br>
-## Some GUI Testing
-We have discussed and worked on enough of code testing. Now is the time for you to work on application interface testing. As an aplication developers, you must keep the user in mind. What you
-design is what they see. Hence, for your application to be user-friendly. You must learn to test your graphical user interface (GUIs) too. Therefore, I want you to check out a few exercises posted on the website link below: 
-<https://www.testingementor.com/software-testing-online-resources/software-testing-exercises/#Software_Testing_Exercise_1_-_How_many_bugs_can_you_find_on_this_buggy_windows_calculator>.
 
-This exercises will teaches you to look at the application interfaces and find bugs in them.
-The key objective of Software Testing Exercises is to leverage *Manual Testing & Automation Testing Skills* gained from our project-based *Manual Testing Training* & Test Automation Training. Especially from a hands-on and project
-perspective, so you could crack Testing Interviews and land a Software Tester job. This strategy helps those aspiring to break into Software Testing in order to think laterally and helps improve analytical skills and attention to details.
+
+## Assertions and GUI Testing (Optional)
+
+An advanced tool for testing is using Assertions similar to the assert functions you 
+have used previously, but can be done during run time instead of debugging. Also in 
+addition to Unit Testing, it's important to know about GUI Testing.  To learn more 
+about assertions or GUI Testing, follow [this optional guide created by former COMP 55 students](14-A-TestOptional.html).  
+
+
 # Review Questions 
 
 ### (*Place your answers to these questions as comments in the TestDate.java file and upload to canvas*)
