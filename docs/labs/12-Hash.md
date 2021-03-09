@@ -304,13 +304,13 @@ next set of steps, which is how to get additional credit for the lab.
 
 [**Click here to start this part of the lab**](http://go.djosv.com/hashmap) and clone
 the repository into eclipse, [just like you've done](lab8media/media/importrepo.gif) before in [the other
-labs](lab8media/media/importfromgit.gif). What we are going to try to build today is a ***SoundBoard***, an accessory that is
-an *essential* part of a DJ set 🙃😏🙄. What we are
+labs](lab8media/media/importfromgit.gif). What we are going to try to build today is an accessory that is a
+very 🙃 *essential* 😏 part of a DJ set 🙄. What we are
 going to do is create a very simple **Sampler**, or as I've called it a
 **SoundBoard**, where we will create a couple of different ```GLabel```s and
-when those different ```GLabel```s are clicked, we are going to play a
-different sound effect. If this doesn't at all make sense, it will once
-you start hearing the sounds, as they will make you reminisce about those days at a party. To start you off, you'll have two classes,
+we are going to play sound effects when each of those different
+ ```GLabel```s are clicked. If this doesn't at all make sense, it will once
+you start hearing the sounds, as they will make you reminisce about those days at a party ✨🎉✨. To start you off, you'll have two classes,
 the ```SoundBoard```, which is a ```GraphicsProgram``` skeleton with a
 ```statusLabel``` and an ```AudioPlayer```, which is a pretty nifty class that
 you'll be able to use to play mp3's. All you'll need to do is to call
@@ -321,7 +321,7 @@ call the method ```playSound```. ```playSound``` takes in two arguments, a
 ```AudioPlayer``` does in fact contain a ```HashMap``` that links a ```String``` in
 this case a *filename*, to a ```MediaPlayer``` object.
 
-The basic goal of extending the soundboard is to get add two ```GLabel```s
+The basic goal of extending the soundboard is to add two ```GLabel```s
 and then when each of those ```GLabel```s is clicked, to play a particular
 sound effect. While we could use a strategy of just creating the labels
 and then having a gigantic if statement at the bottom that would try to
@@ -413,7 +413,7 @@ shakes up and down, (if I haven't shown you this, please ask me to\!).
 To implement this correctly, think about making a new class called
 ```Explosion``` that inherits from ```SoundEffect```. You should also create a
 class ```LabelShaker``` that has a ```GLabel``` as an instance variable and that
-```implements ActionListener```. Then as part of the play start the ```Timer```
+```implements ActionListener```. Then, in the ```play``` implementation,  start the ```Timer```
 to move the label up and down, which uses the same mechanics from the
 dance simulator for moving the label back and forth on each call to
 ```actionPerformed```.

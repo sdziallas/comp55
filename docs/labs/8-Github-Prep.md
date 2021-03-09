@@ -87,7 +87,7 @@ picture. At this point the project should work and run. If it doesn't,
 you may have to change some preferences on your eclipse, but this is
 very rare.
 
-## Editing your Git Preferences
+## Examining ```user.name``` and ```user.email``` to your Git Preferences
 
 So that we can make sure that you get credit for committing and working
 on the project, we're going to have you make one additional change to
@@ -96,13 +96,17 @@ computers so that you get credit for all of your work**. In order
 to do this, we'll go into eclipse and click on *Window-\>Preferences*
 (If you are on a mac, this would be in *Eclipse-\>Preferences*.
 
-Once there, you'll see this window, which I'll ask you to navigate to the git configuration by typing **git** in the search box and then clicking *Configuration*.
+Once there, you'll see this window, which I'll ask you to navigate to the git configuration by typing **git** in the search box and then clicking *Configuration*.  
+**Look to see if you have user.name and user.email**
 
 ![](lab8media/media/eclipseprefs.gif)
 
-**You need to verify this with each computer that you use.** Chagne your name attribute to your actual name.  If you have the entries for user.email and user.name in the bottom but with your email and your actual name, then you can click **Apply and Close** to exit preferences and [jump to the next section](##committing-and-pushing-changes).  
+**You need to verify that you have those two fields with each computer that you use.** 
+Change your name attribute to your actual name.  If you don't have user.name then skip to the next paragraph.
+If you have the entries for user.email and user.name in the bottom but with your email and your actual name, then you can click **Apply and Close** to exit preferences and [jump to the next section](##committing-and-pushing-changes).  
 
-If those two values don't appear, you'll need to add them. You'll be adding your email (the one you used in github)
+### Adding user.name and user.email if you don't have them.
+You'll be adding your email (the one you used in github)
 and name to your settings for all computers. On the same git configuration screen, click the *Add Entry* button on
 the upper right. For the *key* type **user.email** and for *value*, you
 want to put the email that you registered with or used to signup for a
