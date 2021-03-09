@@ -303,27 +303,37 @@ collection of variables, like say when you need to keep track of
 multiple ```GObject```s on the screen, it may make more sense for you to
 create all of the objects and store them in a list, or potentially a
 ```HashMap```. This also makes it nice because then you could possibly
-create a loop and function that will create a series of these objects,
-like, for example, where you can pass in (label, x, y, width, height, color) 
-as parameters in a function to create buttons. 
+create a loop and function that will create a series of these objects.  
+For example, you might remember a function in the [Timers Lab](10-Timer.html##BallLauncher.java) called ```makeBall``` what, if instead you modify or create
+a more general function that passes in ```(x, y, width, height, color, fill)```
+as parameters, so that way you could just call ```makeBall``` and a ball appears? 
 
-Here is an example written in pseudocode
+Here is an example of what that ```makeBall``` function could look like
 
 ```java
-void makeButton(String label, double x, double y, double width, double height, Color col) {
-       int size = 5;
-       List <GButton> listOfButtons = new ArrayList <GRect>();
-       for (int i = 0; i < size; i++) {
-          GButton knob = new GButton (label, x, y, width, height, color);
-          listOfButtons.add(knob);
-        }
-        System.out.println(listOfButtons);
+void makeBall(double x, double y, double width, double height, Color col, boolean shouldFill) {
+        GOval ball = new GOval(x, y, width, height);
+        ball.setFilled(shouldFill);
+        ball.setColor(col);
+        add(ball)
+        listOfBalls.add(ball);
 }
 ```
 
-If you are creating 5 buttons,
-wouldn't it be nice to have a function that was like makeButton(30, 30,
-100, 100, "OK", Color.BLUE) and then know it that it will just show up?
+If you are creating 5 balls,
+wouldn't it be nice to have a function that was like ```makeBall(30, 30,
+SIZE, SIZE, Color.BLUE, true)``` and then know it that it will just show up?  
+This does not even get to what you could do later, which is to store all of the information in an object, and then have that be passed into your for loop instead!
+Assume there was a simple ```BallSpec``` class that worked like simple classes before, meant to just hold some information and store it.  Then look what could happen to our code.
+
+```java
+// Assume the info was loaded from a file or somewhere else
+for(int i = 0; i < ballSpecs.length; i++) {
+    makeBall(ballSpecs[i]);
+}
+```
+
+Then our ```makeBall``` fucntion would merely call getters for the ```x```, ```y```, ```width```, ```height```, ```color``` and ```shouldFill``` for example to have that all be filled in.
 
 7)  **Does the code look confusing? Consider making methods to help you
     make parts more readable.**
