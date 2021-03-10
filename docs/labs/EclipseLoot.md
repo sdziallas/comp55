@@ -93,7 +93,7 @@ To debug in eclipse
 
 >> ![](eclipseloot/media/image2.png)
 
-  - Use *Debug* (shown below) instead of the adjacent *Run* to run in
+  - Use *Debug* ![](eclipseloot/media/debug.PNG) instead of the adjacent *Run* ![](eclipseloot/media/run.PNG) to run in
     the debugger (Note: "Run" is different from "Debug" -- Run ignores
     the breakpoints).
 
@@ -125,8 +125,7 @@ To debug in eclipse
 > window will list all of the variables present in this scope. Notice
 > that the variable ```s``` has the value ```"Hello"```
 
-  - Eclipse has the typical Step-over, Step-in, Step-out controls (the
-    yellow arrows circled above) to advance the program in little steps.
+  - Eclipse has the typical ***Step-Over***, ***Step-In***, ***Step-Out*** controls to advance the program in little steps.
     ![](eclipseloot/media/image8.png)
 
   - Before you can make those steps, you have to set a breakpoint in a

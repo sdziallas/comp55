@@ -486,7 +486,29 @@ making changes to it together. Each of you should try to have as many
 changes made to this lab project as possible and points will be given
 based on the smallest number of commits and merges done by the team
 member with the smallest amount of activity before the due date. Also
-for this class I want all of you to only use the single master branch.
+for this class I want all of you to only use the single ```main``` branch.
+
+### More Git Theory
+
+![](lab9media/media/Egit-lifecycle.png)
+
+Here is a helpful illustration from the [Eclipse Foundation](https://wiki.eclipse.org/EGit/User_Guide#Recording_Changes_in_the_Repository)
+
+The above illustration can be read like this:
+
+* When you **add a file**, you are telling Git to keep **track** of it. 
+* Once you **modify** the file, git recognizes that the file is different, but does 
+not immediately submit those as official changes to the repo.  To put them up for 
+consideration, you **stage** the changes.  A good metaphor for this is that you are 
+preparing to save these changes as a draft.
+* Once you stage the changes, you can then **commit** those changes, which keeps them 
+in git's history. This is like you actually saving the draft (as a copy).  Committing 
+is good in that it allows you to keep track of what you've done.
+* The cycle then moves you back to having all the files be up to date, so the cycle 
+repeats. 
+
+For more information regarding the illustration and using Git with Eclipse, check out the [EGit/User Guide](https://wiki.eclipse.org/EGit/User_Guide#Getting_Started).
+
 
 Also if any of this confuses you, you may start searching google for
 more resources to learn git. There is some good stuff out there (and

@@ -38,7 +38,7 @@ writing the Timer code to wake up instead, then you would use the
 special keyword ```this``` … ```this``` refers to yourself, the object that you
 are currently in. 
 
-### 2. Setup event handlers - ```ActionLister``` and ```actionPerformed``` - in the appropriate class
+### 2. Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
 Any class that would like to be responsible party for
 handling the alarm must implement the ```ActionListener``` interface. The
 ```ActionListener``` interface has just one method, ```public void
@@ -337,7 +337,7 @@ direction. Then make sure that you call ```moveAllEnemiesOnce``` in
 to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  They will be very wiggly. At this point you should **commit
 and push again,** with the message **"added wiggly enemy movement"**.
 
-## One last addition
+## Final required addition
 
 At this point I'm guessing that you probably want some way to get rid of
 these green squares using the ball. While there are many ways for
@@ -364,7 +364,11 @@ squares disappear **and follow all the directions on when to push your
 code**. Make sure to push your final changes to your repository by the
 deadline.
 
-## Bonus - "Hey! This is almost a game!"
+## Advanced reading on multiple timers
+If you're curious, [here's an explanation on how to implement multiple timers in your program](10-A-Mult-Timers.html)
+
+## Bonus
+### *"Hey! This is almost a game!"*
 
 While this does not yet have the polish of some of the games you may
 tend to play, there are many things you can do to make it more polished.

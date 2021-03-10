@@ -22,7 +22,7 @@ toy has been switched on while
 
 In this case, which version of ```timesPlayed``` should
 ```ToyGuitar``` inherit or modify when you reference ```ToyGuitar```? This can
-become messy and quite buggy. However, one thing that that Java has
+become messy and quite buggy. However, one thing that Java has
 realized is that you should be able to *inherit* multiple sets of
 behaviors. This is where interfaces come in. **Interfaces** are special
 java files that allow us to declare methods, *but provide no
@@ -38,7 +38,7 @@ Import that zip file [like you normally would](lab2media/media/image2.gif).
 
 In today's lab, what we are going to do is simulate the typical programming process, and so we are going to create an office programming simulator.  The goal of the simulator is to display the three most common emotional states in programming.  I would say that these three emotional states often happen in this particular order:
 
-Before you beging programming there may be a sense of calmness or possibly a neutral feeling.  That calmness then changes to happiness as we are being productive and writing
+Before you begin programming there may be a sense of calmness or possibly a neutral feeling.  That calmness then changes to happiness as we are being productive and writing
 code that we think will work.  That happiness then changes to anger/frustration when we encounter a bug.  Once we fix the bug, then we return back to being
 calm, which lets us write more code and the cycle repeats.  Our program will be responsible for showing different graphical representations for each of these different states.
 
@@ -91,6 +91,9 @@ public interface Emotional {
 
 This file is quite empty and while the topic of *Interfaces* may sound intimidating, interface files are typically quite empty and only hold method declarations.  The methods do not define implementations in the interface so many interface files are less than 10 lines of code.  Interfaces are inherently simple and the benefit will come when we have other classes refer to these files in the future.  What we are going to do in our scenario is to add the three methods from our UML diagram.  Go ahead and do that now.  **Add the three method declarations to the interface**.  Not sure which three methods I'm referring to?  Look at the UML diagram.  The declaration will look just like the method definitions from ```EmotionalOval```, except that instead of having a definition with curly braces, it will end with a semi-colon.  Once you add those three lines of code, you can move on to the next step.
 
+Connection To Visual:
+On the UML diagram, ```GRect```, ```GOval```, ```EmotionalRect```, and ```EmotionalOval``` are all part of the shapes that get displayed with the colors changing inside them. The ```EmotionSimulator``` takes in the information of the three emotions to display the colors corresponding to each emotion to display them inside the shapes when the mouse is clicked.  
+
 ### Step 2: Change ```EmotionalOval``` and Rect so that they both implement the interface
 Open up ```EmotionalOval``` and locate the start of the class definition, which looks like this:
 ```java
@@ -101,7 +104,7 @@ What we are going to do is after ```GOval``` but before the curly brace, add the
 
 ### Step 3: Change ```EmotionalState``` and ```EmotionSimulator``` to use type ```Emotional``` instead of ```EmotionalOval```
 
-The beauty with now using an interface is that we get the benefits of polymorphism in having what you could think of as being a superclass, but without all of the fuss of figuring out what data will be changed.  Because interfaces do not have any data, we do not run into the same problems that we had before when we were thinking of trying to inherit information from multiple classes.  Interfaces say nothing about how should behave, only that we will can respond to a particular method.  While this may feel trivial, this is incredibly powerful.  By not having any responsibilities of having to do anything other than know you can call a method, both sides can be very well abstracted from each other.  A class that calls a function belonging to an interface doesn't need to know anything about who they are calling and the function definition doesn't need to know anything about how it's being called, which allows for both sides to be extremely flexible.  
+The beauty with using an interface now is that we get the benefits of polymorphism. It's like what you could think of as being a superclass, but without all of the fuss of figuring out what data will be changed.  We do not run into the same problems that we had before when we were thinking of trying to inherit information from multiple classes because interfaces do not have any data.  Interfaces can only respond to particular methods, but cannot direct how those methods behave.  While this may feel trivial, it is incredibly powerful.  By not having any responsibilities other than calling methods, both sides can be very abstracted from each other.  A class that calls a function belonging to an interface and the function definition do not need to know anything about each other, which allows for both sides to be extremely flexible.  
 
 ***Open up ```EmotionalState``` and change the parameter ```being``` in the ```expressEmotion``` method from ```EmotionalOval``` to ```Emotional```***. Then save the file.  Other than the type changing color (if you are using our color scheme), there will be no other changes that will need to be made, and you will not run into any additional compiler errors.  
 
@@ -115,7 +118,7 @@ What you will need to do here is merely to create a ```new EmotionalRect``` at n
 ![](lab7media/media/emotionalrect.gif)
 
 ### Step 5: Make an ```EmotionalCharacter```
-While these two classes so far feel very similar, remember that each class and their behavior is there own, and different reacitons could come up for the three different states.  For this let's deviate a little bit more from the Oval and Rect classes and instead make an EmotionalCharacter.  This time, instead of copying pasting the other classes, let's start fresh, by creating a new java class, where we have eclipse help us create a class with inherited methods.
+While these two classes so far feel very similar, remember that each class and their behavior is there own, and different reactions could come up for the three different states.  For this let's deviate a little bit more from the Oval and Rect classes and instead make an EmotionalCharacter.  This time, instead of copying pasting the other classes, let's start fresh, by creating a new java class, where we have eclipse help us create a class with inherited methods.
 
 ![](lab7media/media/newclasswithinterface.gif)
 
