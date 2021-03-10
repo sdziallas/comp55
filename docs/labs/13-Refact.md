@@ -278,20 +278,23 @@ your final project grade.</u>**
 6)  **Are you making a lot of variables? Consider using a list or other
     data structure to store them instead.**
 
-I think for the purposes of this project, it's pretty easy to start
+I think for the purpose of this project, it's pretty easy to start
 thinking of making instance variables for everything. Instance variables
 are nice because they are visible in all methods of every method in a
 class, which means you don't have to worry about passing information to
-and from a function. However, the ability to pass information back and
+and from a function. 
+
+However, the ability to pass information back and
 forth between methods and understanding scope is an important tenet in
 developing software. Otherwise, having so many instance variables is
 akin to giving everyone in your dorm a key to your room. Sure it's
 convenient to give everyone a key, but it's not secure, and more
 importantly when you're trying to debug and figure out who borrowed your
-playstation, it makes it that much more difficult to find out who it was
-and when it happened, it also could lead to situations where people
+Playstation, it makes it that much more difficult to find out who it was
+and when it happened. Also, it could lead to situations where people
 start using your room for other purposes that you wouldn't necessarily
 want (feel free to let your imagine roam for a minute here if you want).
+
 Like with your dorm room, there are situations in which your program and
 all of your functions do not need to have access to every single one of
 those instance variables, so consider using local variables when a
@@ -300,11 +303,37 @@ collection of variables, like say when you need to keep track of
 multiple ```GObject```s on the screen, it may make more sense for you to
 create all of the objects and store them in a list, or potentially a
 ```HashMap```. This also makes it nice because then you could possibly
-create a loop and function that will create a series of these objects,
-like for example buttons, where you extract out to the method all of the
-common things needed for a button. I mean if you are creating 5 buttons,
-wouldn't it be nice to have a function that was like ```makeButton(30, 30,
-100, 100, "OK", Color.BLUE)``` and then know it that it will just show up?
+create a loop and function that will create a series of these objects.  
+For example, you might remember a function in the [Timers Lab](10-Timer.html##BallLauncher.java) called ```makeBall``` what, if instead you modify or create
+a more general function that passes in ```(x, y, width, height, color, fill)```
+as parameters, so that way you could just call ```makeBall``` and a ball appears? 
+
+Here is an example of what that ```makeBall``` function could look like
+
+```java
+void makeBall(double x, double y, double width, double height, Color col, boolean shouldFill) {
+        GOval ball = new GOval(x, y, width, height);
+        ball.setFilled(shouldFill);
+        ball.setColor(col);
+        add(ball)
+        listOfBalls.add(ball);
+}
+```
+
+If you are creating 5 balls,
+wouldn't it be nice to have a function that was like ```makeBall(30, 30,
+SIZE, SIZE, Color.BLUE, true)``` and then know it that it will just show up?  
+This does not even get to what you could do later, which is to store all of the information in an object, and then have that be passed into your for loop instead!
+Assume there was a simple ```BallSpec``` class that worked like simple classes before, meant to just hold some information and store it.  Then look what could happen to our code.
+
+```java
+// Assume the info was loaded from a file or somewhere else
+for(int i = 0; i < ballSpecs.length; i++) {
+    makeBall(ballSpecs[i]);
+}
+```
+
+Then our ```makeBall``` fucntion would merely call getters for the ```x```, ```y```, ```width```, ```height```, ```color``` and ```shouldFill``` for example to have that all be filled in.
 
 7)  **Does the code look confusing? Consider making methods to help you
     make parts more readable.**
@@ -316,6 +345,35 @@ methods that have return values based on parameters, will make them
 easier to generate test methods for as well, since you'll be able to
 say, *when I expect this, I should get back this*, which is the basis of
 unit testing that we went over in the previous lab.
+
+Take the following code as an example.
+```java
+@Override
+public void mouseMoved(MouseEvent e) {
+    if(e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || e.getY() < frame.getY() || e.getY() > frame.getY() + frame.getHeight()) {
+        // do something
+    }
+}
+```
+
+Is it immediately clear what the above if statement does? Maybe, maybe not. It's difficult to understand without some context that the conditions check the location of ```e``` relative to ```frame```. However, using a function could make this code clearer. Rewriting the code above using a function could look something like this:
+
+```java
+private boolean outsideOf(GImage frame, MouseEvent e) {
+    return e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || 
+           e.getY() < frame.getY() || e.getY() > frame.getY() + frame.getHeight();
+}
+
+@Override
+public void mouseMoved(MouseEvent e) {
+    if(outsideOf(frame, e)) {
+        // do something
+    }
+}
+```
+
+With this change, the ```if``` statement remains functionally the same.
+However, by removing the content of the if statement and putting it into a function, the ```if``` statement becomes more readable. Additionally, the ```outsideOf``` function will be easy to test, and can be called again as needed in other parts of the code.
 
 To be honest, I think a lot of the issues that I see with student code
 in COMP 55 is the lack of methods/functions that they tend to create for
@@ -371,19 +429,17 @@ body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
 head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
 ```
 
-Here, we are establishing, other norms for your program that help you
-think of how the numbers relate to each other. Now we make it easier for
-you to increase the size as well as move the ovals and not have to do
-any of the calculations yourselves. Now, how you work this, you may
-decide that the two 100's here are merely a coincidence. If that's the
-case, then you could create two variables instead. Declaring constants
-makes your code more readable and more readily changeable. While the
-previous example is on the extreme end, there are many situations where
-code tends to have the same number egregiously littered everywhere.
-Convert that number to a constant, since if you change it one place, it
-should change in the others as well. This makes a lot of sense to do as
-well with filenames, to make them string constants or even to
-concatenate strings. For example, here was my traffic jam way of reading
+Here, we are linking these previous arbitrary numbers in your equations 
+to constant variables. Now, this new relation does several things for you as the 
+developer. First, your code becomes much easier to understand! Since all of
+your parameters are labeled, a reader can quickly ascertain the relationships
+between the parameters. Secondly, you can now efficiently and reliably change
+the values of the constant variables, and your program will calculate the same equations
+but with new values. This will save you lots of time when the alternative is searching every
+instance of your old number, trying to remember if this particular instance is related to
+the change you want to make, and then praying nothing was missed or overlooked.
+This concept makes a lot of sense when applied to filenames, making them string constants for 
+ease of editing when a filepath is changed. For example, here was my traffic jam way of reading
 files from the project. Which were *images/car.png,
 images/car\_vert.png, images/truck.png, images/truck\_vert.png*, etc.
 

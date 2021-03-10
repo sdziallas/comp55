@@ -70,8 +70,8 @@ we want to do is inherit from the special ACM class, ```GraphicsProgram```,
 which will do a lot of the necessary legwork to get ourselves ready to
 deal with graphics. By saying ```ACMLab extends GraphicsProgram```, we are
 telling Java that the ```ACMLab``` **IS** a ```GraphicsProgram```, and so we get
-all of the benefits and tribulations of being a ```GraphicsProgram```. This means that we'll need to leverage and write few additional methods in order to make our program work.  Rather than using ```public static void main(String[] args)```,
-I want you to conisder ```public void run()``` as our starting point for now.  
+all of the benefits and tribulations of being a ```GraphicsProgram```. This means that we'll need to leverage and write few additional methods to make our program work.  Rather than using ```public static void main(String[] args)```,
+consider ```public void run()``` as our starting point for now.  
 
 - **public static final int:** Lines 7 & 8 declare constants for the
 program to reference. **It is good programming practice to declare any
@@ -228,6 +228,18 @@ object, after it's been created, you can call ```getWidth()``` or
 ```getHeight()```. You can use this in combination with a ```setLocation(x,
 y)``` that will change the location of where an object is if you want the
 object to be placed in a particular area.
+
+## Applying Color
+
+Once you have created your shape or image, the ACM library gives you the abiliy to fill it with a wild variety of colors. Depending on what you created, the procress for applying the desired color you want vary between each other. The different options that will be dicussed are ```GLabel```, and ```GRect```. ```GRect``` is interchangeable with ```GOval```.
+
+If you want to apply color to a ```GLabel``` look at the following table to compare code snippets:
+
+| GLabel | GRect |
+| :--- | :--- |
+| `GLabel text1 = new GLabel("Hello World", START_X, START_Y);`<br>`text1.setFont("Arial-24");`<br>`text1.setColor(Color.BLUE);`<br>`add(text1);` | `GRect rect = new GRect(START_X, START_Y, 200, 100);`<br>`//200 and 100 should be constants`<br>`rect.setFillColor(Color.YELLOW);`<br>`rect.setFilled(true);`<br>`//This will apply the color you have chosen`<br>`add(rect);`| 
+
+The first column has a ```GLabel``` that changes to blue. The second column has a  ```GRect``` that changes to yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor``` on a ```GRect```/```GOval```, you change the color of the outlines, not the shape's fill itself.  If you use ```.setFillColor(Color.INSERT_COLOR_HERE)```, you fill the shape with the color of your choosing, but it wont be shown just yet. Instead,  you must use ```.setFilled(true)``` to apply the color to your shape and it will now show after you ```add()``` the shape and run.
 
 ## Overlapping Objects
 

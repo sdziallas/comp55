@@ -6,6 +6,7 @@ pictures pretty well
 | C++                                                                                                             | Java                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | ![http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg](diffjavacpp/media/image1.jpeg) | ![http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg](diffjavacpp/media/image2.jpeg) |
+Source: *[pxleyes](http://www.pxleyes.com)* and *[cityofws](http://www.cityofws.org)*
 
 C++ really just lets you do whatever you want, which is exciting, but
 can really mess you up. Java on the other hand is much more protective.
@@ -157,6 +158,14 @@ Notice that Java doesn't have the ```endl``` at the end of the statement. It
 has been replaced with the ```println``` statement, if you don't want to go
 to the next line, call ```print``` instead of ```println```.
 
+## Const/Final variables
+
+A constant is a variable that cannot change its value during the program execution.
+Java and C++ have different keywords that are used when referring to a constant 
+variable. Java uses ```final``` while C++ uses ```const```. Note though that the
+two keywords do not share all of the same meanings.  To learn more about the
+difference, [please see here](https://stackoverflow.com/questions/4971286/javas-final-vs-cs-const#:~:text=Java%20final%20is%20equivalent%20to,i.e.&text=Aside%20from%20having%20certain%20and,to%20be%20initialized%20on%20declaration!).  
+
 ## Java has programmed many things for you
 
 In addition to things like ArrayLists, which is an infinitely expandable
@@ -169,7 +178,7 @@ your disposal. Ever wanted to have a class that stores a Date correctly?
 Done. Want to make an http request? Done. Want to sort an array? Done.
 To see, just go to this link.
 
-http://docs.oracle.com/javase/11/docs/api/
+<https://docs.oracle.com/en/java/javase/11/docs/api/index.html>
 
 Those are all java files that have been implemented, are stable and get
 leveraged by folks who work in Java so that they don't reinvent the
