@@ -6,6 +6,7 @@ pictures pretty well
 | C++                                                                                                             | Java                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | ![http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg](diffjavacpp/media/image1.jpeg) | ![http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg](diffjavacpp/media/image2.jpeg) |
+Source: *[pxleyes.com](http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg)* and *[cityofws.org](http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg)*
 
 C++ really just lets you do whatever you want, which is exciting, but
 can really mess you up. Java on the other hand is much more protective.
@@ -160,39 +161,10 @@ to the next line, call ```print``` instead of ```println```.
 ## Const/Final variables
 
 A constant is a variable that cannot change its value during the program execution.
-Java and C++ have different syntax for the constant variable. 
-Java uses ```final``` while C++ uses ```const```. These two words could be equivalent 
-and work the same and could be not. This difference depends on what they are referred to.
-
-### Final and const are equivalent:
-
-When the variable is a primitive type (int, float, double, char, boolean...), 
-```final``` and ```const``` have the same work. 
-
-```cpp
-final int SIZE = 100; // java
-const int SIZE = 100; // C++
-SIZE = 500; // Assigning variable SIZE to different value is Invalid in both languages
-```
-
-### Final and const are not equivalent:
-
-When ```final```/```const``` refers to methods, they have different meanings, 
-and we can't make them work the same anymore.
-
-In Java, we can use ```final``` with other function even if it's not a constant function:
-
-```java
-final Customer customer = name;
-customer.setAddress("123 abc"); // Valid
-```
-
-While in C++, we only can call ```const``` with another const function:
-
-```cpp
-const Customer* customer = name;
-customer->setAddress("123 abc"); // Invalid
-```
+Java and C++ have different keywords that are used when referring to a constant 
+variable. Java uses ```final``` while C++ uses ```const```. Note though that the
+two keywords do not share all of the same meanings.  To learn more about the
+difference, [please see here](https://stackoverflow.com/questions/4971286/javas-final-vs-cs-const#:~:text=Java%20final%20is%20equivalent%20to,i.e.&text=Aside%20from%20having%20certain%20and,to%20be%20initialized%20on%20declaration!).  
 
 ## Java has programmed many things for you
 
