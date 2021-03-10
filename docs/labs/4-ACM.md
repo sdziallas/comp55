@@ -231,26 +231,15 @@ object to be placed in a particular area.
 
 ## Applying Color
 
-Once you have created your shape or image, the ACM library gives you the abiliy to fill it with a wild variety of colors. Depending on what you created, the procress for applying the desired color you want vary between each other. The different options that will be dicussed are ```GParagraph```, ```GLabel```, ```GObject```, and ```GRect```. ```GRect``` is interchangeable with ```GOval```.
+Once you have created your shape or image, the ACM library gives you the abiliy to fill it with a wild variety of colors. Depending on what you created, the procress for applying the desired color you want vary between each other. The different options that will be dicussed are ```GLabel```, and ```GRect```. ```GRect``` is interchangeable with ```GOval```.
 
-If you want to apply color to a ```GParagraph``` or ```GLabel``` look at the following table to compare code snippets:
+If you want to apply color to a ```GLabel``` look at the following table to compare code snippets:
 
-| GParagraph | GRect |
+| GLabel | GRect |
 | :--- | :--- |
-| `GParagraph text1 = new GParagraph("Hello World", START_X, START_Y);`<br>`text1.setFont("Arial-24");`<br>`text1.setColor(Color.BLUE);`<br>`add(text1);` | `GRect rect = new GRect(START_X, START_Y, 200, 100);`<br>`//200 and 100 should be constants`<br>`rect.setFillColor(Color.YELLOW);`<br>`rect.setFilled(true);`<br>`//This will apply the color you have chosen`<br>`add(rect);`| 
+| `GLabel text1 = new GLabel("Hello World", START_X, START_Y);`<br>`text1.setFont("Arial-24");`<br>`text1.setColor(Color.BLUE);`<br>`add(text1);` | `GRect rect = new GRect(START_X, START_Y, 200, 100);`<br>`//200 and 100 should be constants`<br>`rect.setFillColor(Color.YELLOW);`<br>`rect.setFilled(true);`<br>`//This will apply the color you have chosen`<br>`add(rect);`| 
 
-As a result of the first column, your ```GParagraph``` or ```GLabel``` will be changed to the color blue. As a result of the second column, your ```GRect``` or ```GOval``` will be changed to the color yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor```, you change the color of the outlines, not the shape itself. Since ```GParagraph``` is not a shape in the ACM library, you have to change the color of the font outlines. When dealing with ```GObject``` or a shape, you use ```.setFillColor(Color.INSERT COLOR HERE)``` to fill the shape with the color of your chosing, but it wont be shown just yet. Addtionally, the outlines will be defaulted to black, but that will be explained in the next example. Next you must use ```.setFilled(true)``` to apply the color to your shape and it will now show when running the program when using ```add()```.
-
-Here is an example of assigning a ```GRect``` to a ```GObject``` and manipulating it's color
-```java
-GRect rect = new GRect(START_X, START_Y, 200, 100); //200 and 100 should be constants
-GObject obj = rect;
-obj.setColor(Color.GREEN);
-rect.setFilled(true);
-add(obj);
-```
-
-As a result of this code, your ```GObject``` will be changed to the color green. In order for the ```GObject```'s color to be change, you must assign the object to the ```GRect```. After ```GRect``` has been asigned to ```GObject``` you can now manipulate the color of the object. In this case ```obj.setColor``` was used. This changes the color outlines of the object and replaces them with the color green, resulting in a white box with a green border around it. Next ```.setFilled(true)``` is called, filling the shape with the color previously stated and applying it simultaneously. This will produce a fully green box with the same color border. Using ```add(obj)``` will show the green box on screen.
+The first column has a ```GLabel``` that changes to blue. The second column has a  ```GRect``` that changes to yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor``` on a ```GRect```/```GOval```, you change the color of the outlines, not the shape's fill itself.  If you use ```.setFillColor(Color.INSERT_COLOR_HERE)```, you fill the shape with the color of your choosing, but it wont be shown just yet. Instead,  you must use ```.setFilled(true)``` to apply the color to your shape and it will now show after you ```add()``` the shape and run.
 
 ## Overlapping Objects
 
