@@ -80,30 +80,25 @@ by following the steps in Tip \#4.
     useful for when you have a dirty project (which you can tell when
     the greater than sign is present next to the project).
     
-## Java Build Path Tip
+## Java Build Path - Adding a folder of images
 
 When importing your project into Eclipse there are times where certain 
 folders are not in the java build path. Lets take for example a media folder 
 containing images for you project that's not in your java build path. 
 The console will return an error telling you it cannot find the image.
 
-
 ![](gittips/media/cannotFindImage.png)
-
 
 First thing you want to do is right click your *project-name* in 
 your project explorer and click on the *properties*. You will be greeted
-with this window: 
-    
+with this window:   
     
 ![](gittips/media/propertiesPage.png)
 
 
-    1) Cick *Java Build Path*
-
-    3) Click on the *Source* tab
-
-    5) Click on *Add Folder*
+1. Cick *Java Build Path*
+2. Click on the *Source* tab
+3. Click on *Add Folder*
 
 Now you are met with the Source Folder Selection wherer you can check the 
 folder you want included and you are done!
