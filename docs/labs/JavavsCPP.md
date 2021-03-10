@@ -6,7 +6,7 @@ pictures pretty well
 | C++                                                                                                             | Java                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | ![http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg](diffjavacpp/media/image1.jpeg) | ![http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg](diffjavacpp/media/image2.jpeg) |
-Source: *[pxleyes.com](http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg)* and *[cityofws.org](http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg)*
+Source: *[pxleyes](http://www.pxleyes.com)* and *[cityofws](http://www.cityofws.org)*
 
 C++ really just lets you do whatever you want, which is exciting, but
 can really mess you up. Java on the other hand is much more protective.
