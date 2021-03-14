@@ -145,19 +145,9 @@ with the JUnit 4 framework.  If you are super curious about the differences whic
 
 ## Create a DateTest class using JUnit 4.
 
-Let's create a new Java File, except in
-this case rather than creating a new class like we did before, we're
-going to do *File-\>New-\>JUnit Test Case*, making sure that we do that
-while having the *TestingLab* project selected*.* The resulting setup
-dialogs will look similar to creating a class.
+If you followed real close the gif from before where you create a new Junit Test Case.
 
-In the dialog, make sure to fill out the Name of the JUnitTest Case,
-which we will just call **DateTest**, and then follow that by filling
-out the second portion which is the class under Test. JUnit does a great
-job of trying to help you formulate test methods if you already have a
-class that has been written, as it will if you want to, provide dummy
-test methods that it will start to run. It will also create method stubs
-for you if you like. Sometimes when you run unit tests, you may want to
+Sometimes when you run unit tests, you may want to
 read certain information from a file, or load another object or create
 something else first before you start doing any tests or before you do
 each test. Similarly you might have to do some clean up after a test if
@@ -189,27 +179,16 @@ these different times. The typical scenario for how the files work is
 Notice that the **same** ```setUp()``` and ```tearDown()``` are being called. If
 you have something more convoluted, it might make sense to talk to me
 about it as you don't necessarily want to have more than 1 ```@Before``` and
-1 ```@BeforeClass``` directives. Go ahead and click the **Next** button, and
-you'll then see the next screen.
-
-![](lab14media/media/image3.png)
-
-Like I mentioned before, JUnit and eclipse do a good job of trying to
-make writing tests as easy as possible, so you don't have to worry about
-remembering any of the syntax or creating each method, JUnit will take
-an existing class and then look at the methods you use and provide you
-stubs so that you can test each of those methods. You can select the
-**isValidDate**, so you can see what Eclipse will do and then click
-finish. Once you do, it will ask if you want to install JUnit on the
-build path, you should click *OK* to Add JUnit 4 to the build path. At
-this point it will return you back to the main project screen, where'
+1 ```@BeforeClass``` directives. 
+At
+this point you should be back in eclipse with your trusty new Junit Test Case file, where'
 you'll see some code that looks something like this:
 
 ![](lab14media/media/image4.png)
 
 Notice that what you see is in fact java code, with a couple of minor
 differences which I'll go over. The first thing you may notice is this
-```import static``` command on line 1, which is slightly different than
+```import static``` command on line 3, which is slightly different than
 import. As you know ```import``` allows us to specify and use libraries, so
 you would be aware that there is a class called *Test.java* and once we
 import it we can then use it in our file, Java knows where to look.
@@ -222,18 +201,18 @@ failed and then providing a message for why the test failed (In this
 case, it's the *Not yet implemented*). Notice that we have no "**.**"
 operator or anything else to qualify where the ```fail``` method came from.
 This is because we had the ```import static```, otherwise if we were change
-line 1 to ```import org.junit.Assert```, we would have to change line 8 to
+line 3 to ```import org.junit.Assert```, we would have to change line 8 to
 say ```Assert.fail("not yet implemented")```**.** You can try that if you
 like, but make sure to change it back. So ```import static``` is for
 convenience, almost like how we had ```using namespace std``` in C++.
 
-Next notice on line 6 that we have the ```@Test``` directive. This is a
+Next notice on line 9 that we have the ```@Test``` directive. This is a
 special annotation that Java has introduced more recently that lets java
 know that the next method under it is one that we would like JUnit to
 test. Because it knows that it will need to test it, we can name the
 method whatever we like. Go ahead and change the method name to
 ```testIsValidDateBasic```, since we'll be making more methods in the
-future. The final thing to look at is on line 8, which is simply a
+future. The final thing to look at is on line 11, which is simply a
 command to let JUnit know that we should not pass by calling fail.
 Anytime java reaches a line that says fail, think of that like being a
 return statement, where the computer immediately exits and returns a
