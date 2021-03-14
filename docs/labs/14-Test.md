@@ -139,8 +139,9 @@ leverage one of the most popular testing frameworks for java that is
 already built into eclipse, the **JUnit testing framework**. JUnit has
 been well integrated into eclipse, so using it should hopefully be
 straightforward. There are different versions of the testing framework
-that have been made over the years, and what we'll do is for now stick
-with the JUnit 4 framework.
+that have been made over the years, and even though we used a newer framework
+in the Hashmaps Lab, what we'll do is for now stick
+with the JUnit 4 framework.  If you are super curious about the differences which is not necessary for this class, you can [read about them here](https://sormuras.github.io/blog/2018-09-13-junit-4-core-vs-jupiter-api.html).
 
 ## Create a DateTest class using JUnit 4.
 
