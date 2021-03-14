@@ -460,8 +460,12 @@ private void drawCar(Vehicle v) {
     GImage g = new GImage(IMG_PATH + v.getVehicleType() + suffix, …)
 ```
 
+# Refactoring Lab
+
+Once you have finished reading these questions, you can now download and take a program to try to do some refactoring:
+
 Your goal is for the rest of class to take these rules and to look over
-the project that I've given you, and by the deadline come up with a
+[the project that I've given you](http://go.djosv.com/refactorlab), and by the deadline come up with a
 refactored solution that still works. **Don't spend your time playing
 and exploring the game**, but rather reading the code and making
 changes. This isn't as much about testing and looking for bugs or
