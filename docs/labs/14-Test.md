@@ -13,18 +13,19 @@ Whether you appreciated doing something tricky, or whether it still
 haunts you in your sleep, we did traffic jam to give you something
 challenging to work on to get you introduced to the idea of working on a
 significant project in parts. Feel lucky that you weren't my first group
-of students that got that assignment, where I asked them to do the
-entire assignment, **without breaking it up and I only gave them two
+of students at Pacific that got that assignment, where I asked them to **complete Traffic Jam without breaking it up and only giving them two
 weeks**\! After giving the assignment a few times, what I've seen that
-helps students much more than anything else I've done so far is the main
+what helps students much more than anything else I've done so far is the main
 functions that I wrote for them, to make sure that they test parts
 they've written before moving forward. Imagine writing all of traffic
 jam only to see the grid and the behavior of traffic jam be at best
-erratic, showing up with symptoms like dragging a vehicle to another
-spot and then having that vehicle disappear and move to completely other
-area on the board, or simply being able to drag over vehicles and not
-returning to the same place, but ending up somewhere else entirely
-instead? If you think about the code that was provided, like this code
+erratic, my first students didn't test as they went along, so when they ran the program, they had symptoms like:
+- dragging a vehicle to another
+spot and then having that vehicle disappear
+- dragging a vehicle vertically and backwards would cause the vehicle to jump to the other side of the board **but horizontally**
+
+
+If you think about the code that was provided, like this code
 for Space.java
 
 ```java
@@ -61,7 +62,7 @@ System.out.println("if we were to move horiz auto -2 it should give you at least
 printSpaces(someAuto.spacesOccupiedOnTrail(-2));
 ```
 
-These line allowed you to test part of your functionality before having
+These snippets of code allowed you to test part of your functionality before having
 the entire assignment done. This type of testing is typically called
 **unit testing**, because we are checking for the most part if a unit
 (be it a class or method like the ```Space```, or the ```Vehicle```, or
@@ -69,9 +70,7 @@ the entire assignment done. This type of testing is typically called
 are still a bit general, by running these in your code, you have a more
 targeted approach for ensuring that the code you've written so far is
 not completely broken. These tests on these individual classes and
-methods is different than the classical way that you may think of with
-regards to testing, which would be to run the program and to play
-through the game. That type of testing is often called system testing,
+methods may be different than what you might consider testing.  Many programmers early on think of testing as running the program and putting in different values. That type of testing is often called system testing,
 as you often are testing the entire system to see if it works. However,
 like we mentioned earlier, today we're going to focus on becoming better
 at producing tests for units so we can make it easier to test and debug
@@ -85,12 +84,12 @@ that will validate Dates. Let's say that we are writing it because it's
 going to be used for a new calendar application that we are building.
 For the simplicity of the lab, I'm not going to provide you with any
 starter files or anything, we are just going to create two classes.
-Date.java and DateTest.java. To start, go ahead and make a new java
+Date.java and DateTest.java in a Gradle Project. To start, go ahead and make a new java
 project in eclipse, which you can call **TestingLab** if you'd like.
 This can be accomplished by going to the file menu and saying
-*File-\>New-\>Java Project*. Then from there, make a new class called
+*File-\>New-\>Project*. Then from there, Select Gradle Project and select the desired folder.  Then open src/main/java and rename the Library.java file that was created to
 **Date.java**. For now it should have just one method, which you can
-make as a static method which will be ```isValidDate```. We won't write out
+make as a static method and rename to be ```isValidDate```. (You can also feel free to delete the Library.java class and make a new one if you like).  We won't write out
 most of ```isValidDate```, but what we'll do is have it for now simply
 return true, so the code should look something like this
 
@@ -101,8 +100,8 @@ public class Date {
     }
 }
 ```
-
-![](lab14media/media/image1.png)
+Next what we'll do is to createa JUnitTestCase.  The gradle project has one already for you, but in this case, let's delete it and start fresh.  
+![](lab14media/media/newjunitcase.gif)
 
 Because it is a static method, this
 means that we'll be able to simply call it from any other class by
@@ -143,9 +142,8 @@ straightforward. There are different versions of the testing framework
 that have been made over the years, and what we'll do is for now stick
 with the JUnit 4 framework.
 
-#### Create a DateTest class using JUnit 4.
+## Create a DateTest class using JUnit 4.
 
-![](lab14media/media/image2.png)
 Let's create a new Java File, except in
 this case rather than creating a new class like we did before, we're
 going to do *File-\>New-\>JUnit Test Case*, making sure that we do that
