@@ -205,7 +205,7 @@ Notice how at the end of ![](lab9media/media/image8.png) you see ![](lab9media/m
 
 
 Once the hackslash has the two commits, they can then right click on
-their project and say *Team-\>Push to origin*. Pushing to upstream
+their project and say *Team-\>Push to origin*. Pushing to origin
 takes those local commits that they have on their computer and sends
 them over to the github server, making them visible to everyone.
 Hackslash, make sure you get a message that does not say it was
@@ -325,7 +325,7 @@ that the version of the git history that the procrastinator has, contains two co
 ![](lab9media/media/image8far.png)
 
 To do this, one simply
-right clicks on the project and says *Team-\>Push To Upstream*. Once
+right clicks on the project and says *Team-\>Push To Origin*. Once
 they do that they should verify it was a success by looking at the
 results. The procrastinator will
 see that the origin main tag is now at the top, indicating github has the version that they have as the latest on their computer.   
