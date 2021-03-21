@@ -488,7 +488,7 @@ based on the smallest number of commits and merges done by the team
 member with the smallest amount of activity before the due date. Also
 for this class I want all of you to only use the single ```main``` branch.
 
-### More Git Theory
+### More Git Theory (Optional)
 
 ![](lab9media/media/Egit-lifecycle.png)
 
