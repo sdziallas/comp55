@@ -385,17 +385,17 @@ file when opened up will look something like this:
 The important parts to look at are lines 18-22. Line 19 shows the
 version that you made, while line 21 shows the version that was on the
 server. When it doesn't know which change is right, git will use this
-notation of having 
+notation:
 
 ```
 <<<<<<< HEAD
-your changes
+    your changes
 =======
-change on server
+    changes on server
 >>>>>>> branch 'main' of https://url-for-your-git-repos-here
 ``` 
 
-in there to let you know
+This notation lets you know
 you need to make a decision for all places where it notices a conflict on what she be used.  If you get into a conflicting state, it's your job
 to decide what code to keep (yours, the servers or some mix of the two). Once you decide what lines are the
 right ones, you will go ahead and delete the rest of the markings so
@@ -421,7 +421,7 @@ can get them and change your code back if needed.  (You can always feel free to 
 
 ## Step 9: Everyone - Successfully resolve a merge conflict
 
-Wreak More Havoc :fire: :fire: :fire:
+Wreak :fire: More :fire: Havoc :fire:
 
 This part about resolving conflicts is so integral that I now want you
 to as a team to all try to make a change on the same line and go through
