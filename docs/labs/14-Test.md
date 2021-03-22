@@ -327,7 +327,7 @@ simply copy and paste it here).
 7. So, now let's go ahead and do one more set of tests, these would be known as *edge 
 tests* - tests where really you're just trying to cause havoc or get the program to 
 crash.
-   
+
    - Examples of edge cases would be zero, negative numbers, or other craziness, for 
    this example do not worry about testing incorrect types like ```char``` or 
    ```boolean```
@@ -353,8 +353,8 @@ about assertions or GUI Testing, follow [this optional guide created by former C
 
 ### (*Place your answers to these questions as comments in the TestDate.java file and upload to canvas*)
 
-  - How many Test methods did I have you make?
+  1. How many Test methods did I have you make?
 
-  - What are the differences between those test methods?
+  2. What are the differences between those test methods?
 
-  - Provide 5 different calls to ```assert``` that you could ask JUnit to do
+  3. Provide 5 different calls that start with ```assert``` that you could use in conjunction with JUnit.
