@@ -346,7 +346,7 @@ of this course, so I'm going to explain a very simple way of checking to
 see if the ball may have hit a square. One thing you can do is that for
 every red ball, when it's their time to move, check a point just outside
 of the ball and call ```getElementAt```. If the object that is given back is
-an instance of a ```GRect```, we could say it's an enemy and then make that
+an ```instanceof``` a ```GRect```, we could say it's an enemy and then make that
 enemy disappear. In this, case we'll want to check the red point in the picture below:
 
 ![](lab10media/media/checkball.png)
