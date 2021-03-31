@@ -289,7 +289,7 @@ Hopefully you start to see that this would be a cleaner solution.
 
 Part of the credit for this lab, will be talking with your teammates
 first. What I'd like you to do as a team is to **answer the four questions
-at the beginning of the document and post it in your teams notebook**. For the useful
+at the beginning of the document and post it in your teams notebook**  You should then use those answers for what you need to submit on canvas. For the useful
 part, you will come up with at least three different potential places
 where you could use a ```HashMap``` in your project, and to provide code for
 what that would look like in terms of helping you make the project
