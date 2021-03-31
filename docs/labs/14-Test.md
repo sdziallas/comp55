@@ -87,7 +87,7 @@ starter files or anything, we are just going to create two classes.
 Date.java and DateTest.java in a Gradle Project. To start, go ahead and make a new java
 project in eclipse, which you can call **TestingLab** if you'd like.
 This can be accomplished by going to the file menu and saying
-*File-\>New-\>Project*. Then from there, Select Gradle Project and select the desired folder.  Then open src/main/java and rename the Library.java file that was created to
+*File-\>New-\>Project*. Then from there, Select ***Gradle Project*** and select the desired folder.  Then open ***src/main/java*** and rename the Library.java file that was created to
 **Date.java**. For now it should have just one method, which you can
 make as a static method and rename to be ```isValidDate```. (You can also feel free to delete the Library.java class and make a new one if you like).  We won't write out
 most of ```isValidDate```, but what we'll do is have it for now simply
@@ -145,7 +145,7 @@ with the JUnit 4 framework.  If you are super curious about the differences whic
 
 ## Create a DateTest class using JUnit 4.
 
-If you followed real close the gif from before where you create a new Junit Test Case.
+If you followed real close the gif from before where you create a new JUnit Test Case.
 
 Sometimes when you run unit tests, you may want to
 read certain information from a file, or load another object or create
