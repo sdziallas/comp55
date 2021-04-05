@@ -28,7 +28,7 @@ copying and pasting that is being done. This lab will go over a set of
 steps that you can perform so that you eliminate redundancy and
 complexity from your code, which is a win for everyone. Today is about
 teaching you some of the common steps you can take to refactor your
-code. Let's go over some basics first. You'll see code with different emojis based on whether it needs to be refactored or not, we'll use the :broken_heart: when it's problematic, :expressionless: when its somewhat troublesome and :green_heart: when it's a
+code. Let's go over some basics first. You'll see code with different emojis based on whether it needs to be refactored or not, we'll use the :scream: when it's problematic, :expressionless: when its somewhat troublesome and :heart: when it's a
 good example to follow.
 
 ### Principles to follow
@@ -38,9 +38,9 @@ good example to follow.
 
 Ie:
 
-:broken_heart: ```if(isLow == true)``` =\> ```if(isLow)``` :green_heart:
+:scream: ```if(isLow == true)``` =\> ```if(isLow)``` :heart:
 
-:broken_heart: ```if(isLow == false)``` =\> ```if(!isLow)``` :green_heart:
+:scream: ```if(isLow == false)``` =\> ```if(!isLow)``` :heart:
 
 2)  **Avoid using negations**
 
@@ -52,7 +52,7 @@ negations that you have, as negations just make things confusing. If you
 don't believe me, then just think about what this statement means here
 in English.
 
-:broken_heart:
+:scream:
 ```java
 if(x != 4 || x != 5)
 ```
@@ -62,7 +62,7 @@ true for numbers that aren't equal for four or five. *It actually works
 for all numbers.* You can use some boolean theory to extract out this
 statement to its equivalent version, which is here
 
-:green_heart:
+:heart:
 ```java
 if(!(x == 4 && x == 5))
 ```
@@ -76,7 +76,7 @@ yet one is more confusing to decipher.
 
 Ie:
 
-:broken_heart:
+:scream:
 ```java
 if(isLow) {
     return true;
@@ -87,7 +87,7 @@ if(isLow) {
 
 All of this can be written as:
 
-:green_heart:
+:heart:
 ```java
 return isLow;
 ```
@@ -99,7 +99,7 @@ return isLow;
 The easiest way to deal with this is when the code looks exactly the
 same in both sections:
 
-:broken_heart:
+:scream:
 ```java
 if(x > 5) {
     x+=10;
@@ -116,7 +116,7 @@ the beginning, take it out of the ```if``` statement, and then place it
 either before or after the if statement depending on where it's located.
 In this instance, we can simply do this
 
-:green_heart:
+:heart:
 ```java
 if(x > 5) {
     x+=10;
@@ -143,7 +143,7 @@ sake of having a short lab, but many COMP 55 students are guilty of
 doing something slightly more extravagant, but I would call equally into
 question. Let's elaborate on our previous example a little more.
 
-:broken_heart:
+:scream:
 ```java
 if(x > 5) {
     System.out.println("I'm going to add 7 here");
@@ -203,7 +203,7 @@ Again, while the previous code may not feel like much of an improvement,
 I would argue that the following code does a better job as it is more
 readable
 
-:green_heart:
+:heart:
 ```java
 if(x > 5) {
     takeAction("add", 5);
@@ -237,7 +237,7 @@ to make the functions usable to people in the future and reduce the
 amount of errors that you could get while making it easy for your
 teammates to use.
 
-:green_heart:
+:heart:
 ```java
 if(x > 5) {
     takeAction(5);
@@ -265,7 +265,7 @@ For those of you who would like to go further or don't want the extra
 amount here, you could go with the ternary operator as well to eliminate
 the extra lines of code
 
-:green_heart:
+:heart:
 ```java
 private void takeAction(int amount) {
     System.out.println("I'm going to " + (amount > 0)? "add":"subtract" + Math.abs(amount) + "here");
@@ -319,7 +319,7 @@ as parameters, so that way you could just call ```makeBall``` and a ball appears
 
 Here is an example of what that ```makeBall``` function could look like
 
-:green_heart:
+:heart:
 ```java
 void makeBall(double x, double y, double width, double height, Color col, boolean shouldFill) {
         GOval ball = new GOval(x, y, width, height);
@@ -336,7 +336,7 @@ SIZE, SIZE, Color.BLUE, true)``` and then know it that it will just show up?
 This does not even get to what you could do later, which is to store all of the information in an object, and then have that be passed into your for loop instead!
 Assume there was a simple ```BallSpec``` class that worked like simple classes before, meant to just hold some information and store it.  Then look what could happen to our code.
 
-:green_heart:
+:heart:
 ```java
 // Assume the info was loaded from a file or somewhere else
 for(int i = 0; i < ballSpecs.length; i++) {
@@ -358,7 +358,7 @@ say, *when I expect this, I should get back this*, which is the basis of
 unit testing that we went over in the previous lab.
 
 Take the following code as an example.
-:broken_heart:
+:scream:
 ```java
 @Override
 public void mouseMoved(MouseEvent e) {
@@ -370,7 +370,7 @@ public void mouseMoved(MouseEvent e) {
 
 Is it immediately clear what the above if statement does? Maybe, maybe not. It's difficult to understand without some context that the conditions check the location of ```e``` relative to ```frame```. However, using a function could make this code clearer. Rewriting the code above using a function could look something like this:
 
-:green_heart:
+:heart:
 ```java
 private boolean outsideOf(GImage frame, MouseEvent e) {
     return e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || 
@@ -406,7 +406,7 @@ generally have a rule of declaring it as a constant. If you have a
 number say 30, or 300 or 50 that is used more than once, it should
 definitely be defined as a constant. Let's take this example:
 
-:broken_heart:
+:scream:
 ```java
 body = new GOval(200, 400, 100, 100);
 head = new GOval(225, 350, 50, 50);
@@ -433,7 +433,7 @@ But why stop there? Use formulas to establish the relationships between
 all of these numbers, since they really are in this case referencing
 each other.
 
-:green_heart:
+:heart:
 ```java
 public static final int SIZE = 100;
 public static final int BODY_X = 200;
@@ -459,7 +459,7 @@ ease of editing when a filepath is changed. For example, here was my traffic jam
 files from the project. Which were *images/car.png,
 images/car\_vert.png, images/truck.png, images/truck\_vert.png*, etc.
 
-:green_heart:
+:heart:
 ```java
 public static final String IMG_EXTENSION = ".png";
 public static final String V_IMG_ENDING = "_vert";
