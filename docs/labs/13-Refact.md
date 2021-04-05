@@ -28,7 +28,7 @@ copying and pasting that is being done. This lab will go over a set of
 steps that you can perform so that you eliminate redundancy and
 complexity from your code, which is a win for everyone. Today is about
 teaching you some of the common steps you can take to refactor your
-code. Let's go over some basics first. You'll see code with different emojis based on whether it needs to be refactored or not, we'll use the facepalm :rage2: when it's problematic, shrug :expressionless: when its somewhat troublesome and :heart: when it's a
+code. Let's go over some basics first. You'll see code with different emojis based on whether it needs to be refactored or not, we'll use the :rage2: when it's problematic, :expressionless: when its somewhat troublesome and :heart: when it's a
 good example to follow.
 
 ### Principles to follow
