@@ -54,7 +54,7 @@ in English.
 
 :scream:
 ```java
-if(x != 4 || x != 5) <div>&#128552</div>
+if(x != 4 || x != 5) </code><div>&#128552</div><code>
 ```
 
 While many of you look at it and think that the statement evaluates to
