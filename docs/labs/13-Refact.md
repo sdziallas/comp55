@@ -28,7 +28,7 @@ copying and pasting that is being done. This lab will go over a set of
 steps that you can perform so that you eliminate redundancy and
 complexity from your code, which is a win for everyone. Today is about
 teaching you some of the common steps you can take to refactor your
-code. Let's go over some basics first. You'll see code with different emojis based on whether it needs to be refactored or not, we'll use the facepalm :facepalm: when it's problematic, shrug :shrug: when its somewhat troublesome and :heart: when it's a
+code. Let's go over some basics first. You'll see code with different emojis based on whether it needs to be refactored or not, we'll use the facepalm :rage2: when it's problematic, shrug :expressionless: when its somewhat troublesome and :heart: when it's a
 good example to follow.
 
 ### Principles to follow
@@ -38,9 +38,9 @@ good example to follow.
 
 Ie:
 
-:facepalm: ```if(isLow == true)``` =\> ```if(isLow)``` :heart:
+:rage2: ```if(isLow == true)``` =\> ```if(isLow)``` :heart:
 
-:facepalm: ```if(isLow == false)``` =\> ```if(!isLow)``` :heart:
+:rage2: ```if(isLow == false)``` =\> ```if(!isLow)``` :heart:
 
 2)  **Avoid using negations**
 
@@ -52,7 +52,7 @@ negations that you have, as negations just make things confusing. If you
 don't believe me, then just think about what this statement means here
 in English.
 
-:facepalm:
+:rage2:
 ```java
 if(x != 4 || x != 5)
 ```
@@ -76,7 +76,7 @@ yet one is more confusing to decipher.
 
 Ie:
 
-:facepalm:
+:rage2:
 ```java
 if(isLow) {
     return true;
@@ -99,7 +99,7 @@ return isLow;
 The easiest way to deal with this is when the code looks exactly the
 same in both sections:
 
-:facepalm:
+:rage2:
 ```java
 if(x > 5) {
     x+=10;
@@ -143,7 +143,7 @@ sake of having a short lab, but many COMP 55 students are guilty of
 doing something slightly more extravagant, but I would call equally into
 question. Let's elaborate on our previous example a little more.
 
-:facepalm:
+:rage2:
 ```java
 if(x > 5) {
     System.out.println("I'm going to add 7 here");
@@ -166,7 +166,7 @@ Remember that subtraction can always be made to be addition, which means
 that we can change our text slightly. And there are different ways to do
 this, but here's a slightly better solution
 
-:shrug:
+:expressionless:
 ```java
 int amount = -10;
 String action = "subtract";
@@ -358,7 +358,7 @@ say, *when I expect this, I should get back this*, which is the basis of
 unit testing that we went over in the previous lab.
 
 Take the following code as an example.
-:facepalm:
+:rage2:
 ```java
 @Override
 public void mouseMoved(MouseEvent e) {
@@ -406,7 +406,7 @@ generally have a rule of declaring it as a constant. If you have a
 number say 30, or 300 or 50 that is used more than once, it should
 definitely be defined as a constant. Let's take this example:
 
-:facepalm:
+:rage2:
 ```java
 body = new GOval(200, 400, 100, 100);
 head = new GOval(225, 350, 50, 50);
@@ -419,7 +419,7 @@ In this case, let's first take the number 100, which seems to be the
 size of the body. You could simply decide to make that a constant that
 you could change up top.
 
-:shrug:
+:expressionless:
 ```java
 public static final int SIZE = 100;
 
