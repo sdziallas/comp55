@@ -71,7 +71,7 @@ Based on DeMorgan's laws, the two statements here are exactly the same,
 yet one is more confusing to decipher.
 
 3)  **If you have an if/else statement and all it's doing is returning
-    true or false based on the condition, use a single return statement
+    ```true``` or ```false``` based on the condition, use a single ```return``` statement
     instead.**
 
 Ie:
@@ -347,7 +347,7 @@ for(int i = 0; i < ballSpecs.length; i++) {
 Then our ```makeBall``` fucntion would merely call getters for the ```x```, ```y```, ```width```, ```height```, ```color``` and ```shouldFill``` for example to have that all be filled in.
 
 7)  **Does the code look confusing? Consider making methods to help you
-    make parts more readable.**
+    make parts of that code more readable.**
 
 If there are sections of code that look crazy, or feel dense, it's best
 to go back through and look into making those methods into classes,
