@@ -215,7 +215,7 @@ all combined into one step.  Like I mentioned to you before, the whole colors th
 
 If I get to this, I will try to make this match as much as possible the site, with a couple of added preferences to keep it in line with some of the things that I've seen with Eclipse.  So to that end, I'd like you to **[download this file](lab1media/media/COMP55LabColorScheme.xml)** which you'll have to do by right clicking and saying *File->Save link as...* Make sure you have the XML extension when you save the file.  
 
-Then once you have that, you're going to go to *Window->preferences->DevStyle->Color Themes*.  Once there I made two changes.  I decided I wanted my icons to be a little bit more subdued, so I went with the pastels option.  More importantly though let's get the color scheme to be closer to the theme here on this site.  Simply choose the xml file you downloaded and then click apply.  Eclipse will ask to restart and once you do, you'll notice that the colors changed and have the same style as the final ones in the static image below.
+Then once you have that, you're going to go to *Window->preferences->DevStyle->Color Themes* for PC or *Eclipse->preferences->DevStyle->Color Themes* for Mac.  Once there I made two changes.  I decided I wanted my icons to be a little bit more subdued, so I went with the pastels option.  More importantly though let's get the color scheme to be closer to the theme here on this site.  Simply choose the xml file you downloaded and then click apply.  Eclipse will ask to restart and once you do, you'll notice that the colors changed and have the same style as the final ones in the static image below.
 
 ![](lab1media/media/finalcolorchanges.gif)
 
