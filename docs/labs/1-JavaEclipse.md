@@ -136,7 +136,7 @@ that looks like this…
 
 ![](lab1media/media/image8.gif)
 
-Give your project a name *Hello World*, and then click **Finish**. They'll ask you if you want to create a module info, which you can ignore for now by clicking **Don't Create**.  You'll then see see a project named Hello World on the left in your package explorer.
+Give your project a name *Hello World*, and then click **Finish**. They'll ask you if you want to create a module info, which you can ignore for now by clicking **Don't Create**.  You'll then see a project named Hello World on the left in your package explorer.
 
 Now, Right-click on the project name (HelloWorld) and then go to
 *New-\>Class*, (this can also be accessed from the file menu
