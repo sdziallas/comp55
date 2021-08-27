@@ -65,7 +65,7 @@ solution from C++ or Visual Studio. Eclipse allows you to have
 different workspaces and switch between them, which is why
 it asks this question. Go ahead and pick the directory where you want
 your projects to live on your hard drive. **Click
-the checkbox to use as a default, and then click OK.**
+the checkbox to use as a default, and then click Lunch.**
 
 ![](lab1media/media/image5.png)
 
