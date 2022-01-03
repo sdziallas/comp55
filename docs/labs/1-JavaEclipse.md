@@ -20,7 +20,7 @@ Go to the eclipse site: <http://www.eclipse.org/downloads>
 
 ![](lab1media/media/image3.png)
 
-Click the orange download 64 bit button. It will take you to another
+Click the orange download 64 bit button (your version will provide the latest year). It will take you to another
 page where you need to click the big orange download button again at the top.
 
 Wait for that file to download.
@@ -56,9 +56,9 @@ workspace to a **Comp 55** folder inside of your **Documents** folder.*
 When you double click eclipse, after seeing the splash screen you will
 be greeted with the image below.
 
-Eclipse likes to use the word **workspace** to mean the location where
+Eclipse likes to use the word ***workspace*** to mean the location where
 you store all of your code. Think of it as the parent or base directory.
-It breaks that directory or workspace down into **projects**, which is
+It breaks that directory or workspace down into ***projects***, which is
 the code you'd write for different assignments or different projects.
 Each project gets its own directory, you can think of the project as the
 solution from C++ or Visual Studio. Eclipse allows you to have
@@ -82,17 +82,22 @@ Since all of you have had some previous experiences with other IDEs, Eclipse all
 
 The next thing we are going to do is change eclipse's appearance.  I have been using eclipse for a long time now, and did not change this until this year.  Eclipse is written in Java and so it does not have as clean of an interface as some of the other programs that you have grown to love by now.  Nonetheless, remember, this is open source, it is used heavily in the industry (and I'm sure you've probably come across at least a few open source projects that just don't look as pretty but get the job done).  I would not play around too much with the colors, but I will walk you through this one option, because when we get to using some of the other features, and when we start building code, I will be using the skin here and so it will be easiest to follow along with tutorials and such if you change the appearance to match mine. **Please follow the options here to get full credit for the image you upload for credit at the end of this lab**
 
-### OPTIONAL: If you prefer the standard theme, skip to [Step 6](##step-6:-let's-get-a-hello-world-going.).
+<!-- ### OPTIONAL: If you prefer the standard theme, skip to [Step 6](##step-6:-let's-get-a-hello-world-going.).
 
 You don't need to download this from the Eclipse Marketplace if you prefer the default theme, but understand that most of the pictures that we have in the tutorials will use the theme we're asking you to download here.
+-->
 
 ## STEP 5: Installing Darkest Dark Theme
 
-Once you are back you should be at the main page where we clicked to review the IDE preferences.  Go ahead and click to go the eclipse marketplace.  This will launch a variety of plugins and tools that have been developed to integrate into eclipse.  Here what we will do is download the darkest dark theme.  So search for "dark" in the marketplace and it should be the first option, which has 1.5M downloads, click install, and then confirm.  You'll have to accept another license agreement by picking the option before being able to finish.  **Be sure to uncheck the devstyle with codetogether bundle option, watch the video a few times** 
+Once you are back you should be at the main page where we clicked to review the IDE preferences.  Go ahead and [click here](https://marketplace.eclipse.org/content/darkest-dark-theme-devstyle) to open a webpage on the eclipse marketplace for the darkest dark theme.  The eclipse marketplace is a variety of third-party add-ons for eclipse.  Here what you are going to do is to drag the install button into your open version of eclipse, like the image below shows.
+
+![](lab1media/media/installbyweb.gif)
+
+Once it finishes loading, follow the next set of images to *uncheck the codetogether bundle*. You'll have to accept another license agreement by picking the option before being able to finish.  **Be sure to uncheck the devstyle with codetogether bundle option, watch the gif a few times** 
 
 ![](lab1media/media/darkestdark.gif)
 
-One it finishes installing, eclipse will ask you to restart eclipse to apply the software update, click **Restart Now**
+Once it finishes installing, eclipse will ask you to restart eclipse to apply the software update, click **Restart Now**
 
 ![](lab1media/media/restarteclipse.png)
 
@@ -100,7 +105,7 @@ Eclipse will close and start itself up again.  Once it finishes you'll be greete
 
 ![](lab1media/media/darkestdarkwelcome.png)
 
-Go ahead and click next.  You'll then be presented with some options.  While your preferences are up to you, in order to match this website's color scheme and the labs, , I will be going with darkest dark theme in the middle (If I have a chance, I will probably change the theme even more.  That is a rabbit hole though, so I can show you how to do that later).  While you can change the color scheme to whatever you want, just know the icons and any future screens you see may differ a little bit from what I have.  **Please do not spend more than 10 minutes looking at all the color combinations**
+Go ahead and click next.  You'll then be presented with some options.  While your preferences are up to you, in order to match this website's color scheme and the labs, you will start this lab by following the directions here.  After you submit your picture, then you can change the color scheme to your heart's content (That is a rabbit hole though, so you can see how to do this more later).  While you can change the color scheme to whatever you want, just know the icons and any future screens you see may differ a little bit from what I have.  **Please do not spend more than 10 minutes looking at all the color combinations after finishing the lab**
 
 Once you click next, you may get a scary looking screen about windows defender possibly getting angry with you about directories that Darkest dark will change and offers a fix.  I did just say *Fix Automatically*. (I'm not sure what happens if you click skip)
 
@@ -112,11 +117,11 @@ Then eclipse will fire up with Darkest Dark one last time to ask you about your 
 
 ![](lab1media/media/eclipsestartdark.png)
 
-Go ahead and click hide, and you'll now be shown your new workspace.
+If you didn't already, go ahead and click hide, and you'll now be shown your new workspace.
 
 ![](lab1media/media/eclipsedarkinit.png).
 
-If you didn't end up switching to this darkest dark theme, then your eclipse would look liook more like the image below.  This is from a previous version, so the windows open may be slightly different.
+If you didn't end up switching to this darkest dark theme, then your eclipse would look look more like the image below.  This is from a previous version, so the windows open may be slightly different.
 
 ![](lab1media/media/image7.png)
 
@@ -131,20 +136,17 @@ at anything. I would encourage you to not think o
 To start programming in any language, it's best to start with a simple
 thing like "Hello, world", so let's do that. Go ahead and right click on
 *File-\>New-\>Java Project*. Java Projects are very similar to the
-Solutions you had in Visual Studio. After clicking, you'll see a window
-that looks like this…
+Solutions you had in Visual Studio. Watch the video a few times and then follow along with all of the steps.
 
 ![](lab1media/media/image8.gif)
 
-Give your project a name *Hello World*, and then click **Finish**. They'll ask you if you want to create a module info, which you can ignore for now by clicking **Don't Create**.  You'll then see a project named Hello World on the left in your package explorer.
+Give your project a name *Hello World*, make sure that you uncheck the module-info portion, and then click **Finish**.  You'll then see a project named Hello World on the left in your package explorer.
 
 Now, Right-click on the project name (HelloWorld) and then go to
 *New-\>Class*, (this can also be accessed from the file menu
 *File-\>New-\>Class*)
 
-This takes you to a window with a lot of options that looks like this,
-though this version has it populated with the options you want,
-highlighted.
+This takes you to a window with a lot of options look at the small animation below to check the correct options.
 
 ![](lab1media/media/image9.gif)
 
@@ -152,7 +154,7 @@ In Java, class files are where you will write your code. Rather than
 having separate .h and .cpp files like in C++, Java just has one file,
 the .java file, which are also referred to as **class** files.
 
-Make sure that you select the options I highlight in the image, which
+Make sure that you follow the options in the animation, which
 have eclipse write a little bit of code for you so that you don't waste
 your brainpower on tangential tasks. Eclipse will make a main method for
 you. We may go over other parts of this, but for right now, writing in
@@ -200,7 +202,7 @@ want to save like this, without the arrows but **make sure it is checked**
 Again, here I would check the box at the bottom to always save resources
 before launching, and click that you want it to save before running. If
 you didn't get the popup, add an exclamation point to *Hello, World\!*
-and then run it again without saving.  Please make sure that you follow these steps.  If I see that you haven't completed this step in the future, expect some scorn from me.
+and then run it again without saving.  ***Please make sure that you are reading and following these steps.***  If I see that you haven't completed this step in the future, expect some scorn from me.
 
 Once you click OK you'll get the console up and running, which will show
 on the bottom of the screen.
@@ -213,9 +215,9 @@ all combined into one step.  Like I mentioned to you before, the whole colors th
 
 ## STEP 8 - One Last Customization to the Color Theme
 
-If I get to this, I will try to make this match as much as possible the site, with a couple of added preferences to keep it in line with some of the things that I've seen with Eclipse.  So to that end, I'd like you to **[download this file](lab1media/media/COMP55LabColorScheme.xml)** which you'll have to do by right clicking and saying *File->Save link as...* Make sure you have the XML extension when you save the file.  
+I will try to make this last color them match as much as possible the site on which these labs are hosted, with a couple of added preferences to keep it in line with some of the things that I've seen with Eclipse.  So to that end, I'd like you to **[download this file](lab1media/media/COMP55LabColorScheme.xml)** which you'll have to do by right clicking and saying *Save link as...* Make sure you have the XML extension when you save the file.  
 
-Then once you have that, you're going to go to *Window->preferences->DevStyle->Color Themes* for PC or *Eclipse->preferences->DevStyle->Color Themes* for Mac.  Once there I made two changes.  I decided I wanted my icons to be a little bit more subdued, so I went with the pastels option.  More importantly though let's get the color scheme to be closer to the theme here on this site.  Simply choose the xml file you downloaded and then click apply.  Eclipse will ask to restart and once you do, you'll notice that the colors changed and have the same style as the final ones in the static image below.
+Then once you have that, you're going to go to *Window->preferences->DevStyle->Color Themes* for PC or *Eclipse->preferences->DevStyle->Color Themes* for Mac.  Once there I made two changes.  I decided I wanted my icons to be a little bit more subdued, so I went with the pastels option.  More importantly though let's get the color scheme to be closer to the theme here on this website.  **Import the xml file you downloaded and then click *Apply***.  Eclipse will ask to restart and once you do, you'll notice that the colors changed and have the same style as the final ones in the static image below.
 
 ![](lab1media/media/finalcolorchanges.gif)
 
@@ -226,8 +228,8 @@ While you are in those preferences, there is also a devstyle privacy option that
 # STEP 9 – Submit confirmation by uploading a picture to Canvas
 
 To get credit for this lab, what you'll do is submit an image of you
-running this hello world program to canvas, but using your own name
-instead. The image should be of the program, similar to the one in the image above. To get full credit however, **use a for loop, make sure the
+entire eclipse running this hello world program to canvas, but using your own name
+instead. The image should be of the program, similar to the one in the image above, and the source code should be showing with the step 8 color scheme. To get full credit however, **use a for loop, make sure the
 java file is showing and have the for loop repeat the salutation three
 times**. So it would be something like
 
