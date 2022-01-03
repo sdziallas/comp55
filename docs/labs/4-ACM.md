@@ -3,7 +3,7 @@
 By this point you've completed the Java Lab and have done some work on
 the project. Congratulations\! Getting started and getting a program to
 run in a new language is no easy task. With your love/hate relationship
-with java already budding, it's time to for us to learn a special
+with java already budding, it's time for us to learn a special
 library that we will be using this semester that will let us easily
 incorporate graphics into our programs. This library is called the ACM
 library, a library built by a [special task force](https://dl.acm.org/doi/abs/10.1145/1121341.1121384) for the [Association for
@@ -15,7 +15,7 @@ Professionals. The version that we'll be using is a special adapted version of t
 
 First, download **IntroACMLab.zip** from canvas and then import that
 file as an existing project into Eclipse, like we did in the [*Intro to
-Java*](http://onzfonz.github.io/comp55/labs/2-JavaIntro.html) lab.
+Java*](2-JavaIntro.html) lab.
 
 Once imported, open **ACMLab.java** in the editor. This file contains
 additional features that we have yet to talk about. Here's the contents
@@ -153,7 +153,7 @@ computer for it to work.
 
 ### Extracting constants
 
-Remember that when we have numbers that we keep using, it makes sense to create final variables, which are constants in Java.  Constants are nice becuase they make the code more readable, and they allow us to make more changes that make more sense based on the code.  Let me show you an easy way that eclipse allows us to extract constants.  Click anywhere on the first 300 your label, right click and choose *source->extract constant*.  There, you'll get an option to name it something, I just named it ```START_X``` in caps, to denote that it's a constant and that it represents the starting X point for the code.  Notice there was an option to have it change all versions of 300 to that variable.  In our case, I think it makes sense to keep them separate, so **go ahead and do another extract constant of the other 300 to separate the x and y**.  From here on out I will refer to those as ```START_X``` and ```START_Y```.  Other things that folks end up extracting as constants would be things like the font and the color, which you should also practice with
+Remember that when we have numbers that we keep using, it makes sense to create final variables, which are constants in Java.  Constants are nice becuase they make the code more readable, and they allow us to make more changes that make more sense based on the code.  Let me show you an easy way that eclipse allows us to extract constants.  Click anywhere on the first 300 your label, right click and choose *source->extract constant* or *refactor->extract constant*.  There, you'll get an option to name it something, I just named it ```START_X``` in caps, to denote that it's a constant and that it represents the starting X point for the code.  Notice there was an option to have it change all versions of 300 to that variable.  In our case, I think it makes sense to keep them separate, so **go ahead and do another extract constant of the other 300 to separate the x and y**.  From here on out I will refer to those as ```START_X``` and ```START_Y```.  Other things that folks end up extracting as constants would be things like the font and the color, which you should also practice with
 
 ![](lab4media/media/extractconstant.gif)
 
@@ -161,9 +161,9 @@ Remember that when we have numbers that we keep using, it makes sense to create 
 
 Let's move on to work with the three most basic shapes in the ACM
 library – rectangles, ovals, and lines. The best way to learn is to just
-to play around with some of the numbers for each shape to get used to
+play around with some of the numbers for each shape to get used to
 how things behave. Let's start with a rectangle. To make a rectangle,
-create a ```GRect``` and then add it to the canvas. A ```new GRect``` takes in
+create a ```GRect``` and then add it to the *canvas* AKA the program window. A ```new GRect``` takes in
 four arguments, the **x** and **y** position of where the Rectangle
 should be placed, and its **width** and **height** all in pixels. So for
 example, let's place a rectangle at ```START_X, START_Y``` with a width of
@@ -239,7 +239,7 @@ If you want to apply color to a ```GLabel``` look at the following table to comp
 | :--- | :--- |
 | `GLabel text1 = new GLabel("Hello World", START_X, START_Y);`<br>`text1.setFont("Arial-24");`<br>`text1.setColor(Color.BLUE);`<br>`add(text1);` | `GRect rect = new GRect(START_X, START_Y, 200, 100);`<br>`//200 and 100 should be constants`<br>`rect.setFillColor(Color.YELLOW);`<br>`rect.setFilled(true);`<br>`//This will apply the color you have chosen`<br>`add(rect);`| 
 
-The first column has a ```GLabel``` that changes to blue. The second column has a  ```GRect``` that changes to yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFilledColor```. When you use ```.setColor``` on a ```GRect```/```GOval```, you change the color of the outlines, not the shape's fill itself.  If you use ```.setFillColor(Color.INSERT_COLOR_HERE)```, you fill the shape with the color of your choosing, but it wont be shown just yet. Instead,  you must use ```.setFilled(true)``` to apply the color to your shape and it will now show after you ```add()``` the shape and run.
+The first column has a ```GLabel``` that changes to blue. The second column has a  ```GRect``` that changes to yellow. The main difference between the first column and second column is how you set the color, ```.setColor``` vs ```.setFillColor```. When you use ```.setColor``` on a ```GRect```/```GOval```, you change the color of the outlines, not the shape's fill itself.  If you use ```.setFillColor(Color.INSERT_COLOR_HERE)```, you fill the shape with the color of your choosing, but it wont be shown just yet. Instead,  you must use ```.setFilled(true)``` to apply the color to your shape and it will now show after you ```add()``` the shape and run.
 
 ## Overlapping Objects
 

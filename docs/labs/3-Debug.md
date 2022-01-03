@@ -105,7 +105,7 @@ Suppose you know that one of your objects has bad data, and you are
 trying to figure out which code is messing it up. Commenting out calls
 to sections of code is a very fast way to eliminate code from suspicion.
 
-  - e.g. Suppose you have a draw program and the shapes are have bad
+  - e.g. Suppose you have a draw program and the shapes have bad
     values. Is the move code or the resize code to blame? Comment out
     the resize code and try it -- the program is barely functional, but
     it's a quick way to decide that code is not the source of the
