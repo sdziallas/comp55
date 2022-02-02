@@ -350,7 +350,7 @@ you release the button, you are no longer able to change anything about
 the line, with the code that we have. Now, every time that we press the
 mouse button, we create a new line, this means that our users can create
 a multitude of lines to form a picture. **Go ahead and make a small
-picture and send me a screenshot of your proud artistic accomplishment in teams before you continue.**
+picture and send me a screenshot of your proud artistic accomplishment in discord before you continue.**
 
 ![](lab5media/media/rubberband.gif)
 
