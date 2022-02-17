@@ -1,8 +1,6 @@
-# UML Lab
+# UML Class Diagram Lab
 
-For today's lab we are going to go over some of the basics of **UML** which stands for *Unified Modeling Language*.  UML is good for getting a high level understanding of a piece of software and how different components interact with one anohter.  While the this sometimes sounds scary, *"UML What?!? You want to introduce us to another language!?!"*, don't fret.  We'll mostly be using it to help us create diagrams.  The reason UML came about is that since everyone had a different way of representing systems, the UML standard was meant to have a universal standard that everyone can follow, similar to how we use certain words or names to evoke certain meanings, like the name Karen for example.  Many of you already have encountered and have expeirence with UML, which came from merely looking at the Traffic Jam assignment, which had a lot of UML diagrams that many of you referred to as you were developing your solutions.  From the UML, you were able to consistently check to make sure that you implemented the methods necessary as well as to get an understanding of how different parts of the system interacted with each other and which classes had access to what.
-
-In our case, with an object oriented language, we're going to mostly discuss how classes and their methods interact.  By us having a way to model this representation, it gives us a better sense of how the software that we are proposing to build works.  What I'm going to do is show you the basics, via this quirky program called [draw.io](https://draw.io)  Let's start with the basic building block that we will use in building UML diagrams, which will be the **class**.
+For today, we are going to continue using plantUML to develop class diagrams.  Let's start by first discussing what the class diagrams will look like, before we learn the syntax for how to develop them in plantUML.
 
 ## Creating a class in UML
 Representing a class in UML is one of the basic building blocks for designing a system.  To do so using UML you just end up providing a name for the class and place it in inside a rectangle, like so
@@ -42,18 +40,18 @@ class Location {
 
 Notice that when you finish typing, you see a class picture down at the bottom that looks something like this:
 
-![](lab61media/oneclass.png)
+![](lab65media/oneclass.png)
 
 One of the nice features of PlantUML is that it continually redraws based on what you have written, giving us that instantaneous and continuous feedback.  So far the syntax for defining a class should feel very similar.  If we wanted to generate another class, we would simply write another class below those two lines (but above the ```@enduml``` line).  Try that now by writing a class called ```Song```.  You should now see the two classes side-by-side.  **Do not continue until you see both classes in the plantuml diagram**
 
 ### Adding class variables and methods
 Let's add two variables to ```Location```, which would be the latitude and longitude (which we'll refer to as ```lat``` and ```long```).  Use the UML format outlined near the top of this document, making sure that those declarations are placed in between the curly braces.  If you did this correctly, you'll get something that looks like this:
 
-![](lab61media/oneclass.png)
+![](lab65media/oneclass.png)
 
 Notice how the there are red squares, which are being used here to denote that the variables are private.  This is not standard UML which uses the (-) as part of the diagram, which we would be able to change if we add the line ```skinparam classAttributeIconSize 0``` just below our ```@startuml```.  Next add two methods for the class which can be done on separate lines just after the variables, using the notation provided up top.  Doing so would allow us to get a picture like this:
 
-![](lab61media/locationclass.png)
+![](lab65media/locationclass.png)
 
 Notice how merely with the inclusion of parenthesis, this automatically puts us in the bottom section of the class, which is where all the method defintions go in a class diagram (the middle area is where all the instance variables are placed).  Therefore in PlantUML, to add any of the class information, we would merely add the variables and methods inside the curly braces of any class defintion that we have added.
 
@@ -67,7 +65,7 @@ One way that we often represent some assocation between classes is merely by dra
 |---|---|---|
 | ```-```| creates a simple horizontal line between the two classes, which represents a very general assocation between the two classes.  (A second hyphen changes the orientation of the classes and lines to be vertical, and even more hyphens means a greater distance between the two classes).  Distance doesn't have any well regarded meaning but can be useful in helping you draw out particular relationships. | *```Student---Course```* |
 | ```<-``` <br> or <br>```->```| uses the greater than (```>```) or less than (```<```) sign to represent an arrow in UML which can be used to show some type of unidirectional association.  Otherwise, if you would like to show a bidirectional association, you can use both arrows, (*```<->```*), but I would just stick to the simple line (*```---```*) instead of having both symbols on the end here | *```Student-->Key```* |
-| ```*--```| uses a diamond for a **Composition** relationship, to denote that there one object has an instance variable that directly holds the other or is a part of the other. Sometimes you will see some difference between Composition and Aggregation, which has to do with whether one class will exist without the other, For comp 55 you can ignore this distinction, just use it if you feel as though you would have a single instance variable that would contain the other class (you can use the word *contains* to check to see if the relationship holds) | *```Student*--Brain```* |
+| ```*--```| will draw a diamond for a **Composition** relationship, to denote that one class (the one where the diamond is closer to) has an instance variable that directly holds the one it is linked to. Sometimes you will see some difference between Composition and Aggregation, which has to do with whether one class will exist without the other. For comp 55 you can ignore this distinction, just use it if you feel as though you would have a single instance variable that would contain the other class (you can use the word *contains* to check to see if the relationship holds) | *```Student*--Brain```* |
 | ```<\|--```| used for inheritance, to say that the class on the left is the superclass for the class on the right.  Use the phrase *IS A* to check to see if the relationship holds | *```Student<\|--GradStudent```* |
 
 Realize thought that this isn't everything that you can do, plantUML is pretty powerful!  I'm normally against having something that is additional text that feels like being another language, but in this case, I think that it is well worth it, as it allows us to think more about the code and not have to draw the diagrams in this perfect format.  If you wanted to have additional information on how to say denote things like abstract classes or interfaces, you can look at plant-umls [official documentation](http://plantuml.com/class-diagram).  Please realize though plantUML *is a product that does not completely adhere to UML standards*.  As such, I want to make sure that you get some practice with following the formats listed above for referencing to variables and methods so that you can easily read UML diagrams in the future.  Also, realize that the documentation is quite lengthy, most of what you would need is at the very top.  The plantUML syntax is quite extensive.  Do not worry about positioning things in certain places here.
