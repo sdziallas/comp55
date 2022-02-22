@@ -1,6 +1,6 @@
 # UML Class Diagram Lab
 
-For today, we are going to continue using plantUML to develop class diagrams.  Let's start by first discussing what the class diagrams will look like, before we learn the syntax for how to develop them in plantUML.
+For today, we are going to continue using plantUML to develop class diagrams which detail how classes and their methods interact.  By having a way to model this representation, it gives us a better sense of how the software that we are proposing to build works.  Let's start by first discussing what the class diagrams will look like, before we learn the syntax for how to develop them in plantUML.
 
 ## Creating a class in UML
 Representing a class in UML is one of the basic building blocks for designing a system.  To do so using UML you just end up providing a name for the class and place it in inside a rectangle, like so
