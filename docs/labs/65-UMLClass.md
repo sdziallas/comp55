@@ -96,7 +96,7 @@ You will need to upload a screenshot of your creation to canvas.  Be creative wi
 
 ### Help it doesn't look how I would like it to look!
 
-So while one of the beauties of plantUML is that it takes care of the drawing for us and all, sometimes we want to ahve some control of the layout.  If you do say want to group some classes so that they appear together, you can use the ```together``` command, which takes some curly braces.  Then any class that you mention inside together (which must be prefaced with the keyword ```class``` will be arranged together on the screen) so if we wanted to group song and location together, we would need to write
+So while one of the beauties of plantUML is that it takes care of the drawing for us and all, sometimes we want to have some control of the layout.  If you do say want to group some classes so that they appear together, you can use the ```together``` command, which takes some curly braces.  Then any class that you mention inside together (which must be prefaced with the keyword ```class``` will be arranged together on the screen) so if we wanted to group song and location together, we would need to write
 
 ```
 together {
