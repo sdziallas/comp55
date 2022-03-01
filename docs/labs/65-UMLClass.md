@@ -81,9 +81,19 @@ Using this format will draw the given relationship between the two classes.  Her
 
 Realize though that this isn't everything that you can do, plantUML is pretty powerful!  PlantUML allows us to think more about the code and not have to draw the diagrams in this perfect format.  If you wanted to have additional information on how to denote things in the diagram like abstract classes or interfaces, you can look at plant-umls [official documentation](http://plantuml.com/class-diagram).  Please realize though plantUML *is a product - it is not necessarily the UML spec*.  The PlantUML documentation is quite lengthy, most of what you would need is at the very top.  For now, do not worry about positioning things in certain places here.
 
-To submit something for this lab, I would like for you to by the end of this come up with some logical structure for five classes (that have both variables and methods and are linked to one another), that includes a ```Song``` and a ```Location``` (think about how to link those together, however you like).  make sure to include an interface, as well as an inheritance relationship as well as other relationships between the classes (it should be interconnected).  Each class should have at least one variable and 2 methods, and should make some sense. (Go beyond having getters/setters and think of methods) Be sure to include parameters and return types.  Use your classmates to get help in navigating plantUML.
+To submit something for this lab, I would like for you to by the end of this come up with some logical structure **for at least five classes** (that have both variables and methods and are linked to one another), that includes:
+-  a ```Song``` and a ```Location``` (think about how to link those together, however you like).  
+-  An interface class
+-  At least one connection to each class.  
+-  A logical inheritance relationship
+-  A logical composition relationship
+-  A logical unidirectional relationship
+-  Each class should have at least one variable and 2 methods, and should make some sense. (Go beyond having getters/setters and think of methods) Be sure to include parameters and return types. 
+-  The skin is on that allows us to see the traditional UML format. 
 
-You will also need to ensure that the skin is on, as shown in the last image.  You will need to upload a screenshot of your creation to canvas, which includes the text description (you can submit multiple screenshots).  Good luck!
+Use your classmates to get help in navigating plantUML.
+
+You will need to upload a screenshot of your creation to canvas.  Be creative with your associations.  Good luck!
 
 ### Help it doesn't look how I would like it to look!
 
