@@ -82,10 +82,9 @@ Using this format will draw the given relationship between the two classes.  Her
 Realize though that this isn't everything that you can do, plantUML is pretty powerful!  PlantUML allows us to think more about the code and not have to draw the diagrams in this perfect format.  If you wanted to have additional information on how to denote things in the diagram like abstract classes or interfaces, you can look at plant-umls [official documentation](http://plantuml.com/class-diagram).  Please realize though plantUML *is a product - it is not necessarily the UML spec*.  The PlantUML documentation is quite lengthy, most of what you would need is at the very top.  For now, do not worry about positioning things in certain places here.
 
 To submit something for this lab, I would like for you to by the end of this come up with some logical structure **for at least five classes** (that have both variables and methods and are linked to one another), that includes:
--  a ```Song``` and a ```Location``` (think about how to link those together, however you like).  
--  An interface class
+-  a ```Song```, ```DJ```, ```Venue```, ```Playlist``` (think about how to link those together, however you like).  
 -  At least one connection to each class.  
--  A logical inheritance relationship
+-  A logical inheritance relationship (you'll need to come up with another class to help with this)
 -  A logical composition relationship
 -  A logical unidirectional relationship
 -  Each class should have at least one variable and 2 methods, and should make some sense. (Go beyond having getters/setters and think of methods) Be sure to include parameters and return types. 
