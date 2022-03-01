@@ -1,13 +1,14 @@
 # UML Class Diagram Lab
 
-For today, we are going to continue using plantUML to develop class diagrams which detail how classes and their methods interact.  By having a way to model this representation, it gives us a better sense of how the software that we are proposing to build works.  Let's start by first discussing what the class diagrams will look like, before we learn the syntax for how to develop them in plantUML.
+For today, we are going to continue using plantUML to develop class diagrams which detail how classes and their methods interact.  By having a way to model this representation, it gives us a better sense of how the software that we are proposing to build works.  Let's start by first discuss what the class diagrams will look like (and how to draw them on a piece of paper) first. 
 
-## Creating a class in UML
-Representing a class in UML is one of the basic building blocks for designing a system.  To do so using UML you just end up providing a name for the class and place it in inside a rectangle, like so
+## Drawing a class in UML on a piece of paper
 
-## *Image to insert with UML simple class here*
+Representing a class in UML is one of the basic building blocks for designing a system.  To do so in a paper drawing for  UML you just end up providing a name for the class and place it in inside a rectangle, like so
 
-Obviously though we want to have some more information, like variables and methods that the class supports.  We can do this by making the rectangle taller and having two sub areas, one for variables and one for methods.  Notice that in UML, the syntax for declaring variables is this:
+![](lab65media/rectangle.png)
+
+Obviously though we want to have some more information, like variables and methods that the class supports.  We can do this by making the rectangle taller and having two sub areas (separated by lines), one for variables and one for methods.  Notice that in UML, the syntax for declaring variables is this:
 
 *```variableName:type```*
 
@@ -19,13 +20,13 @@ For methods, they look a little closer to what we do in C++ but use the same rev
 
 So in this case, the type of what you would return ends up being placed at the end of the method instead of before the method name, just like in Java/C++.  Lastly, we can begin each variable/method with a prefix to detail its accessibility across classes by using ```+``` for public, ````-```` for private and ```#``` for protected. 
 
-One of the easiest ways to get started with UML diagrams is by merely drawing something, but since some of us are anemic to drawing, we are going to use a tool called *PlantUML*.  PlantUML allows us to use text and symbols to come up with a diagram.
+One of the easiest ways to get started with UML diagrams is by merely drawing something, but since some of us are anemic to drawing, we are going to use *PlantUML* again, as it allows us to use text and symbols to come up with a diagram.
 
 ## Class Diagrams in PlantUML
 
 ### Basic Class definitions
 
-To start, right click on [this webpage](http://plantuml.com) and say *open in new window*. You may want to have the plantUML page and these instructions side-by-side (if you haven't done this using keyboard shortcuts, you can hold the Window Logo Key and type left or right, and then click on the other webpage.  On the plantUML site, Once there, click on the online server option on the left sidebar.   This will open up a webserver that has a sample sequence diagram, which we'll discuss in the future. 
+To start, right click on [this webpage](http://plantuml.com) and say *open in new window*. (Remember to do the side by side with Windows left arrow!). On the plantUML site, remember to click on the **online server** option on the left sidebar.   
 
 For now, replace the line:
 ```
@@ -47,9 +48,15 @@ One of the nice features of PlantUML is that it continually redraws based on wha
 ### Adding class variables and methods
 Let's add two variables to ```Location```, which would be the latitude and longitude (which we'll refer to as ```lat``` and ```long```).  Use the UML format outlined near the top of this document, making sure that those declarations are placed in between the curly braces.  If you did this correctly, you'll get something that looks like this:
 
-![](lab65media/oneclass.png)
+![](lab65media/latlong.png)
 
-Notice how the there are red squares, which are being used here to denote that the variables are private.  This is not standard UML which uses the (-) as part of the diagram, which we would be able to change if we add the line ```skinparam classAttributeIconSize 0``` just below our ```@startuml```.  Next add two methods for the class which can be done on separate lines just after the variables, using the notation provided up top.  Doing so would allow us to get a picture like this:
+Notice how the there are red squares, which are being used here to denote that the variables are **private**.  This is not standard UML which uses the (```-```) as part of the diagram.  Let's change that - add the line:
+
+```
+skinparam classAttributeIconSize 0
+``` 
+
+as the second line in our text, just after```@startuml```.  Next add two methods for the class which can be done on separate lines just after the variables, using the notation provided up top.  Doing so would allow us to get a picture like this:
 
 ![](lab65media/locationclass.png)
 
@@ -59,7 +66,11 @@ This should provide you with sufficient information to declare classes and the m
 
 ### Establishing relationships between classes
 
-One way that we often represent some assocation between classes is merely by drawing a line or arrow from one class to another.  This can be done very simply in plantUML as well, through the use of hyphens and some ASCII type art.  After all of the class definitions (but again, before the ```@enduml``` line), we can represent simple relationships between the classes and on separate lines.  To create associations between classes we merely have to mention both classes by name and then use some symbols in between the classes.  Doing so will draw the given relationship between the two classes.  Here are some examples and what they normally mean.
+One way that we often represent some assocation between classes is merely by drawing a line or arrow from one class to another.  This can be done very simply in plantUML as well, through the use of hyphens and some ASCII type art (just like we did with the use case diagrams).  After all of the class definitions (but again, before the ```@enduml``` line), we can represent simple relationships between the classes and on separate lines.  To create associations between classes we merely follow this format.  
+
+*```left_class```* ***```operator```*** *```right_class```*
+
+Using this format will draw the given relationship between the two classes.  Here are some examples and what they normally mean.
 
 |symbol|association|example|
 |---|---|---|
@@ -68,11 +79,11 @@ One way that we often represent some assocation between classes is merely by dra
 | ```*--```| will draw a diamond for a **Composition** relationship, to denote that one class (the one where the diamond is closer to) has an instance variable that directly holds the one it is linked to. Sometimes you will see some difference between Composition and Aggregation, which has to do with whether one class will exist without the other. For comp 55 you can ignore this distinction, just use it if you feel as though you would have a single instance variable that would contain the other class (you can use the word *contains* to check to see if the relationship holds) | *```Student*--Brain```* |
 | ```<\|--```| used for inheritance, to say that the class on the left is the superclass for the class on the right.  Use the phrase *IS A* to check to see if the relationship holds | *```Student<\|--GradStudent```* |
 
-Realize thought that this isn't everything that you can do, plantUML is pretty powerful!  I'm normally against having something that is additional text that feels like being another language, but in this case, I think that it is well worth it, as it allows us to think more about the code and not have to draw the diagrams in this perfect format.  If you wanted to have additional information on how to say denote things like abstract classes or interfaces, you can look at plant-umls [official documentation](http://plantuml.com/class-diagram).  Please realize though plantUML *is a product that does not completely adhere to UML standards*.  As such, I want to make sure that you get some practice with following the formats listed above for referencing to variables and methods so that you can easily read UML diagrams in the future.  Also, realize that the documentation is quite lengthy, most of what you would need is at the very top.  The plantUML syntax is quite extensive.  Do not worry about positioning things in certain places here.
+Realize though that this isn't everything that you can do, plantUML is pretty powerful!  PlantUML allows us to think more about the code and not have to draw the diagrams in this perfect format.  If you wanted to have additional information on how to denote things in the diagram like abstract classes or interfaces, you can look at plant-umls [official documentation](http://plantuml.com/class-diagram).  Please realize though plantUML *is a product - it is not necessarily the UML spec*.  The PlantUML documentation is quite lengthy, most of what you would need is at the very top.  For now, do not worry about positioning things in certain places here.
 
-The goal would be for you to by the end of this come up with some logical structure for five classes (that have both variables and methods and are linked to one another), that includes a ```Song``` and a ```Location``` (think about how to link those together, however you like).  make sure to include an interface, as well as an inheritance relationship as well as other relationships between the classes (it should be interconnected).  
+To submit something for this lab, I would like for you to by the end of this come up with some logical structure for five classes (that have both variables and methods and are linked to one another), that includes a ```Song``` and a ```Location``` (think about how to link those together, however you like).  make sure to include an interface, as well as an inheritance relationship as well as other relationships between the classes (it should be interconnected).  Each class should have at least one variable and 2 methods, and should make some sense. (Go beyond having getters/setters and think of methods) Be sure to include parameters and return types.  Use your classmates to get help in navigating plantUML.
 
-Ensure that the skin is on.  You will need to upload a screenshot of your creation to canvas, or you can use plantUMLs export picture features.  Good luck!
+You will also need to ensure that the skin is on, as shown in the last image.  You will need to upload a screenshot of your creation to canvas, which includes the text description (you can submit multiple screenshots).  Good luck!
 
 ### Help it doesn't look how I would like it to look!
 
