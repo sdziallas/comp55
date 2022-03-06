@@ -53,19 +53,26 @@ Now once eclipse is open, go ahead and do a *File->Import->Git->Projects from Gi
 
 ![](lab8media/media/importrepo.gif)
 
-Enter in your own GitHub URL that you created by going to this site.  (Eclipse may have also automagically filled it in for you.  If you still have it, you can [click here](##saving-your-github-credentials) to jump to next part, otherwise, you can keep reading.
+Enter in your own GitHub URL that you created from the classroom assignment.  (Eclipse may have also automagically filled it in for you.  **Do not press Enter just yet or fill in your password**.  
 
 ### Help! I lost my github URL!
 
-If you have lost the repository URL, go back to github.com. When you get there, or
+If you have lost the repository URL, go back to [GitHub](http://github.com). When you get there, or
 if you log back in you just need to access your repositories, which will
-be listed on the right once you login. Clicking on the repository will land you at a page similar to what was shown above.
+be listed on the right once you login. You can also use the search page up top, if you type comp55 you'll be able to see your repo.  Once you locate the repo, copy the URI like it was shown in the lab previously.
 
-## Saving your Github Credentials
-If your git password is not accepted in next step, try this: go back to [GitHub](http://github.com) and login, then click on your profile icon in the upper right, and then go to *Settings-\>Developer settings-\>Personal Access Token-\>Create New Token*. Then give the token a name, set expiration to *No expiration* and select all options and then create your token.  This will be used in place of your password.
-Because you'll be need to enter your credentials often, it may make sense to just store them in the secure store, which means that the credentials are stored on your computer.  If you are super worried about safety, please just store them there and use a throwaway account for this class.  I've had to deal with many more students forgetting their github passwords and locking themselves over their accounts, than having students whose computers have been hacked and whose github credentials have been rickrolled.  So please check the option **Store in Secure Store** so that
+## I have the URL but have yet to connect to GitHub
+If you you read every detail...Congrats!  I said earlier not to click or to fill in your password.  You can fill in your username though.  Github has taken additional measures to protect your account from password abuse, so they now require everyone to use a **token** to access their information outside of github's website.  
+
+### Generate a token and store it in secure store
+Go back to [GitHub](http://github.com) and login, then click on your profile icon in the upper right, and then go to *Settings-\>Developer settings-\>Personal Access Token-\>Create New Token*. Then give the token a name, set expiration to *No expiration* or *90 days* and select the all repos checkbox at the top.  This will be used in place of your password.
+
+![](lab8media/media/generatetoken.png)
+
+
+Because you'll be need to enter your credentials often, it may make sense to just store them in the secure store, which means that the credentials are stored on your computer.  If you are super worried about safety, please just store them there and use this account as a throwaway account for this class.  I've had to deal with many more students forgetting their github passwords, having expired tokens and locking themselves over their accounts, than having students whose computers have been hacked and whose github credentials have been rickrolled.  So please check the option **Store in Secure Store** so that
 way your password is saved. As part of this, eclipse may ask you for some
-recovery questions, which you can provide if you want, but nonetheless *save your password in the secure store*, the only scenario where I can see this being an issue if you are sharing an eclipse program with another developer who has a different login, and that should be quite scarce. s
+recovery questions (which you can skip), but regardless ***save your password in the secure store***, the only scenario where I can see this being an issue if you are sharing an eclipse program with another developer who has a different login, and that should be quite scarce. 
 
 ![](lab8media/media/image9.png)
 
