@@ -33,12 +33,12 @@ Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
 There are two arguments for a ```Timer```:
 
 - The number of milliseconds that should pass before it wakes up
-    - Timer someTimerVar = new Timer(==1000==, objectToBeWokenUp);
+    - Timer someTimerVar = new Timer(**1000**, objectToBeWokenUp);
     - Number of milliseconds = ```1000 milliseconds```
 - Which class should be woken up
-    - Timer someTimerVar = new Timer(1000, ==objectToBeWokenUp==);
+    - Timer someTimerVar = new Timer(1000, **objectToBeWokenUp**);
     - Class to be woken up = ```objectToBeWokenUp```
-    - Timer someTimerVar = new Timer(1000, ==this==);
+    - Timer someTimerVar = new Timer(1000, **this**);
     - Class to be woken up = The class that you're currently in
 
 ### 2. Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
