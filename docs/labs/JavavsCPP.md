@@ -148,15 +148,24 @@ replaced by doing something like this.
 
 ```cpp
 cout << "Hello, my " << age << "year-old friend!" << endl; //C++
+cout << "Hello, my " << age << "year-old friend!\n"; //C++
+cout << "Hello\t friend!"; //C++
 ```
 
 ```java
 System.out.println("Hello, my " + age + "year-old friend!"); //Java
+System.out.print("Hello, my " + age + "year-old friend!\n"); //Java
+System.out.print("Hello\t friend!"); //Java
 ```
 
 Notice that Java doesn't have the ```endl``` at the end of the statement. It
 has been replaced with the ```println``` statement, if you don't want to go
-to the next line, call ```print``` instead of ```println```.
+to the next line, call ```print``` instead of ```println```. Both ```print```
+and ```println``` can also have ```\n``` to make a new line. Also, you can use ```\n``` in 
+C++ as well instead of ```endl```. ```\t``` is also something that is in both C++ and 
+Java that hasn't changed and when printing you can use it to have a tab or five spaces in what you
+are printing. You can also have multiple ```\n``` and ```\t``` in what you are printing
+in both C++ and Java.
 
 ## Const/Final variables
 
