@@ -19,26 +19,30 @@ alarm. Since a ```Timer``` is a class, to create one of these alarms, we
 have to follow three steps.
 
 ### 1. Create a timer object
+
 We create timers using similar syntax that we've used previously to create other Java objects:
 
 ```java
+import javax.swing.*;
 Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
 ```
 
-Since the java library is so vast, there are actually multiple classes
-that are named ```Timer```. The reason for this is outside the scope of this
-lab, but we will use the ```javax.swing.Timer``` class, so you should
-```import javax.swing.*;```  Instead of writing that line, remember that you can use ***Ctrl-Shift-O*** to have eclipse add the necessary imports for you.  You may need it below for ```ActionEvent```, which is a class we'll be using.
+* Make sure that you're importing the ```javax.swing.Timer``` class. There are multiple classes that are named ```Timer```.
+* Instead of writing ```import javax.swing.*;```, remember that you can use ***Ctrl-Shift-O*** to have eclipse add the necessary imports for you.  You may need it below for the class, ```ActionEvent```.
 
-The two arguments that a ```Timer``` takes is the number of ms that should
-pass before it wakes up, and which class should be woken up. This can be
-another class or object altogether (like I have written with
-```objectToBeWokenUp```). If you would like the same class where you are
-writing the Timer code to wake up instead, then you would use the
-special keyword ```this``` … ```this``` refers to yourself, the object that you
-are currently in. 
+There are two arguments for a ```Timer```:
+
+- The number of milliseconds that should pass before it wakes up
+    - Timer someTimerVar = new Timer(==1000==, objectToBeWokenUp);
+    - Number of milliseconds = ```1000 milliseconds```
+- Which class should be woken up
+    - Timer someTimerVar = new Timer(1000, ==objectToBeWokenUp==);
+    - Class to be woken up = ```objectToBeWokenUp```
+    - Timer someTimerVar = new Timer(1000, ==this==);
+    - Class to be woken up = The class that you're currently in
 
 ### 2. Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
+
 Any class that would like to be responsible party for
 handling the alarm must implement the ```ActionListener``` interface. The
 ```ActionListener``` interface has just one method, ```public void
@@ -58,6 +62,7 @@ have too many nested for loops or very long loops, so that your program
 doesn't hang.
 
 ### 3. Call the timer's ```start``` method
+
 While the new ```Timer``` line shown at the top of the page sets up the
 ```Timer```, it does not actually turn the timer on. To start the timer so
 that it repeatedly calls ```actionPerformed```, you must tell that
@@ -200,7 +205,7 @@ want to make an ```ArrayList``` of ```GOval```s, which we can call ```balls```. 
 ahead and declare a new ```ArrayList``` as a private instance variable at
 the top, initializing it in ```run```. The other thing we want to do is
 after ```makeBall``` is called, we want to add that ball to our list of
-balls by calling the ```add``` method that pertains to the ```ArrayList```. Visually at this point, nothing would have changed if you run the program. Let's add something visual  by having the program 
+balls by calling the ```add``` method that pertains to the ```ArrayList```. Visually at this point, nothing would have changed if you run the program. Let's add something visual  by having the program
 setup a timer that moves all of the balls in our ```ArrayList```.
 
 To help us with
@@ -260,6 +265,7 @@ trying to modify the list of balls, while the program is currently
 cycling through and moving them, something that you cannot do when you
 use the for loop with the ```:``` operator. I've given the bad example below
 of what your run shouldn't do (unless you want to get the ```ConcurrentModificationException```).
+
 ```java
 // This is buggy code
 public void run() {
@@ -365,9 +371,11 @@ code**. Make sure to push your final changes to your repository by the
 deadline.
 
 ## Advanced reading on multiple timers
+
 If you're curious, [here's an explanation on how to implement multiple timers in your program](10-A-Mult-Timers.html)
 
 ## Bonus
+
 ### *"Hey! This is almost a game!"*
 
 While this does not yet have the polish of some of the games you may
