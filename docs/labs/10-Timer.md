@@ -436,13 +436,12 @@ with the message **"enemies populate screen regularly"**.
   pixels in the ```x``` direction and a random integer (```SPEED```) in the ```y```
   direction.
 
-3. Call ```moveAllEnemiesOnce``` in
-  ```actionPerformed```.
+3. Call ```moveAllEnemiesOnce``` in ```actionPerformed```.
 
-  Once you run the program now, the enemies will come
-  to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  
+    Once you run the program now, the enemies will come
+    to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  
 
-  They will be very wiggly.
+    They will be very wiggly.
 
 4. At this point you should **commit and push again,** with the message **"added wiggly enemy movement"**.
 
