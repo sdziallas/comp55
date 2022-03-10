@@ -16,7 +16,7 @@ A **```Timer```** is a Java class whose sole responsibility is to wake up
 every X milliseconds. You end up specifying how often you want a timer
 to wake up. From an analogy standpoint, it's very much like a repeating
 alarm. Since a ```Timer``` is a class, to create one of these alarms, we
-have to follow three steps.
+have to follow three steps.  **Please read these steps and use this as a reference, we'll go through the actual steps later in the lab.**
 
 ### 1. Create a timer object
 
@@ -411,11 +411,11 @@ if(numTimes % 40 == 0) {
 like this for today (or you can just click on 40 and then click
 *Refactor-\>Constant* in the menu).
 
-2. Once you add these lines of code in
+3. Once you add these lines of code in
 ```actionPerformed```, run the code again and watch the green squares slowly
 take over\!
 
-3. When the squares appear **commit and push your code again**
+4. When the squares appear **commit and push your code again**
 with the message **"enemies populate screen regularly"**.
 
 You can still have circles appear but right now they will just run over
