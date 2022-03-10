@@ -46,7 +46,9 @@ There are two arguments for a ```Timer```:
 Any class that would like to be responsible party for
 handling the alarm must implement the ```ActionListener``` interface. 
 The ```ActionListener``` interface has just one method:
+
 ```public void actionPerformed(ActionEvent e)``` 
+
 So every time the timer wakes up, it calls the ```objectToBeWokenUp```'s ```actionPerformed``` method. The structure that you follow is very similar to implementing ```mouseDragged```, except that rather than you responding to mouse events, you are responding to events that the ```Timer``` is initiating. 
 
 *We don't want to spend too much time doing anything complicated in mouse events or in handlers like ```actionPerformed```.* 
