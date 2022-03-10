@@ -103,7 +103,7 @@ public void actionPerformed(ActionEvent e) {
 5. Move the label horizontally every 1000ms.
 
 * Go ahead and have ```myLabel``` move 5 pixels to the right, while moving it zero
-pixels in the y direction. 
+pixels in the y direction.
 
 6. Make sure that you call ```start()``` on the timer you created in ```run()```.  
 
@@ -113,9 +113,9 @@ pixels in the y direction.
 
 If you don't see it move, make sure that you have done the steps we outlined above.  
 
-### Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called.
+### Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called
 
-It's important have a variable that keeps track of how many times ```actionPerformed``` has been called. 
+It's important have a variable that keeps track of how many times ```actionPerformed``` has been called.
 
 To do this in ```run()```, make sure to initialize that number to 0, and
 increment ```numTimes``` at the start of ```actionPerformed```. Now just for fun, let's
@@ -137,31 +137,31 @@ The **Timer** objects in java have a lot of flexibility, and so I
 encourage you to later look at all the ways you can use and leverage a
 timer. But for now I want to direct you to two methods:
 
-- **```stop```** (Stops the timer)
+* **```stop```** (Stops the timer)
 
-    * Stops the timer 
+  * Stops the timer
 
-- **```setInitialDelay```**
+* **```setInitialDelay```**
 
-    * Takes an integer for how many milliseconds you want to delay before
-    constantly running the timer. 
+  * Takes an integer for how many milliseconds you want to delay before
+    constantly running the timer.
 
-It's best to add the delay before you call ```start```. 
+It's best to add the delay before you call ```start```.
 
-### Add a three second delay before the timer starts.
+### Add a three second delay before the timer starts
 
 While the concept of **stop** seems simple enough, it may not always make sense as
-to when or who should be able to make the timer stop. 
+to when or who should be able to make the timer stop.
 
 1. Add a call to stop the timer in ```actionPerformed```.
 
 2. We declared our Timer as a local variable, switch the timer to be an instance
-variable instead. 
+variable instead.
 
 3. Use an ```if``` statement to say that we want to stop the timer
-when ```numTimes``` has reached 10. 
+when ```numTimes``` has reached 10.
 
-* ```actionPerformed``` is called many times, to we want a special time when we would want to stop the timer. 
+* ```actionPerformed``` is called many times, to we want a special time when we would want to stop the timer.
 
 In this situation,  When you run your program, you should get to a screenshot that looks like this (if you add a return statement, then you may end without it moving one final time)
 
@@ -175,26 +175,34 @@ on to the next task.
 
 So far, we've mostly been showing the basics of Timers, however, Timers
 end up being extremely useful in many situations, since what they allow
-you to do is to have a separate process (which we'll call **thread**) that is
-running independently of the program's main loop. This is going to be
+you to run **threads**.
+
+* Threads are separate processes that run independently from the program's main loop.
+
+This is going to be
 useful for creating animations or having any movement so that the
 movement and animations can be made independently of what the user
 clicks on or interacts with.
 
 Similar to mouse events, the timer events happen independently of what
 is going on in other parts of the game, this allows us to create some
-very flexible & awesome programs. While it may be tempting to have many
-different timers, *I suggest for now that you have a single timer
-and call it more often*. If you only need something to happen
-every second (1000ms) and your timer is happening every 500 ms, just have a
-```numTimes``` variable and check to see if ```numTimes``` is even. Let's go
-through a slightly more complicated example by opening up
+very flexible & awesome programs.
+
+*While it may be tempting to have many different timers, I suggest for now that you have a single timer and call it more often.*
+
+For example:
+
+If you only need something to happen every second (1000ms) and your timer is happening every 500 ms, just have a ```numTimes``` variable and check to see if ```numTimes``` is even.
+
+Let's go through a slightly more complicated example by opening up
 **BallLauncher.java**:
 
 If you run at this point, what you'll notice is something similar to our
 earlier interactivity lab. When we are clicking the mouse button, it is
 making a ball at the same height as our mouse cursor but on the left
-hand of the screen. For example, if you click in different areas of the screen, you'll notice red circles on the left hand side based on where your cursor is when you click,
+hand of the screen.
+
+For example, if you click in different areas of the screen, you'll notice red circles on the left hand side based on where your cursor is when you click,
 like so:
 
 ![](lab10media/media/ballstart.gif)
@@ -223,6 +231,8 @@ public class BallLauncher extends GraphicsProgram {
 }
 ```
 
+### Reviiew of the Code
+
 Most of this should be a refresher, the one thing to notice is how we
 are using a constant ```SIZE``` to create a circle. Remember that since we want the circle to appear at the center of where we click, we are subtracting ```SIZE/2```, from where we click, which will cause where we click to be the center of the circle instead of the top left. ```makeBall``` is just a convenience
 method to help make a red filled ball. What we are going to do is to
@@ -231,51 +241,82 @@ want to make an ```ArrayList``` of ```GOval```s, which we can call ```balls```. 
 ahead and declare a new ```ArrayList``` as a private instance variable at
 the top, initializing it in ```run```. The other thing we want to do is
 after ```makeBall``` is called, we want to add that ball to our list of
-balls by calling the ```add``` method that pertains to the ```ArrayList```. Visually at this point, nothing would have changed if you run the program. Let's add something visual  by having the program
-setup a timer that moves all of the balls in our ```ArrayList```.
+balls by calling the ```add``` method that pertains to the ```ArrayList```. Visually at this point, nothing would have changed if you run the program.
 
-To help us with
-our future functionality, make two more constants, ```public static final int```,
-just like the ```SIZE``` constant. One constant (call it ```MS``` if you want) should store how often we
-want the timer to be woken up (set it to 50), and another (I called it ```SPEED```) should tell us
-how much to move each ball by each time (set this to 2). Now make a **Timer** object and start it. (Can't remember how to do this?  [Go back and review.](##myfirsttimer.java)) Just like in the first file, you will make BallLauncher the one to respond to the timer,
-Our ```actionPerformed``` method will be fairly
-simple, we will have it iterate through the balls ```ArrayList``` and move
-each one by SPEED in the X direction and 0 in the y. If you haven't tried doing a for loop using the **:** operator
-to iterate through a list, now would be a good time to try.
+Let's add something visual to our program.
+
+### Setup a timer that moves all of the balls in our ```ArrayList```
+
+1. Make two more constants
+
+* ```public static final int MS```
+
+  * just like the ```SIZE``` constant
+
+  * stores how often we want the timer to be woken up (set it to 50)
+
+* I called it ```SPEED```
+  * tells us how much to move each ball by each time (set this to 2).
+
+2. Make a **Timer** object and start it.
+
+* (Can't remember how to do this?  [Go back and review.](##myfirsttimer.java))
+
+3. Just like in the first file, you will make BallLauncher the one to respond to the timer.
+
+* Our ```actionPerformed``` method will be fairly simple. We will have it iterate through the balls ```ArrayList``` and move each one by SPEED in the X direction and 0 in the y.
+
+*If you haven't tried doing a for loop using the **:** operator to iterate through a list, now would be a good time to try.*
 
 Once you handled the ```actionPerformed``` event by moving all the balls in
 the list, created and started the timer, you should run your program
 again, and click around and notice how you have something that feels
-much more dynamic and expressive\! If you are still curious how my version behaves (or you just want to observe your professor's antiquated clicking habits for 15 seconds), you can [click here](lab10media/media/ballnextdemo.gif).
+much more dynamic and expressive\!
 
-Once this is working, you should
-**commit and push your code** again using the message **"all balls move
-across the screen"**. If it's not behaving how you would expect, review the [three step checklist above](##what-is-a-timer).
+If you are still curious how my version behaves (or you just want to observe your professor's antiquated clicking habits for 15 seconds), you can [click here](lab10media/media/ballnextdemo.gif).
 
-**The last thing we are going to add is a limit to the number of balls
-that someone can launch at any given time.** While there are many ways to
-do this, what we are going to do is simply cycle through the list of
-balls, and look to see if any have an x coordinate that is less than 100
-(by calling ```getX()``` on a single ball). If there is a ball that has an x
-coordinate that is less than 100, then we know ```mousePressed``` was just
-recently launched, so we can just return from ```mousePressed```, and ignore
-the user's press of the mouse button.  Doing this will cause your program [to behave as if it has a cooldown, like this gif shows](lab10media/media/ballcooldown.gif). Once you fix that and read the
-note below, **commit and push** this next change. However, as part of
-your commit, *in your own words*, ***write a sentence or two in the
+4. Once this is working, you should **commit and push your code** again
+
+* Use the message **"all balls move across the screen"**.
+
+If it's not behaving how you would expect, review the [three step checklist above](##what-is-a-timer).
+
+### The last thing we are going to add is a limit to the number of balls that someone can launch at any given time
+
+While there are many ways to do this, what we are going to do is simply:
+
+* Cycle through the list of balls
+
+* Look to see if any have an x coordinate that is less than 100
+  * by calling ```getX()``` on a single ball
+  * If there is a ball that has an x coordinate that is less than 100, then we know ```mousePressed``` was just recently launched, so we can just return from ```mousePressed```, and ignore the user's press of the mouse button.  
+
+Doing this will cause your program [to behave as if it has a cooldown, like this gif shows](lab10media/media/ballcooldown.gif). 
+
+Once you fix that and **read the note below**, **commit and push** this next change. 
+
+* As part of your commit, *in your own words*, ***write a sentence or two in the
 commit message text that would describe what would happen if you were to
 use ```pause``` in an ```actionPerformed``` method.***
 
-***"OK, Bye ```pause```!"*** One thing some of you might have
+***"OK, Bye ```pause```!"*** 
+
+### Note!
+
+One thing some of you might have
 remembered is that ```GraphicsProgram``` has a ```pause()``` method that would
-simply pause the program for a certain amount of time. Why do we have to
-go through all this trouble of doing timers if we can simply call
-```pause()```? The reason is because of how mouse events work together with
+simply pause the program for a certain amount of time. 
+
+**Why do we have to go through all this trouble of doing timers if we can simply call ```pause()```?** 
+
+The reason is because of how mouse events work together with
 animations. To make things animate and still respond to mouse events,
 all of those events need to be done in a way where the computer can
-respond to both and not get confused. If you think about our discussion,
+respond to both and not get confused. 
+
+If you think about our discussion,
 what would happen when you click the mouse while the program is going
-through the list and moving all of the balls. In the case of having the
+through the list and moving all of the balls? In the case of having the
 timer, the program will actually wait until it is done with the
 ```actionPerformed``` before it calls ```mousePressed```, so that it feels like
 both work at the same time (aka concurrently). Because mouse events and
@@ -286,7 +327,9 @@ pizzazz to your movement. **So if the mouse is pressed, it will interrupt
 whatever loop it is in at the moment.** If you try to replace your timer
 with a pause and a while loop, you'll notice that once you run the
 program and click a couple of times, you'll get a
-```ConcurrentModificationException```. This exception means that you are
+```ConcurrentModificationException```. 
+
+This exception means that you are
 trying to modify the list of balls, while the program is currently
 cycling through and moving them, something that you cannot do when you
 use the for loop with the ```:``` operator. I've given the bad example below
