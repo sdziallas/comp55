@@ -33,33 +33,26 @@ Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
 There are two arguments for a ```Timer```:
 
 - The number of milliseconds that should pass before it wakes up
-    - Timer someTimerVar = new Timer(**1000**, objectToBeWokenUp);
-    - Number of milliseconds = ```1000 milliseconds```
+    - ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+    - Number of milliseconds = **1000 milliseconds**
 - Which class should be woken up
-    - Timer someTimerVar = new Timer(1000, **objectToBeWokenUp**);
-    - Class to be woken up = ```objectToBeWokenUp```
-    - Timer someTimerVar = new Timer(1000, **this**);
-    - Class to be woken up = The class that you're currently in
+    - ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+    - Class to be woken up = **objectToBeWokenUp**
+    - ```Timer someTimerVar = new Timer(1000, this);```
+    - Class to be woken up = **this** (The class that you're currently in)
 
 ### 2. Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
 
 Any class that would like to be responsible party for
-handling the alarm must implement the ```ActionListener``` interface. The
-```ActionListener``` interface has just one method, ```public void
-actionPerformed(ActionEvent e)```. So every time the timer wakes up, it
-calls the ```objectToBeWokenUp```'s ```actionPerformed``` method. The structure
-that you follow is very similar to implementing ```mouseDragged```, except
-that rather than you responding to mouse events, you are responding to
-events that the ```Timer``` is initiating. This also means that we don't
-want to spend too much time doing anything complicated in mouse events
-or in handlers like ```actionPerformed```. If you are curious, put a really
-large for loop that counts from 0 to a billion in ```mousePressed```, and
-watch the program grind to its knees. It does this because java treats
-timers and mouse events as being very important, so important that it
-stops doing other things (like listening to other events) until those
-handlers are finished. So what you do in each should be small, and not
-have too many nested for loops or very long loops, so that your program
-doesn't hang.
+handling the alarm must implement the ```ActionListener``` interface. 
+The ```ActionListener``` interface has just one method:
+```public void actionPerformed(ActionEvent e)``` 
+So every time the timer wakes up, it calls the ```objectToBeWokenUp```'s ```actionPerformed``` method. The structure that you follow is very similar to implementing ```mouseDragged```, except that rather than you responding to mouse events, you are responding to events that the ```Timer``` is initiating. 
+
+*We don't want to spend too much time doing anything complicated in mouse events or in handlers like ```actionPerformed```.* 
+If you are curious, put a really large for loop that counts from 0 to a billion in ```mousePressed```, and
+watch the program grind to its knees. It does this because java treats timers and mouse events as being very important, so important that it stops doing other things (like listening to other events) until those
+handlers are finished. So what you do in each should be small, and not have too many nested for loops or very long loops, so that your program doesn't hang.
 
 ### 3. Call the timer's ```start``` method
 
