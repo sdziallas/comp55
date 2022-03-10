@@ -180,6 +180,7 @@ end up being extremely useful in many situations, since what they allow
 you to run **threads**.
 
 * Threads are separate processes that run independently from the program's main loop.
+* If you want to learn more about threads, follow this [link]<https://www.iitk.ac.in/esc101/05Aug/tutorial/essential/threads/definition.html#:~:text=Definition%3A%20A%20thread%20is%20a,tasks%20in%20a%20single%20program.>
 
 This is going to be
 useful for creating animations or having any movement so that the
