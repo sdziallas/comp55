@@ -55,7 +55,7 @@ So every time the timer wakes up, it calls the ```objectToBeWokenUp```'s ```acti
 
 *We don't want to spend too much time doing anything complicated in mouse events or in handlers like ```actionPerformed```.*
 
-If you are curious, put a really large for loop that counts from 0 to a billion in ```mousePressed```, and
+If you are curious, put a really large `for` loop that counts from 0 to a billion in ```mousePressed```, and
 watch the program grind to its knees. It does this because java treats timers and mouse events as being very important, so important that it stops doing other things (like listening to other events) until those
 handlers are finished. So what you do in each should be small, and not have too many nested for loops or very long loops, so that your program doesn't hang.
 
