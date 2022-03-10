@@ -269,9 +269,9 @@ Let's add something visual to our program.
 
    * (Can't remember how to do this?  [Go back and review.](##myfirsttimer.java))
 
-3. Just like in the first file, you will make BallLauncher the one to respond to the timer.
+3. Just like in the first file, you will make ```BallLauncher``` the one to respond to the timer.
 
-   * Our ```actionPerformed``` method will be fairly simple. We will have it iterate through the balls ```ArrayList``` and move each one by SPEED in the X direction and 0 in the y.
+  * Our ```actionPerformed``` method will be fairly simple. We will have it iterate through the balls ```ArrayList``` and move each one by SPEED in the X direction and 0 in the y.
 
   * If you haven't tried doing a for loop using the **:** operator to iterate through a list, now would be a good time to try.*
 
