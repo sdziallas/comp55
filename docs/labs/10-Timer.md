@@ -139,12 +139,12 @@ timer. But for now I want to direct you to two methods:
 
 - **```stop```** (Stops the timer)
 
-* Stops the timer 
+    * Stops the timer 
 
 - **```setInitialDelay```**
 
-* Takes an integer for how many milliseconds you want to delay before
-constantly running the timer. 
+    * Takes an integer for how many milliseconds you want to delay before
+    constantly running the timer. 
 
 It's best to add the delay before you call ```start```. 
 
