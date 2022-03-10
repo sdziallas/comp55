@@ -88,24 +88,24 @@ simple window with a label that does nothing.
 
 3. Have the 2<sup>nd</sup> argument be **```this```**
 
-Having these two arguments means ```MyFirstTimer``` (```this```) will be
-notified every second (```1000```ms).
+    Having these two arguments means ```MyFirstTimer``` (```this```) will be
+    notified every second (```1000```ms).
 
 4. Implement the ```ActionListener``` interface.
 
-* Let's add ```implements ActionListener``` to line 8, as well as an ```actionPerformed```
-method.
+   * Let's add ```implements ActionListener``` to line 8, as well as an ```actionPerformed```
+  method.
 
-```java
-public void actionPerformed(ActionEvent e) {
-    //TODO add what we want to do every two seconds
-}
-```
+  ```java
+  public void actionPerformed(ActionEvent e) {
+      //TODO add what we want to do every two seconds
+  }
+  ```
 
 5. Move the label horizontally every 1000ms.
 
-* Go ahead and have ```myLabel``` move 5 pixels to the right, while moving it zero
-pixels in the y direction.
+   * Go ahead and have ```myLabel``` move 5 pixels to the right, while moving it zero
+  pixels in the y direction.
 
 6. Make sure that you call ```start()``` on the timer you created in ```run()```.  
 
