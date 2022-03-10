@@ -16,7 +16,11 @@ A **```Timer```** is a Java class whose sole responsibility is to wake up
 every X milliseconds. You end up specifying how often you want a timer
 to wake up. From an analogy standpoint, it's very much like a repeating
 alarm. Since a ```Timer``` is a class, to create one of these alarms, we
-have to follow three steps.  **Please read these steps and use this as a reference, we'll go through the actual steps later in the lab.**
+have to follow three steps.  
+
+## The Three Step Checklist Reference
+
+Anytime you create a timer, you'll need to do these three steps.  **Please read these steps and use this as a reference, we'll go through the actual steps later in the lab.**
 
 ### 1. Create a timer object
 
@@ -252,35 +256,35 @@ Let's add something visual to our program.
 
 1. Make two more constants
 
-* ```public static final int MS```
+   * ```public static final int MS```
 
-  * Just like the ```SIZE``` constant
+   * Just like the ```SIZE``` constant
 
-  * Stores how often we want the timer to be woken up (set it to 50)
+   * Stores how often we want the timer to be woken up (set it to 50)
 
-* I called it ```SPEED```
-  * Tells us how much to move each ball by each time (set this to 2).
+   * I called it ```SPEED```
+     * Tells us how much to move each ball by each time (set this to 2).
 
 2. Make a **Timer** object and start it.
 
-* (Can't remember how to do this?  [Go back and review.](##myfirsttimer.java))
+   * (Can't remember how to do this?  [Go back and review.](##myfirsttimer.java))
 
 3. Just like in the first file, you will make BallLauncher the one to respond to the timer.
 
-* Our ```actionPerformed``` method will be fairly simple. We will have it iterate through the balls ```ArrayList``` and move each one by SPEED in the X direction and 0 in the y.
+   * Our ```actionPerformed``` method will be fairly simple. We will have it iterate through the balls ```ArrayList``` and move each one by SPEED in the X direction and 0 in the y.
 
-*If you haven't tried doing a for loop using the **:** operator to iterate through a list, now would be a good time to try.*
+  * If you haven't tried doing a for loop using the **:** operator to iterate through a list, now would be a good time to try.*
 
-Once you handled the ```actionPerformed``` event by moving all the balls in
-the list, created and started the timer, you should run your program
-again, and click around and notice how you have something that feels
-much more dynamic and expressive\!
+  Once you handled the ```actionPerformed``` event by moving all the balls in
+  the list, created and started the timer, you should run your program
+  again, and click around and notice how you have something that feels
+  much more dynamic and expressive\!
 
-If you are still curious how my version behaves (or you just want to observe your professor's antiquated clicking habits for 15 seconds), you can [click here](lab10media/media/ballnextdemo.gif).
+  If you are still curious how my version behaves (or you just want to observe your professor's antiquated clicking habits for 15 seconds), you can [click here](lab10media/media/ballnextdemo.gif).
 
 4. Once this is working, you should **commit and push your code** again
 
-* Use the message **"all balls move across the screen"**.
+   * Use the message **"all balls move across the screen"**.
 
 If it's not behaving how you would expect, review the [three step checklist above](##what-is-a-timer).
 
@@ -329,8 +333,7 @@ it can coordinate between the two. However, if you decide to use
 pizzazz to your movement. **So if the mouse is pressed, it will interrupt
 whatever loop it is in at the moment.** If you try to replace your timer
 with a pause and a while loop, you'll notice that once you run the
-program and click a couple of times, you'll get a
-```ConcurrentModificationException```.
+program and click a couple of times, you'll get a ```ConcurrentModificationException```.
 
 This exception means that you are
 trying to modify the list of balls, while the program is currently
