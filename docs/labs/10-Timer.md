@@ -32,7 +32,9 @@ Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
 
 There are two arguments for a ```Timer```:
 
-* The number of milliseconds that should pass before it wakes up
+
+1. The number of milliseconds that should pass before it wakes up
+
   * ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
   * Number of milliseconds = **1000 milliseconds**
 * Which class should be woken up
