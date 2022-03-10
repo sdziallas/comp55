@@ -370,59 +370,59 @@ that one, we're going to work with a copy of it.
 
 1. Open **DodgeBall.java and run it**.
 
-Notice that it works the same as BallLauncher at the
-moment. What I've done is added a couple of additional convenience
-methods. With our newfound ability to launch balls, let's try to have
-our users aim those balls at others.
+  Notice that it works the same as BallLauncher at the
+  moment. What I've done is added a couple of additional convenience
+  methods. With our newfound ability to launch balls, let's try to have
+  our users aim those balls at others.
 
-To help us with this, I ended up
-adding an ```ArrayList``` of ```GRects``` called ```enemies```, which are just going
-to be green rectangles. I have already added the code to create the
-empty list of enemies in ```run```.
+  To help us with this, I ended up
+  adding an ```ArrayList``` of ```GRects``` called ```enemies```, which are just going
+  to be green rectangles. I have already added the code to create the
+  empty list of enemies in ```run```.
 
-There is also an analogous ```makeEnemy```
-function which will create a green square to represent our enemies. To
-make it easier to use, I only have it provide a **y** coordinate, and
-the method automatically places the enemy on the right hand side of the
-screen.
+  There is also an analogous ```makeEnemy```
+  function which will create a green square to represent our enemies. To
+  make it easier to use, I only have it provide a **y** coordinate, and
+  the method automatically places the enemy on the right hand side of the
+  screen.
 
-You'll also notice that we have a ```RandomGenerator rgen``` that we
-have created. One last refactoring that you'll see is that I created
-both ```addABall``` and ```addAnEnemy``` functions, each of which will call
-their respective ```make____``` functions, and then add them to the
-screen and their respective lists.
+  You'll also notice that we have a ```RandomGenerator rgen``` that we
+  have created. One last refactoring that you'll see is that I created
+  both ```addABall``` and ```addAnEnemy``` functions, each of which will call
+  their respective ```make____``` functions, and then add them to the
+  screen and their respective lists.
 
-Lastly, I moved the ball movement for
-loop into its own method, ```moveAllBallsOnce()```. The last thing is that you'll see that I
-have an ```if``` statement that acts like the cooldown you wrote earlier.
+  Lastly, I moved the ball movement for
+  loop into its own method, ```moveAllBallsOnce()```. The last thing is that you'll see that I
+  have an ```if``` statement that acts like the cooldown you wrote earlier.
 
 2. Call ```addAnEnemy``` in our timer.
 
-* However, we don't want to call ```addAnEnemy```, everytime ```actionPerformed``` is called, but rather every once in a while.
-* This is where something like that ```%``` operator works great if we add a ```numTimes``` instance variable that works similar to what we implemented in the [first timer example](##myfirsttimer.java), (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster, or to decrease it from 40 to say 5, [like I did here](lab10media/media/greenpopulate.gif)).
-* Because we are keeping track of the number of times
-```actionPerformed``` is called, we can simply say every 40<sup>th</sup>
-time, go ahead and make a new enemy,
+   * However, we don't want to call ```addAnEnemy```, everytime ```actionPerformed``` is called, but rather every once in a while.
+   * This is where something like that ```%``` operator works great if we add a ```numTimes``` instance variable that works similar to what we implemented in the [first timer example](##myfirsttimer.java), (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster, or to decrease it from 40 to say 5, [like I did here](lab10media/media/greenpopulate.gif)).
+   * Because we are keeping track of the number of times
+  ```actionPerformed``` is called, we can simply say every 40<sup>th</sup>
+  time, go ahead and make a new enemy,
 
-```java
-if(numTimes % 40 == 0) {
-    addAnEnemy();
-}
-```
+  ```java
+  if(numTimes % 40 == 0) {
+      addAnEnemy();
+  }
+  ```
 
-* Normally I would want you to make 40 a constant, but you can leave it
-like this for today (or you can just click on 40 and then click
-*Refactor-\>Constant* in the menu).
+   * Normally I would want you to make 40 a constant, but you can leave it
+  like this for today (or you can just click on 40 and then click
+  *Refactor-\>Constant* in the menu).
 
-3. Once you add these lines of code in
-```actionPerformed```, run the code again and watch the green squares slowly
-take over\!
+   1. Once you add these lines of code in
+  ```actionPerformed```, run the code again and watch the green squares slowly
+  take over\!
 
 4. When the squares appear **commit and push your code again**
 with the message **"enemies populate screen regularly"**.
 
-You can still have circles appear but right now they will just run over
-the squares. We'll get to that in a bit.
+  You can still have circles appear but right now they will just run over
+  the squares. We'll get to that in a bit.
 
 ### The next thing we want to do is to make the enemies have some type of movement
 
