@@ -370,31 +370,31 @@ that one, we're going to work with a copy of it.
 
 1. Open **DodgeBall.java and run it**.
 
-  Notice that it works the same as BallLauncher at the
-  moment. What I've done is added a couple of additional convenience
-  methods. With our newfound ability to launch balls, let's try to have
-  our users aim those balls at others.
+    Notice that it works the same as BallLauncher at the
+    moment. What I've done is added a couple of additional convenience
+    methods. With our newfound ability to launch balls, let's try to have
+    our users aim those balls at others.
 
-  To help us with this, I ended up
-  adding an ```ArrayList``` of ```GRects``` called ```enemies```, which are just going
-  to be green rectangles. I have already added the code to create the
-  empty list of enemies in ```run```.
+    To help us with this, I ended up
+    adding an ```ArrayList``` of ```GRects``` called ```enemies```, which are just going
+    to be green rectangles. I have already added the code to create the
+    empty list of enemies in ```run```.
 
-  There is also an analogous ```makeEnemy```
-  function which will create a green square to represent our enemies. To
-  make it easier to use, I only have it provide a **y** coordinate, and
-  the method automatically places the enemy on the right hand side of the
-  screen.
+    There is also an analogous ```makeEnemy```
+    function which will create a green square to represent our enemies. To
+    make it easier to use, I only have it provide a **y** coordinate, and
+    the method automatically places the enemy on the right hand side of the
+    screen.
 
-  You'll also notice that we have a ```RandomGenerator rgen``` that we
-  have created. One last refactoring that you'll see is that I created
-  both ```addABall``` and ```addAnEnemy``` functions, each of which will call
-  their respective ```make____``` functions, and then add them to the
-  screen and their respective lists.
+    You'll also notice that we have a ```RandomGenerator rgen``` that we
+    have created. One last refactoring that you'll see is that I created
+    both ```addABall``` and ```addAnEnemy``` functions, each of which will call
+    their respective ```make____``` functions, and then add them to the
+    screen and their respective lists.
 
-  Lastly, I moved the ball movement for
-  loop into its own method, ```moveAllBallsOnce()```. The last thing is that you'll see that I
-  have an ```if``` statement that acts like the cooldown you wrote earlier.
+    Lastly, I moved the ball movement for
+    loop into its own method, ```moveAllBallsOnce()```. The last thing is that you'll see that I
+    have an ```if``` statement that acts like the cooldown you wrote earlier.
 
 2. Call ```addAnEnemy``` in our timer.
 
