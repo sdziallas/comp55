@@ -78,7 +78,7 @@ code. Notice that here we have a simple ```GraphicsProgram``` with a
 ```GLabel``` added to the screen. If you run the program, you'll get a
 simple window with a label that does nothing.
 
-**Let's first start by creating a Timer in the ```**run**``` method**.
+###Let's first start by creating a Timer in the ```**run**``` method###
 
 1. Name the timer anything you want
 
@@ -107,13 +107,13 @@ pixels in the y direction.
 
 6. Make sure that you call ```start()``` on the timer you created in ```run()```.  
 
-*If you added in all three of these steps, you should see this when you run the program.*
+*If you added in all of these steps, you should see this when you run the program.*
 
 ![](lab10media/media/timerinitcut.gif)
 
 If you don't see it move, make sure that you have done the steps we outlined above.  
 
-**Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called.**
+###Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called.###
 
 It's important have a variable that keeps track of how many times ```actionPerformed``` has been called. 
 
@@ -148,7 +148,7 @@ constantly running the timer.
 
 It's best to add the delay before you call ```start```. 
 
-**Add a three second delay before the timer starts.** 
+###Add a three second delay before the timer starts.###
 
 While the concept of **stop** seems simple enough, it may not always make sense as
 to when or who should be able to make the timer stop. 
