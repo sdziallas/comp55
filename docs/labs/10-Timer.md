@@ -401,20 +401,20 @@ that one, we're going to work with a copy of it.
    * However, we don't want to call ```addAnEnemy```, everytime ```actionPerformed``` is called, but rather every once in a while.
    * This is where something like that ```%``` operator works great if we add a ```numTimes``` instance variable that works similar to what we implemented in the [first timer example](##myfirsttimer.java), (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster, or to decrease it from 40 to say 5, [like I did here](lab10media/media/greenpopulate.gif)).
    * Because we are keeping track of the number of times
-  ```actionPerformed``` is called, we can simply say every 40<sup>th</sup>
-  time, go ahead and make a new enemy,
+    ```actionPerformed``` is called, we can simply say every  40<sup>th</sup>
+    time, go ahead and make a new enemy,
 
-  ```java
-  if(numTimes % 40 == 0) {
-      addAnEnemy();
-  }
-  ```
+    ```java
+    if(numTimes % 40 == 0) {
+        addAnEnemy();
+    }
+    ```
 
    * Normally I would want you to make 40 a constant, but you can leave it
   like this for today (or you can just click on 40 and then click
   *Refactor-\>Constant* in the menu).
 
-   1. Once you add these lines of code in
+3. Once you add these lines of code in
   ```actionPerformed```, run the code again and watch the green squares slowly
   take over\!
 
