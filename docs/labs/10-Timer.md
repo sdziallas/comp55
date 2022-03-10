@@ -231,7 +231,7 @@ public class BallLauncher extends GraphicsProgram {
 }
 ```
 
-### Reviiew of the Code
+### Review of the Code
 
 Most of this should be a refresher, the one thing to notice is how we
 are using a constant ```SIZE``` to create a circle. Remember that since we want the circle to appear at the center of where we click, we are subtracting ```SIZE/2```, from where we click, which will cause where we click to be the center of the circle instead of the top left. ```makeBall``` is just a convenience
@@ -251,12 +251,12 @@ Let's add something visual to our program.
 
 * ```public static final int MS```
 
-  * just like the ```SIZE``` constant
+  * Just like the ```SIZE``` constant
 
-  * stores how often we want the timer to be woken up (set it to 50)
+  * Stores how often we want the timer to be woken up (set it to 50)
 
 * I called it ```SPEED```
-  * tells us how much to move each ball by each time (set this to 2).
+  * Tells us how much to move each ball by each time (set this to 2).
 
 2. Make a **Timer** object and start it.
 
@@ -288,7 +288,7 @@ While there are many ways to do this, what we are going to do is simply:
 * Cycle through the list of balls
 
 * Look to see if any have an x coordinate that is less than 100
-  * by calling ```getX()``` on a single ball
+  * By calling ```getX()``` on a single ball
   * If there is a ball that has an x coordinate that is less than 100, then we know ```mousePressed``` was just recently launched, so we can just return from ```mousePressed```, and ignore the user's press of the mouse button.  
 
 Doing this will cause your program [to behave as if it has a cooldown, like this gif shows](lab10media/media/ballcooldown.gif). 
@@ -356,32 +356,45 @@ public void run() {
 ## DodgeBall.java
 
 Alright, so now that you have some experience let's try to make a very
-simple game by using timers and some randomness. We're going to add a
+simple game by using timers and some randomness. 
+
+We're going to add a
 little bit to our ball launcher game but rather than just add on top of
-that one, we're going to work with a copy of it. Open **DodgeBall.java
-and run it**. Notice that it works the same as BallLauncher at the
+that one, we're going to work with a copy of it. 
+
+1. Open **DodgeBall.java and run it**. 
+
+Notice that it works the same as BallLauncher at the
 moment. What I've done is added a couple of additional convenience
 methods. With our newfound ability to launch balls, let's try to have
-our users aim those balls at others. To help us with this, I ended up
+our users aim those balls at others. 
+
+To help us with this, I ended up
 adding an ```ArrayList``` of ```GRects``` called ```enemies```, which are just going
 to be green rectangles. I have already added the code to create the
-empty list of enemies in ```run```. There is also an analogous ```makeEnemy```
+empty list of enemies in ```run```. 
+
+There is also an analogous ```makeEnemy```
 function which will create a green square to represent our enemies. To
 make it easier to use, I only have it provide a **y** coordinate, and
 the method automatically places the enemy on the right hand side of the
-screen. You'll also notice that we have a ```RandomGenerator rgen``` that we
+screen. 
+
+You'll also notice that we have a ```RandomGenerator rgen``` that we
 have created. One last refactoring that you'll see is that I created
 both ```addABall``` and ```addAnEnemy``` functions, each of which will call
 their respective ```make____``` functions, and then add them to the
-screen and their respective lists. Lastly, I moved the ball movement for
+screen and their respective lists. 
+
+Lastly, I moved the ball movement for
 loop into its own method, ```moveAllBallsOnce()```. The last thing is that you'll see that I
 have an ```if``` statement that acts like the cooldown you wrote earlier.
 
-Our first step is to call ```addAnEnemy``` in our timer. However, we don't
-want to call ```addAnEnemy```, everytime ```actionPerformed``` is called, but
-rather every once in a while. This is where something like that ```%```
-operator works great if we add a ```numTimes``` instance variable that works similar to what we implemented in the
-[first timer example](##myfirsttimer.java), (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster, or to decrease it from 40 to say 5, [like I did here](lab10media/media/greenpopulate.gif)). Because we are keeping track of the number of times
+2. Call ```addAnEnemy``` in our timer. 
+
+* However, we don't want to call ```addAnEnemy```, everytime ```actionPerformed``` is called, but rather every once in a while. 
+* This is where something like that ```%``` operator works great if we add a ```numTimes``` instance variable that works similar to what we implemented in the [first timer example](##myfirsttimer.java), (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster, or to decrease it from 40 to say 5, [like I did here](lab10media/media/greenpopulate.gif)). 
+* Because we are keeping track of the number of times
 ```actionPerformed``` is called, we can simply say every 40<sup>th</sup>
 time, go ahead and make a new enemy,
 
@@ -391,26 +404,41 @@ if(numTimes % 40 == 0) {
 }
 ```
 
-Normally I would want you to make 40 a constant, but you can leave it
+* Normally I would want you to make 40 a constant, but you can leave it
 like this for today (or you can just click on 40 and then click
-*Refactor-\>Constant* in the menu). Once you add these lines of code in
+*Refactor-\>Constant* in the menu). 
+
+2. Once you add these lines of code in
 ```actionPerformed```, run the code again and watch the green squares slowly
-take over\! When the squares appear **commit and push your code again**
+take over\! 
+
+3. When the squares appear **commit and push your code again**
 with the message **"enemies populate screen regularly"**.
 
 You can still have circles appear but right now they will just run over
-the squares. We'll get to that in a bit. The next thing we want to do
-however is to make the enemies have some type of movement. The easiest
-thing to try to do is to have each enemy randomly move between say a -2
-and +2, so we can use ```rgen.nextInt``` to give us a random number between
-these and then have it move this much. Leveraging the code we have for
+the squares. We'll get to that in a bit. 
+
+### The next thing we want to do however is to make the enemies have some type of movement. 
+
+1. Have each enemy randomly move between say a -2 and +2
+
+* Use ```rgen.nextInt``` to give us a random number between these and then have it move this much. 
+
+2. Leveraging the code we have for
 ```moveAllBallsOnce```, create a method calls ```moveAllEnemiesOnce``` that will
 cycle through the list of enemies and call move on each one, moving it 0
 pixels in the ```x``` direction and a random integer (```SPEED```) in the ```y```
-direction. Then make sure that you call ```moveAllEnemiesOnce``` in
-```actionPerformed```. Once you run the program now, the enemies will come
-to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  They will be very wiggly. At this point you should **commit
-and push again,** with the message **"added wiggly enemy movement"**.
+direction. 
+
+3. Call ```moveAllEnemiesOnce``` in
+```actionPerformed```. 
+
+Once you run the program now, the enemies will come
+to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  
+
+They will be very wiggly. 
+
+4. At this point you should **commit and push again,** with the message **"added wiggly enemy movement"**.
 
 ## Final required addition
 
@@ -418,7 +446,9 @@ At this point I'm guessing that you probably want some way to get rid of
 these green squares using the ball. While there are many ways for
 checking to see if a ball and rectangle overlap, that's not really part
 of this course, so I'm going to explain a very simple way of checking to
-see if the ball may have hit a square. One thing you can do is that for
+see if the ball may have hit a square. 
+
+One thing you can do is that for
 every red ball, when it's their time to move, check a point just outside
 of the ball and call ```getElementAt```. If the object that is given back is
 an ```instanceof``` a ```GRect```, we could say it's an enemy and then make that
