@@ -37,7 +37,7 @@ There are two arguments for a ```Timer```:
 
   * ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
   * Number of milliseconds = **1000 milliseconds**
-* Which class should be woken up
+2. Which class should be woken up
   * ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
   * Class to be woken up = **objectToBeWokenUp**
   * ```Timer someTimerVar = new Timer(1000, this);```
