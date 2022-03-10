@@ -428,21 +428,21 @@ with the message **"enemies populate screen regularly"**.
 
 1. Have each enemy randomly move between say a -2 and +2
 
-* Use ```rgen.nextInt``` to give us a random number between these and then have it move this much.
+   * Use ```rgen.nextInt``` to give us a random number between these and then have it move this much.
 
 2. Leveraging the code we have for
-```moveAllBallsOnce```, create a method calls ```moveAllEnemiesOnce``` that will
-cycle through the list of enemies and call move on each one, moving it 0
-pixels in the ```x``` direction and a random integer (```SPEED```) in the ```y```
-direction.
+  ```moveAllBallsOnce```, create a method calls ```moveAllEnemiesOnce``` that will
+  cycle through the list of enemies and call move on each one, moving it 0
+  pixels in the ```x``` direction and a random integer (```SPEED```) in the ```y```
+  direction.
 
 3. Call ```moveAllEnemiesOnce``` in
 ```actionPerformed```.
 
-Once you run the program now, the enemies will come
-to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  
+  Once you run the program now, the enemies will come
+  to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  
 
-They will be very wiggly.
+  They will be very wiggly.
 
 4. At this point you should **commit and push again,** with the message **"added wiggly enemy movement"**.
 
