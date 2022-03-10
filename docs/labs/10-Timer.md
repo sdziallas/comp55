@@ -271,16 +271,16 @@ Let's add something visual to our program.
 
 3. Just like in the first file, you will make ```BallLauncher``` the one to respond to the timer.
 
-  * Our ```actionPerformed``` method will be fairly simple. We will have it iterate through the balls ```ArrayList``` and move each one by SPEED in the X direction and 0 in the y.
+     * Our ```actionPerformed``` method will be fairly simple. We will have it iterate through the balls ```ArrayList``` and move each one by SPEED in the X direction and 0 in the y.
 
-  * If you haven't tried doing a for loop using the **:** operator to iterate through a list, now would be a good time to try.*
+     * If you haven't tried doing a for loop using the **:** operator to iterate through a list, now would be a good time to try.*
 
-  Once you handled the ```actionPerformed``` event by moving all the balls in
-  the list, created and started the timer, you should run your program
-  again, and click around and notice how you have something that feels
-  much more dynamic and expressive\!
+    Once you handled the ```actionPerformed``` event by moving all the balls in
+    the list, created and started the timer, you should run your program
+    again, and click around and notice how you have something that feels
+    much more dynamic and expressive\!
 
-  If you are still curious how my version behaves (or you just want to observe your professor's antiquated clicking habits for 15 seconds), you can [click here](lab10media/media/ballnextdemo.gif).
+    If you are still curious how my version behaves (or you just want to observe your professor's antiquated clicking habits for 15 seconds), you can [click here](lab10media/media/ballnextdemo.gif).
 
 4. Once this is working, you should **commit and push your code** again
 
