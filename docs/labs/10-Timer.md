@@ -437,7 +437,7 @@ with the message **"enemies populate screen regularly"**.
   direction.
 
 3. Call ```moveAllEnemiesOnce``` in
-```actionPerformed```.
+  ```actionPerformed```.
 
   Once you run the program now, the enemies will come
   to life\! [Here's a version where the enemies are being generated more quickly, but the movement is correct](lab10media/media/wigglymoves.gif).  
