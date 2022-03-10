@@ -94,13 +94,13 @@ simple window with a label that does nothing.
 4. Implement the ```ActionListener``` interface.
 
    * Let's add ```implements ActionListener``` to line 8, as well as an ```actionPerformed```
-  method.
+    method.
 
-  ```java
-  public void actionPerformed(ActionEvent e) {
-      //TODO add what we want to do every two seconds
-  }
-  ```
+    ```java
+    public void actionPerformed(ActionEvent e) {
+        //TODO add what we want to do every two seconds
+    }
+    ```
 
 5. Move the label horizontally every 1000ms.
 
