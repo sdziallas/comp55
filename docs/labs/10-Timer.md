@@ -32,38 +32,40 @@ Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
 
 There are two arguments for a ```Timer```:
 
-- The number of milliseconds that should pass before it wakes up
-    - ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
-    - Number of milliseconds = **1000 milliseconds**
-- Which class should be woken up
-    - ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
-    - Class to be woken up = **objectToBeWokenUp**
-    - ```Timer someTimerVar = new Timer(1000, this);```
-    - Class to be woken up = **this** (The class that you're currently in)
+* The number of milliseconds that should pass before it wakes up
+  * ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+  * Number of milliseconds = **1000 milliseconds**
+* Which class should be woken up
+  * ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+  * Class to be woken up = **objectToBeWokenUp**
+  * ```Timer someTimerVar = new Timer(1000, this);```
+  * Class to be woken up = **this** (The class that you're currently in)
 
 ### 2. Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
 
 Any class that would like to be responsible party for
-handling the alarm must implement the ```ActionListener``` interface. 
+handling the alarm must implement the ```ActionListener``` interface.
 The ```ActionListener``` interface has just one method:
 
-```public void actionPerformed(ActionEvent e)``` 
+```public void actionPerformed(ActionEvent e)```
 
-So every time the timer wakes up, it calls the ```objectToBeWokenUp```'s ```actionPerformed``` method. The structure that you follow is very similar to implementing ```mouseDragged```, except that rather than you responding to mouse events, you are responding to events that the ```Timer``` is initiating. 
+So every time the timer wakes up, it calls the ```objectToBeWokenUp```'s ```actionPerformed``` method. The structure that you follow is very similar to implementing ```mouseDragged```, except that rather than you responding to mouse events, you are responding to events that the ```Timer``` is initiating.
 
-*We don't want to spend too much time doing anything complicated in mouse events or in handlers like ```actionPerformed```.* 
+*We don't want to spend too much time doing anything complicated in mouse events or in handlers like ```actionPerformed```.*
+
 If you are curious, put a really large for loop that counts from 0 to a billion in ```mousePressed```, and
 watch the program grind to its knees. It does this because java treats timers and mouse events as being very important, so important that it stops doing other things (like listening to other events) until those
 handlers are finished. So what you do in each should be small, and not have too many nested for loops or very long loops, so that your program doesn't hang.
 
 ### 3. Call the timer's ```start``` method
 
-While the new ```Timer``` line shown at the top of the page sets up the
-```Timer```, it does not actually turn the timer on. To start the timer so
-that it repeatedly calls ```actionPerformed```, you must tell that
-particular timer to start, by calling its ```start``` method. So to start
-the Timer, you'll see a line like this shortly after creating a ```Timer```
-object.
+```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+
+While the new ```Timer``` line shown above sets up the
+```Timer```, it does not actually turn the timer on.
+
+To start the timer so that it repeatedly calls ```actionPerformed```, you must tell that
+particular timer to start, by calling its ```start``` method. So to start the Timer, you'll see a line like this shortly after creating a ```Timer``` object.
 
 ```java
 someTimerVar.start();
@@ -74,11 +76,22 @@ someTimerVar.start();
 Let's go ahead and open up **MyFirstTimer.java** to start writing in the
 code. Notice that here we have a simple ```GraphicsProgram``` with a
 ```GLabel``` added to the screen. If you run the program, you'll get a
-simple window with a label that does nothing. **Let's first start by
-creating a Timer in the ```**run**``` method**. You can name the timer anything
-you want, but have the 1<sup>st</sup> argument be ```1000``` and the 2<sup>nd</sup> argument be **```this```**. Having these two arguments means ```MyFirstTimer``` (```this```) will be
-notified every second (```1000```ms). The next step will be to implement the ```ActionListener``` interface. Let's add ```implements
-ActionListener``` to line 8, as well as an ```actionPerformed```
+simple window with a label that does nothing.
+
+**Let's first start by creating a Timer in the ```**run**``` method**.
+
+1. Name the timer anything you want
+
+2. Have the 1<sup>st</sup> argument be ```1000```
+
+3. Have the 2<sup>nd</sup> argument be **```this```**
+
+Having these two arguments means ```MyFirstTimer``` (```this```) will be
+notified every second (```1000```ms).
+
+4. Implement the ```ActionListener``` interface.
+
+* Let's add ```implements ActionListener``` to line 8, as well as an ```actionPerformed```
 method.
 
 ```java
@@ -87,19 +100,22 @@ public void actionPerformed(ActionEvent e) {
 }
 ```
 
-One thing we can do is simply move the label horizontally every 1000ms.
-Go ahead and have ```myLabel``` move 5 pixels to the right, while moving it zero
-pixels in the y direction. Lastly, make sure that you call ```start()``` on the timer you created in ```run()```.  If you added in all three of these steps, you should see this when you run the program.
+5. Move the label horizontally every 1000ms.
+
+* Go ahead and have ```myLabel``` move 5 pixels to the right, while moving it zero
+pixels in the y direction. 
+
+6. Make sure that you call ```start()``` on the timer you created in ```run()```.  
+
+*If you added in all three of these steps, you should see this when you run the program.*
 
 ![](lab10media/media/timerinitcut.gif)
 
-If you don't see it move, make sure that you have done the three steps we outlined above.  
+If you don't see it move, make sure that you have done the steps we outlined above.  
 
-Before we move on to the next program, it's important to understand a
-classic procedure, which is to have a variable that keeps track of how
-many times ```actionPerformed``` has been called. **Let's create a private
-variable ```numTimes``` that keeps track of how many times ```actionPerformed```
-has been called.**
+**Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called.**
+
+It's important have a variable that keeps track of how many times ```actionPerformed``` has been called. 
 
 To do this in ```run()```, make sure to initialize that number to 0, and
 increment ```numTimes``` at the start of ```actionPerformed```. Now just for fun, let's
@@ -119,20 +135,35 @@ been called.
 
 The **Timer** objects in java have a lot of flexibility, and so I
 encourage you to later look at all the ways you can use and leverage a
-timer. But for now I want to direct you to two methods, one is **```stop```**
-which would stop the timer and the other is **```setInitialDelay```**, which
-takes an integer for how many milliseconds you want to delay before starting the
-constantly running the timer. It's best to add the delay before you
-call ```start```. Add a three second delay before the timer starts. While the
-concept of **stop** seems simple enough, it may not always make sense as
-to when or who should be able to make the timer stop. Let's add a call
-to stop the timer in ```actionPerformed```. However, if we declared our
-Timer as a local variable, **switch the timer to be an instance
-variable** instead. Since ```actionPerformed``` is called many times, there is
-probably a special time when we would want to stop the timer. In this
-situation, use an ```if``` statement to say that we want to stop the timer
-when ```numTimes``` has reached 10. When you run your program, you should
-get to a screenshot that looks like this (if you add a return statement, then you may end without it moving one final time)
+timer. But for now I want to direct you to two methods:
+
+- **```stop```** (Stops the timer)
+
+* Stops the timer 
+
+- **```setInitialDelay```**
+
+* Takes an integer for how many milliseconds you want to delay before
+constantly running the timer. 
+
+It's best to add the delay before you call ```start```. 
+
+**Add a three second delay before the timer starts.** 
+
+While the concept of **stop** seems simple enough, it may not always make sense as
+to when or who should be able to make the timer stop. 
+
+1. Add a call to stop the timer in ```actionPerformed```.
+
+2. We declared our Timer as a local variable, switch the timer to be an instance
+variable instead. 
+
+3. Use an ```if``` statement to say that we want to stop the timer
+when ```numTimes``` has reached 10. 
+
+* ```actionPerformed``` is called many times, to we want a special time when we would want to stop the timer. 
+
+In this situation,  When you run your program, you should get to a screenshot that looks like this (if you add a return statement, then you may end without it moving one final time)
 
 ![](lab10media/media/timerinitdone.gif)
 
