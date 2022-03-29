@@ -214,11 +214,11 @@ As for me, some ideas are.
     should be able to find a calculation that you can use on an
     increasing number. Your program should run something like this
 
-![](lab11media/media/image4.png)
+    ![](lab11media/media/image4.png)
 
-And then it keeps going. It doesn't matter what it starts with, just as
-long as it keeps moving back and forth between 3 and 0 and doesn't go
-past that.
+    And then it keeps going. It doesn't matter what it starts with, just as
+    long as it keeps moving back and forth between 3 and 0 and doesn't go
+    past that.
 
 6.  Change your ```println``` statements so that they go from 0 to 255 and
     then back down to 0. Run it long enough that you can check to make
