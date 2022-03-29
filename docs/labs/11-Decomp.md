@@ -244,7 +244,7 @@ As for me, some ideas are.
     an additional challenge do this without any if statements. Submit
     your resulting code in text format. Good luck\!
 
-![](lab11media/media/image5.png)
+    ![](lab11media/media/image5.png)
 
 Programming projects can get quite large and unwieldy, so much to the
 point that you may feel *frozen* as to where to begin. This paralysis
