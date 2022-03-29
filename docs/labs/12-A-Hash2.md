@@ -8,6 +8,8 @@ labs](lab8media/media/importfromgit.gif).
 
 You will know that you are finished when you have in your repo something that looks like this: ![](lab12media/media/hashmapsfinished.png)
 
+If you instead have a red x or error, you'll need to do one additional thing, which is to go to ***Window->Preferences->Gradle***.  Once there you'll need to select the option that causes you to choose a specific gradle version, which should be something like 7.4.1 as of March of 2022, though this may absolutely change by the time we look at the lab again.  After you choose ***Specific Gradle Version***, click ***Apply and Close***.
+
 ## Quick detour on Gradle
 
 **Make sure that your project folder looks like this** - ![](lab12media/media/gradleprojecticon.png) - 
