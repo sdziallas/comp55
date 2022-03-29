@@ -257,5 +257,5 @@ work, can come from many factors, some are just to protect yourself
 you don't know where to start, which decomposition may help you to get started on your project. 
 
 To learn more about self-handicapping, here are some references:
-- https://sites.psu.edu/aspsy/tag/self-handicapping/ 
-- https://hbr.org/2012/05/dont-sabotage-yourself
+- [Don't Sabotage Yourself from Harvard Business Review](https://hbr.org/2012/05/dont-sabotage-yourself)
+- [Penn State's blog on self-handicapping](https://sites.psu.edu/aspsy/tag/self-handicapping/)
