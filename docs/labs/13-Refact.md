@@ -1,40 +1,66 @@
 # Refactoring Lab
 
 By this point you should have a feeling that there many different ways
-for someone to write code, and one thing that we would like to do in
+for someone to write code,
+and one thing that we would like to do in
 this class (and for you do in the future) is to make sure you write your
 code in a way that can make it easy to change and be flexible.
-**Software changes**. Most of the time we are worried about correctness
-or speed, but we should also concentrate on readability. This is
-especially true when we are coding with other people. If the code ends
-up being difficult to read or overly complicated, it's less likely to be
-tested and reviewed for errors. What we are going to do today is start
+**Software changes**.
+Most of the time we are worried about correctness
+or speed,
+but we should also concentrate on readability.
+This is
+especially true when we are coding with other people.
+If the code ends
+up being difficult to read or overly complicated,
+it's less likely to be
+tested and reviewed for errors.
+What we are going to do today is start
 learning strategies we can use to do what's called **refactor code**,
-which means to revise the code. Refactoring not only can increase
-readability, but it can also reduce complexity, which will make your
+which means to revise the code.
+Refactoring not only can increase
+readability,
+but it can also reduce complexity,
+which will make your
 code easier to test and debug.
 
 ## The biggest culprit (*if statements*)
 
-In case you don't know, I'm not a big fan of ```if``` statements. If
-statements are often overused, especially by budding programmers. The
+In case you don't know,
+I'm not a big fan of ```if``` statements.
+If
+statements are often overused,
+especially by budding programmers.
+The
 most common issue I encounter with 55 students is their justification
 for an if statement that subsequently mutates into many ```if``` statements,
 when in fact if they re-thought their logic they most likely would need
-only one or two. This becomes very egregious when the ```if``` statements
+only one or two.
+This becomes very egregious when the ```if``` statements
 then lead to code that looks mostly the same in the different sections
-of the if statement, resulting in the loss of many kittens from all the
-copying and pasting that is being done. This lab will go over a set of
+of the if statement,
+resulting in the loss of many kittens from all the
+copying and pasting that is being done.
+This lab will go over a set of
 steps that you can perform so that you eliminate redundancy and
-complexity from your code, which is a win for everyone. Today is about
+complexity from your code,
+which is a win for everyone.
+Today is about
 teaching you some of the common steps you can take to refactor your
-code. Let's go over some basics first. You'll see code with different emojis based on whether it needs to be refactored or not, we'll use the :scream: when it's problematic, :expressionless: when its somewhat troublesome and :heart: when it's a
+code.
+Let's go over some basics first.
+You'll see code with different emojis based on whether it needs to be refactored or not,
+we'll use the :scream: when it's problematic,
+:expressionless: when its somewhat troublesome and :heart: when it's a
 good example to follow.
 
 ### Principles to follow
 
-1)  **If you see a comparison to a boolean, take it out. If the boolean
-    is false, simply use a negation**
+1) **If you see a comparison to a boolean,
+take it out.
+If the boolean
+    is false,
+simply use a negation**
 
 Ie:
 
@@ -42,41 +68,55 @@ Ie:
 
 :scream: ```if(isLow == false)``` =\> ```if(!isLow)``` :heart:
 
-2)  **Avoid using negations**
+2) **Avoid using negations**
 
-Negations can often be rewritten or restructured. For example, in the
-step above, if ```isLow``` is only being used once and you are constantly
-checking ```if(!isLow)```, then why not change the variable to make it
+Negations can often be rewritten or restructured.
+For example,
+in the
+step above,
+if ```isLow``` is only being used once and you are constantly
+checking ```if(!isLow)```,
+then why not change the variable to make it
 ```isHigh```? There are usually ways for you to minimize the amount of
-negations that you have, as negations just make things confusing. If you
-don't believe me, then just think about what this statement means here
+negations that you have,
+as negations just make things confusing.
+If you
+don't believe me,
+then just think about what this statement means here
 in English.
 
 :scream:
+
 ```java
 if(x != 4 || x != 5)
 ```
 
 While many of you look at it and think that the statement evaluates to
-true for numbers that aren't equal for four or five. *It actually works
+true for numbers that aren't equal for four or five.
+*It actually works
 for all numbers.* You can use some boolean theory to extract out this
-statement to its equivalent version, which is here
+statement to its equivalent version,
+which is here
 
 :heart:
+
 ```java
 if(!(x == 4 && x == 5))
 ```
 
-Based on DeMorgan's laws, the two statements here are exactly the same,
+Based on DeMorgan's laws,
+the two statements here are exactly the same,
 yet one is more confusing to decipher.
 
-3)  **If you have an if/else statement and all it's doing is returning
-    ```true``` or ```false``` based on the condition, use a single ```return``` statement
+3) **If you have an if/else statement and all it's doing is returning
+    ```true``` or ```false``` based on the condition,
+use a single ```return``` statement
     instead.**
 
 Ie:
 
 :scream:
+
 ```java
 if(isLow) {
     return true;
@@ -88,18 +128,21 @@ if(isLow) {
 All of this can be written as:
 
 :heart:
+
 ```java
 return isLow;
 ```
 
-4)  **If you see a lot of code that looks similar in each branch of an
-    if/else statement, take the necessary steps so that it is not
+4) **If you see a lot of code that looks similar in each branch of an
+    if/else statement,
+take the necessary steps so that it is not
     repeated.**
 
 The easiest way to deal with this is when the code looks exactly the
 same in both sections:
 
 :scream:
+
 ```java
 if(x > 5) {
     x+=10;
@@ -111,12 +154,17 @@ if(x > 5) {
 ```
 
 Most of the time you will have code at the beginning or the end of the
-curly braces that is in both sets of statements. If it is the same at
-the beginning, take it out of the ```if``` statement, and then place it
+curly braces that is in both sets of statements.
+If it is the same at
+the beginning,
+take it out of the ```if``` statement,
+and then place it
 either before or after the if statement depending on where it's located.
-In this instance, we can simply do this
+In this instance,
+we can simply do this
 
 :heart:
+
 ```java
 if(x > 5) {
     x+=10;
@@ -127,23 +175,34 @@ if(x > 5) {
 System.out.println("now pick the next number");
 ```
 
-While this example may seem highly trivial, slightly more complex
-versions of this tend to happen in many places. Sometimes students will
+While this example may seem highly trivial,
+slightly more complex
+versions of this tend to happen in many places.
+Sometimes students will
 see that one small change happens in the middle of six lines of code,
-and for that reason end up repeating everything, when some should be
+and for that reason end up repeating everything,
+when some should be
 moved before the if statement and the other lines should be moved after.
 
-5)  **If you do see if statements that look the same, but feel that it
-    needs to be repeated, ask yourself – "Is there some way to
+5) **If you do see if statements that look the same,
+but feel that it
+    needs to be repeated,
+ask yourself – "Is there some way to
     standardize the operations by storing the different information in
     variables?"**
 
-I get it, the last example was quite trivial, which we are doing for the
-sake of having a short lab, but many COMP 55 students are guilty of
-doing something slightly more extravagant, but I would call equally into
-question. Let's elaborate on our previous example a little more.
+I get it,
+the last example was quite trivial,
+which we are doing for the
+sake of having a short lab,
+but many COMP 55 students are guilty of
+doing something slightly more extravagant,
+but I would call equally into
+question.
+Let's elaborate on our previous example a little more.
 
 :scream:
+
 ```java
 if(x > 5) {
     System.out.println("I'm going to add 7 here");
@@ -156,17 +215,28 @@ if(x > 5) {
 }
 ```
 
-You may have seen code that looks similar to this before, you have some
-branches in your code that have some differences, and so you tend to
-write them out. However, in both branches, you are printing out a
-message, doing some addition/subtraction, and then printing out another
+You may have seen code that looks similar to this before,
+you have some
+branches in your code that have some differences,
+and so you tend to
+write them out.
+However,
+in both branches,
+you are printing out a
+message,
+doing some addition/subtraction,
+and then printing out another
 message.
 
-Remember that subtraction can always be made to be addition, which means
-that we can change our text slightly. And there are different ways to do
-this, but here's a slightly better solution
+Remember that subtraction can always be made to be addition,
+which means
+that we can change our text slightly.
+And there are different ways to do
+this,
+but here's a slightly better solution
 
 :expressionless:
+
 ```java
 int amount = -10;
 String action = "subtract";
@@ -184,36 +254,56 @@ System.out.println("now pick the next number");
 
 You may look at the above solution and think "*Lolz well that's the same
 number of linezzz*" as the previous set of statements and believe that
-therefore both snippets are the same, however, this is one simple
-example of the type of scenario where that would happen, and what we are
-doing is what the book said, which is trying to separate out only what
-is different between the two cases. **The point is for you to think
+therefore both snippets are the same,
+however,
+this is one simple
+example of the type of scenario where that would happen,
+and what we are
+doing is what the book said,
+which is trying to separate out only what
+is different between the two cases.
+**The point is for you to think
 about all the scenarios where code in different if sections is the same,
 and then to figure out what does not have to be repeated over and over
-again. Whatever both pieces share should seriously be considered for
-rewriting.** Also, for those of you who are curious, the reason that we
+again.
+Whatever both pieces share should seriously be considered for
+rewriting.** Also,
+for those of you who are curious,
+the reason that we
 have this as a single if statement is because of traditional languages
 forcing you to declare variables in both the if and the else statements.
-In our case, since we need the variables, we simply start by declaring
+In our case,
+since we need the variables,
+we simply start by declaring
 them and then having an if handle the alternate case to change their
-values. Otherwise, if we were using other languages, we could do an if
+values.
+Otherwise,
+if we were using other languages,
+we could do an if
 else at the top if you really wanted to.
 
-Again, while the previous code may not feel like much of an improvement,
+Again,
+while the previous code may not feel like much of an improvement,
 I would argue that the following code does a better job as it is more
 readable
 
 :heart:
+
 ```java
 if(x > 5) {
-    takeAction("add", 5);
+    takeAction("add",
+5);
 }else{
-    takeAction("subtract", -10);
+    takeAction("subtract",
+-10);
 }
 
-// Meanwhile, in some other part of the code... (future snippets will use -------)
+// Meanwhile,
+in some other part of the code...
+(future snippets will use -------)
 
-private void takeAction(String action, int amount) {
+private void takeAction(String action,
+int amount) {
     System.out.println("I'm going to " + action +
     Math.abs(amount) + "here");
     x+=amount;
@@ -221,23 +311,35 @@ private void takeAction(String action, int amount) {
 }
 ```
 
-Again, these are trivial examples, but it's important that you
-understand that in most situations, having this latter version is going
+Again,
+these are trivial examples,
+but it's important that you
+understand that in most situations,
+having this latter version is going
 to be better than the previous action that you created because we are
-reducing the amount of duplicate code. Ultimately, depending on what we
-were trying to do with the function, ```takeAction```, we could decide to go
+reducing the amount of duplicate code.
+Ultimately,
+depending on what we
+were trying to do with the function,
+```takeAction```,
+we could decide to go
 further with that function by for example taking out the action to add
-or subtract as something that is being passed in as a string. I only
-provide that here to show how the refactoring would be done. If I were
-to refactor this method again, I would most likely just include the
+or subtract as something that is being passed in as a string.
+I only
+provide that here to show how the refactoring would be done.
+If I were
+to refactor this method again,
+I would most likely just include the
 number and then inside of the function figure out if it's positive or
 negative so that I can provide the correct label (add or subtract).
-Another part of making functions is not just to refactor the code, but
+Another part of making functions is not just to refactor the code,
+but
 to make the functions usable to people in the future and reduce the
 amount of errors that you could get while making it easy for your
 teammates to use.
 
 :heart:
+
 ```java
 if(x > 5) {
     takeAction(5);
@@ -262,10 +364,12 @@ private void takeAction(int amount) {
 ```
 
 For those of you who would like to go further or don't want the extra
-amount here, you could go with the ternary operator as well to eliminate
+amount here,
+you could go with the ternary operator as well to eliminate
 the extra lines of code
 
 :heart:
+
 ```java
 private void takeAction(int amount) {
     System.out.println("I'm going to " + (amount > 0)? "add":"subtract" + Math.abs(amount) + "here");
@@ -275,54 +379,98 @@ private void takeAction(int amount) {
 ```
 
 The ternary operator is not something that is used frequently however as
-it makes the code dense. Again, like I mentioned up at the top, writing
+it makes the code dense.
+Again,
+like I mentioned up at the top,
+writing
 code is expressive and there are different options or strategies that
-you can take. *However, the biggest thing that I would like you to get
+you can take.
+*However,
+the biggest thing that I would like you to get
 out of this class is to stop repeating and pasting so much code.* For
-the purposes of this class, I'm going to be looking a lot at the code
+the purposes of this class,
+I'm going to be looking a lot at the code
 that you are writing and making sure that there isn't much repetition in
-it. **<u>The amount of repetition that you have in your code will impact
+it.
+**<u>The amount of repetition that you have in your code will impact
 your final project grade.</u>**
 
-6)  **Are you making a lot of variables? Consider using a list or other
+6) **Are you making a lot of variables? Consider using a list or other
     data structure to store them instead.**
 
-I think for the purpose of this project, it's pretty easy to start
-thinking of making instance variables for everything. Instance variables
+I think for the purpose of this project,
+it's pretty easy to start
+thinking of making instance variables for everything.
+Instance variables
 are nice because they are visible in all methods of every method in a
-class, which means you don't have to worry about passing information to
-and from a function. 
+class,
+which means you don't have to worry about passing information to
+and from a function.
 
-However, the ability to pass information back and
+However,
+the ability to pass information back and
 forth between methods and understanding scope is an important tenet in
-developing software. Otherwise, having so many instance variables is
-akin to giving everyone in your dorm a key to your room. Sure it's
-convenient to give everyone a key, but it's not secure, and more
+developing software.
+Otherwise,
+having so many instance variables is
+akin to giving everyone in your dorm a key to your room.
+Sure it's
+convenient to give everyone a key,
+but it's not secure,
+and more
 importantly when you're trying to debug and figure out who borrowed your
-Playstation, it makes it that much more difficult to find out who it was
-and when it happened. Also, it could lead to situations where people
+Playstation,
+it makes it that much more difficult to find out who it was
+and when it happened.
+Also,
+it could lead to situations where people
 start using your room for other purposes that you wouldn't necessarily
 want (feel free to let your imagine roam for a minute here if you want).
 
-Like with your dorm room, there are situations in which your program and
+Like with your dorm room,
+there are situations in which your program and
 all of your functions do not need to have access to every single one of
-those instance variables, so consider using local variables when a
-variable is only needed in one function. If you do need to have a
-collection of variables, like say when you need to keep track of
-multiple ```GObject```s on the screen, it may make more sense for you to
-create all of the objects and store them in a list, or potentially a
-```HashMap```. This also makes it nice because then you could possibly
-create a loop and function that will create a series of these objects.  
-For example, you might remember a function in the [Timers Lab](10-Timer.html##BallLauncher.java) called ```makeBall``` what, if instead you modify or create
-a more general function that passes in ```(x, y, width, height, color, fill)```
-as parameters, so that way you could just call ```makeBall``` and a ball appears? 
+those instance variables,
+so consider using local variables when a
+variable is only needed in one function.
+If you do need to have a
+collection of variables,
+like say when you need to keep track of
+multiple ```GObject```s on the screen,
+it may make more sense for you to
+create all of the objects and store them in a list,
+or potentially a
+```HashMap```.
+This also makes it nice because then you could possibly
+create a loop and function that will create a series of these objects.
+
+For example,
+you might remember a function in the [Timers Lab](10-Timer.html##BallLauncher.java) called ```makeBall``` what,
+if instead you modify or create
+a more general function that passes in ```(x,
+y,
+width,
+height,
+color,
+fill)```
+as parameters,
+so that way you could just call ```makeBall``` and a ball appears?
 
 Here is an example of what that ```makeBall``` function could look like
 
 :heart:
+
 ```java
-void makeBall(double x, double y, double width, double height, Color col, boolean shouldFill) {
-        GOval ball = new GOval(x, y, width, height);
+void makeBall(double x,
+double y,
+double width,
+double height,
+Color col,
+boolean shouldFill) {
+        GOval ball = new GOval(x,
+y,
+width,
+height);
         ball.setFilled(shouldFill);
         ball.setColor(col);
         add(ball)
@@ -331,12 +479,21 @@ void makeBall(double x, double y, double width, double height, Color col, boolea
 ```
 
 If you are creating 5 balls,
-wouldn't it be nice to have a function that was like ```makeBall(30, 30,
-SIZE, SIZE, Color.BLUE, true)``` and then know it that it will just show up?  
-This does not even get to what you could do later, which is to store all of the information in an object, and then have that be passed into your for loop instead!
-Assume there was a simple ```BallSpec``` class that worked like simple classes before, meant to just hold some information and store it.  Then look what could happen to our code.
+wouldn't it be nice to have a function that was like ```makeBall(30,
+30,
+SIZE,
+SIZE,
+Color.BLUE,
+true)``` and then know it that it will just show up?  
+This does not even get to what you could do later,
+which is to store all of the information in an object,
+and then have that be passed into your for loop instead!
+Assume there was a simple ```BallSpec``` class that worked like simple classes before,
+meant to just hold some information and store it.
+Then look what could happen to our code.
 
 :heart:
+
 ```java
 // Assume the info was loaded from a file or somewhere else
 for(int i = 0; i < ballSpecs.length; i++) {
@@ -344,21 +501,34 @@ for(int i = 0; i < ballSpecs.length; i++) {
 }
 ```
 
-Then our ```makeBall``` fucntion would merely call getters for the ```x```, ```y```, ```width```, ```height```, ```color``` and ```shouldFill``` for example to have that all be filled in.
+Then our ```makeBall``` fucntion would merely call getters for the ```x```,
+```y```,
+```width```,
+```height```,
+```color``` and ```shouldFill``` for example to have that all be filled in.
 
-7)  **Does the code look confusing? Consider making methods to help you
+7) **Does the code look confusing? Consider making methods to help you
     make parts of that code more readable.**
 
-If there are sections of code that look crazy, or feel dense, it's best
+If there are sections of code that look crazy,
+or feel dense,
+it's best
 to go back through and look into making those methods into classes,
-since that will make the code more readable, and if you come up with
-methods that have return values based on parameters, will make them
-easier to generate test methods for as well, since you'll be able to
-say, *when I expect this, I should get back this*, which is the basis of
+since that will make the code more readable,
+and if you come up with
+methods that have return values based on parameters,
+will make them
+easier to generate test methods for as well,
+since you'll be able to
+say,
+*when I expect this,
+I should get back this*,
+which is the basis of
 unit testing that we went over in the previous lab.
 
 Take the following code as an example.
 :scream:
+
 ```java
 @Override
 public void mouseMoved(MouseEvent e) {
@@ -368,72 +538,120 @@ public void mouseMoved(MouseEvent e) {
 }
 ```
 
-Is it immediately clear what the above if statement does? Maybe, maybe not. It's difficult to understand without some context that the conditions check the location of ```e``` relative to ```frame```. However, using a function could make this code clearer. Rewriting the code above using a function could look something like this:
+Is it immediately clear what the above if statement does? Maybe,
+maybe not.
+It's difficult to understand without some context that the conditions check the location of ```e``` relative to ```frame```.
+However,
+using a function could make this code clearer.
+Rewriting the code above using a function could look something like this:
 
 :heart:
+
 ```java
-private boolean outsideOf(GImage frame, MouseEvent e) {
+private boolean outsideOf(GImage frame,
+MouseEvent e) {
     return e.getX() < frame.getX() || e.getX() > frame.getX() + frame.getWidth() || 
            e.getY() < frame.getY() || e.getY() > frame.getY() + frame.getHeight();
 }
 
 @Override
 public void mouseMoved(MouseEvent e) {
-    if(outsideOf(frame, e)) {
+    if(outsideOf(frame,
+e)) {
         // do something
     }
 }
 ```
 
-With this change, the ```if``` statement remains functionally the same.
-However, by removing the content of the if statement and putting it into a function, the ```if``` statement becomes more readable. Additionally, the ```outsideOf``` function will be easy to test, and can be called again as needed in other parts of the code.
+With this change,
+the ```if``` statement remains functionally the same.
+However,
+by removing the content of the if statement and putting it into a function,
+the ```if``` statement becomes more readable.
+Additionally,
+the ```outsideOf``` function will be easy to test,
+and can be called again as needed in other parts of the code.
 
-To be honest, I think a lot of the issues that I see with student code
+To be honest,
+I think a lot of the issues that I see with student code
 in COMP 55 is the lack of methods/functions that they tend to create for
-a variety of reasons. I understand that making them takes time, but
-again, remember that eclipse does offer the *Alt-Shift-M* keyboard
-shortcut to help you make or extract a method out of a piece of code, so
+a variety of reasons.
+I understand that making them takes time,
+but
+again,
+remember that eclipse does offer the *Alt-Shift-M* keyboard
+shortcut to help you make or extract a method out of a piece of code,
+so
 I would encourage you to use that to make things more readable and more
-testable. Having more methods easily outweighs any insignificant (if any
+testable.
+Having more methods easily outweighs any insignificant (if any
 at all) performance hit you'd get from having them.
 
-8)  **Do you see a number over and over and over again? That should be a
-    constant. If a formula is repeated that either needs to be in a
+8) **Do you see a number over and over and over again? That should be a
+    constant.
+If a formula is repeated that either needs to be in a
     variable or in a function**
 
-If a number is specified in your code and it isn't a 0, 1, or 2, then I
-generally have a rule of declaring it as a constant. If you have a
-number say 30, or 300 or 50 that is used more than once, it should
-definitely be defined as a constant. Let's take this example:
+If a number is specified in your code and it isn't a 0,
+1,
+or 2,
+then I
+generally have a rule of declaring it as a constant.
+If you have a
+number say 30,
+or 300 or 50 that is used more than once,
+it should
+definitely be defined as a constant.
+Let's take this example:
 
 :scream:
+
 ```java
-body = new GOval(200, 400, 100, 100);
-head = new GOval(225, 350, 50, 50);
+body = new GOval(200,
+400,
+100,
+100);
+head = new GOval(225,
+350,
+50,
+50);
 ```
 
-While this situation is slightly more complex, the numbers are much more
+While this situation is slightly more complex,
+the numbers are much more
 likely to be repeated.
 
-In this case, let's first take the number 100, which seems to be the
-size of the body. You could simply decide to make that a constant that
+In this case,
+let's first take the number 100,
+which seems to be the
+size of the body.
+You could simply decide to make that a constant that
 you could change up top.
 
 :expressionless:
+
 ```java
 public static final int SIZE = 100;
 
 // ----------------------------------
 
-body = new GOval(200, 400, SIZE, SIZE);
-head = new GOval(225, 350, 50, 50);
+body = new GOval(200,
+400,
+SIZE,
+SIZE);
+head = new GOval(225,
+350,
+50,
+50);
 ```
 
 But why stop there? Use formulas to establish the relationships between
-all of these numbers, since they really are in this case referencing
+all of these numbers,
+since they really are in this case referencing
 each other.
 
 :heart:
+
 ```java
 public static final int SIZE = 100;
 public static final int BODY_X = 200;
@@ -441,25 +659,51 @@ public static final int BODY_Y = 400;
 
 // ----------------------------------
 
-body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
-head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
+body = new GOval(BODY_X,
+BODY_Y,
+SIZE,
+SIZE);
+head = new GOval(BODY_X+SIZE/4,
+BODY_Y-SIZE/2,
+SIZE/2,
+SIZE/2);
 ```
 
-Here, we are linking these previous arbitrary numbers in your equations 
-to constant variables. Now, this new relation does several things for you as the 
-developer. First, your code becomes much easier to understand! Since all of
-your parameters are labeled, a reader can quickly ascertain the relationships
-between the parameters. Secondly, you can now efficiently and reliably change
-the values of the constant variables, and your program will calculate the same equations
-but with new values. This will save you lots of time when the alternative is searching every
-instance of your old number, trying to remember if this particular instance is related to
-the change you want to make, and then praying nothing was missed or overlooked.
-This concept makes a lot of sense when applied to filenames, making them string constants for 
-ease of editing when a filepath is changed. For example, here was my traffic jam way of reading
-files from the project. Which were *images/car.png,
-images/car\_vert.png, images/truck.png, images/truck\_vert.png*, etc.
+Here,
+we are linking these previous arbitrary numbers in your equations
+to constant variables.
+Now,
+this new relation does several things for you as the
+developer.
+First,
+your code becomes much easier to understand! Since all of
+your parameters are labeled,
+a reader can quickly ascertain the relationships
+between the parameters.
+Secondly,
+you can now efficiently and reliably change
+the values of the constant variables,
+and your program will calculate the same equations
+but with new values.
+This will save you lots of time when the alternative is searching every
+instance of your old number,
+trying to remember if this particular instance is related to
+the change you want to make,
+and then praying nothing was missed or overlooked.
+This concept makes a lot of sense when applied to filenames,
+making them string constants for
+ease of editing when a filepath is changed.
+For example,
+here was my traffic jam way of reading
+files from the project.
+Which were *images/car.png,
+images/car\_vert.png,
+images/truck.png,
+images/truck\_vert.png*,
+etc.
 
 :heart:
+
 ```java
 public static final String IMG_EXTENSION = ".png";
 public static final String V_IMG_ENDING = "_vert";
@@ -474,25 +718,41 @@ private void drawCar(Vehicle v) {
         suffix = V_IMG_ENDING + suffix;
     }
 
-    GImage g = new GImage(IMG_PATH + v.getVehicleType() + suffix, …)
+    GImage g = new GImage(IMG_PATH + v.getVehicleType() + suffix,
+…)
 ```
 
 # Refactoring Lab
 
-Once you have finished reading these questions, you can now download and take a program to try to do some refactoring:
+Once you have finished reading these questions,
+you can now download and take a program to try to do some refactoring:
 
 Your goal is for the rest of class to take these rules and to look over
-[the project that I've given you](http://go.djosv.com/refactorlab), and by the deadline come up with a
-refactored solution that still works. **Don't spend your time playing
-and exploring the game**, but rather reading the code and making
-changes. This isn't as much about testing and looking for bugs or
+[the project that I've given you](http://go.djosv.com/refactorlab),
+and by the deadline come up with a
+refactored solution that still works.
+**Don't spend your time playing
+and exploring the game**,
+but rather reading the code and making
+changes.
+This isn't as much about testing and looking for bugs or
 critiquing as much as practicing the refactoring principles I've given
-you here. Credit will be given on how much more readable, flexible and
-possibly simple the code is in relation to the original. **You can work
-on this project in pairs, but should not break up or attempt to break up
-the work. Rather you should work on it together, propose ideas to each
+you here.
+Credit will be given on how much more readable,
+flexible and
+possibly simple the code is in relation to the original.
+**You can work
+on this project in pairs,
+but should not break up or attempt to break up
+the work.
+Rather you should work on it together,
+propose ideas to each
 other about how to refactor and what should be refactored.** This is not
-group work but team work. If you're unsure where to start, I would start
+group work but team work.
+If you're unsure where to start,
+I would start
 by looking at any of the classes that have a *Pane* in the name of the
-java file. You should commit changes everytime you have a factor that
-you'd like to propose…change it and then commit and push. Good luck\!
+java file.
+You should commit changes everytime you have a factor that
+you'd like to propose…change it and then commit and push.
+Good luck\!
