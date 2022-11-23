@@ -13,7 +13,6 @@ programs setting in windows, or applications on a mac, and searching for any jav
 
 ![remove java versions](lab1media/media/image0.gif)
 
-
 ## STEP 2: Download Eclipse
 
 Go to the eclipse site: <http://www.eclipse.org/downloads>
@@ -93,7 +92,7 @@ Once you are back you should be at the main page where we clicked to review the 
 
 ![darkest dark theme webpage](lab1media/media/installbyweb.gif)
 
-Once it finishes loading, follow the next set of images to *uncheck the codetogether bundle*. You'll have to accept another license agreement by picking the option before being able to finish.  **Be sure to uncheck the devstyle with codetogether bundle option, watch the gif a few times** 
+Once it finishes loading, follow the next set of images to *uncheck the codetogether bundle*. You'll have to accept another license agreement by picking the option before being able to finish.  **Be sure to uncheck the devstyle with codetogether bundle option, watch the gif a few times.**
 
 ![darkest dark eclipse install](lab1media/media/darkestdark.gif)
 
@@ -131,7 +130,7 @@ listed, which I think makes it easier for you to look at past projects
 and explore other files you have written, in case you need to look back
 at anything. I would encourage you to not think o
 
-## STEP 6: Let's get a Hello World going.
+## STEP 6: Let's get a Hello World going
 
 To start programming in any language, it's best to start with a simple
 thing like "Hello, world", so let's do that. Go ahead and right click on
@@ -225,7 +224,7 @@ Then once you have that, you're going to go to *Window->preferences->DevStyle->C
 
 While you are in those preferences, there is also a devstyle privacy option that should you wish, you can opt out of.  I will only be supporting these colors, so in the future all guides will be using darkstyle with this xml layout and the pastel icons.  If you wish to go with another scheme, I will not answer any questions about where those icons are.  Please again, I can't stress this enough, do not spend more time trying to pick colors now.  You can do that at the end once you are finished with traffic jam.
 
-# STEP 9 – Submit confirmation by uploading a picture to Canvas
+## STEP 9 – Submit confirmation by uploading a picture to Canvas
 
 To get credit for this lab, what you'll do is submit an image of you
 entire eclipse running this hello world program to canvas, but using your own name
@@ -233,7 +232,7 @@ instead. The image should be of the program, similar to the one in the image abo
 java file is showing and have the for loop repeat the salutation three
 times**. So it would be something like
 
-```
+```text
 
 Hello, PutYourName Here!
 
