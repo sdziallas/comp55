@@ -154,7 +154,7 @@ to:
 - ```(i*(WINDOW_WIDTH/3)) – BALL_SIZE/2```
 
 *If you wanted to have a general solution, you would replace the ```3``` in the previous line with ```NUM_BALLS + 1```*.
-Then we need to have the ```for``` loop start at one and go to three 
+Then we need to have the ```for``` loop start at one and go to three
 (which is ```NUM_BALLS + 1```).
 By doing this,
 it would place the first ball at 1/3 of the width of the window and the second ball and 2/3 of the width of the window.
