@@ -15,7 +15,7 @@ You can work with one other person throughout the lab, **but each person must su
 
 ## Some advice
 
-### Keep a calm mindset – You can do this\
+### Keep a calm mindset – You can do this
 
 <img align="right" src="lab3media/media/image1.png" />
 
