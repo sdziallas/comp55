@@ -244,7 +244,7 @@ the right area is the commit message,
 where you'll want to write a short message that outlines what changes you made,
 in this case, you can simply put something like:
 
-```Changed the text to reflect final assignment```
+```Changed the text to reflect the final assignment```
 
 *Make sure the author/committer has the name and email that you stored in your preferences settings*.
 Finally, near the bottom right of the image,
