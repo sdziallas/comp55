@@ -277,7 +277,7 @@ but unfortunately because of all the different parts,
 it makes more sense to keep them separate.
 You could define a ```makeRectCharacter```
 which would be very similar but for ```EmotionalRect```s.
-If you place the ```EmotionalRect``` at say ```500, 100``` 
+If you place the ```EmotionalRect``` at say ```500, 100```
 with the same ```SIZE```,
 you should get something like this:
 
