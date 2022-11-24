@@ -529,77 +529,56 @@ This happens when you haven't touched or been active in working with the code in
 
 ## Step 9: Everyone - Successfully resolve a merge conflict
 
-Wreak :fire: More :fire: Havoc :fire:
+Wreak 🔥 More 🔥 Havoc 🔥
 
-This part about resolving conflicts is so integral that I now want you
-to as a team to all try to make a change on the same line and go through
-the process of each of you resolving the changes being in that conflict
-mode and having to re-add the file and commit and push.
-Part of your
-credit from this lab will be me looking at your git history and seeing
-that all of you have tried this,
-so make sure to help each other along
-the way.
+This part about resolving conflicts is so integral,
+that I now want you to - as a team,
+try to make a change on the same line.
+Go through the process of each of you resolving the changes being in that conflict mode and having to re-add the file and commit and push.
+Part of your credit from this lab will be me looking at your git history and seeing that all of you have tried this,
+so make sure to help each other along the way.
 Since the martyr tried making the change the last time,
-have
-them push first so that they don't have to do the process again.
-Also
-make sure that no one tries to pull after each push,
-assume they don't
-know the changes have been pushed.
-So that the last person will be
-possibly many commits behind everyone else.
+have them push first so that they don't have to do the process again.
+Also make sure that no one tries to pull after each push,
+assume they don't know the changes have been pushed.
+So that the last person will be possibly many commits behind everyone else.
 
 ## Step 10: Everyone - Be aware of a conflict problems
 
 While this is the end of the official lab,
-I want you to be aware of one
-more issue that seems to pop up a lot when folks are using git,
-which is
-a git conflict problems.
-This tends to happen when you have uncommitted
-changes,
+I want you to be aware of one more issue that seems to pop up a lot when folks are using git,
+which is a git conflict problems.
+This tends to happen when you have uncommitted changes,
 and then you decide to try to pull in the latest changes.
-Git
-has issues with this because pulling replaces your code and files with
-the latest versions.
+Git has issues with this because pulling replaces your code and files with the latest versions.
 However,
 if you have work that you saved,
-but did
-not commit,
+but did not commit,
 it would be throwing this code potentially away.
-This is not
-the case when you commit,
-since those changes are stored on the database
-if you ever need to go back to them,
+This is not the case when you commit,
+since those changes are stored on the database if you ever need to go back to them,
 which you can view in the history.
-**If you do have**>
-**signs on the project explorer and decide to pull
-in changes from the server** (and the server has changes to give you)
+**If you do have** >
+**signs on the project explorer and decide to pull in changes from the server**
+(and the server has changes to give you)
 you'll raise these scary messages one on top of the other.
 
-![](lab9media/media/conflictproblem.png)
-![](lab9media/media/pullcanceled.png)
+![eclipse checkout conflict](lab9media/media/conflictproblem.png)
+![eclipse screenshot saying pull was canceled](lab9media/media/pullcanceled.png)
 
 If you do get that error,
 you have a few options,
 you can either commit
 your latest changes,
-or if you feel like you didn't really make any
-changes and they must be by accident or say you were just playing around
-with the code,
-then it would be best for you to do a hard reset like we
-did in Step 2.
+or if you feel like you didn't really make any changes and they must be by accident or say you were just playing around with the code,
+then it would be best for you to do a hard reset like we did in Step 2.
 Once you either commit or reset the code,
-you can then
-try to pull the code again.
-Remember that if you did commit after
-pulling and merging it's best for you to push the code back on the
-server so that you let the server know that you have the latest changes.
+you can then try to pull the code again.
+Remember that if you did commit after pulling and merging it's best for you to push the code back on the server so that you let the server know that you have the latest changes.
 
-If you ever want to find out if changes have been made but aren't ready to replace your code with those changes (but just want to see how many changes have been made or how many changes you need to incorporate,
-you can instead right click on the project and select *Team->
-Fetch from Origin*).
+If you ever want to find out if changes have been made but aren't ready to replace your code with those changes
+(but just want to see how many changes have been made or how many changes you need to incorporate,
+you can instead right click on the project and select *Team-> Fetch from Origin*).
 Then just like you saw before in the package explorer,
 you'll be able to see the number of commits that are you behind from your server,
 with a down arrow to show them.
@@ -609,45 +588,29 @@ with a down arrow to show them.
 Practice the workflow!
 
 Based on the lab,
-I think it's important to remember how to work on the
-project.
+I think it's important to remember how to work on the project.
 Before you start working on the project,
-make sure to pull to
-get the latest changes.
-The easiest way to know you are up to date is by
-making sure you have no arrows in the project explorer and that when you
-pull it tells you everything is up to date.
+make sure to pull to get the latest changes.
+The easiest way to know you are up to date is by making sure you have no arrows in the project explorer and that when you pull it tells you everything is up to date.
 Then you go ahead and
 commit,
 commit,
 and commit again.
-Once you are finally ready then push
-your changes.
+Once you are finally ready then push your changes.
 If that push fails,
-you'll need to do a pull to merge with
-your team members changes.
+you'll need to do a pull to merge with your team members changes.
 Once you merge and commit,
-you should then
-push your changes.
+you should then push your changes.
 There are more advanced ways of using git,
-but this
-is the way that I'm going to be looking for you to use git in this
-class,
-as simply getting used to source control when working on projects
-is a big undertaking.
-For the rest of this lab you guys should just get
-into the habit of trying to quickly modify the file that you have and
-making changes to it together.
-Each of you should try to have as many
-changes made to this lab project as possible and points will be given
-based on the smallest number of commits and merges done by the team
-member with the smallest amount of activity before the due date.
-Also
-for this class I want all of you to only use the single ```main``` branch.
+but this is the way that I'm going to be looking for you to use git in this class,
+as simply getting used to source control when working on projects is a big undertaking.
+For the rest of this lab you guys should just get into the habit of trying to quickly modify the file that you have and making changes to it together.
+Each of you should try to have as many changes made to this lab project as possible and points will be given based on the smallest number of commits and merges done by the team member with the smallest amount of activity before the due date.
+Also for this class I want all of you to only use the single ```main``` branch.
 
 ### More Git Theory (Optional)
 
-![](lab9media/media/Egit-lifecycle.png)
+![git theory diagram](lab9media/media/Egit-lifecycle.png)
 
 Here is a helpful illustration from the [Eclipse Foundation](https://wiki.eclipse.org/EGit/User_Guide#Recording_Changes_in_the_Repository)
 
@@ -658,37 +621,27 @@ you are telling Git to keep **track** of it.
 
 - Once you **modify** the file,
 git recognizes that the file is different,
-but does
-not immediately submit those as official changes to the repo.
-To put them up for
-consideration,
+but does not immediately submit those as official changes to the repo.
+To put them up for consideration,
 you **stage** the changes.
-A good metaphor for this is that you are
-preparing to save these changes as a draft.
-- Once yhavingou stage the changes,
+A good metaphor for this is that you are preparing to save these changes as a draft.
+- Once you stage the changes,
 you can then **commit** those changes,
-which keeps them
-in git's history.
+which keeps them in git's history.
 This is like you actually saving the draft (as a copy).
-Committing
-is good in that it allows you to keep track of what you've done.
+Committing is good in that it allows you to keep track of what you've done.
 - The cycle then moves you back to having all the files be up to date,
-so the cycle
-repeats.
+so the cycle repeats.
 
 For more information regarding the illustration and using Git with Eclipse,
 check out the [EGit/User Guide](https://wiki.eclipse.org/EGit/User_Guide#Getting_Started).
 
 Also if any of this confuses you,
-you may start searching google for
-more resources to learn git.
-There is some good stuff out there (and
-also lots of bad stuff),
-however,
-most of it revolves around using the
-command line,
-so it's probably better to ask me or your TA if you need
-help or have any questions.
+you may start searching google for more resources to learn git.
+There is some good stuff out there
+(and also lots of bad stuff).
+However,
+most of the help provides solutions that need to be entered in the command line,
+so it's probably better to ask me or your TA if you need help or have any questions.
 
-Let me know what still confuses you so I can make this lab better in the
-future!
+Let me know what still confuses you so I can make this lab better in the future!
