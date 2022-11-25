@@ -37,7 +37,8 @@ I've noticed that drawing diagrams is often inviting,
 having a sheet of paper with different folks can be a collaborative and often rich discussion.
 However,
 I've noticed a tendency for myself and the majority of students in this class to avoid drawing diagrams on a piece of paper.
-A majority of folks (but not all) when given the option started trying to draw diagrams on the computer - this often leaves many of us learning a new program that will allow us to to draw,
+A majority of folks (but not all) when given the option started trying to draw diagrams on the computer -
+this often leaves many of us learning a new program that will allow us to to draw,
 correct,
 and then edit diagrams efficiently.
 While there are some programs that exist that are meant to help you draw UML diagrams,
@@ -81,14 +82,16 @@ whatever is inside the rectangle is what we are proposing will be a part of the 
 ## Starting a PlantUML use case diagram
 
 To start,
-right click on [this webpage](http://plantuml.com) and say *open in new window*.
-You may want to have the plantUML page and these instructions side-by-side (if you haven't done this using keyboard shortcuts,
+right click on [this webpage](http://plantuml.com)
+and say *open in new window*.
+You may want to have the plantUML page and these instructions side-by-side
+(if you haven't done this using keyboard shortcuts,
 you can hold the Window Logo Key and type left or right,
-and then click on the other webpage.
+and then click on the other webpage.)
 On the plantUML site,
 Once there,
 click on the online server option on the left sidebar.
- This will open up a plantUML webserver that has a sample sequence diagram,
+This will open up a plantUML webserver that has a sample sequence diagram,
 which we'll discuss in the future.
 Notice how in the text editor,
 the beginning line is ```@startuml``` and the last line is ```@enduml```.
@@ -98,24 +101,26 @@ the beginning line is ```@startuml``` and the last line is ```@enduml```.
 For now,
 let's replace that single line that is between those two statements (shown here):
 
-```
+```plantuml
 Bob -> Alice : hello
 ```
 
 with:
 
-```
+```plantuml
 left to right direction
 actor "Partygoer" as p
 ```
 
 and you will see this at the bottom of the plantUML pane:
 
-![](lab61media/partygoer.png)
+![Partygoer use case diagram actor](lab61media/partygoer.png)
 
 ## Explanation of the plantUML code
 
-The first line (```left to right direction```) is merely a directive to tell plantUML that we will be working in a horizontal fashion.
+The first line
+(```left to right direction```)
+is merely a directive to tell plantUML that we will be working in a horizontal fashion.
 The second line introduces our first actor.
 For our use cases and actors,
 they will follow this format.
@@ -152,8 +157,12 @@ you can introduce use cases.
 The only thing that is different than say an actor is that instead of us using the keyword ```actor```,
 we use the keyword ```usecase```.
 With your newfound knowledge of creating usecases,
-**go ahead and create three use cases in plantuml for requesting a new song,
-playing a song and voting on existing songs**.
+**go ahead and create three use cases in plantuml for:**
+
+1. requesting a new song
+2. playing a song and
+3. voting on existing songs
+
 As for the variablnames,
 you can use shorthand variable names.
 Some folks like to preface the shorthand with *```uc```* to stand for usecase.
@@ -163,7 +172,7 @@ you will see three ovals representing the three use cases appear in your picture
 Just as a reference,
 here's what the play song should look like.
 
-![](lab61media/playasong.png)
+![Play a song oval use case](lab61media/playasong.png)
 
 Do not worry about how they are arranged right now or where they are.
 We will connect them next.
@@ -193,7 +202,8 @@ separated by a hyphen.
 Start with single hyphen between your ```Partygoer``` and ```vote on a song``` use case.
 Once you see the diagram update,
 add a second hyphen and then look at the picture below.
-What just happened?  If you continue adding hyphens,
+What just happened?
+If you continue adding hyphens,
 you'll notice it will also get longer and longer.
 
 To help with creating linkages,
@@ -213,8 +223,7 @@ so you would have something like so.
 
 ```}```
 
-**Go ahead and enclose all 3 use cases into a rectangle and have the title be your name.**  Make sure that *for your picture,
-the DJ ends up being on the right hand side,
-while the partygoer is on the left*.
+**Go ahead and enclose all 3 use cases into a rectangle and have the title be your name.**  Make sure that for your picture,
+*the DJ ends up being on the right hand side, while the partygoer is on the left*.
 To get credit for this lab,
 submit your screenshot to canvas.
