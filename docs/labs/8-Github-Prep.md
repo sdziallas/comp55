@@ -19,7 +19,7 @@ you can still get the pack (and you should!),
 but you can also just jump to [start GitHub classroom](#start-github-classroom).
 
 Some of these are just awesome technologies that might be of use later when you are writing programs to take over the world.
-**One thing you'll need to do for certain is to [verify your email address](https://docs.github.com/en/github/getting-started-with-github/verifying-your-email-address).** You can check to see if your email is verified by checking the Emails tab of your account settings in GitHub.
+**One thing you'll need to do for certain is to [verify your email address](https://docs.github.com/en/get-started/signing-up-for-github/verifying-your-email-address).** You can check to see if your email is verified by checking the Emails tab of your account settings in GitHub.
 
 If you have a warning icon like this picture,
 then you'll want to ask to resend the verification email and verify your email with them.
