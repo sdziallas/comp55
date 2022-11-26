@@ -5,14 +5,14 @@
 If you still feel uncomfortable with either the [ACM](4-ACM.html)
 or the [Intro to Java](2-JavaIntro.html) Labs,
 you should go back and revisit what was done in each.
-Today we're going to get you started on learning and additional topic events that will allow us to add some dynamic content to our upcoming graphics program.
+Today we're going to get you started on learning and about events
+that will allow us to add some dynamic content to our upcoming graphics program.
 
 ## Old I/O Programs
 
-Most of the programs you have created for COMP 51 and 53 have had a very linear structure that was based on text input and output.
-While the
-programs that you created were dynamic in that they asked the user for
-input,
+Most of the programs you have created for COMP 51 and 53 have had a very linear structure
+that was based on text input and output.
+While the programs that you created were dynamic in that they asked the user for input,
 the program would explicitly wait for users to type and press enter before moving on.
 The program controlled when users could input information.
 The *program* would run through its statements,
@@ -59,7 +59,8 @@ To help explain how we need to understand the notion of an ***event***.
 
 A **computer event** is a special "happening" that a program may find important.
 A good real-life analogy is an unexpected real-life event
-(like a friend telling you that your parents just posted an embarrassing childhood photo of you on social media).
+(like a friend telling you that your parents
+just posted an embarrassing childhood photo of you on social media).
 In that case,
 you (or the computer) might be currently occupied with a task.
 However,
@@ -77,7 +78,8 @@ Some examples of computer events are the mouse moving or a keyboard key being pr
 When users move the mouse or press a key on the keyboard,
 Java can be set up to immediately notify any subscribed object about that event.
 
-You can find the starter files for this project by going to the starter files section in Canvas and looking for **InteractivityLab.zip**.
+You can find the starter files for this project
+by going to the starter files section in Canvas and looking for **InteractivityLab.zip**.
 **Import the project and open up *Ball.java* and run the program.**
 What you'll notice in the program is a very rough animation of a ball bouncing horizontally.
 
@@ -85,7 +87,8 @@ Here's what you should see (approximately):
 
 ![animation of ball moving across the screen](lab5media/media/ballmotion.gif)
 
-Once you finish this lab you can think about how to make the ball bounce more cleanly off the window.
+Once you finish this lab you can think about
+how to make the ball bounce more cleanly off the window.
 
 The ACM libraries have made it easy for you to subscribe to mouse event notifications -
 one can subscribe by calling ```addMouseListeners()```.
@@ -138,7 +141,8 @@ we need to define a method that contains the code that responds to that particul
 These are known as **event handlers**,
 because they specify what code we want to execute when that event happens.
 As I've mentioned before that Java notifies us about any of the events listed above,
-what it does is call the event method name listed above for all objects that added themselves as a listener.
+what it does is call the event method name listed above for all objects
+that added themselves as a listener.
 
 ### Our first event handler in Ball.java
 
@@ -157,13 +161,15 @@ public void mousePressed(MouseEvent e) {
 ```
 
 It's useful to write the ```@Override```
-label because it tells Java that what you are doing is defining a special method that it should recognize.
+label because it tells Java that what you are doing
+is defining a special method that it should recognize.
 If it doesn't recognize the method that you are trying to define,
 it should raise an error (red squiggly).
 While providing ```@Override``` is optional,
 if you were to misspell ```mousePressed```,
 as ```musePressed``` for example,
-Java would have no way of knowing whether you intended that method to be an event handler or if you writing a program about pressing muses.
+Java would have no way of knowing whether you intended
+that method to be an event handler or if you writing a program about pressing muses.
 All the mouse events are ```public```
 because they are being called by Java classes that are foreign to our program.
 Let's have our event handler set the color of the ball to a new random color.
@@ -225,7 +231,9 @@ the line you added should look like this…
 Run the program again and make sure to click in a couple of different
 areas.
 Notice that our ```mousePressed``` method is relatively short and without loops.
-We are doing some small operations which allow us to feel like the ball is immediately responding and then continuing back to moving from side to side.
+We are doing some small operations
+which allow us to feel like the ball is immediately responding
+and then continuing back to moving from side to side.
 If you'd like the ball to be placed in the center of where the mouse cursor is,
 you'll have to do a little bit of math on the y coordinate to make that happen,
 but we'll leave that for later.
@@ -260,17 +268,20 @@ test it again,
 making sure that you understand how ```getElementAt``` works here.
 We can compare or use the double equals because as you'll remember,
 we are dealing with pointers,
-so it will check to see if the objects are the same object in this situation by comparing address locations.
+so it will check to see if the objects are the same object in this situation
+by comparing address locations.
 Here's what it should behave like at the end (it would continue bouncing too)
 
 ![final ball animation](lab5media/media/finalball.gif)
 
 ## Understanding when all events are called
 
-The easiest way for us to understand how and when all of the mouse events are called is to do one of my favorite things when I'm first learning to program in a language,
+The easiest way for us to understand how and when all of the mouse events are called
+is to do one of my favorite things when I'm first learning to program in a language,
 which is, **print a bunch of stuff**.
 For this part,
-what we are going to do is override all of the mouse events by writing method definitions for all five mouse events so far.
+what we are going to do is override all of the mouse events
+by writing method definitions for all five mouse events so far.
 In every method definition,
 make a ```System.out.println()``` call with a unique message in each method –
 things like "mouse pressed" for the ```mousePressed``` method.
@@ -307,7 +318,8 @@ While this is all great and everything,
 what makes programs truly dynamic is moving the mouse and dragging.
 We haven't talked about calls like moving the mouse.
 
-That is because those events have been split off from the five we've just discussed in the traditional java sense,
+That is because those events have been split off from the five we've just discussed
+in the traditional java sense,
 they are categorized as ```MouseMotion``` events.
 In standard Java,
 to listen to these events we would have to register ourselves as a ```MouseMotionListener```
@@ -329,14 +341,18 @@ button is pressed
 Both of these events take in the ```MouseEvent e``` as a parameter.
 Notice how so many more events are being generated!
 It's not just that one mouse movement event is being generated for when you move the mouse,
-but java is continually spamming you with event notifications even during what you would consider to be one movement.
+but java is continually spamming you with event notifications
+even during what you would consider to be one movement.
 With so many event notifications,
-we need to be careful with how we handle those events and want to avoid taxing the computer during that method call.
+we need to be careful with how we handle those events
+and want to avoid taxing the computer during that method call.
 We will talk about how to deal with dragging in a bit.
 
 ## The Rubber Band
 
-Let's move to another code example that helps us to understand how dynamic our programs can become by doing something as simple as working with a line and dragging it.
+Let's move to another code example
+that helps us to understand how dynamic our programs can become
+by doing something as simple as working with a line and dragging it.
 **Go ahead and open up your *RubberBand.java***,
 which looks almost identical to *Ball.java* when it was first created,
 except that there is nothing in ```run```.
@@ -372,7 +388,8 @@ Remember that the parameters for a new ```GLine``` are ```x1, y1, x2, y2```.
 We need to provide actual values there,
 so for this example,
 let's create a line with zero length.
-We can do this by passing in the parameter for where the mouse button was clicked to each of the four parameters
+We can do this by passing in the parameter for where the mouse button was clicked
+to each of the four parameters
 ```(e.getX(), e.getY(), e.getX(), e.getY())```.
 Once we create the ```GLine```
 and ```add``` it to the screen,
@@ -417,7 +434,8 @@ I've already written the method definitions for the three mouse events,
 as well as call ```addMouseListeners``` for you here.
 What you have to do is concentrate on getting the dragging to work properly.
 The first thing that people tend to do from a dragging standpoint,
-is to simply override mouse dragged by getting the location of the object and possibly calling ```setLocation```.
+is to simply override mouse dragged by getting the location of the object
+and possibly calling ```setLocation```.
 Go ahead and try to do this first.
 **Add these two lines to the ```mouseDragged``` event handler and then run the program, which will be buggy.**
 
@@ -426,7 +444,8 @@ toDrag = getElementAt(e.getX(), e.getY());
 toDrag.setLocation(e.getX(), e.getY());
 ```
 
-One thing you'll notice is a lot of null pointer exceptions as well as the code not working too well.
+One thing you'll notice is a lot of null pointer exceptions
+as well as the code not working too well.
 Try **dragging upwards and to the left**
 instead of downwards and to the right,
 you may notice that one feels more like it's dragging than the other.
@@ -446,11 +465,12 @@ We only want to set the location of ```toDrag```
 if in fact,
 ```toDrag``` is not ```null```.
 Otherwise, we are trying to set the location of a *null* object.
-Go ahead and 
+Go ahead and
 **add an ```if``` statement to only call ```setLocation``` on ```toDrag``` if ```toDrag``` is not null**
 and then run the program again
 (***Ctrl-F11***).
-What you'll notice now is that no more exceptions are being generated but the behavior is pretty much the same -
+What you'll notice now is that no more exceptions are being generated
+but the behavior is pretty much the same -
 we can't drag upwards and to the left.
 The reason for this is what happens with ```setLocation```.
 Remember that here ```setLocation```
@@ -473,10 +493,13 @@ There are still a couple of things that are off.
 One of the big ones that can occur is when you drag the blue oval over the green square,
 and if you pay close attention,
 you'll notice that you leave the blue oval behind and start dragging the green square.
-Another one that happens is if you start with your mouse clicked somewhere away from one of the two objects and while the mouse button is down,
+Another one that happens is
+if you start with your mouse clicked somewhere away from one of the two objects
+and while the mouse button is down,
 you move into one of the shapes.
 You'll notice that you'll immediately start to move it.
-This happens because if you notice the only event where we are doing anything significant is in ```mouseDragged```.
+This happens because the only event
+where we are doing anything significant is in ```mouseDragged```.
 This means that it's only handling messages when the mouse is down.
 What we want to do is instead,
 keep track of if we started initially by pressing the mouse button when we were on top of an object.
@@ -491,7 +514,8 @@ the one that we initially pressed the mouse button on.
 Once you try to move everything around,
 you can notice that everything is working closer to what we expect.
 
-The last thing we want to eliminate is the jumpiness that happens when we barely click on one of the corners.
+The last thing we want to eliminate is the jumpiness
+that happens when we barely click on one of the corners.
 To make this more evident,
 let's go ahead and change ```SHAPE_SIZE``` to be ```300```
 so that we have a large circle and oval and run the program again.
@@ -499,7 +523,9 @@ Slowly drag the blue oval from its edge,
 and you'll notice the oval almost immediately jump to its center.
 *(You may also see this in the video above when you click on one of the corners)*.
 In reality,
-what we want is not for it to jump like this but if we grab the oval from one of the edges and move, we want it to move however much the mouse moved.
+what we want is not for it to jump like this
+but if we grab the oval from one of the edges and move,
+we want it to move however much the mouse moved.
 
 To do this,
 what we need to do is keep track of that the mouse has moved between ```mouseDragged``` events,
@@ -510,16 +536,20 @@ Then we will set the ```lastX``` and ```lastY``` in ```mousePressed```.
 You can set those to the mouse coordinates from ```MouseEvent e```.
 
 Now what we want is that each time ```mouseDragged``` is called,
-we want to use the current coordinates and the last known coordinates of the mouse to measure how far it has traveled.
+we want to use the current coordinates and the last known coordinates of the mouse
+to measure how far it has traveled.
 This will allow us to know how much and in which direction the mouse has moved.
 If we know the direction and how much the mouse has moved by,
 rather than call ```setLocation``` on the object,
 we can use those calculations to figure out how much to ```move```
 the object by in the x and y direction.
 Then after moving the object,
-the last thing we want to do in ```mouseDragged``` is to update the last known coordinates for the mouse cursor to be the current ones.
-We'll leave it as an exercise to use your classmates to figure out the code that should be in ```mousePressed``` and ```mouseDragged```
-(your hint is that ```mousePressed``` should have 3 lines of code and ```mouseDragged``` should have 4-5 lines of code).
+the last thing we want to do in ```mouseDragged``` is
+to update the last known coordinates for the mouse cursor to be the current ones.
+We'll leave it as an exercise to use your classmates
+to figure out the code that should be in ```mousePressed``` and ```mouseDragged```
+(your hint is that ```mousePressed``` should have 3 lines of code
+and ```mouseDragged``` should have 4-5 lines of code).
 You could do something nice like set
 ```toDrag``` to be ```null``` in ```mouseReleased```,
 but in this situation it's not needed.
@@ -543,14 +573,16 @@ which is the upper-left hand corner of any object.
 Remember that calling ```getX``` and ```getY``` will get us that upper-left corner
 
 So if we want to check to see if the ball has bounced on say the right edge,
-we need to include in our calculations the width of the ball to check to see if it has reached the edge of the screen.
+we need to include in our calculations the width of the ball
+to check to see if it has reached the edge of the screen.
 By including the width,
 we can make sure that we can keep the ball on the screen.
 In addition to modifying the code so that it bounces off more clearly,
 you can also add a ```yVelocity```,
 which should only be flipped (like we do with the ```xVelocity```,
 when we reach the top or the bottom of the screen.
-It's best to create a new method to check the vertical bounds and make that separate from the horizontal bounds,
+It's best to create a new method to check the vertical bounds
+and make that separate from the horizontal bounds,
 so that way it is easier to change the velocity of x or y.
 Once we add the ```yVelocity```,
 we should be able to make what looks like a bouncing ball that bounces off the
