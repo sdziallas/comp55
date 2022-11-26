@@ -256,7 +256,7 @@ you want to concentrate on adding the logic that makes sense for that particular
 
 Since you aren't working on the assignment just yet,
 I would just encourage you to explore and ask questions and use your classmates as a resource.
-I'll be putting up additional guides and resources of information for you in the future on Canvas 
+I'll be putting up additional guides and resources of information for you in the future on Canvas
 so that you can make more sense of all the neat things Eclipse and Java can do for you.
 For this lab,
 I want you to explore making a super Fractions class.

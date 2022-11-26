@@ -323,7 +323,7 @@ we are going to do one last set of steps.
 
 I will try to make this last color theme
 match as much as possible the site on which these labs are hosted,
-with a couple of added preferences 
+with a couple of added preferences
 to keep it in line with some of the things that I've seen with Eclipse.
 So to that end,
 I'd like you to **[download this file](lab1media/media/COMP55LabColorScheme.xml)**
