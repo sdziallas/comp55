@@ -5,7 +5,8 @@ you've completed the Java Lab and have done some work on the project.
 Congratulations!
 Getting started and getting a program to run in a new language is no easy task.
 With your love/hate relationship with java already budding,
-it's time for us to learn a special library that we will be using this semester that will let us easily incorporate graphics into our programs.
+it's time for us to learn a special library
+that we will be using this semester that will let us easily incorporate graphics into our programs.
 This library is called the ACM library,
 a library built by a [special task force](https://dl.acm.org/doi/abs/10.1145/1121341.1121384)
 for the [Association for Computing Machinery](https://www.acm.org/about-acm/about-the-acm-organization),
@@ -56,8 +57,10 @@ public class ACMLab extends GraphicsProgram {
 ```
 
 - **Imports:** Lines 1-4 contain ```import``` statements:
-  ```import``` calls are similar to ```#include```s that we had in C++ in that they help Java figure out what libraries you will be using.
-  One of the nice features of Java is that it allows you to reference a folder of classes all at once,
+  ```import``` calls are similar to ```#include```s that we had in C++
+  in that they help Java figure out what libraries you will be using.
+  One of the nice features of Java
+  is that it allows you to reference a folder of classes all at once,
   so for example,
   rather than have to write 20 import statements for each class that we want to reference,
   we can use the ```*``` to say,
@@ -75,7 +78,8 @@ public class ACMLab extends GraphicsProgram {
   Eclipse will prompt you to choose.
   The majority of imports we'll use start with "java." or "acm."
 
-- **extends:** Line 6 should be of interest as you see the word extends followed by ```GraphicsProgram```.
+- **extends:** Line 6 should be of interest
+  as you see the word extends followed by ```GraphicsProgram```.
   ```extends``` is a special keyword in Java that lets you inherit capabilities from another class.
   In our case,
   what we want to do is inherit from the special ACM class,
@@ -84,18 +88,21 @@ public class ACMLab extends GraphicsProgram {
   By saying ```ACMLab extends GraphicsProgram```,
   we are telling Java that the ```ACMLab``` **IS** a ```GraphicsProgram```,
   and so we get all of the benefits and tribulations of being a ```GraphicsProgram```.
-  This means that we'll need to leverage and write a few additional methods to make our program work.
+  This means that we'll need to leverage
+  and write a few additional methods to make our program work.
   Rather than using ```public static void main(String[] args)```,
   consider ```public void run()``` as our starting point for now.
 
 - **public static final int:** Lines 7 & 8 declare constants for the program to reference.
   **It is good programming practice to declare any number that is not 0, 1, or 2, as a constant**.
-  We're going to break with that convention for the opening part of the tutorial as we are introducing you to the different calls,
+  We're going to break with that convention for the opening part of the tutorial
+  as we are introducing you to the different calls,
   but once you get into the activity,
   please make new constants.
   Constants make your program easier to change in the future and easier to read.
   While there are a couple of extra keywords here that I don't want you to worry about too much yet,
-  the ```final``` keyword is the one that is telling Java that a particular variable can no longer be changed.
+  the ```final``` keyword is the one that is telling Java
+  that a particular variable can no longer be changed.
   One nice part about constants is that they don't need to be literal values,
   they can be formulas based on other constants like this:
 
@@ -116,8 +123,10 @@ public class ACMLab extends GraphicsProgram {
   for now,
   you could try to make the screen relatively big,
   but this will be something you may have to continually adjust.
-  You also may be able to fix this by [visiting this URL](http://stackoverflow.com/questions/30555401/java-disable-dpi-aware-not-working/39372897#39372897).
-  The ```requestFocus``` call just allows the window to be the active window for both the mouse and the keyboard,
+  You also may be able to fix this by
+  [visiting this URL](http://stackoverflow.com/questions/30555401/java-disable-dpi-aware-not-working/39372897#39372897).
+  The ```requestFocus``` call just allows the window to be the active window
+  for both the mouse and the keyboard,
   which will be useful in the future.
   Other than changing the size,
   you should leave the ```init``` method alone.
@@ -127,7 +136,9 @@ public class ACMLab extends GraphicsProgram {
   but what may be interesting here is how empty our main is,
   and Line 20.
   **Please don't spend too much time thinking about or copying Line 20 for your future code**.
-  Think of this main function that we have as template (aka boilerplate) code that will be in most graphical programs,
+  Think of this main function that we have as template
+  (aka boilerplate)
+  code that will be in most graphical programs,
   you should not need to modify the mains for the graphical programs that you create.
   This small function tells java how to start your program.
   If you notice,
@@ -135,7 +146,8 @@ public class ACMLab extends GraphicsProgram {
   (which it does not even save into a variable! :disappointed:).
   Then on the same line,
   it calls ```start```,
-  which is an internal call for `GraphicsProgram` that helps set up the graphics window and get everything started.
+  which is an internal call for `GraphicsProgram` that helps set up the graphics window
+  and get everything started.
   You should in most cases,
   *leave the ```main``` alone for any graphics programs*.
   Instead,
@@ -143,14 +155,18 @@ public class ACMLab extends GraphicsProgram {
   ```run```,
   which we'll discuss next.
 
-- **public void run():** Lines 15-17 have the method that you should consider the starting point for your program,
-  and it is here that we will be putting most of our code as well as function calls to the rest of our code.
+- **public void run():** Lines 15-17 have the method
+  that you should consider the starting point for your program,
+  and it is here that we will be putting most of our code
+  as well as function calls to the rest of our code.
   Currently,
   there is only one call on line 16,
   which is, ```add(new GLabel("Hello World", 300, 300));```.
   ```GraphicsProgram``` follows what one can think of as a *collage model* for making graphics.
-  Rather than creating graphics with a pen where you give commands to move the pen around the screen to draw things,
-  the graphics package allows you to create objects, which one can think of as cutting out shapes from a piece of paper.
+  Rather than creating graphics with a pen where you give commands
+  to move the pen around the screen to draw things,
+  the graphics package allows you to create objects,
+  which one can think of as cutting out shapes from a piece of paper.
   Once the objects are created,
   you then need to add them to your canvas.
   The ```add``` command at the beginning of the line is reminiscent of that.
@@ -229,7 +245,8 @@ Let's move on to work with the three most basic shapes in the ACM library:
 - ovals
 - lines
 
-The best way to learn is to just play around with some of the numbers for each shape to get used to how things behave.
+The best way to learn is to just play around with some of the numbers for each shape
+to get used to how things behave.
 Let's start with a rectangle.
 To make a rectangle,
 create a ```GRect``` and then add it to the *canvas* AKA the program window.
@@ -276,7 +293,8 @@ Once you run this,
 you'll notice that you now have a different picture,
 with the oval inside the rectangle.
 
-```GOval``` works by creating the largest oval that can fit inside a rectangle with the given dimensions
+```GOval``` works by creating the largest oval
+that can fit inside a rectangle with the given dimensions
 (A circumscribed oval).
 It also follows the conventions of using the upper-left as its starting position.
 
@@ -287,7 +305,8 @@ this is done by calling ```setFilled(true)``` on the ```GOval``` or ```GRect``` 
 
 ```GLine``` works slightly differently.
 ```GLine``` also takes four integers when it's created,
-but the integers stand for the x and y coordinates of the two endpoints that would make up that line.
+but the integers stand for the x and y coordinates of the two endpoints
+that would make up that line.
 So if we were to use the same arguments again,
 we would notice that we would have a picture like this.
 
@@ -351,10 +370,12 @@ the shape and run.
 
 ## Overlapping Objects
 
-As you become more proficient you may want certain shapes to appear in front of others in case they are overlapping.
+As you become more proficient you may want certain shapes to appear in front of others
+in case they are overlapping.
 The best way to control this is by changing the order in which you add the objects.
 *The latest object that you add will always be added on top of the rest of the objects*.
-You can play around with this by filling some shapes and setting them to different colors so that you can experiment with them.
+You can play around with this by filling some shapes and setting them to different colors
+so that you can experiment with them.
 
 ## Making a robot (Upload your robot picture as your deliverable)
 
@@ -423,7 +444,8 @@ and see the magic happen.
 You can spend some additional time making some cool animation.
 
 If you're done with that and what to create more complicated drawings,
-you can also explore a couple of different types of objects that we didn't go over if you want to create some other animations,
+you can also explore a couple of different types of objects
+that we didn't go over if you want to create some other animations,
 like for example ```GArc``` and ```GPolygon```.
 You can find out more about those and other items in the graphics library here:
 
