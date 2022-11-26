@@ -347,7 +347,7 @@ shown below using the classic interface.
 ![classic interface screenshot](lab3media/media/image11old.png)
 
 Notice the green bar on line 39 with the arrow on the left?
-That is equivalent to the gray line in the darkest dark theme that has the yellow arrow 
+That is equivalent to the gray line in the darkest dark theme that has the yellow arrow
 ![yellow arrow icon](lab3media/media/yellowarrow.png),
 it is telling us that the debugger is about to execute the function ```doMove```.
 We can ask the debugger to execute code line by line and then pause after each line of execution.
@@ -458,7 +458,7 @@ I think as soon as I run into a problem when I'm debugging something
 that I'm unsure about it working,
 I jump into this mode when I have to rewrite a line to make sure that it works.
 Rather than make the change and hope that it works.
-I set a breakpoint on whichever line of code I'm running, debug, 
+I set a breakpoint on whichever line of code I'm running, debug,
 and then use the debug shell to figure out the exact code before writing it in.
 
 <br>**Problem 7 – Go online to answer the next question**<br><br>
@@ -475,7 +475,7 @@ Work with a partner for this lab.
 Put breakpoints,
 think of good test-cases that you can write in the code
 **(adding code is great when debugging)**
-and come up with additional tests that you can write to help you understand what the problems are 
+and come up with additional tests that you can write to help you understand what the problems are
 and to ensure that your Fractions Program is truly working the way it should be.
 Your tests can be simple print statements like we've done with Traffic Jam.
 
