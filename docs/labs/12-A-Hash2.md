@@ -44,7 +44,7 @@ then click ***Apply and Close***.
 **Make sure that your project folder looks like this** -
 ![gradle project folder icon](lab12media/media/gradleprojecticon.png) -
 notice the icon in the upper left.
-That is something new that our projects will have from now on that introduce us to **gradle**,
+That is something new that our projects will have as they use **gradle**,
 which is an industry tool made for helping folks
 with a variety of issues that occur with building projects.
 We'll use it to help us manage additional libraries that you will need for your projects.
@@ -76,10 +76,10 @@ and so instead of having you go to a URL and download it
 and then edit your eclipse environment
 and finally cross your fingers that you downloaded the correct one,
 ***gradle takes care of downloading it and installing it for you***.
-All we need to is to start following some of their conventions.
+We need to start following gradle's conventions to make it easier on ourselves.
 For one,
 we will use this pattern of src/main/java to put our files into,
-and we will name packages which is good practice anyways.
+and we will name packages which is a good practice.
 Packages are just folders where we group java files that have something in common,
 similar to how you would use a directory to place files that make sense to go together.
 While I did show this initial directory structure.
@@ -92,30 +92,30 @@ It turns out that your project will look more like this.
 There are many files at the bottom of the project that we will not discuss for the time being.
 The only one we will need to pay attention to soon is the line
 ![src/test/java](lab12media/media/srctestjava.png),
-this will be the first lab where I will begin to provide you small test cases
+this will be the first lab where I will begin to provide you with small test cases
 that you can use to ensure that what you are writing is following what we've specified.
 You do not need to modify the tests or even open up the tests,
 as you will develop everything on src/main/java.
 Testing is super important,
-and unfortunately I don't do it enough,
-but we are going to discuss this more in the future.
-For now simply know that there are some test files
-that we will be able to run inside of that folder
-that are specifically meant to ensure that you've done the first three steps correctly.
+and unfortunately, I don't do it enough,
+but we will discuss this point in the future.
+For now, simply know that there are some test files
+that we will be able to run inside that folder.
+Those test files are specifically meant to ensure that you've done the first three steps correctly.
 
 If you notice,
 you'll see that eclipse is noting a small change,
 and your project will have a different project name,
-that includes your github handle.
+that includes your GitHub handle.
 *How can it be that there are changes already when you haven't done anything?*
 If you open the git staging view,
 you'll notice that .project has in fact been modified.
 This is because eclipse has renamed your project and that differs from what was on git.
 Normally we do not want to change the .project file
 (some folks even advise against including it in the git repo entirely),
-but we include it here to make it easier for you all to import your projects initally.
+but we include it here to make it easier for you all to import your projects initially.
 For now,
-what we will do is to tell git that we are going to assume that ```.project``` has not changed.
+we will tell git that we are going to assume that ```.project``` has not changed.
 Right-click on the file and select ***Assume Unchanged***.
 That will remove .project from the Unstaged changes and take away the ```>``` sign.
 *You may need **Assume Unchanged** for `.classpath` and the `org.eclipse.jdt.core.prefs` files as well.*
@@ -194,7 +194,7 @@ or by pushing your code.
 
 ### Step 1. Create an interface called ```Playable```
 
-Go throuh the eclipse ***File*** menu to make the interface,
+Go through the eclipse ***File*** menu to make the interface,
 and then insert the following two methods inside.
 
 ```java
@@ -204,13 +204,13 @@ public String getName();
 
 [Remember that interfaces](7-Interface.html) allow us to create some objects
 that are much more flexible.
-In this case we want to create an interface that allows someone to just implement these two methods.
-One where we ask for a string that gives us back a name,
-and the other which provides us with a ```AudioPlayer``` and a ```GLabel```,
-and we are asked to play a sound.
+In this case, we want to create an interface that allows someone to just implement these two methods.
+One method will ask for a string that returns a name,
+and the other will read in an ```AudioPlayer``` and a ```GLabel```,
+and then play a sound.
 **Remember to use *Ctrl-Shift-O* to organize any imports (like ```GLabel```)**.
 You can commit and push your code,
-or you can also run tests like we have shown here.
+or you can also run tests as we have shown here.
 
 ![run junit tests animation](lab12media/media/junittest.gif)
 
@@ -219,7 +219,7 @@ If you want to make sure that things ran correctly,
 JUnit is a standard testing framework that we will explore more in-depth in a couple of weeks.
 The feedback from JUnit is easily accessible
 as you can click on the tests to get additional information,
-including clicking on the stack trace to get to the offending line of code show up in the editor,
+including clicking on the stack trace to get to the offending line of code to show up in the editor,
 when you don't pass the tests.
 
 ![junit tests errors](lab12media/media/junitred.png)
@@ -227,7 +227,7 @@ when you don't pass the tests.
 Once you have something that is green.
 You can commit and push your code.
 **Make sure you do not edit the test files.**
-If you want to see github in action,
+If you want to see GitHub in action,
 you can go back and ensure that you have a 1 point out of 3!
 
 ### Step 2. Create a ```SoundEffect``` class that ```implements Playable```
@@ -252,7 +252,7 @@ public SoundEffect(String n) {
 ```
 
 By this point,
-your code should be able to pass the first and second set of tests.
+your code should be able to pass the first and second sets of tests.
 
 ### Step 3. Play some audio
 
@@ -260,7 +260,7 @@ In the play method for ```SoundEffect```,
 fill out the ```playSound``` method,
 by using the ```AudioPlayer```.
 If you use the same ```player``` variable,
-this could be started as by adding this line into the ```play``` method.
+this could be started by adding this line into the ```play``` method.
 
 ```java
 player.playSound("sounds", name + ".mp3");
@@ -273,7 +273,7 @@ You should also call ```setLabel``` on the label itself to update what it is pla
 which **needs to have exactly**
 ```"playing: " + name``` as
 the text inside the call to ```setLabel``` for the ```GLabel``` passed into ```play```.
-At this point your ```SoundEffect``` should not have any errors
+At this point, your ```SoundEffect``` should not have any errors
 and you should have three methods that have code implemented.
 
 1. a constructor,
@@ -292,11 +292,12 @@ then you need to figure out what the issue is before moving on.
 ### Step 4. Setup the ```Hashmap```
 
 Declare a ```HashMap``` instance variable in ```SoundBoard```
-that links a ```GLabel``` to a ```Playable``` and initialize it in the ```run``` method.
+that links a ```GLabel``` to a ```Playable``` and initializes it in the ```run``` method.
 If it doesn't recognize HashMap,
-amke sure you ```import java.util.*;``` or do ***Ctrl-Shift-O***.
-In this case **a ```GLabel``` will be the key and the ```Playable``` will be the value**.
-Are you not sure how to be able to declare and initialize a ```HashMap```? If you aren't sure,
+make sure you ```import java.util.*;``` or do ***Ctrl-Shift-O***.
+In this case, **a ```GLabel``` will be the key and the ```Playable``` will be the value**.
+Are you not sure how to be able to declare and initialize a ```HashMap```? 
+If you aren't sure,
 then you'll want to go back and [look over the lab](12-Hash.html) more closely.
 In this step,
 you are only creating the ```HashMap``` (~2 lines of code),
@@ -314,7 +315,7 @@ and the font string to set each label's names,
 coordinates and font.
 Make sure you use the same string constant to
 **create a ```SoundEffect``` object in run too**.
-All in all you are making two ```GLabel```s,
+You should be making two ```GLabel```s,
 and two ```SoundEffect```s using only constants as the parameters.
 When you run this program,
 you should get something that looks like the picture below,
@@ -328,7 +329,7 @@ but nothing will happen just yet.
 Near the end of ```run```,
 use the ```Hashmap``` that you created to link the ```GLabel``` key with the ```Playable``` object.
 Remember since ```SoundEffect``` is a ```Playable``` object,
-you'll actually *link* the ```GLabel``` *with* a ```SoundEffect```.
+you'll *link* the ```GLabel``` *with* a ```SoundEffect```.
 Again,
 if you are not sure how to do this,
 [go back and look over the lab](12-Hash.html##basic-hashmap-usage)

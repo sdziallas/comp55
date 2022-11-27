@@ -1,12 +1,12 @@
 # Timers Lab
 
-In this lab you'll start to get an appreciation of what a timer is,
+In this lab, you'll begin to appreciate what a timer is,
 how it works,
-and how we can make something that is pretty cool using it.
+and how to use it to make cool stuff.
 
-For this demo we're going to start with a very basic timer.
-You'll be able to get timers lab by checking out the repository from github here:
-<http://go.djosv.com/timer> .
+We're going to start with a very basic timer.
+You'll be able to get timers lab by checking out the repository from GitHub here:
+<http://go.djosv.com/timer>.
 Once you accept the assignment,
 make sure to from eclipse use the
 [***File->Import->Git->Projects from Git*** process](lab8media/media/importrepo.gif)
@@ -25,7 +25,7 @@ Since a ```Timer``` is a class,
 to create one of these alarms,
 we have to follow three steps.
 
-## The Three Step Checklist Reference
+## The Three-Step Checklist Reference
 
 Anytime you create a timer,
 you'll need to do these three steps.
@@ -65,7 +65,7 @@ There are two arguments for a ```Timer```:
 
 Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
 
-Any class that would like to be responsible party for
+Any class that would like to be responsible for
 handling the alarm must implement the ```ActionListener``` interface.
 The ```ActionListener``` interface has just one method:
 
@@ -78,17 +78,17 @@ except that rather than you responding to mouse events,
 you are responding to events that the ```Timer``` is initiating.
 
 *We don't want to spend too much time doing anything complicated in mouse events
-or in handlers like ```actionPerformed```.*
+or handlers like ```actionPerformed```.*
 
 If you are curious,
-put a really large `for` loop that counts from 0 to a billion in ```mousePressed```,
-and watch the program grind to its knees.
+put a `for` loop that counts from 0 to a billion in ```mousePressed```,
+and watch the program lock up.
 It does this because java treats timers and mouse events as being very important,
 so important that it stops doing other things
 (like listening to other events)
 until those handlers are finished.
 So what you do in each should be small,
-and not have too many nested for loops or very long loops,
+and not have too many nested for loops or very long loops
 so that your program doesn't hang.
 
 ### Step 3 - Call the timer's ```start``` method
@@ -96,7 +96,7 @@ so that your program doesn't hang.
 ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
 
 While the new ```Timer``` line shown above sets up the ```Timer```,
-it does not actually turn the timer on.
+it does not turn the timer on.
 
 To start the timer so that it repeatedly calls ```actionPerformed```,
 you must tell that particular timer to start,
@@ -147,7 +147,7 @@ make sure that you have done the steps we outlined above.
 
 ### Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called
 
-It's important have a variable
+It's important to have a variable
 that keeps track of how many times ```actionPerformed``` has been called.
 
 To do this in ```run()```,
@@ -167,9 +167,9 @@ and will also update every second or so with the number of times that it has bee
 
 ![# of times moving animation updating count](lab10media/media/timerinitmidcut.gif)
 
-The **Timer** objects in java have a lot of flexibility,
+The **Timer** objects in java have a lot of flexibility
 and so I encourage you to later look at all the ways you can use and leverage a timer.
-But for now I want to direct you to two methods:
+But for now, I want to direct you to two methods:
 
 - **```stop```** (Stops the timer)
     - Stops the timer
@@ -177,16 +177,16 @@ But for now I want to direct you to two methods:
     - Takes an integer for how many milliseconds you want to delay
       before constantly running the timer.
 
-It's best to add the delay before you call ```start```.
+It's best to add the delay before calling ```start```.
 
-### Add a three second delay before the timer starts
+### Add a three-second delay before the timer starts
 
 While the concept of **stop** seems simple enough,
 it may not always make sense as to when or who should be able to make the timer stop.
 
 1. Add a call to stop the timer in ```actionPerformed```.
-2. We declared our Timer as a local variable,
-   switch the timer to be an instance variable instead.
+2. We declared our Timer as a local variable;
+   convert the timer to an instance variable instead.
 3. Use an ```if``` statement to say
    that we want to stop the timer when ```numTimes``` has reached 10.
     - ```actionPerformed``` is called many times,
@@ -213,7 +213,7 @@ So far,
 we've mostly been showing the basics of Timers,
 however,
 Timers end up being extremely useful in many situations,
-since what they allow you to run **threads**.
+since they allow you to run **threads**.
 
 - Threads are separate processes that run independently from the program's main loop.
 - If you want to learn more about threads,
@@ -233,7 +233,7 @@ I suggest for now that you have a single timer and call it more often.*
 For example:
 
 If you only need something to happen every second (1000ms) and your timer is happening every 500 ms,
-just have a ```numTimes``` variable and check to see if ```numTimes``` is even.
+create a ```numTimes``` variable and check to see if ```numTimes``` is even.
 
 Let's go through a slightly more complicated example by opening up
 **BallLauncher.java**:
@@ -245,7 +245,7 @@ it is making a ball at the same height as our mouse cursor but on the left hand 
 
 For example,
 if you click in different areas of the screen,
-you'll notice red circles on the left hand side based on where your cursor is when you click,
+you'll notice red circles on the left-hand side based on where your cursor is when you click,
 like so:
 
 ![clicking around adds balls to the screen](lab10media/media/ballstart.gif)
@@ -282,7 +282,7 @@ Remember that since we want the circle to appear at the center of where we click
 we are subtracting ```SIZE/2```,
 from where we click,
 which will cause where we click to be the center of the circle instead of the top left.
-```makeBall``` is just a convenience method to help make a red filled ball.
+```makeBall``` is just a convenience method to help make a red-filled ball.
 What we are going to do is to move all of the balls that are created to the right.
 To start this,
 we want to make an ```ArrayList``` of ```GOval```s,
@@ -321,12 +321,16 @@ Let's add something visual to our program.
     - If you haven't tried doing a for loop using the **:** operator to iterate through a list,
     now would be a good time to try.*
 
-    Once you handled the ```actionPerformed``` event by moving all the balls in the list,
-    created and started the timer,
-    you should run your program again,
-    and click around and notice how you have something that feels much more dynamic and expressive!
+    Once you handle the ```actionPerformed``` event by:
 
-    If you are still curious how my version behaves
+    - moving all the balls in the list
+    - creating and starting the timer
+  
+    you should run your program again
+    and click around.
+    Notice how you have something that feels much more dynamic and expressive!
+
+    If you are still curious about how my version behaves
     (or you just want to observe your professor's antiquated clicking habits for 15 seconds),
     you can [click here](lab10media/media/ballnextdemo.gif).
 
@@ -335,7 +339,7 @@ Let's add something visual to our program.
     - Use the message **"all balls move across the screen"**.
 
 If it's not behaving how you would expect,
-review the [three step checklist above](#what-is-a-timer).
+review the [three-step checklist above](#what-is-a-timer).
 
 ### Adding a Ball Launch cooldown
 
@@ -383,7 +387,7 @@ If you think about our discussion,
 what would happen when you click the mouse
 while the program is going through the list and moving all of the balls?
 In the case of having the timer,
-the program will actually wait until it is done with the
+the program will wait until it is done with the
 ```actionPerformed``` before it calls ```mousePressed```,
 so that it feels like both work at the same time (aka concurrently).
 Because mouse events and our timers both involve the user interface,
@@ -446,7 +450,7 @@ we're going to work with a copy of it.
     function which will create a green square to represent our enemies.
     To make it easier to use,
     I only have it provide a **y** coordinate,
-    and the method automatically places the enemy on the right hand side of the screen.
+    and the method automatically places the enemy on the right-hand side of the screen.
 
     You'll also notice that we have a ```RandomGenerator rgen``` that we have created.
     One last refactoring that you'll see is
@@ -464,14 +468,14 @@ we're going to work with a copy of it.
 
     - However,
     we don't want to call ```addAnEnemy```,
-    everytime ```actionPerformed``` is called,
+    every time ```actionPerformed``` is called,
     but rather every once in a while.
     - This is where something like that ```%``` operator works great
-    if we add a ```numTimes``` instance variable that works similar to what we implemented in the
+    if we add a ```numTimes``` instance variable that works similarly to what we implemented in the
     [first timer example](#myfirsttimerjava),
     (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster,
     or to decrease it from 40 to say 5,
-    [like I did here](lab10media/media/greenpopulate.gif)).
+    [as I did here](lab10media/media/greenpopulate.gif)).
     - Because we are keeping track of the number of times ```actionPerformed``` is called,
     we can simply say every  40<sup>th</sup> time,
     go ahead and make a new enemy,
@@ -518,13 +522,13 @@ we're going to work with a copy of it.
 
 ## Final required addition
 
-At this point I'm guessing that you probably want
+At this point, I'm guessing that you probably want
 some way to get rid of these green squares using the ball.
 While there are many ways for checking to see if a ball and rectangle overlap,
-that's not really part of this course,
+that's not part of this course,
 so I'm going to explain a very simple way of checking to see if the ball may have hit a square.
 
-One thing you can do is that for every red ball,
+One thing you can do is that for every red ball -
 when it's their time to move,
 check a point just outside of the ball and call ```getElementAt```.
 If the object that is given back is an ```instanceof``` a ```GRect```,
@@ -534,7 +538,7 @@ we'll want to check the red point in the picture below:
 
 ![diagram showing point ahead of ball](lab10media/media/checkball.png)
 
-If it turns out that we do have potential enemy in front of us
+Turns out that if we do have a potential enemy in front of us
 (by calling ```getElementAt``` using the measurements shown above),
 then we want to remove it not only from the screen (by calling **remove**)
 but also from the ```enemies```.
@@ -554,7 +558,7 @@ Make sure to push your final changes to your repository by the deadline.
 ## Advanced reading on multiple timers
 
 If you're curious,
-[here's an explanation on how to implement multiple timers in your program](10-A-Mult-Timers.html)
+[here's an explanation of how to implement multiple timers in your program](10-A-Mult-Timers.html)
 
 ## Bonus
 
@@ -566,21 +570,20 @@ there are many things you can do to make it more polished.
 For example,
 you could add a label that is continually updated or set in ```actionPerformed```
 that would update the number of green squares that you have removed from the screen
-(see version on the left).
+(see the version on the left).
 Or you could instead (or in addition)
 add in checks to say if there are more than ```MAX_ENEMIES``` on the screen,
 then stop the timer,
-remove everything an add a message telling them they lost.
+remove everything and add a message telling them they lost.
 Lastly,
-it's fairly simple to give them some indicator of progress or score
-by simply on the lose screen presenting them with the ```numTimes``` variable,
-which is in a way,
-representative of how long they were able to last in playing the game
+it's fairly simple to give them some indicator of progress or score.
+On game over, present them with the ```numTimes``` variable,
+which is representative of how long they were able to last in playing the game
 (see version below).
-Hopefully you can see how easy this is to extend
+Hopefully, you can see how easy this is to extend
 and how much fun you can start to have in creating these things and making the game your own,
-with your own changes.
-Hopefully you see the powers that timers can have
-in making your programs more dynamic and more expressive.
+with your changes.
+Hopefully, you see the powers that timers can have
+in making your programs more dynamic and expressive.
 
 ![label showing score during gameplay in lower left](lab10media/media/image5.png)![label showing game over with score](lab10media/media/image6.png)
