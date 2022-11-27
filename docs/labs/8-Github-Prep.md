@@ -2,9 +2,9 @@
 
 This lab is a mishmash of steps
 that need to be completed individually before we meet again in class.
-What we are doing is joining the wide world of sharing code repositories.
+We will be joining the wide world of sharing code repositories.
 To do that,
-we're going learn about git,
+we'll learn about git,
 which is a way being able to keep track of our code changes,
 and we're also going to learn about and use GitHub,
 which is one of the leading companies to host git repositories (think projects) online.
