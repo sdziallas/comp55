@@ -231,7 +231,7 @@ All you will need to do is import the library or collection of classes that you 
 similar to the ```#include``` in C++.
 Except here there are many more libraries and useful classes at your disposal.
 Ever wanted to have a class that stores a Date correctly? Done.
-Want to make an http request? Done.
+Want to make an HTTP request? Done.
 Want to sort an array? Done.
 To see,
 just go to this link.
@@ -255,7 +255,7 @@ and see if anything interesting comes up.
 I'll leave you with one last thing to worry about here.
 
 Now with your newfound knowledge of Java,
-what will this printout?
+what will this print out?
 
 ```java
 Fraction f1 = new Fraction(5, 2);

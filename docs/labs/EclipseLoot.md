@@ -14,7 +14,7 @@ then I would encourage you to ask me or others about them or see if you need any
   and just type ```System.``` --
   it pops up "auto completions".
   Use the *up* and *down arrow keys* to look at your options,
-  hit *Return* to select & *Esc* to get out.
+  then hit *Return* to select & *Esc* to get out.
   Also,
   typing *Ctrl-space* brings this up on command,
   even without a dot.
@@ -23,7 +23,7 @@ then I would encourage you to ask me or others about them or see if you need any
   Select *Collections* and once you press the *period* key
   then you'll get static methods in the Collections class.
   This will be useful for things like the ```Math``` class
-  so you don't have to remember all of the methods as each method comes with  description.
+  so you don't have to remember all of the methods as each method comes with a description.
 
 - ***Ctrl-space*** works wonders in a variety of places,
   it will always try to provide you with relevant suggestions based on what you've typed so far.
@@ -31,13 +31,14 @@ then I would encourage you to ask me or others about them or see if you need any
 - Hover over a word in the source to pull up its javadoc.
   For example,
   you can type the following line ```String s = "Hello";```
-  and then hover over the ```String``` word and you'll see the documentation fo ```String``` pop up.
+  and then hover over the ```String``` word and you'll see the documentation of ```String``` pop up.
 
     ![Java documentation window in eclipse](eclipseloot/media/image1.png)
 
-- You can right click and then say *Source->Correct Indentation* to fix indentation.
-  Alternatively you can also just *Select All* (***Ctrl-A***)
-  and then hit ***Ctrl-I*** to fix all th indentation,
+- You can right-click and then say *Source->Correct Indentation* to fix the indentation.
+  Alternatively,
+  you can also just *Select All* (***Ctrl-A***)
+  and then hit ***Ctrl-I*** to fix all the indentation,
   so your code is properly indented at all times.
 
 - You can easily comment and uncomment out a line of code by hitting
@@ -54,24 +55,24 @@ then I would encourage you to ask me or others about them or see if you need any
   hold down the ***Ctrl*** key when going left and right.
   It will navigate between words.
   It will save you from having to press the arrow key so many times.
-  This is actually a keyboard shortcut that works in most programs.
+  This keyboard shortcut works in most programs.
   Pressing ***Home*** and ***End*** to navigate to the beginning or end of a line
   is what I use the most.
-  Holding ***Shift*** while you navigate will allow you to highlight tex as well.
+  Holding ***Shift*** while you navigate will allow you to highlight text as well.
 
 - Select a method/variable/class name,
   *right click* and choose *Refactor->Rename*
   (***Alt-Shift-R***) -- this is a superficial feature,
-  but is sure is handy to fix up a name choice quickly.
+  but it sure is handy to fix up a name choice quickly.
 
 - You can easily make a new method out of any code by selecting a block of code,
-  right clicking and choosing *Refactor->Extract Method* (***Alt-Shift-M***).
+  right-clicking and choosing *Refactor->Extract Method* (***Alt-Shift-M***).
 It's smart about what parameters are required.
 
 ### Closing/Removing/Quitting
 
 - If you want your resources to be focused on a particular project,
-  you can right click on a project,
+  you can right-click on a project,
   and close it.
   Closing it won't remove it from the package explorer,
   but will not let you open the files or will allow you to run the project,
@@ -95,7 +96,7 @@ It's smart about what parameters are required.
 
 To debug in eclipse
 
-- Double click in the editor at the left of a line to set a breakpoint on that line
+- Double-click in the editor at the left of a line to set a breakpoint on that line
 
     ![eclipse with a breakpoint](eclipseloot/media/image2.png)
 
@@ -107,7 +108,7 @@ To debug in eclipse
 
     ![eclipse toolbar classic](eclipseloot/media/image3.png)
 
-- This should prompt to switch to the "debugger" perspective
+- This should prompt you to switch to the "debugger" perspective
 
     ![debug perspective switch confirmation](eclipseloot/media/image5.png)
 
@@ -119,7 +120,7 @@ To debug in eclipse
   you'll want to see different things than when you are editing the code.
 
 - There are little buttons at the far upper right to switch perspectives,
-  use the left most one to open up a perspective if it's not listed.
+  use the left-most one to open up a perspective if it's not listed.
 
     ![perspective icons in toolbar](eclipseloot/media/image6.png)
 
@@ -143,7 +144,7 @@ To debug in eclipse
   so that the debugger knows where you should stop to take a look at variables.
 
 - The red square highlighted above will stop the program.
-  You should used this
+  You should have used this
   so that you don't have too many copies of the program running at the same time.
   ![red square icon](eclipseloot/media/image9.png)
 
@@ -156,7 +157,7 @@ To debug in eclipse
   at the time of the exception
   (this happens when you *Debug* the program,
   not when you *Run* it).
-  In the debug perspective,
+  Inside the debug perspective,
   the *Run->Add Java Exception Breakpoint* command allows you to edit which exceptions drop automatically into the debugger.
 
 ### One Final Tip

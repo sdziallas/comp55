@@ -1,7 +1,7 @@
 # Git Tips
 
-Here's a couple of things you have to know to use Git and not have it
-mess with you.
+Here are a few things you must know to use Git and not have it
+use you.
 
 1. Ensure your team member uses the project I've given you to setup the repository
 
@@ -81,14 +81,14 @@ mess with you.
     If it won't let you, continue the pull and merge.
 
 5. If you're having issues with the repository,
-   you can always reset your folder to match what the latest version is.
+   you can always reset your folder to match the latest version.
    To do this,
    right-click on the project,
    then select ***Team->Reset….***
    Make sure to select the remote version or the local version
    of the repository you want to switch to,
    and then select a hard reset,
-   which will attempt to replace your entire folder contents wit what is in that version.
+   which will attempt to replace your entire folder contents with what is in that version.
    Know that if you do a hard reset,
    you will lose any changes you made,
    so only do this as a last resort or if you haven't made changes and just want the latest part.
@@ -98,25 +98,25 @@ mess with you.
 ## Java Build Path - Adding a folder of images
 
 When importing your project into Eclipse
-there are times where certain folders are not in the java build path.
-Lets take for example a media folder containing images for you project
+there are times when certain folders are not in the java build path.
+Let's take for example a media folder containing images for your project
 that's not in your java build path.
 
 The console will return an error telling you it cannot find the image.
 
 ![Exception stack trace file not found](gittips/media/cannotFindImage.png)
 
-First thing you want to do is right-click your *project-name* in your project explorer
+The first thing you want to do is right-click your *project-name* in your project explorer
 and click on the *properties*.
 You will be greeted with this window:
 
 ![eclipse project properties](gittips/media/propertiesPage.png)
 
-1. Cick *Java Build Path*
+1. Click *Java Build Path*
 2. Click on the *Source* tab
 3. Click on *Add Folder*
 
 Now you are met with the Source Folder Selection
-where you can check the folder you want included and you are done!
+where you can check the folder you want to include and you are done!
 
 ![eclipse source folder selection](gittips/media/sourceFolderSelection.png)
