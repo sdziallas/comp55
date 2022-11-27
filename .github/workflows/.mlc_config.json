@@ -1,7 +1,7 @@
 {
   "ignorePatterns": [
 	{
-		"pattern":"^[0-9]{1,2}-[0-9A-Za-z-]+.html"
+		"pattern":"^([0-9]{1,2}-[0-9A-Za-z-]+.html|docs.github.com)"
 	}
   ],
   "retryOn429": true,
