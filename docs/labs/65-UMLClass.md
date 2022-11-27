@@ -1,25 +1,24 @@
 # UML Class Diagram Lab
 
 For today,
-we are going to continue using plantUML to develop class diagrams
+we are going to continue using plantUML to develop class diagrams,
 which detail how classes and their methods interact.
-By having a way to model this representation,
-it gives us a better sense of how the software that we are proposing to build works.
-Let's start by first discuss what the class diagrams will look like
+Making models helps us better understand how the software that we are proposing to build will work.
+Let's start by first discussing what the class diagrams will look like
 (and how to draw them on a piece of paper) first.
 
 ## Drawing a class in UML on a piece of paper
 
 Representing a class in UML is one of the basic building blocks for designing a system.
 To do so in a paper drawing for UML you just end up providing a name for the class
-and place it in inside a rectangle,
+and place it inside a rectangle,
 like so:
 
 ![Rectangle for UML diagram](lab65media/rectangle.png)
 
-Obviously though we want to have some more information,
+We can increase our understanding of a system when we can add more information to a class,
 like variables and methods that the class supports.
-We can do this by making the rectangle taller and having two sub areas (separated by lines),
+We can do this by making the rectangle taller and having two sub-areas (separated by lines),
 one for variables and one for methods.
 Notice that in UML,
 the syntax for declaring variables is this:
@@ -28,7 +27,7 @@ the syntax for declaring variables is this:
 
 The colon (```:```) is used as a marker between the type and the variable's name.
 Notice that the type is **after** the variable name
-which is reverse compared to what you have in Java/C++ many other languages,
+which is reverse compared to what you have in Java/C++ and many other languages,
 but again,
 this is meant to be able to be used in any language,
 so we will not question it and continue.
@@ -59,7 +58,7 @@ as it allows us to use text and symbols to come up with a diagram.
 
 To start,
 right-click on [this webpage](http://plantuml.com) and say *open in new window*.
-(Remember to do the side by side with Windows left arrow!).
+(Remember to do the side-by-side with Windows left arrow!).
 On the plantUML site,
 remember to click on the **online server** option on the left sidebar.
 
@@ -83,13 +82,13 @@ you see a class picture down at the bottom that looks something like this:
 ![Single class UML diagram](lab65media/oneclass.png)
 
 One of the nice features of PlantUML is that it continually redraws based on what you have written,
-giving us that instantaneous and continuous feedback.
+providing us with instantaneous and continuous feedback.
 So far the syntax for defining a class should feel very similar.
 If we wanted to generate another class,
 we would simply write another class below those two lines (but above the ```@enduml``` line).
 Try that now by writing a class called ```Song```.
 You should now see the two classes side-by-side.
-**Do not continue until you see both classes in the plantuml diagram**
+**Do not continue until you see both classes in the plantUML diagram**
 
 ### Adding class variables and methods
 
@@ -102,7 +101,7 @@ you'll get something that looks like this:
 
 ![Single class with properties UML diagram](lab65media/latlong.png)
 
-Notice how the there are red squares,
+Notice how there are red squares,
 which are being used here to denote that the variables are **private**.
 This is not standard UML which uses the (```-```) as part of the diagram.
 Let's change that -
@@ -122,15 +121,15 @@ Doing so would allow us to get a picture like this:
 
 Notice how merely with the inclusion of parenthesis,
 this automatically puts us in the bottom section of the class,
-which is where all the method defintions go in a class diagram
+which is where all the method definitions go in a class diagram
 (the middle area is where all the instance variables are placed).
 Therefore in PlantUML,
 to add any of the class information,
 we would merely add the variables and methods
-inside the curly braces of any class defintion that we have added.
+inside the curly braces of any class definition that we have added.
 
 This should provide you with sufficient information
-to declare classes and the methods that would be inside of those classes.
+to declare classes and the methods that would be inside those classes.
 While having the class names and what they contain and do is important,
 these class UML diagrams have one last important part to discuss,
 which is how they are related to one another.
@@ -140,14 +139,14 @@ let's look at that now.
 
 ### Establishing relationships between classes
 
-One way that we often represent some assocation between classes
+One way that we often represent some association between classes
 is merely by drawing a line or arrow from one class to another.
 This can be done very simply in plantUML as well,
-through the use of hyphens and some ASCII type art
+through the use of hyphens and some ASCII-type art
 (just like we did with the use case diagrams).
 After all of the class definitions
 (but again, before the ```@enduml``` line),
-we can represent simple relationships between the classes and on separate lines.
+we can represent simple relationships between the classes on separate lines.
 To create associations between classes we merely follow this format.
 
 *```left_class```* ***```operator```*** *```right_class```*
@@ -168,7 +167,7 @@ PlantUML allows us to think more about the code
 and not have to draw the diagrams in this perfect format.
 If you wanted to have additional information
 on how to denote things in the diagram like abstract classes or interfaces,
-you can look at plant-umls
+you can look at plantUML's
 [official documentation](http://plantuml.com/class-diagram).
 Please realize though plantUML *is a product - it is not necessarily the UML spec*.
 The PlantUML documentation is quite lengthy,
@@ -180,7 +179,7 @@ To submit something for this lab,
 I would like for you to by the end of this come up
 with some logical structure **for at least five classes**
 (that have both variables and methods and are linked to one another),
-that includes:
+that include:
 
 - a ```Song```,
     ```DJ```,
@@ -192,7 +191,7 @@ that includes:
   (you'll need to come up with another class to help with this)
 - A logical composition relationship
 - A logical unidirectional relationship
-- Each class should have at least one variable and 2 methods,
+- Each class should have at least one variable and 2 methods
   and should make some sense.
   (Go beyond having getters/setters and think of methods)
   Be sure to include parameters and return types.
