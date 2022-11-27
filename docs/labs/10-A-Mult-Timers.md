@@ -20,13 +20,15 @@ For *shared resources*,
 you do **not** actually need more than one ```Timer```.
 As a matter of fact,
 introducing more than one timer variable can create concurrency issues.
-The timers are not guaranteed to affect the shared resources in a specific order every time the program executes.
+The timers are not guaranteed to affect the shared resources
+in a specific order every time the program executes.
 To handle different timer tasks that use the same resources,
 follow one of the following two approaches depending on timing:
 
 ## Simulating multiple tasks on shared resources at different times with a single timer
 
-Imagine that we want to create a program where we have two tasks that happen at different times but affect the same resource
+Imagine that we want to create a program
+where we have two tasks that happen at different times but affect the same resource
 (ex: *Task A should occur every 3 sec, Task B should occur every 4 sec*)
 
 To do this,
@@ -62,7 +64,8 @@ if (timesCalled % 4 == 0) {
 ```
 
 This type of implementation will always work,
-the only small caveat is that it may affect performance if what is implemented in ```actionPerformed``` is long.
+the only small caveat is that it may affect performance
+if what is implemented in ```actionPerformed``` is long.
 But for 95% of you,
 if you understand this approach,
 I am OK with you using this.

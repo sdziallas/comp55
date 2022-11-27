@@ -21,10 +21,12 @@ If you're not sure how many pieces to break it down to,
 start with breaking it down into two or three that seem to be nice and separate sub-problems.
 From there you can take each of those parts and if they seem complicated,
 break those down into smaller pieces too.
-This is a technique that you can use once you know what the problem is or what you are trying to build.
+This is a technique that you can use
+once you know what the problem is or what you are trying to build.
 
 While this lab will hopefully give you some practice in decomposing problems into smaller parts,
-I'm also going to use this opportunity to discuss some aspects of programming that some of you may not have had much interaction with
+I'm also going to use this opportunity to discuss some aspects of programming
+that some of you may not have had much interaction with
 (yet may be useful for your projects),
 like custom colors as well as movement using polar coordinates.
 
@@ -43,7 +45,8 @@ what if I asked you to build one of the two parts?
 
 Either of those by themselves is less daunting than the whole.
 Breaking problems down helps us more easily tackle a hard project,
-and the art of finding a good way to break them down is important and one that you should practice when programming from here on out.
+and the art of finding a good way to break them down is important
+and one that you should practice when programming from here on out.
 
 Decomposing programming tasks not only makes it easier to tackle the problem,
 but it also makes it easier to test -
@@ -99,7 +102,8 @@ Now for step 2,
 on each ```actionPerformed```,
 move ```ball``` by a pixel or two.
 Don't' worry about setting the ball's color or anything.
-Run the program and fix anything to make sure that have a ball that is just moving across the screen continuously.
+Run the program and fix anything
+to make sure that have a ball that is just moving across the screen continuously.
 **Don't continue until you get the ball moving in a straight line across the screen.**
 
 ![moving horizontally](lab11media/media/step2ballblackv2forever.gif)
@@ -112,12 +116,15 @@ This is the beauty of decomposition,
 and we feel better about accomplishing things.
 Now,
 let's focus on changing that movement to be circular.
-*Do you notice how the circular movement feels just a tad more achievable since we have already made some progress?* While the circular movement may still feel tricky,
+*Do you notice how the circular movement feels just a tad more achievable
+since we have already made some progress?*
+While the circular movement may still feel tricky,
 getting the ball to move across the screen with a timer shouldn't have felt insurmountable,
 so we worked on that first to get that going,
 which then makes the circular movement feel slightly less daunting.
 
-To help you think about a circular movement let me introduce a little function that is already a part of the acm graphics library called ```movePolar```.
+To help you think about a circular movement let me introduce a little function
+that is already a part of the acm graphics library called ```movePolar```.
 Rather than dive into some huge explanation,
 it's important to play around and to try to figure out behavior,
 so...
@@ -169,7 +176,9 @@ zero once it goes past 360 degrees.
 Otherwise you can use an if statement if this all feels very rough.
 
 Finally,
-you can then tweak the values of the circular movement so that you can get the oval to start at the bottom of the screen and to move in a circular movement around the screen to better match what was shown to you.
+you can then tweak the values of the circular movement
+so that you can get the oval to start at the bottom of the screen
+and to move in a circular movement around the screen to better match what was shown to you.
 No need to have the square in the image above,
 though you can add it if you want.
 
@@ -178,7 +187,8 @@ you can now go on to tackle the Colors!
 
 ## Changing colors
 
-While smooth color changing has become all the rage recently especially with the adoption of LED lights in EVERYTHING,
+While smooth color changing has become all the rage recently
+especially with the adoption of LED lights in EVERYTHING,
 this wasn't always the case.
 In fact,
 slowly transforming colors used to generate a sense of awe.
@@ -208,7 +218,8 @@ you would have the value 255 in all three values of red, green, and blue.
 
 ![HTML Color picker from W3Schools](lab11media/media/image2.png)
 
-If you are curious what all the *f*'s are and the *\#* prefix are in the section between the highlighted values,
+If you are curious
+what all the *f*'s are and the *#* prefix are in the section between the highlighted values,
 that is just the representation or the HTML code for *white*,
 which is also represented as three values,
 except that those values are stored in hexadecimal format (Base 16)
@@ -224,7 +235,8 @@ which represents the fully intense blue component of the color)
 Click on a couple more of the colors and you'll notice that they will
 all end up being some combination of *red*, *green*, and *blue* values.
 This also happens with LED lighting,
-where you can actually see the differences in each of the LED markers provide a different color based on their intensity of their red green and blue lights.
+where you can actually see the differences in each of the LED markers
+provide a different color based on their intensity of their red green and blue lights.
 So if we figure out a way to gradually intensify red, green,
 and blue values in their intensity and then have them gradually lessen,
 then we could have the oval change into different colors in what looks like a smooth progression.
@@ -266,7 +278,8 @@ some ideas are.
     write down the numbers from say 0 to 7 and then start with 3,
     have it go down to zero and then have it come back up to 3.
     - If you think of using the mod operator and try to come up with a pattern,
-    with enough time you should be able to find a calculation that you can use on an increasing number.
+    with enough time you should be able to find a calculation
+    that you can use on an increasing number.
     Your program should run something like this
 
     ![output of the zig zagging](lab11media/media/image4.png)
@@ -278,10 +291,13 @@ some ideas are.
 6. Change your ```println``` statements so that they go from 0 to 255 and then back down to 0.
     Run it long enough that you can check to make sure that you don't go past 0 or 255.
 
-7. Use the calculation or value that you have that is being printed and place that in your ```setColor``` instead,
+7. Use the calculation or value that you have
+   that is being printed and place that in your ```setColor``` instead,
    which you may comment out now.
-   This should have it now move back and forth between 0 and 255 using the color mode for that single color.
-   Running the program again should have it move between black and red and black and red continuously without crashing.
+   This should have it now move back and forth
+   between 0 and 255 using the color mode for that single color.
+   Running the program again should have it move between black and red
+   and black and red continuously without crashing.
 
 8. Do that with the green and blue values,
    which will have it move from black to white to black
@@ -304,7 +320,9 @@ some ideas are.
 Programming projects can get quite large and unwieldy,
 so much to the point that you may feel *frozen* as to where to begin.
 This paralysis doesn't just happen in programming *but in all aspects of life*.
-I've often found that it happens to me anytime there is something large enough that I don't feel comfortable being able to say that I can accomplish it.
+I've often found that it happens to me
+anytime there is something large enough
+that I don't feel comfortable being able to say that I can accomplish it.
 Having this feeling,
 where you end up avoiding or delaying work,
 can come from many factors,

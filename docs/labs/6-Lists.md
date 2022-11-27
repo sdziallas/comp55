@@ -19,9 +19,11 @@ much *MUCH* easier.
   they just keep growing as you add more items.
 - Can add items to the end of an array by simply calling ```add```
   along with the item to be added.
-- Can ```insert``` items into the middle of the list without worrying about whether or not you shifted all the elements over.
-- Can ```remove``` items from the list in a variety of ways either searching for the object to remove or removing at a particular position.
-The list will automatically shrink.
+- Can ```insert``` items into the middle of the list
+  without worrying about whether or not you shifted all the elements over.
+- Can ```remove``` items from the list in a variety of ways
+  either searching for the object to remove or removing at a particular position.
+- The list will automatically shrink when items are removed.
 - Can cycle through the ```ArrayList``` in a very shorthand and awesome way.
 
 ```ArrayList```s do have an array under the hood,
@@ -92,7 +94,8 @@ void printList(ArrayList<String> list) {
 
 To complete this lab,
 you are going to copy your **Ball.java**
-file from the Interactivity lab and paste it in that same project (*Make sure to cover the Ball portion of the Interactivity Lab before attempting this lab*).
+file from the Interactivity lab and paste it in that same project
+(*Make sure to cover the Ball portion of the Interactivity Lab before attempting this lab*).
 You can rename the file **Balls.java**,
 since your end goal will be to have multiple balls bouncing off the screen.
 
@@ -153,11 +156,13 @@ to:
 
 - ```(i*(WINDOW_WIDTH/3)) – BALL_SIZE/2```
 
-*If you wanted to have a general solution, you would replace the ```3``` in the previous line with ```NUM_BALLS + 1```*.
+*If you wanted to have a general solution,
+you would replace the ```3``` in the previous line with ```NUM_BALLS + 1```*.
 Then we need to have the ```for``` loop start at one and go to three
 (which is ```NUM_BALLS + 1```).
 By doing this,
-it would place the first ball at 1/3 of the width of the window and the second ball and 2/3 of the width of the window.
+it would place the first ball at 1/3 of the width of the window
+and the second ball and 2/3 of the width of the window.
 Run the program again and the two balls should now start at different positions.
 However, only one ball is moving and eventually for a little bit they overlap.
 If we make all balls move however now that they are spread out,
@@ -167,7 +172,8 @@ we won't have them overlap anymore.
 
 Just like you did in creating multiple GOvals,
 the trick with making all the balls move is to go through the list and call ```move``` on each one.
-You can do this **by surrounding the code that moves ```ball``` and changes the direction inside of a for loop**.
+You can do this
+**by surrounding the code that moves ```ball``` and changes the direction inside of a for loop**.
 Because it's very common to iterate through a list,
 Java has provided an alternate loop syntax for cycling through a list.
 
@@ -187,7 +193,8 @@ which would now allow you to reference each oval in that list and call it ```bal
 **while inside the** ```for``` **loop**.
 Because we have redeclared ball,
 notice that it is no longer blue,
-(*we created a local variable with the same name so that we wouldn't have to modify our existing code*).
+(*we created a local variable with the same name
+so that we wouldn't have to modify our existing code*).
 
 To be sure you understand what is happening,
 the above for loop is equivalent to writing this:
@@ -204,10 +211,12 @@ One thing to know about the simplified version of the for loop is that you
 **cannot use remove elements from the list while iterating through it.**
 Doing so would raise an exception,
 so if you are at all confused,
-you can always go back to using the standard ```for``` loop syntax shown above to iterate through a list instead.
+you can always go back to using the standard ```for``` loop syntax shown above
+to iterate through a list instead.
 
 Lastly,
-in order to make sure that we convert all the code from working on the instance variable ball instead of the arraylist of balls.
+let's make sure that we convert all the code
+from working on the instance variable ```ball``` to the arraylist of ```balls```.
 We should delete or remove the instance variable ```private GOval ball;```.
 Once you do that,
 you may notice other errors that pop up.
@@ -237,7 +246,8 @@ velocity as well as a ```GOval```,
 but for this lab,
 you could just make a parallel ```ArrayList``` for ```xVelocities```
 and another parallel ```ArrayList``` for ```yVelocities```.
-Doing so would probably mean that you would want to use the more generalized version of the ```for```
+Doing so would probably mean
+that you would want to use the more generalized version of the ```for```
 loop that uses an ```i``` variable,
 so that you can use the same index (```i```)
 to link a particular ```GOval``` with an ```xVelocity``` and ```yVelocity``` if you'd want.
