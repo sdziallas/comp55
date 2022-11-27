@@ -3,14 +3,14 @@
 This lab has two components.
 The first part is reading heavy,
 but not too long.
-In this lab you're going to learn
+In this lab, you're going to learn
 
 - *What a HashMap is*
 - *How it differs from a Hashtable*
 - *How to store and retrieve items from a HashMap*
 - *In which ways HashMaps are useful*
 
-In the [second part of the lab](12-A-Hash2.html)
+In the [second part of the lab](12-A-Hash2.html),
 you'll walk through a program in a style similar to what we've done previously.
 This time though,
 we will show you how to use a ```HashMap```.
@@ -24,12 +24,12 @@ similar to what some of you may remember with the **map** STL library in C++.
 In COMP 53,
 you may have some faint recollection of what a hashtable is,
 which was a data structure that would compute a **hash** based on a value,
-and then use that hashed value as index to be used to locate the index in an array.
+and then use that hashed value as an index to be used to locate the index in an array.
 Hashtables allowed us to search and store items into a collection in constant O(1) time,
 which means that no matter the size of the hashtable,
 you would be able to count on the running time not increasing
 (as long as the number of buckets is roughly equal to the
-number of items and you have a full hash function yada yada)
+number of items and you have a full hash function yada-yada)
 
 ## Why didn't they just call it a hashtable then?
 
@@ -40,7 +40,7 @@ implements the ```Map``` interface.
 a bond,
 or mapping,
 between two items.
-Java actually does have a ```HashTable``` class that is
+Java has a ```HashTable``` class that is
 nearly identical to the ```HashMap``` class,
 but ```HashTable``` is now obsolete and still available for legacy reasons.
 These two classes are not to be confused with Java's ```HashSet``` data structure,
@@ -56,11 +56,11 @@ where the key is hashed.
 Like a dictionary,
 when you end up looking up a word in a dictionary,
 you get a definition for that word.
-In a way it links or maps the word with the definition.
+In a way, it links or maps the word with the definition.
 In computer science lingo,
 the word would end up being called the **key**,
 while the definition would be called the **value**.
-In order to make ```HashMaps``` truly work,
+To make ```HashMaps``` truly work,
 ```HashMaps``` have a condition that a
 **key can only correspond to one value**.
 So for example,
@@ -87,7 +87,7 @@ we'll declare them in the HashMap like this:
 HashMap<String, String> phobias = new HashMap<String, String>();
 ```
 
-Now to create a linkage in the ```HashMap```.
+To create a linkage in the ```HashMap```.
 One would use the ```put``` call to place something into the ```HashMap```.
 
 ```java
@@ -185,7 +185,7 @@ pentheraphobia : the fear of your mother-in-law
 
 Remember,
 ***each key corresponds to one and only one value object***.
-So how does this work when you have multiple objects that you want with similar values.
+So how does this work when you have multiple objects that you want with similar values?
 Let's try this first.
 
 ```java
@@ -213,9 +213,9 @@ no longer would the shorter definition be linked to *nomophobia*,
 it would be replaced with this longer definition.
 **Each key can only correspond to one value.**
 
-## But...what if there are multiple meanings to the same word?
+## But...what if there are multiple meanings for the same word?
 
-In that case if you want to store multiple meanings,
+In that case, if you want to store multiple meanings,
 you'll have to select an object or class that will allow you to store multiple meanings.
 For example,
 you can have a word that has multiple meanings sometimes even contradictory.
@@ -223,16 +223,16 @@ Let's start up another ```HashMap```,
 this time for contronyms which are words that often have opposite meanings.
 For example,
 think about the word ***dust***.
-Usually it means to take off something right?
+Usually, it means to take off something right?
 For example,
 when you want to *dust* the furniture.
 However,
-the word *dust* can also mean to add something instead of taking away!
-For example you may want to *dust* a pan with flour.
-In this case the word **dust** has two meanings.
+the word *dust* can also mean to add something instead of taking it away!
+For example, you may want to *dust* a pan with flour.
+In this case, the word **dust** has two meanings.
 Let's say we want to create a map that has both.
 How would this be done?
-In this situation we could create some really long string,
+In this situation, we could create some long string,
 but what we can do is simply create a different linkage,
 one in which we'll link a word,
 with another storage mechanism that would allow us to store multiple definitions.
@@ -247,8 +247,8 @@ dustDefs.add("To take away fine particles");
 dustDefs.add("To add particles");
 ```
 
-Now to add create this linkage in a map,
-we'll create a new HashMap that links the word with this arraylist that we just created.
+Now to create this linkage in a map,
+we'll create a new ```HashMap``` that links the word with this ```ArrayList``` that we just created.
 
 ```java
 HashMap<String, ArrayList<String>> contronyms = new HashMap<String, ArrayList<String>>();
@@ -258,16 +258,14 @@ contronyms.put("dust", dustDefs);
 
 Then,
 whenever you call ```get```,
-you will store the value that receive back from the HashMap as an arraylist.
+you will store the value that you receive back from the HashMap as an ```ArrayList```.
 For example:
 
 ```java
 ArrayList<String> wordDefs = contronyms.get("dust");
 ```
 
-## Ok
-
-so how do we really use this?
+## Ok, so how do we use this?
 
 The possibilities are endless here!
 
@@ -321,17 +319,13 @@ For example:
 ```java
 HashMap<String, Movement> moveMap = new HashMap<String, Movement>();
 
-moveMap.put("up",
-new Movement(upOval, 0, -5, "north"));
-moveMap.put("down",
-new Movement(downOval, 0, 3, "south"));
-moveMap.put("left",
-new Movement(leftOval, -7, 0, "west"));
-moveMap.put("right",
-new Movement(rightOval, 8, 0, "east"));
+moveMap.put("up", new Movement(upOval, 0, -5, "north"));
+moveMap.put("down", new Movement(downOval, 0, 3, "south"));
+moveMap.put("left", new Movement(leftOval, -7, 0, "west"));
+moveMap.put("right", new Movement(rightOval, 8, 0, "east"));
 ```
 
-Then when you get to actually having to do this code,
+Then when you have to do the movement,
 you can write this.
 
 ```java
@@ -346,21 +340,21 @@ Now some of you may rightfully say that this is more code,
 but think about what this represents.
 We are putting all of the code that deals with changes into one place.
 And what would happen if we move to 8 directions?
-And then we also forgot that we need to add two more lines
+And what if we need to add two more lines
 of code inside of our if statement that needs more movement data?
-Hopefully you start to see that this would be a cleaner solution.
+Hopefully, you start to see that this would be a cleaner solution.
 
 ## Getting credit for part 1
 
-Part of the credit for this lab,
+Part of the credit for this lab
 will be in thinking about what hashmaps are by thinking about the four questions up top.
 You should discuss this with your team,
-but what I'd like you to do is to
+but what I'd like you to do is
 **answer the four questions at the beginning of the document in your own words (not your team's)**.
 For the useful part,
 you will come up with at least three different potential places
 where you could use a ```HashMap``` in your project,
-and to provide code for what that would look like in terms of helping you make the project better.
+and provide example code for how an ArrayList can improve your project.
 Remember that what I've shown you here has been using mostly strings as keys,
 however,
 your key can be any object that you choose.

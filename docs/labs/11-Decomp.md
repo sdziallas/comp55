@@ -1,7 +1,7 @@
 # Decomposition Lab
 
 - [Decomposition Lab](#decomposition-lab)
-    - [Let's get movement going](#lets-get-movement-going)
+    - [Let's get some movement going](#lets-get-some-movement-going)
         - [Adding an oval to the screen](#adding-an-oval-to-the-screen)
         - [Animating the oval to move in a straight line](#animating-the-oval-to-move-in-a-straight-line)
         - [Animating the ball to move along a circular path](#animating-the-ball-to-move-along-a-circular-path)
@@ -10,7 +10,7 @@
 
 Today you are going to recreate this animation and behavior:
 
-![Final animation color changing swirl](lab11media/media/swirl.gif)
+![Final animation color-changing swirl](lab11media/media/swirl.gif)
 
 To achieve this,
 today we're going to provide advice on how to figure out where to start with a large problem.
@@ -35,8 +35,7 @@ For this lab it may make sense to break down the problem initially into two part
 1. the circular movement,
 2. the color changing.
 
-Now,
-if instead of asking you to build the whole thing,
+Now if instead of asking you to build the whole thing,
 what if I asked you to build one of the two parts?
 
  Just circular movement | Just change the color
@@ -70,7 +69,7 @@ it shouldn't feel *extremely* trivial,
 especially if you take the
 **added challenge of making a solution that doesn't use any if statements or conditionals**.
 
-## Let's get movement going
+## Let's get some movement going
 
 For this lab,
 to get straight to working on the contents,
@@ -133,7 +132,7 @@ so...
 
 **Change the ```move``` that you have in your
 ```actionPerformed``` to ```movePolar``` instead**,
-using the same arguments as you had in move.
+using the same arguments as you had in ```move```.
 If you aren't aware or don't remember polar coordinates,
 **polar coordinates** are expressed using two values,
 one is the *distance* that you want to move,
@@ -144,7 +143,7 @@ run it again with ```movePolar```.
 You should notice that it moves in a straight line,
 maybe even in the exact same way as before.
 Stop the program and change the numbers.
-What happens when you change the numbers and try it again?
+What happens when you change the numbers and try again?
 If you're not sure,
 start by changing one of the numbers by 1,
 if you don't get much of a result,
@@ -162,7 +161,7 @@ Look at this handy chart below to understand how the angles translate to differe
 
 Instead of me trying to tell you which argument is which,
 use some different values,
-like **45** in the different arguments for ```movePolar``` to figure out order of the arguments.
+like **45** in the different arguments for ```movePolar``` to figure out the order of the arguments.
 Once you've figured that out,
 then think about this:
 ***what would happen if we ask the ball to move the same distance around,
@@ -173,10 +172,11 @@ Once you do get a circle,
 you can if you want to do the challenge,
 think of using the remainder operator to reset the angle back to
 zero once it goes past 360 degrees.
-Otherwise you can use an if statement if this all feels very rough.
+Otherwise,
+you can use an if statement if this all feels very rough.
 
 Finally,
-you can then tweak the values of the circular movement
+you can then tweak the values of the circular motion
 so that you can get the oval to start at the bottom of the screen
 and to move in a circular movement around the screen to better match what was shown to you.
 No need to have the square in the image above,
@@ -187,14 +187,13 @@ you can now go on to tackle the Colors!
 
 ## Changing colors
 
-While smooth color changing has become all the rage recently
+While smooth color changing has become all the rage recently,
 especially with the adoption of LED lights in EVERYTHING,
 this wasn't always the case.
-In fact,
-slowly transforming colors used to generate a sense of awe.
+In the early 200s,
+slowly transforming colors would generate a sense of awe.
 For this lab,
-let's pretend to be back in those olden times of yore
-(you know, the early 2000's).
+let's pretend to be back in those olden times.
 Before we start trying to change the colors,
 we need to understand how colors are represented in computers.
 For the most part,
@@ -235,8 +234,8 @@ which represents the fully intense blue component of the color)
 Click on a couple more of the colors and you'll notice that they will
 all end up being some combination of *red*, *green*, and *blue* values.
 This also happens with LED lighting,
-where you can actually see the differences in each of the LED markers
-provide a different color based on their intensity of their red green and blue lights.
+where you can see the differences in each of the LED markers
+providing a different color based on the intensity of their red green and blue lights.
 So if we figure out a way to gradually intensify red, green,
 and blue values in their intensity and then have them gradually lessen,
 then we could have the oval change into different colors in what looks like a smooth progression.
@@ -252,7 +251,7 @@ As for me,
 some ideas are.
 
 1. Just get the program to use some custom RGB color using the ```Color``` class,
-   in which a ```new Color``` takes 3 integers to represent the red,green,
+   in which a ```new Color``` takes 3 integers to represent the red, green,
    and blue values for that color.
    You can then call ```setColor```
    on the ball with that new Color variable.
@@ -271,7 +270,7 @@ some ideas are.
 4. Comment out the ```setColor``` call and introduce a ```println``` statement
     where you print out the one value and comment out the ```setColor``` statement
 
-5. Get the program to print out values from 0 to 3 and then back down to 0 in a zig zag format
+5. Get the program to print out values from 0 to 3 and then back down to 0 in a zig-zag format
     (if you want to be fancy,
     you can do this without an if statement at all
     - to try this,
@@ -310,7 +309,7 @@ some ideas are.
     If you need to,
     it may make sense for you to go back to doing the ```println```
     statements so that you end up getting an output like this,
-    then you can use those numbers as the rgb values in```setColor```.
+    then you can use those numbers as the RGB values in```setColor```.
     For an additional challenge do this without any if statements.
     Submit your resulting code in text format.
     Good luck!
