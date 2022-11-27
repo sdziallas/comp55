@@ -1,15 +1,18 @@
 # UML Class Diagram Lab
 
 For today,
-we are going to continue using plantUML to develop class diagrams which detail how classes and their methods interact.
+we are going to continue using plantUML to develop class diagrams
+which detail how classes and their methods interact.
 By having a way to model this representation,
 it gives us a better sense of how the software that we are proposing to build works.
-Let's start by first discuss what the class diagrams will look like (and how to draw them on a piece of paper) first.
+Let's start by first discuss what the class diagrams will look like
+(and how to draw them on a piece of paper) first.
 
 ## Drawing a class in UML on a piece of paper
 
 Representing a class in UML is one of the basic building blocks for designing a system.
-To do so in a paper drawing for UML you just end up providing a name for the class and place it in inside a rectangle,
+To do so in a paper drawing for UML you just end up providing a name for the class
+and place it in inside a rectangle,
 like so:
 
 ![Rectangle for UML diagram](lab65media/rectangle.png)
@@ -24,7 +27,8 @@ the syntax for declaring variables is this:
 *```variableName:type```*
 
 The colon (```:```) is used as a marker between the type and the variable's name.
-Notice that the type is **after** the variable name which is reverse compared to what you have in Java/C++ many other languages,
+Notice that the type is **after** the variable name
+which is reverse compared to what you have in Java/C++ many other languages,
 but again,
 this is meant to be able to be used in any language,
 so we will not question it and continue.
@@ -36,10 +40,12 @@ so functions would follow this format:
 *```methodName(arg1:type, arg2:type):returntype```*
 
 So in this case,
-the type of what you would return ends up being placed at the end of the method instead of before the method name,
+the type of what you would return ends up being placed at the end of the method
+instead of before the method name,
 just like in Java/C++.
 Lastly,
-we can begin each variable/method with a prefix to detail its accessibility across classes by using ```+``` for public,
+we can begin each variable/method with a prefix
+to detail its accessibility across classes by using ```+``` for public,
 ````-```` for private and ```#``` for protected.
 
 One of the easiest ways to get started with UML diagrams is by merely drawing something,
@@ -120,9 +126,11 @@ which is where all the method defintions go in a class diagram
 (the middle area is where all the instance variables are placed).
 Therefore in PlantUML,
 to add any of the class information,
-we would merely add the variables and methods inside the curly braces of any class defintion that we have added.
+we would merely add the variables and methods
+inside the curly braces of any class defintion that we have added.
 
-This should provide you with sufficient information to declare classes and the methods that would be inside of those classes.
+This should provide you with sufficient information
+to declare classes and the methods that would be inside of those classes.
 While having the class names and what they contain and do is important,
 these class UML diagrams have one last important part to discuss,
 which is how they are related to one another.
@@ -132,7 +140,8 @@ let's look at that now.
 
 ### Establishing relationships between classes
 
-One way that we often represent some assocation between classes is merely by drawing a line or arrow from one class to another.
+One way that we often represent some assocation between classes
+is merely by drawing a line or arrow from one class to another.
 This can be done very simply in plantUML as well,
 through the use of hyphens and some ASCII type art
 (just like we did with the use case diagrams).
@@ -148,32 +157,17 @@ Here are some examples and what they normally mean.
 
 |symbol|association|example|
 |---|---|---|
-| ```-```| creates a simple horizontal line between the two classes,
-which represents a very general assocation between the two classes.
-(A second hyphen changes the orientation of the classes and lines to be vertical,
-and even more hyphens means a greater distance between the two classes).
-Distance doesn't have any well regarded meaning but can be useful in helping you draw out particular relationships.
-| *```Student---Course```* |
-| ```<-``` <br> or <br>```->```| uses the greater than (```>```) or less than (```<```) sign to represent an arrow in UML which can be used to show some type of unidirectional association.
-Otherwise,
-if you would like to show a bidirectional association,
-you can use both arrows,
-(*```<->```*),
-but I would just stick to the simple line (*```---```*) instead of having both symbols on the end here | *```Student-->Key```* |
-| ```*--```| will draw a diamond for a **Composition** relationship,
-to denote that one class (the one where the diamond is closer to) has an instance variable that directly holds the one it is linked to.
-Sometimes you will see some difference between Composition and Aggregation,
-which has to do with whether one class will exist without the other.
-For comp 55 you can ignore this distinction,
-just use it if you feel as though you would have a single instance variable that would contain the other class (you can use the word *contains* to check to see if the relationship holds) | *```Student*--Brain```* |
-| ```</--``` (actually the vertical pipe character) | used for inheritance,
-to say that the class on the left is the superclass for the class on the right.
-Use the phrase *IS A* to check to see if the relationship holds | *```Student<|--GradStudent```* |
+| ```-```| creates a simple horizontal line between the two classes, which represents a very general assocation between the two classes. (A second hyphen changes the orientation of the classes and lines to be vertical, and even more hyphens means a greater distance between the two classes). Distance doesn't have any well regarded meaning but can be useful in helping you draw out particular relationships. | *```Student---Course```* |
+| ```<-``` <br> or <br>```->```| uses the greater than (```>```) or less than (```<```) sign to represent an arrow in UML which can be used to show some type of unidirectional association. Otherwise, if you would like to show a bidirectional association, you can use both arrows, (*```<->```*), but I would just stick to the simple line (*```---```*) instead of having both symbols on the end here | *```Student-->Key```* |
+| ```*--```| will draw a diamond for a **Composition** relationship, to denote that one class (the one where the diamond is closer to) has an instance variable that directly holds the one it is linked to. Sometimes you will see some difference between Composition and Aggregation, which has to do with whether one class will exist without the other. For comp 55 you can ignore this distinction, just use it if you feel as though you would have a single instance variable that would contain the other class (you can use the word *contains* to check to see if the relationship holds) | *```Student*--Brain```* |
+| ```<\|--``` (actually the vertical pipe character) | used for inheritance, to say that the class on the left is the superclass for the class on the right. Use the phrase *IS A* to check to see if the relationship holds | *```Student<\|--GradStudent```* |
 
 Realize though that this isn't everything that you can do,
 plantUML is pretty powerful!
-PlantUML allows us to think more about the code and not have to draw the diagrams in this perfect format.
-If you wanted to have additional information on how to denote things in the diagram like abstract classes or interfaces,
+PlantUML allows us to think more about the code
+and not have to draw the diagrams in this perfect format.
+If you wanted to have additional information
+on how to denote things in the diagram like abstract classes or interfaces,
 you can look at plant-umls
 [official documentation](http://plantuml.com/class-diagram).
 Please realize though plantUML *is a product - it is not necessarily the UML spec*.
@@ -183,7 +177,8 @@ For now,
 do not worry about positioning things in certain places here.
 
 To submit something for this lab,
-I would like for you to by the end of this come up with some logical structure **for at least five classes**
+I would like for you to by the end of this come up
+with some logical structure **for at least five classes**
 (that have both variables and methods and are linked to one another),
 that includes:
 

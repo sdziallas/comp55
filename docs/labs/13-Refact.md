@@ -10,7 +10,8 @@ but we should also concentrate on readability.
 This is especially true when we are coding with other people.
 If the code ends up being difficult to read or overly complicated,
 it's less likely to be tested and reviewed for errors.
-What we are going to do today is start learning strategies we can use to do what's called **refactor code**,
+What we are going to do today is start learning strategies we can use
+to do what's called **refactor code**,
 which means to revise the code.
 Refactoring not only can increase readability,
 but it can also reduce complexity,
@@ -22,11 +23,14 @@ In case you don't know,
 I'm not a big fan of ```if``` statements.
 If statements are often overused,
 especially by budding programmers.
-The most common issue I encounter with 55 students is their justification for an if statement that subsequently mutates into many ```if``` statements,
+The most common issue I encounter with 55 students is their justification for an if statement
+that subsequently mutates into many ```if``` statements,
 when in fact if they re-thought their logic they most likely would need only one or two.
-This becomes very egregious when the ```if``` statements then lead to code that looks mostly the same in the different sections of the if statement,
+This becomes very egregious when the ```if``` statements then lead to code
+that looks mostly the same in the different sections of the if statement,
 resulting in the loss of many kittens from all the copying and pasting that is being done.
-This lab will go over a set of steps that you can perform so that you eliminate redundancy and complexity from your code,
+This lab will go over a set of steps that you can perform
+so that you eliminate redundancy and complexity from your code,
 which is a win for everyone.
 Today is about teaching you some of the common steps you can take to refactor your code.
 Let's go over some basics first.
@@ -63,7 +67,8 @@ then just think about what this statement means here in English.
 if(x != 4 || x != 5) //😱😱😱
 ```
 
-While many of you look at it and think that the statement evaluates to true for numbers that aren't equal for four or five.
+While many of you look at it and think that the statement evaluates to true for numbers
+that aren't equal for four or five
 *It actually works for all numbers.*
 You can use some boolean theory to extract out this statement to its equivalent version,
 which is here:
@@ -86,7 +91,8 @@ yet one is more confusing to decipher.
 
 #### 4. Refactor out the duplicate parts of if statements
 
-*If you see a lot of code that looks similar in each branch of an if/else statement, take the necessary steps so that it is not repeated.*
+*If you see a lot of code that looks similar in each branch of an if/else statement,
+take the necessary steps so that it is not repeated.*
 
 The easiest way to deal with this is when the code looks exactly the same in both sections:
 
@@ -95,7 +101,8 @@ The easiest way to deal with this is when the code looks exactly the same in bot
 |<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");
 </code>|
 
-Most of the time you will have code at the beginning or the end of the curly braces that is in both sets of statements.
+Most of the time you will have code at the beginning or the end of the curly braces
+that is in both sets of statements.
 If it is the same at the beginning,
 take it out of the ```if``` statement,
 and then place it either before or after the if statement depending on where it's located.
@@ -108,10 +115,11 @@ when some should be moved before the if statement and the other lines should be 
 
 #### 5. Use variables to help you refactor code
 
-*If you do see if statements that look the same,
+If you do see if statements that look the same,
 but feel that it needs to be repeated,
 ask yourself –
-"Is there some way to standardize the operations by storing the different information in variables?"*
+*"Is there some way to standardize the operations
+by storing the different information in variables?"*
 
 I get it,
 the last example was quite trivial,
@@ -166,21 +174,27 @@ x+=amount;
 System.out.println("now pick the next number");
 ```
 
-You may look at the above solution and think "*Lolz well that's the same number of linezzz*" as the previous set of statements and believe that therefore both snippets are the same,
+You may look at the above solution and think
+"*Lolz well that's the same number of linezzz*"
+as the previous set of statements and believe that therefore both snippets are the same,
 however,
 this is one simple example of the type of scenario where that would happen,
 and what we are doing is what the book said,
 which is trying to separate out only what is different between the two cases.
-**The point is for you to think about all the scenarios where code in different if sections is the same,
+**The point is for you to think about all the scenarios
+where code in different if sections is the same,
 and then to figure out what does not have to be repeated over and over again.
 Whatever both pieces share should seriously be considered for rewriting.**
 
 Also,
 for those of you who are curious,
-the reason that we have this as a single if statement is because of traditional languages forcing you to declare variables in both the if and the else statements.
+the reason that we have this as a single if statement
+is because of traditional languages forcing you to declare variables
+in both the if and the else statements.
 In our case,
 since we need the variables,
-we simply start by declaring them and then having an if handle the alternate case to change their values.
+we simply start by declaring them
+and then having an if handle the alternate case to change their values.
 Otherwise,
 if we were using other languages,
 we could do an if else at the top if you really wanted to.
@@ -211,17 +225,24 @@ private void takeAction(String action, int amount) {
 Again,
 these are trivial examples,
 but it's important that you understand that in most situations,
-having this latter version is going to be better than the previous action that you created because we are reducing the amount of duplicate code.
+having this latter version is going to be better than the previous action that you created
+because we are reducing the amount of duplicate code.
 Ultimately,
 depending on what we were trying to do with the function,
 ```takeAction```,
-we could decide to go further with that function by for example taking out the action to add or subtract as something that is being passed in as a string.
+we could decide to go further with that function
+by for example taking out the action to add or subtract
+as something that is being passed in as a string.
 I only provide that here to show how the refactoring would be done.
 If I were to refactor this method again,
-I would most likely just include the number and then inside of the function figure out if it's positive or negative so that I can provide the correct label
+I would most likely just include the number
+and then inside of the function figure out if it's positive or negative
+so that I can provide the correct label
 (add or subtract).
 Another part of making functions is not just to refactor the code,
-but to make the functions usable to people in the future and reduce the amount of errors that you could get while making it easy for your teammates to use.
+but to make the functions usable to people in the future
+and reduce the amount of errors that you could get
+while making it easy for your teammates to use.
 
 ❤️
 
@@ -264,15 +285,18 @@ The ternary operator is not something that is used frequently however as it make
 Again,
 like I mentioned up at the top,
 writing code is expressive and there are different options or strategies that you can take.
-*However, the biggest thing that I would like you to get out of this class is to stop repeating and pasting so much code.*
+*However, the biggest thing that I would like you to get out of this class is
+to stop repeating and pasting so much code.*
 For the purposes of this class,
-I'm going to be looking a lot at the code that you are writing and making sure that there isn't much repetition in it.
+I'm going to be looking a lot at the code that you are writing
+and making sure that there isn't much repetition in it.
 **<u>The amount of repetition that you have in your code will impact
 your final project grade.</u>**
 
 #### 6. Use data instead of logic to store variations
 
-*Are you making a lot of variables? Consider using a list or other data structure to store them instead.*
+*Are you making a lot of variables?
+Consider using a list or other data structure to store them instead.*
 
 I think for the purpose of this project,
 it's pretty easy to start thinking of making instance variables for everything.
@@ -280,7 +304,8 @@ Instance variables are nice because they are visible in all methods of every met
 which means you don't have to worry about passing information to and from a function.
 
 However,
-the ability to pass information back and forth between methods and understanding scope is an important tenet in developing software.
+the ability to pass information back and forth between methods and understanding scope
+is an important tenet in developing software.
 Otherwise,
 having so many instance variables is akin to giving everyone in your dorm a key to your room.
 Sure it's convenient to give everyone a key,
@@ -288,17 +313,20 @@ but it's not secure,
 and more importantly when you're trying to debug and figure out who borrowed your Playstation,
 it makes it that much more difficult to find out who it was and when it happened.
 Also,
-it could lead to situations where people start using your room for other purposes that you wouldn't necessarily want
+it could lead to situations where people start using your room for other purposes
+that you wouldn't necessarily want
 (feel free to let your imagination wander for a minute here if you want).
 
 Like with your dorm room,
-there are situations in which your program and all of your functions do not need to have access to every single one of those instance variables,
+there are situations in which your program and all of your functions
+do not need to have access to every single one of those instance variables,
 so consider using local variables when a variable is only needed in one function.
 If you do need to have a collection of variables,
 like say when you need to keep track of multiple ```GObject```s on the screen,
 it may make more sense for you to create all of the objects and store them in a list,
 or potentially a ```HashMap```.
-This also makes it nice because then you could possibly create a loop and function that will create a series of these objects.
+This also makes it nice because then you could possibly create a loop and function
+that will create a series of these objects.
 
 For example,
 you might remember a function in the [Timers Lab](10-Timer.html##BallLauncher.java)
@@ -341,7 +369,9 @@ for(int i = 0; i < ballSpecs.length; i++) {
 }
 ```
 
-Then our ```makeBall``` fucntion would merely call getters for the ```x```, ```y```, ```width```, ```height```, ```color``` and ```shouldFill``` for example to have that all be filled in.
+Then our ```makeBall``` fucntion would merely call getters
+for the ```x```, ```y```, ```width```, ```height```, ```color``` and ```shouldFill```
+for example to have that all be filled in.
 
 #### 7. Methods can also make your code more readable
 
@@ -371,7 +401,8 @@ public void mouseMoved(MouseEvent e) {
 
 Is it immediately clear what the above if statement does?
 Maybe, maybe not.
-It's difficult to understand without some context that the conditions check the location of ```e``` relative to ```frame```.
+It's difficult to understand without some context
+that the conditions check the location of ```e``` relative to ```frame```.
 However,
 using a function could make this code clearer.
 Rewriting the code above using a function could look something like this:
@@ -402,10 +433,13 @@ the ```outsideOf``` function will be easy to test,
 and can be called again as needed in other parts of the code.
 
 To be honest,
-I think a lot of the issues that I see with student code in COMP 55 is the lack of methods/functions that they tend to create for a variety of reasons.
+I think a lot of the issues
+that I see with student code in COMP 55 is the lack of methods/functions
+that they tend to create for a variety of reasons.
 I understand that making them takes time,
 but again,
-remember that eclipse does offer the *Alt-Shift-M* keyboard shortcut to help you make or extract a method out of a piece of code,
+remember that eclipse does offer the *Alt-Shift-M* keyboard shortcut
+to help you make or extract a method out of a piece of code,
 so I would encourage you to use that to make things more readable and more
 testable.
 Having more methods easily outweighs any insignificant
@@ -518,7 +552,8 @@ Your goal is for the rest of class to take these rules and to look over
 and by the deadline come up with a refactored solution that still works.
 **Don't spend your time playing and exploring the game**,
 but rather reading the code and making changes.
-This isn't as much about testing and looking for bugs or critiquing as much as practicing the refactoring principles I've given you here.
+This isn't as much about testing and looking for bugs or critiquing
+as much as practicing the refactoring principles I've given you here.
 Credit will be given on how much more readable,
 flexible and possibly simple the code is in relation to the original.
 **You can work on this project in pairs,

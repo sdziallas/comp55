@@ -27,7 +27,8 @@ so when they ran the program,
 they had symptoms like:
 
 - dragging a vehicle to another spot and then having that vehicle disappear
-- dragging a vehicle vertically and backwards would cause the vehicle to jump to the other side of the board **but horizontally**
+- dragging a vehicle vertically and backwards would cause the vehicle
+  to jump to the other side of the board **but horizontally**
 
 If you think about the code that was provided,
 like this code for Space.java
@@ -441,7 +442,8 @@ lets come up with some more complicated examples of tests for Dates.
     you can simply keep reworking your solution until you get the correct result.
 
 12. If you haven't thought of February 29th and when things are a leap year,
-    it's worth reading [this short article about leap years](https://www.infoplease.com/leap-year-explained).
+    it's worth reading
+    [this short article about leap years](https://www.infoplease.com/leap-year-explained).
 
 Let me know if you have any other questions about any of these steps
 

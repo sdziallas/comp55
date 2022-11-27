@@ -2,7 +2,8 @@
 
 For today's lab we are going to learn about the sequence diagram,
 which is also part of the UML standard.
-Sequence diagrams allow us to think more about how objects are dynamically related to each other or more succintly,
+Sequence diagrams allow us to think more about how objects are dynamically related to each other
+or more succintly,
 sequence diagrams tell us who called what and when.
 
 ## plantUML Starter
@@ -26,14 +27,18 @@ Actor NameToAppear as varname
 
 To start **create a player actor** on the screen.
 In addition to actors,
-we'll also need to lay out the classes that will be interacting with each other based on what the actor is doing.
-Each one of these classes will be labelled with the keyword ```Participant``` instead of ```Actor```.
+we'll also need to lay out the classes
+that will be interacting with each other based on what the actor is doing.
+Each one of these classes will be labelled
+with the keyword ```Participant``` instead of ```Actor```.
 **Create three classes (Ahem Participants) called ```GraphicsProgram```,
 ```Level``` and ```Board```.**
 
 ### Creating the sequence via connection arrows
 
-The magic in a sequence diagram is in the order in which you now detail your connections between the objects which are the actors and the participants.
+The magic in a sequence diagram is in the order
+in which you now detail your connections
+between the objects which are the actors and the participants.
 This can be done by following this format.
 
 ```plantuml
@@ -67,7 +72,9 @@ we generally show this by adding a second hyphen (to the arrow) to the connectio
 This will change the line style from a solid line to dashed,
 which helps refer to it as something that is being sent back.
 
-Another thing that I like to do is to use italics for any message that details what in fact is being return.
+Another thing that I like to do
+is to use italics for any message
+that details what in fact is being return.
 I tend to place this into brackets,
 but that is not needed.
 But I do expect messages to be italicized,
@@ -84,14 +91,19 @@ Obj2-->Obj1 : <i>[returnedObject]</i>
 ## Fancy options
 
 Lastly,
-make sure that you look at the various options in the documentation for styling the diagrams as you wish,
+make sure that you look at the various options in the documentation
+for styling the diagrams as you wish,
 as there are many
 [awesome options in the PlahtUML docs](https://plantuml.com/sequence-diagram).
 We won't cover them here,
-but the most popular for sequence diagrams is to group certain calls from clases with one another using alt or else.
+but the most popular for sequence diagrams
+is to group certain calls from clases with one another using alt or else.
 **Search the documentation in plantUML to learn how to write this**.
-Having an ```alt``` or ```else``` as an alternate path is sometimes convenient for thinking about some alternate path that could arise in the interaction,
-but I tend not to use them too much because then we get into this idea of having lots of logic in our sequence diagrams,
+Having an ```alt``` or ```else``` as an alternate path
+is sometimes convenient for thinking about some alternate path
+that could arise in the interaction,
+but I tend not to use them too much
+because then we get into this idea of having lots of logic in our sequence diagrams,
 which then makes it more difficult to understand.
 
 ## Getting credit

@@ -20,20 +20,24 @@ then I would encourage you to ask me or others about them or see if you need any
   even without a dot.
   For example,
   type ```Colle``` and hit ***Ctrl-space*** for it to pop-up suggestions.
-  Select *Collections* and once you press the *period* key then you'll get static methods in the Collections class.
-  This will be useful for things like the ```Math``` class so you don' have to remember all of the methods as each method comes with  description.
+  Select *Collections* and once you press the *period* key
+  then you'll get static methods in the Collections class.
+  This will be useful for things like the ```Math``` class
+  so you don't have to remember all of the methods as each method comes with  description.
 
 - ***Ctrl-space*** works wonders in a variety of places,
   it will always try to provide you with relevant suggestions based on what you've typed so far.
 
 - Hover over a word in the source to pull up its javadoc.
   For example,
-  you can type the following line ```String s = "Hello";``` an then hover over the ```String``` word and you'll see the documentation fo ```String``` pop up.
+  you can type the following line ```String s = "Hello";```
+  and then hover over the ```String``` word and you'll see the documentation fo ```String``` pop up.
 
     ![Java documentation window in eclipse](eclipseloot/media/image1.png)
 
 - You can right click and then say *Source->Correct Indentation* to fix indentation.
-  Alternatively you can also just *Select All* (***Ctrl-A***) and then hit ***Ctrl-I*** to fix all th indentation,
+  Alternatively you can also just *Select All* (***Ctrl-A***)
+  and then hit ***Ctrl-I*** to fix all th indentation,
   so your code is properly indented at all times.
 
 - You can easily comment and uncomment out a line of code by hitting
@@ -51,7 +55,8 @@ then I would encourage you to ask me or others about them or see if you need any
   It will navigate between words.
   It will save you from having to press the arrow key so many times.
   This is actually a keyboard shortcut that works in most programs.
-  Pressing ***Home*** and ***End*** to navigate to the beginning or end of a line is what I use the most.
+  Pressing ***Home*** and ***End*** to navigate to the beginning or end of a line
+  is what I use the most.
   Holding ***Shift*** while you navigate will allow you to highlight tex as well.
 
 - Select a method/variable/class name,
@@ -77,7 +82,8 @@ It's smart about what parameters are required.
 - You can also remove the project from Eclipse,
   *right-click* the project and select *Delete*.
   This should prompt with a *do not delete contents*,
-  which is what we want ("contents" in this case refers to the .java and other files out in the directory).
+  which is what we want
+  ("contents" in this case refers to the .java and other files out in the directory).
   This removes the project from Eclipse,
   but leaves its directory, files, etc.
   intact out in the filesystem.
@@ -133,10 +139,12 @@ To debug in eclipse
     ![step controls](eclipseloot/media/image8.png)
 
 - Before you can make those steps,
-  you have to set a breakpoint in a good place so that the debugger knows where you should stop to take a look at variables.
+  you have to set a breakpoint in a good place
+  so that the debugger knows where you should stop to take a look at variables.
 
 - The red square highlighted above will stop the program.
-  You should used this so that you don't have too many copies of the program running at the same time.
+  You should used this
+  so that you don't have too many copies of the program running at the same time.
   ![red square icon](eclipseloot/media/image9.png)
 
 - Click the ***J-Java*** in the upper right to return to the editing perspective
@@ -159,7 +167,8 @@ It will allow you to click around and look at all the variables.
 On the other hand,
 if the line is hit many times and only fails on the 67th time ...
 well ```println``` is handy for showing a time series like that.
-What's also handy though is adding an ```if``` statement to your code specifically to help you debug,
+What's also handy though
+is adding an ```if``` statement to your code specifically to help you debug,
 something that says
 
 ```java
@@ -170,5 +179,8 @@ if (i == 67) {
 and then placing a breakpoint on that ```println``` line.
 It makes things much easier
 when you can narrow down when something is happening.
-While there are many IDEs including eclipse that support these conditional breakpoints (without having to write the ```if```),
-merely writing this is a quick way to get the code to stop when you want instead of exploring the IDE at this point and helps you better understand your execution.
+While there are many IDEs including eclipse that support these conditional breakpoints
+(without having to write the ```if```),
+merely writing this is a quick way to get the code to stop when you want
+instead of exploring the IDE at this point
+and helps you better understand your execution.

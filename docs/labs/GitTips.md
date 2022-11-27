@@ -7,8 +7,10 @@ mess with you.
 
     - While you may be tempted to use another project or code that
         someone else has done,
-        It's best to use the project I've given you as a starting point as it has the acm.jar file embedded as well as all the hidden details needed to have your teammates
-        checkout the project and have it immediately run.
+        It's best to use the project I've given you as a starting point
+        as it has the acm.jar file embedded
+        as well as all the hidden details needed to have your teammates checkout the project
+        and have it immediately run.
 
 2. Be careful what you commit
 
@@ -18,7 +20,8 @@ mess with you.
 
 3. Look at the icons in your project closely: Here is a list of icons
     with filenames that give a partial explanation of what is happening with files in your project.
-    **Do note that the following icons are the ones seen in classic eclipse view and their appearance changes when using other themes!**
+    **Do note that the following icons are the ones seen in classic eclipse view
+    and their appearance changes when using other themes!**
 
     ![eclipse icon explanations for it](gittips/media/image1.png)
 
@@ -48,7 +51,8 @@ mess with you.
     The last one,
     **conflict**,
     is an important one to take notice of,
-    as you'll have to resolve any conflicts there before you're allowed to continue contributing to the project.
+    as you'll have to resolve any conflicts there
+    before you're allowed to continue contributing to the project.
     It's best if you resolve the conflicts
     by following the steps in Tip #4.
 
@@ -58,7 +62,8 @@ mess with you.
    Sometimes you'll need to keep committing and then pulling until everything is up to date,
    once you have no more conflicts and you've pulled you should be able to commit and push.
 
-    - Sometimes you're working on your code while one of your other team members pushes a later version of the code to the repository.
+    - Sometimes you're working on your code
+    while one of your other team members pushes a later version of the code to the repository.
     If so,
     git won't let you push the code,
     no matter how many times you try,
@@ -67,7 +72,8 @@ mess with you.
     after you commit,
     do a pull,
     and most likely you'll get a couple of files that have conflicts in them.
-    This means that you'll have to open them up and remove the errors and decide what the right piece of code for that area is.
+    This means that you'll have to open them up
+    and remove the errors and decide what the right piece of code for that area is.
     Once you do that,
     then you'll be able to add the file again to the index and commit again.
     You can then try to push again
@@ -79,8 +85,10 @@ mess with you.
    To do this,
    right-click on the project,
    then select ***Team->Reset….***
-   Make sure to select the remote version or the local version of the repository you want to switch to,
-   and then select a hard reset, which will attempt to replace your entire folder contents wit what is in that version.
+   Make sure to select the remote version or the local version
+   of the repository you want to switch to,
+   and then select a hard reset,
+   which will attempt to replace your entire folder contents wit what is in that version.
    Know that if you do a hard reset,
    you will lose any changes you made,
    so only do this as a last resort or if you haven't made changes and just want the latest part.
@@ -89,14 +97,17 @@ mess with you.
 
 ## Java Build Path - Adding a folder of images
 
-When importing your project into Eclipse there are times where certain folders are not in the java build path.
-Lets take for example a media folder containing images for you project that's not in your java build path.
+When importing your project into Eclipse
+there are times where certain folders are not in the java build path.
+Lets take for example a media folder containing images for you project
+that's not in your java build path.
 
 The console will return an error telling you it cannot find the image.
 
 ![Exception stack trace file not found](gittips/media/cannotFindImage.png)
 
-First thing you want to do is right click your *project-name* in your project explorer and click on the *properties*.
+First thing you want to do is right-click your *project-name* in your project explorer
+and click on the *properties*.
 You will be greeted with this window:
 
 ![eclipse project properties](gittips/media/propertiesPage.png)
@@ -105,6 +116,7 @@ You will be greeted with this window:
 2. Click on the *Source* tab
 3. Click on *Add Folder*
 
-Now you are met with the Source Folder Selection wherer you can check the folder you want included and you are done!
+Now you are met with the Source Folder Selection
+where you can check the folder you want included and you are done!
 
 ![eclipse source folder selection](gittips/media/sourceFolderSelection.png)

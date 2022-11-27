@@ -17,7 +17,8 @@ but it makes sure you to take away any obvious ways to hurt yourself
 (you just have to be more creative).
 
 The languages are very similar syntax wise!
-If you have any doubts you should just go about how you would do things in C++ for most of the basic elements.
+If you have any doubts
+you should just go about how you would do things in C++ for most of the basic elements.
 I'm going to highlight a couple of differences.
 
 ## Bools & Arrays
@@ -51,7 +52,8 @@ char ch = s.charAt(1); //ch now has 'e'
 ```
 
 To find something in a string you can use the method **```indexOf```**,
-which takes in either a string or a character and returns the integer position of where it is located.
+which takes in either a string or a character
+and returns the integer position of where it is located.
 If it's not found,
 ```indexOf``` returns ```-1```.
 
@@ -71,7 +73,9 @@ Here,
 the numbers for substring stand for the **range of characters**,
 where you include the first one but not the 3<sup>rd</sup>.
 In this case,
-you can think of substring as saying include all the characters that start at position one and go up to (but not including) position 3.
+you can think of substring as saying
+include all the characters that start at position one
+and go up to (but not including) position 3.
 If you omit the second number,
 Java will give you the entire string from the starting character given up until the end.
 
@@ -144,7 +148,8 @@ If you really want to create an object,
 you will have to create it using the new operator.
 That will,
 like in C++,
-create the object that you want on the heap where you can then store information in it and call its values.
+create the object that you want on the heap
+where you can then store information in it and call its values.
 So easiest thing would be to just get in the habit of always initializing all of your variables.
 
 ```java
@@ -155,18 +160,21 @@ f1.setDenominator(2); //now this will make the fraction ½
 ## Java will take care of deleting objects for you
 
 Since it's on the heap,
-you might start feeling weird about having to free your own memory or call delete on objects you don't need anymore.
+you might start feeling weird about having to free your own memory
+or call delete on objects you don't need anymore.
 Well,
 java does that for you now.
 And yes to the "l33t h4x0rs" this may be more inefficient and causes java to be slower,
-but the seconds you lose in running the program will outweigh the hours you spend trying to figure out freed memory exceptions.
+but the seconds you lose in running the program
+will outweigh the hours you spend trying to figure out freed memory exceptions.
 
 ## Output/Input stuff has changed
 
 I'm not gonna lie,
 ```cout```,
 ```cin``` was pretty easy to use.
-Java has recognized though that there are some potential dangers in getting input that isn't in the right type for example,
+Java has recognized though that there are some potential dangers in getting input
+that isn't in the right type for example,
 so they have made getting input a little bit more difficult.
 Printing out to a console has been replaced by doing something like this.
 
@@ -184,10 +192,14 @@ Notice that Java doesn't have the ```endl``` at the end of the statement.
 It has been replaced with the ```println``` statement,
 if you don't want to go to the next line,
 call ```print``` instead of ```println```.
-Both ```print``` and ```println``` can also have ```\n``` to make a new line which C++ also supports when printing.
+Both ```print``` and ```println``` can also have ```\n``` to make a new line
+which C++ also supports when printing.
 
-```\t``` is also something that is in both C++ and Java that hasn't changed and when printing you can use it to have a horizontal tab which is the equivalent of eight spaces in what you are printing.
-You can also have multiple ```\n``` and ```\t``` in what you are printing in both C++ and Java by doing something like this.
+```\t``` is also something that is in both C++ and Java that hasn't changed
+and when printing you can use it to have a horizontal tab
+which is the equivalent of eight spaces in what you are printing.
+You can also have multiple ```\n``` and ```\t``` in what you are printing in both C++ and Java
+by doing something like this.
 
 ```cpp
 cout << "Hello,\nmy " << age << "year-old\nfriend!\n"; //C++
@@ -232,9 +244,11 @@ are stable and get leveraged by folks who work in Java so that they don't reinve
 
 I can't tell you all the nooks and crannies or differences.
 I just wanted to highlight some major ones.
-You will undoubtedly have to learn a new language and IDE to work along that language when you go off to the real world,
+You will undoubtedly have to learn a new language and IDE to work along that language
+when you go off to the real world,
 and you won't have much help,
-so take advantage of the jump start I gave you and start exploring and learning a new language without having complete direction from me.
+so take advantage of the jump start I gave you
+and start exploring and learning a new language without having complete direction from me.
 One good place to start is just to google "Java for C++ programmers",
 and see if anything interesting comes up.
 I'll leave you with one last thing to worry about here.

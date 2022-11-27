@@ -47,9 +47,11 @@ These two classes are not to be confused with Java's ```HashSet``` data structur
 which uses hashing to implement Java's **Set** interface.
 All three data structures use a
 [hashing function](https://computersciencewiki.org/index.php/Hashing) for different purposes,
-and there are still other [hashtable-esque objects meant for thread-safe operations](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html).
+and there are still other
+[hashtable-esque objects meant for thread-safe operations](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html).
 
-Java's ```HashMap``` is often thought of or referred to as a **dictionary** or **associative array**,
+Java's ```HashMap``` is often thought of or referred to
+as a **dictionary** or **associative array**,
 where the key is hashed.
 Like a dictionary,
 when you end up looking up a word in a dictionary,
@@ -73,10 +75,13 @@ what you would do is put the key and value pairs into a map and then retrieve th
 
 Like an ```ArrayList```,
 we need to first let Java know that we want to use one of these data structures.
-One syntactical difference is that Java would like to know the type for both the key and the value in the angle brackets.
+One syntactical difference is that Java would like to know the type
+for both the key and the value in the angle brackets.
 While I have only shown strings,
 the keys and values can be any type of Object.
-In this particular case though since the type of both the definition (*value*) and word (*key*) are both strings we'll declare them in the HashMap like this:
+In this particular case though
+since the type of both the definition (*value*) and word (*key*) are both strings
+we'll declare them in the HashMap like this:
 
 ```java
 HashMap<String, String> phobias = new HashMap<String, String>();
@@ -105,7 +110,9 @@ String def = phobias.get("ergophobia")
 // def now has the value "the abnormal fear of work"
 ```
 
-If you try to get a phobia that has not been introduced into this particular phobias map like say this one
+If you try to get a phobia
+that has not been introduced into this particular phobias map
+like say this one
 
 ```java
 String possibleDef = phobias.get("osvaldophobia")
@@ -264,7 +271,8 @@ so how do we really use this?
 
 The possibilities are endless here!
 
-Here is a sample piece of code that I see often that I think can be done more nicely by using hashmaps.
+Here is a sample piece of code that I see often
+that I think can be done more nicely by using hashmaps.
 First study the code below.
 
 ```java
@@ -350,7 +358,8 @@ You should discuss this with your team,
 but what I'd like you to do is to
 **answer the four questions at the beginning of the document in your own words (not your team's)**.
 For the useful part,
-you will come up with at least three different potential places where you could use a ```HashMap``` in your project,
+you will come up with at least three different potential places
+where you could use a ```HashMap``` in your project,
 and to provide code for what that would look like in terms of helping you make the project better.
 Remember that what I've shown you here has been using mostly strings as keys,
 however,
