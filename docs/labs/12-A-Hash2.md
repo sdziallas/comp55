@@ -296,7 +296,7 @@ that links a ```GLabel``` to a ```Playable``` and initializes it in the ```run``
 If it doesn't recognize HashMap,
 make sure you ```import java.util.*;``` or do ***Ctrl-Shift-O***.
 In this case, **a ```GLabel``` will be the key and the ```Playable``` will be the value**.
-Are you not sure how to be able to declare and initialize a ```HashMap```? 
+Are you not sure how to be able to declare and initialize a ```HashMap```?
 If you aren't sure,
 then you'll want to go back and [look over the lab](12-Hash.html) more closely.
 In this step,

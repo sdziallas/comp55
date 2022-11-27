@@ -1,9 +1,9 @@
 # Testing Lab
 
-In this lab you'll be developing your testing techniques.
-First we'll discuss the notion of unit tests,
+In this lab, you'll be developing your testing techniques.
+First, we'll discuss the notion of unit tests,
 and then we'll switch over to introducing you to the **JUnit** testing framework,
-which allows us to more easily work with unit tests.
+which allows us to easily work with unit tests.
 While you can work on this with your team or with just a member of your team,
 all of you will be expected to turn this in.
 
@@ -85,7 +85,7 @@ Many programmers early on think of testing as running the program and putting in
 That type of testing is often called system testing,
 as you often are testing the entire system to see if it works.
 However,
-like we mentioned earlier,
+as we mentioned earlier,
 today we're going to focus on becoming better at producing tests for units
 so we can make it easier to test and debug large projects.
 While it's not necessarily a glamorous job,
@@ -93,7 +93,8 @@ coming up with good unit tests is an art.
 
 ## Date Testing
 
-For today's lab we're going to concentrate on having you write a method that will validate Dates.
+For today's lab,
+we're going to concentrate on having you write a method that will validate Dates.
 Let's say that we are writing it because it's going to be used
 for a new calendar application that we are building.
 For the simplicity of the lab,
@@ -107,7 +108,8 @@ This can be accomplished by going to the file menu and saying
 Then from there,
 Select ***Gradle Project*** and select the desired folder.
 Then open ***src/main/java*** and rename the Library.java file that was created to **Date.java**.
-For now it should have just one method,
+For now,
+it should have just one method,
 which you can make as a static method and rename to be ```isValidDate```.
 (You can also feel free to delete the Library.java class and make a new one if you like).
 We won't write out most of ```isValidDate```,
@@ -122,7 +124,7 @@ public class Date {
 }
 ```
 
-Next what we'll do is to createa JUnitTestCase.
+Next what we'll do is create a JUnitTestCase.
 The gradle project has one already for you,
 but in this case,
 let's delete it and start fresh.
@@ -136,13 +138,13 @@ by simply saying something like,
 which is similar to how things like the ```RandomGenerator``` and the ```Math``` class are used
 (```Math.abs()``` and ```RandomGenerator.getInstance()```).
 Because static methods are not part of any object,
-they can be called by anyone at anytime,
+they can be called by anyone at any time,
 as long as we provide the name of the class where the method resides.
 Static methods don't operate on any data in a class,
-which makes them different than say something like ```move()```
+which makes them different from say something like ```move()```
 since that operates on a single oval object and changes the state of that oval.
 It makes one oval move.
-Static methods don't have those operations,
+Static methods don't have those operations.
 and are typically written as being utility classes,
 where all the information that is needed is passed in.
 Since in our case we simply want to write a method
@@ -159,12 +161,12 @@ let's go ahead and build some tests.
 One way to build tests is like we've always done,
 which is to just create a ```main``` and have it print out stuff,
 however,
-in order to make it easier for us to simply see whether or not we passed all of our tests
+to make it easier for us to simply see whether or not we passed all of our tests
 (which helps with automation,
 something our future robot overlords will love),
 we're going to use a **testing framework**.
 Think of a testing framework as being like a set of libraries,
-except that rather than you call a method in the library (ie ```rgen.nextInt()```),
+except that rather than you calling a method in the library (ie ```rgen.nextInt()```),
 the library will call one of your methods
 (like we had with implementing ```mouseMoved```, etc).
 There are many frameworks available for many languages,
@@ -178,19 +180,19 @@ JUnit has been well integrated into eclipse,
 so using it should hopefully be straightforward.
 There are different versions of the testing framework that have been made over the years,
 and even though we used a newer framework in the Hashmaps Lab,
-what we'll do is for now stick with the JUnit 4 framework.
-If you are super curious about the differences which is not necessary for this class,
-you can [read about them here](https://sormuras.github.io/blog/2018-09-13-junit-4-core-vs-jupiter-api.html).
+what we'll do for now is stick with the JUnit 4 framework.
+If you are super curious about the differences,
+you can optionally [read about them here](https://sormuras.github.io/blog/2018-09-13-junit-4-core-vs-jupiter-api.html).
 
 ## Create a DateTest class using JUnit 4
 
-If you followed real close the gif from before where you create a new JUnit Test Case.
+If you followed real close the gif from before where you created a new JUnit Test Case.
 
 Sometimes when you run unit tests,
-you may want to read certain information from a file,
+you may want to read certain information from a file
 or load another object or create something else first
 before you start doing any tests or before you do each test.
-Similarly you might have to do some clean up after a test
+Similarly, you might have to clean up after a test
 if say you were testing whether or not some information was written to a file,
 you may have to delete that information or restore how the file was before
 to make sure that things are nice and tidy.
@@ -217,11 +219,11 @@ it might make sense to talk to me about it as you don't necessarily want to have
 than 1 ```@Before``` and 1 ```@BeforeClass``` directives.
 
 At this point you should be back in eclipse with your trusty new Junit Test Case file,
-where' you'll see some code that looks something like this:
+where you'll see some code that looks something like this:
 
 ![DateTest Screenshot image here](lab14media/media/image4.png)
 
-Notice that what you see is in fact java code,
+Notice that what you see is java code,
 with a couple of minor differences which I'll go over.
 The first thing you may notice is this ```import static``` command on line 3,
 which is slightly different than import.
@@ -242,7 +244,7 @@ it's the *Not yet implemented*).
 Notice that we have no "**.**"
 operator or anything else to qualify where the ```fail``` method came from.
 This is because we had the ```import static```,
-otherwise if we were change line 3 to ```import org.junit.Assert```,
+otherwise, if we were to change line 3 to ```import org.junit.Assert```,
 we would have to change line 8 to say ```Assert.fail("not yet implemented")```.
 You can try that if you like,
 but make sure to change it back.
@@ -256,10 +258,10 @@ Because it knows that it will need to test it,
 we can name the method whatever we like.
 Go ahead and change the method name to ```testIsValidDateBasic```,
 since we'll be making more methods in the future.
-The final thing to look at is on line 11,
+The final thing to look at is from line 11,
 which is simply a command to let JUnit know that we should not pass by calling fail.
 Anytime java reaches a line that says fail,
-think of that like being a return statement,
+think of that as being a return statement,
 where the computer immediately exits and returns a fail result.
 
 ![Failing test result](lab14media/media/image5.png)
@@ -268,18 +270,18 @@ where the computer immediately exits and returns a fail result.
 
 To run a Junit test,
 you can either use the command shortcut ***Alt-Shift-X, T***,
-or you can **right click** on the project in the package explorer and then select,
+or you can **right-click** on the project in the package explorer and then select,
 *Run As->JUnit Test*.
 Running the JUnit Test will open up the JUnit view,
 where you'll get something that looks like what you see on the left.
-First thing to notice is the bar,
+First, notice the bar,
 which is a color indicator for letting you know whether or not your test passed or failed.
 Just below that is going to be a list of all the test methods that we have,
-along with their individual results.
+along with individual results.
 In our case,
 we only have one test method so far,
-so that will just show as being a failure.
-Above the bar you can notice that we won't just get whether or not everything passed or failed,
+so that will cause that test to fail.
+Above the bar, you can notice that we won't just get whether or not everything passed or failed,
 but you'll get a much more detailed look at how many of the tests passed,
 which will be organized into methods.
 
@@ -295,7 +297,7 @@ that we have yet to implement ```DateTest```.
 This is how we will get to know whether or not our code is working.
 In a way,
 it is very similar to what we saw in coding bat,
-except that instead of us getting results for each and every test we make,
+except that instead of us getting results for every test we make,
 we're going to group those tests into methods and get the results from each method instead.
 If we want to know more,
 then we can go ahead and check it out by clicking on one of the methods.
@@ -307,12 +309,12 @@ The first thing we are going to do is to delete the fail statement on line 8
 (try using **Ctrl-D** if you haven't by clicking somewhere on line 8 and
 then doing Ctrl-D.) In its place,
 let's go ahead and type an ```assertTrue``` clause,
-where we provide a very basic example of an Date.
+where we provide a very basic example of a ```Date```.
 Because we are starting with basic tests,
-what we want to start with first from a test standpoint is to think of tests
-that will should be easy for our method to be able to figure out.
+what we want to start with first is to think of tests
+that should be easy for our method to be able to figure out.
 For example,
-come up with a basic Date example that the computer should definitely recognize as a Date.
+come up with a basic Date example that the computer should recognize as a Date.
 For example,
 something like the example I posted above,
 ```4-15-2017```.
@@ -339,9 +341,9 @@ let's come up with a test where ```isValidDate``` should return ```false```.
 
 You can come up with any type of basic result,
 but even something like ```55-8-2017``` should not be considered a valid Date.
-At its simplest terms,
+In its simplest terms,
 such a thing would be considered a simple test.
-At this point you could copy and paste line 8,
+At this point, you could copy and paste line 8,
 but then change the ```assertTrue``` to an ```assertFalse``` instead,
 and change ```4,15,2017``` to ```55,8,2017```.
 There are some disadvantages to copying and pasting code
@@ -360,12 +362,12 @@ Now,
 I'm going to ask you to try to do two more ```assertTrue``` and two more ```assertFalse``` examples
 that look very similar to the ones you've done.
 For now,
-keep the true statements with days below say 25,
+keep the true statements with days below say 25 -
 the months from 1 to 11.
 Likewise,
 don't try to do anything crazy for ```assertFalse```,
-just have numbers greater than 35 for the day,
-15 for the month,
+just have numbers greater than 35 for the day
+and 15 for the month,
 and you can avoid changing the year for now.
 After which,
 go ahead and come up with a simple solution to the ```isValidDate``` problem
@@ -381,10 +383,10 @@ you can move on to the next part.
 
 ## Coming up with Advanced Tests
 
-While there are some that say you must write all your tests before writing code,
+While developers preach that you must write all your tests before writing code,
 I want to show you how nice it is to have tests when you have to refactor code.
 So,
-lets come up with some more complicated examples of tests for Dates.
+let's come up with some more complicated examples of tests for Dates.
 
 1. Create a new method in our DateTest.java file and name it ```testDatesAdvanced()```.
 2. Put the ```@Test``` annotation beforehand to make sure that JUnit runs it.
@@ -420,7 +422,7 @@ lets come up with some more complicated examples of tests for Dates.
 
 7. So, now let's go ahead and do one more set of tests,
    these would be known as *edge tests* -
-   tests where really you're just trying to cause havoc or get the program to crash.
+   tests where you're just trying to cause havoc or get the program to crash.
 
     - Examples of edge cases would be zero,
     negative numbers,
@@ -459,7 +461,7 @@ follow [this optional guide created by former COMP 55 students](14-A-TestOptiona
 
 ## Review Questions
 
-### (*Place your answers to these questions as comments in the TestDate.java file and upload to canvas*)
+### (*Place your answers to these questions as comments in the TestDate.java file and upload them to canvas*)
 
 1. How many Test methods did I have you make?
 2. What are the differences between those test methods?

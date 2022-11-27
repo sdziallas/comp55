@@ -1,8 +1,8 @@
 # Refactoring Lab
 
-By this point you should have a feeling that there many different ways for someone to write code,
+By this point, you should have a feeling that there are many different ways for someone to write code,
 and one thing that we would like to do in this class
-(and for you do in the future)
+(and for you to do in the future)
 is to make sure you write your code in a way that can make it easy to change and be flexible.
 **Software changes**.
 Most of the time we are worried about correctness or speed,
@@ -12,12 +12,12 @@ If the code ends up being difficult to read or overly complicated,
 it's less likely to be tested and reviewed for errors.
 What we are going to do today is start learning strategies we can use
 to do what's called **refactor code**,
-which means to revise the code.
+which means revise the code.
 Refactoring not only can increase readability,
 but it can also reduce complexity,
 which will make your code easier to test and debug.
 
-## The biggest culprit (*if statements*)
+## The biggest culprit *if statements*
 
 In case you don't know,
 I'm not a big fan of ```if``` statements.
@@ -57,7 +57,7 @@ For example,
 in the step above,
 if ```isLow``` is only being used once and you are constantly checking ```if(!isLow)```,
 then why not change the variable to make it ```isHigh```?
-There are usually ways for you to minimize the amount of negations that you have,
+There are usually ways for you to minimize the number of negations that you have,
 as negations just make things confusing.
 If you don't believe me,
 then just think about what this statement means here in English.
@@ -67,10 +67,10 @@ then just think about what this statement means here in English.
 if(x != 4 || x != 5) //😱😱😱
 ```
 
-While many of you look at it and think that the statement evaluates to true for numbers
-that aren't equal for four or five
-*It actually works for all numbers.*
-You can use some boolean theory to extract out this statement to its equivalent version,
+While many of you look at it and think that the *statement evaluates to true with numbers
+that aren't equal to four or five*
+*That is incorrect. It works for all numbers.*
+You can use some boolean theory to extract this statement to its equivalent version,
 which is here:
 
 | 😱 | ❤️ |
@@ -78,7 +78,7 @@ which is here:
 |```if(x != 4 \|\| x != 5)```|```if(!(x == 4 && x == 5))```|
 
 Based on DeMorgan's laws,
-the two statements here are exactly the same,
+the two statements here are the same,
 yet one is more confusing to decipher.
 
 #### 3. Simplify if statements to use return when possible
@@ -94,7 +94,7 @@ yet one is more confusing to decipher.
 *If you see a lot of code that looks similar in each branch of an if/else statement,
 take the necessary steps so that it is not repeated.*
 
-The easiest way to deal with this is when the code looks exactly the same in both sections:
+The easiest way to deal with this is when the code looks the same in both sections:
 
 | 😱 | ❤️ |
 |:---|:---|
@@ -102,7 +102,7 @@ The easiest way to deal with this is when the code looks exactly the same in bot
 </code>|
 
 Most of the time you will have code at the beginning or the end of the curly braces
-that is in both sets of statements.
+that are in both sets of statements.
 If it is the same at the beginning,
 take it out of the ```if``` statement,
 and then place it either before or after the if statement depending on where it's located.
@@ -180,7 +180,7 @@ as the previous set of statements and believe that therefore both snippets are t
 however,
 this is one simple example of the type of scenario where that would happen,
 and what we are doing is what the book said,
-which is trying to separate out only what is different between the two cases.
+which is trying to separate only what is different between the two cases.
 **The point is for you to think about all the scenarios
 where code in different if sections is the same,
 and then to figure out what does not have to be repeated over and over again.
@@ -197,7 +197,7 @@ we simply start by declaring them
 and then having an if handle the alternate case to change their values.
 Otherwise,
 if we were using other languages,
-we could do an if else at the top if you really wanted to.
+we could do an if else at the top if you wanted to.
 
 Again,
 while the previous code may not feel like much of an improvement,
@@ -224,7 +224,7 @@ private void takeAction(String action, int amount) {
 
 Again,
 these are trivial examples,
-but it's important that you understand that in most situations,
+but in most situations,
 having this latter version is going to be better than the previous action that you created
 because we are reducing the amount of duplicate code.
 Ultimately,
@@ -241,7 +241,7 @@ so that I can provide the correct label
 (add or subtract).
 Another part of making functions is not just to refactor the code,
 but to make the functions usable to people in the future
-and reduce the amount of errors that you could get
+and reduce the number of errors that you could get
 while making it easy for your teammates to use.
 
 ❤️
@@ -283,11 +283,11 @@ private void takeAction(int amount) {
 
 The ternary operator is not something that is used frequently however as it makes the code dense.
 Again,
-like I mentioned up at the top,
+as previously mentioned,
 writing code is expressive and there are different options or strategies that you can take.
 *However, the biggest thing that I would like you to get out of this class is
 to stop repeating and pasting so much code.*
-For the purposes of this class,
+For this class,
 I'm going to be looking a lot at the code that you are writing
 and making sure that there isn't much repetition in it.
 **<u>The amount of repetition that you have in your code will impact
@@ -298,7 +298,7 @@ your final project grade.</u>**
 *Are you making a lot of variables?
 Consider using a list or other data structure to store them instead.*
 
-I think for the purpose of this project,
+I think for this project,
 it's pretty easy to start thinking of making instance variables for everything.
 Instance variables are nice because they are visible in all methods of every method in a class,
 which means you don't have to worry about passing information to and from a function.
@@ -310,7 +310,7 @@ Otherwise,
 having so many instance variables is akin to giving everyone in your dorm a key to your room.
 Sure it's convenient to give everyone a key,
 but it's not secure,
-and more importantly when you're trying to debug and figure out who borrowed your Playstation,
+and more importantly, when you're trying to debug and figure out who borrowed your Playstation,
 it makes it that much more difficult to find out who it was and when it happened.
 Also,
 it could lead to situations where people start using your room for other purposes
@@ -325,13 +325,13 @@ If you do need to have a collection of variables,
 like say when you need to keep track of multiple ```GObject```s on the screen,
 it may make more sense for you to create all of the objects and store them in a list,
 or potentially a ```HashMap```.
-This also makes it nice because then you could possibly create a loop and function
+This also makes it nice because then you could create a loop and function
 that will create a series of these objects.
 
 For example,
 you might remember a function in the [Timers Lab](10-Timer.html##BallLauncher.java)
 called ```makeBall```.
-What if instead you create a more general function that passes in
+What if instead, you create a more general function that passes in
 ```(x, y, width, height, color, fill)``` as parameters,
 so that way you could just call ```makeBall``` and a ball appears?
 
@@ -358,7 +358,7 @@ which is to store all of the information in an object,
 and then have that be passed into your for loop instead!
 Assume there was a simple ```BallSpec``` class that worked like simple classes before,
 meant to just hold some information and store it.
-Then look what could happen to our code.
+Then look at what could happen to our code.
 
 ❤️
 
@@ -381,7 +381,7 @@ for example to have that all be filled in.
 If there are sections of code that look crazy,
 or feel dense, it's best to go back through and look into making those methods into classes,
 since that will make the code more readable,
-and if you come up with methods that have return values based on parameters,
+and if you come up with methods that have return-values based on parameters,
 will make them easier to generate test methods for as well,
 since you'll be able to say,
 *when I expect this, I should get back this*,
@@ -429,7 +429,7 @@ However,
 by removing the content of the if statement and putting it into a function,
 the ```if``` statement becomes more readable.
 Additionally,
-the ```outsideOf``` function will be easy to test,
+the ```outsideOf``` function will be easy to test
 and can be called again as needed in other parts of the code.
 
 To be honest,
@@ -450,13 +450,13 @@ performance hit you'd get from having them.
 
 *Do you see a number over and over and over again?
 That should be a constant.
-If a formula is repeated that either needs to be in a variable or in a function*
+If a formula is repeated that either needs to be in a variable or a function*
 
 If a number is specified in your code and it isn't a 0, 1, or 2,
 then I generally have a rule of declaring it as a constant.
 If you have a number say 30,
 or 300 or 50 that is used more than once,
-it should definitely be defined as a constant.
+it should be defined as a constant.
 Let's take this example:
 
 😱
@@ -486,7 +486,7 @@ head = new GOval(225, 350, 50, 50);
 ```
 
 But why stop there? Use formulas to establish the relationships between all of these numbers,
-since they really are in this case referencing each other.
+since they are in this case referencing each other.
 
 ❤️
 
@@ -547,21 +547,25 @@ private void drawCar(Vehicle v) {
 Once you have finished reading these questions,
 you can now download and take a program to try to do some refactoring:
 
-Your goal is for the rest of class to take these rules and to look over
+Your goal for the rest of class is to take these rules and apply them to
 [the project that I've given you](http://go.djosv.com/refactorlab),
 and by the deadline come up with a refactored solution that still works.
 **Don't spend your time playing and exploring the game**,
 but rather reading the code and making changes.
 This isn't as much about testing and looking for bugs or critiquing
 as much as practicing the refactoring principles I've given you here.
-Credit will be given on how much more readable,
+Credit will be given to how much more readable,
 flexible and possibly simple the code is in relation to the original.
 **You can work on this project in pairs,
 but should not break up or attempt to break up the work.
-Rather you should work on it together,
-propose ideas to each other about how to refactor and what should be refactored.**
-This is not group work but team work.
+Rather you should:
+
+1. work on it together,
+2. propose ideas to each other about how to refactor
+3. propose ideas on what should be refactored.**
+
+This is not group work but teamwork.
 If you're unsure where to start,
 I would start by looking at any of the classes that have a *Pane* in the name of the java file.
-You should commit changes everytime you have a factor that you'd like to propose…change it and then commit and push.
+You should commit changes every time you have a factor that you'd like to propose…change it and then commit and push.
 Good luck!
