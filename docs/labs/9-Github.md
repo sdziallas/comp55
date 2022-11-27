@@ -100,7 +100,7 @@ before you start working on a much more complicated project.
 Once all of you have made the changes and saved the file,
 you'll notice that your project,
 along with the file that they modified,
-now have a greater than sign (```>```)
+now has a greater than sign (```>```)
 next to all projects and directories that contain changes that differ from the latest **commit**,
 which is a named revision of your code.
 Study this image here and what happens after saving.
@@ -418,7 +418,7 @@ In this case,
 since the procrastinator pulled if they were to get conflicts
 then they would be the ones deciding which lines of the file are the most current.
 We will get ourselves into that mess in the next step,
-as all of you need to be aware of and to at least try it.
+as all of you need to be aware of and at least try it.
 If you did put yourself into that mess already,
 congratulations!
 You can move on to the next step,
@@ -443,8 +443,8 @@ and then going to *Team-> Show Repository in History View*.)
 In this view,
 notice the ![origin/main](lab9media/media/originmain.png) label.
 It is attached to the commit that is the latest one that GitHub has for the main branch.
-That tag is different,
-but shows how your main version is based off of the origin main
+That tag is different
+but shows how your main version is based on the origin main
 and that the hackslash 2 commit that was made is the one
 that the server thinks is currently the most recent.
 This is also where the
@@ -491,14 +491,14 @@ To do this we're going to set it up
 so that the martyr and the hackslash try to modify the same line in the same file.
 **After having pulled, have both hackslash and the martyr change the GLabel's text.**
 The easiest thing to do in this case is to change the text
-by adding in your name as part of the label.
-You can use your own real name or you can use the name I've assigned you.
+by adding your name as part of the label.
+You can use your real name or you can use the name I've assigned you.
 Then go ahead and commit.
 *Let's have hackslash push their commit to the server and then try to have the martyr push theirs.*
 The martyr will notice that they will be rejected from pushing their changes.
 When they pull to get the latest changes from the server,
 they'll notice that the result will be slightly different,
-where they'll get a conflicting results instead of merging.
+where they'll get conflicting results instead of merging.
 
 ![conflicting error screenshot](lab9media/media/image17.png)
 
@@ -510,7 +510,7 @@ since your project explorer will have some red icons that are next to it.
 
 Also take a look at the status message in the package explorer -
 ![Label for project says conflicts](lab9media/media/conflictstatus.png).
-Here notice that it is telling you that you are in the conflicting state,
+Here notice that it is telling you that you are in a conflicting state,
 with one change yet to be pushed to the server,
 while you also need to incorporate one change from the server.
 
@@ -572,7 +572,7 @@ and all the previous places that mentioned conflict are still there.
 To get rid of the red marks,
 the martyr should drag the file from unstaged to staged changes,
 in the git staging view.
-(Alternatively, they could also right click on the file
+(Alternatively, they could also right-click on the file
 and choose *Team-> Add To Index* after saving.)
 The icons will update to indicate that the file will be added to the repository
 ![add icon](lab9media/media/addicon.png):
@@ -617,7 +617,7 @@ So that the last person will be possibly many commits behind everyone else.
 
 While this is the end of the official lab,
 I want you to be aware of one more issue that seems to pop up a lot when folks are using git,
-which is a git conflict problems.
+which is a git conflict problem.
 This tends to happen when you have uncommitted changes,
 and then you decide to try to pull in the latest changes.
 Git has issues with this because pulling replaces your code and files with the latest versions.
@@ -640,13 +640,13 @@ If you do get that error,
 you have a few options,
 you can either commit
 your latest changes,
-or if you feel like you didn't really make any changes and they must be by accident
+or if you feel like you didn't make any changes and they must be by accident
 or say you were just playing around with the code,
 then it would be best for you to do a hard reset like we did in Step 2.
 Once you either commit or reset the code,
 you can then try to pull the code again.
 Remember that if you did commit after pulling and merging
-it's best for you to push the code back on the server
+you should push the code back on the server
 so that you let the server know that you have the latest changes.
 
 If you ever want to find out if changes have been made
@@ -674,20 +674,20 @@ commit,
 and commit again.
 Once you are finally ready then push your changes.
 If that push fails,
-you'll need to do a pull to merge with your team members changes.
+you'll need to do a pull to merge with your team member's changes.
 Once you merge and commit,
 you should then push your changes.
 There are more advanced ways of using git,
 but this is the way that I'm going to be looking for you to use git in this class,
 as simply getting used to source control when working on projects is a big undertaking.
-For the rest of this lab
+For the rest of this lab,
 you guys should just get into the habit
 of trying to quickly modify the file that you have
 and making changes to it together.
 Each of you should try to have as many changes made to this lab project as possible
 and points will be given based on the smallest number of commits and merges done by the team member
 with the smallest amount of activity before the due date.
-Also for this class I want all of you to only use the single ```main``` branch.
+Also for this class, I want all of you to only use the single ```main``` branch.
 
 ### More Git Theory (Optional)
 
@@ -710,7 +710,7 @@ A good metaphor for this is that you are preparing to save these changes as a dr
 - Once you stage the changes,
 you can then **commit** those changes,
 which keeps them in git's history.
-This is like you actually saving the draft (as a copy).
+This is like you saving the draft (as a copy).
 Committing is good in that it allows you to keep track of what you've done.
 - The cycle then moves you back to having all the files be up to date,
 so the cycle repeats.

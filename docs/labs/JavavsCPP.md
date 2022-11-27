@@ -8,15 +8,15 @@ I would say that they fit these pictures pretty well
 | ![http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg](diffjavacpp/media/image1.jpeg) | ![http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg](diffjavacpp/media/image2.jpeg) |
 Source: *[pxleyes](http://www.pxleyes.com)* and *[cityofws](http://www.cityofws.org)*
 
-C++ really just lets you do whatever you want,
-which is exciting,
-but can really mess you up.
+C++ just lets you do whatever you want,
+which is exciting
+but can mess you up.
 Java on the other hand is much more protective.
 You still get to be creative and expressive,
-but it makes sure you to take away any obvious ways to hurt yourself
+but it makes sure to take away any obvious ways to hurt yourself
 (you just have to be more creative).
 
-The languages are very similar syntax wise!
+The languages are very similar syntax-wise!
 If you have any doubts
 you should just go about how you would do things in C++ for most of the basic elements.
 I'm going to highlight a couple of differences.
@@ -39,11 +39,11 @@ just say ```arr.length```
 ## Java Strings
 
 Java strings do work differently than C++.
-Remember how you know the internals of C++ strings as being arrays of characters,
+Remember, C++ strings internally are arrays of characters,
 and you could access a C++ string like an array.
 In Java that is not possible.
 
-Instead if you want to get an underlying character,
+Instead, if you want to get an underlying character,
 you can use ```charAt```.
 
 ```java
@@ -87,14 +87,14 @@ things like
 ```char```,
 ```double```,
 and ```boolean```.
-You can immediately identify them based on case.
+You can immediately identify them based on the case.
 Primitives are all in lower case while other types in Java,
 like ```String```,
 are in uppercase.
 Anything that is in uppercase is just like a class/object from C++,
 it was written in a class file,
 which are java files.
-There are not separate .h and .cpp files in Java,
+There are no separate .h and .cpp files in Java,
 the declaration and definition of a class is contained in the same file.
 Like in 53,
 the code that is in these java files I will refer to as a
@@ -105,7 +105,7 @@ will be called an
 **<span class="smallcaps">object</span>**.
 You can have many objects that follow the same class blueprints.
 
-## In Java there is no pointer notation
+## In Java, there is no pointer notation
 
 Remember this?
 
@@ -122,7 +122,8 @@ However,
 you'll often hear that java has no pointers.
 That's a misnomer.
 Any object that you create will always be holding a pointer to that object.
-When I create a Fraction object based on the Fraction.java class writing something like this:
+When I create a Fraction object based on the Fraction.java class,
+I write something like this:
 
 ```java
 Fraction f1;
@@ -144,13 +145,13 @@ By calling ```new```.
 
 ## All Objects you create in Java will be created on the Heap
 
-If you really want to create an object,
+If you want to create an object,
 you will have to create it using the new operator.
 That will,
 like in C++,
 create the object that you want on the heap
 where you can then store information in it and call its values.
-So easiest thing would be to just get in the habit of always initializing all of your variables.
+So the easiest thing would be to just get in the habit of always initializing all of your variables.
 
 ```java
 Fraction f1 = new Fraction(1, 1); //Remember to call new!
@@ -160,8 +161,8 @@ f1.setDenominator(2); //now this will make the fraction ½
 ## Java will take care of deleting objects for you
 
 Since it's on the heap,
-you might start feeling weird about having to free your own memory
-or call delete on objects you don't need anymore.
+you might start feeling weird about having to free your memory
+or calling delete on objects you don't need anymore.
 Well,
 java does that for you now.
 And yes to the "l33t h4x0rs" this may be more inefficient and causes java to be slower,
@@ -253,8 +254,8 @@ One good place to start is just to google "Java for C++ programmers",
 and see if anything interesting comes up.
 I'll leave you with one last thing to worry about here.
 
-Now with your new found knowledge on Java,
-what will this print out?
+Now with your newfound knowledge of Java,
+what will this printout?
 
 ```java
 Fraction f1 = new Fraction(5, 2);

@@ -34,7 +34,7 @@ then you'll want to ask to resend the verification email and verify your email w
 
 If you do not have a warning sign or the label does not say *Resend Verification email*,
 then your email is verified.
-The other thing you should do is give youself an icon picture,
+The other thing you should do is give yourself an icon picture,
 which is always fun to do and can be done from the profile option in settings.
 
 ## Start GitHub Classroom
@@ -82,7 +82,7 @@ by going to the classroom.github.com link provided and logging in.
 
 ## Importing your new GitHub Repository into eclipse
 
-Now once eclipse is open,
+Now once Eclipse is open,
 go ahead and do a *File->Import->Git->Projects from Git with Smart Import*.
 On the next screen choose the Clone URI button as shown in the image below.
 
@@ -98,7 +98,7 @@ If you have lost the repository URL,
 go back to [GitHub](http://github.com).
 When you get there,
 or if you log back in you just need to access your repositories,
-which will be listed on the right once you login.
+which will be listed on the right once you log in.
 You can also use the search page up top,
 if you type ```comp55``` you'll be able to see your repo.
 Once you locate the repo,
@@ -116,7 +116,7 @@ to access their information outside of GitHub's website.
 
 ### Generate a token and store it in secure store
 
-Go back to [GitHub](http://github.com) and login,
+Go back to [GitHub](http://github.com) and log in,
 then click on your profile icon in the upper right,
 and then go to *Settings->Developer settings->Personal Access Token->Create New Token*.
 Then give the token a name,
@@ -136,7 +136,7 @@ than having students whose computers have been hacked
 and whose GitHub credentials have been rickrolled.
 So please check the option **Store in Secure Store** so that way your password is saved.
 As part of this,
-eclipse may ask you for some recovery questions
+Eclipse may ask you for some recovery questions
 (which you can skip),
 but regardless ***save your password in the secure store***,
 the only scenario where I can see this being an issue is
@@ -166,8 +166,8 @@ so we will work exclusively on the **main** branch.
 ## Opening your project
 
 Go ahead and open up the project *COMP55GitPrepLab* and double-click on *SimplePicture.java*.
-You'll see that it will behave like if you imported the project.
-You can also run it if you like by running simple picture.
+You'll see that it will behave as if you imported the project.
+You can also run it if you like.
 At this point,
 the project should work and run.
 If it doesn't,
@@ -243,7 +243,7 @@ you'll want to do what's called **commit**.
 To commit the files,
 simply right-click on the project,
 near the bottom of the menu,
-select *Team->Commit*.
+and select *Team->Commit*.
 That may open up a **Git Staging View**,
 which will look something like this:
 

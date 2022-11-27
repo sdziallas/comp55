@@ -18,8 +18,7 @@ with timing being trivial.
 
 For *shared resources*,
 you do **not** actually need more than one ```Timer```.
-As a matter of fact,
-introducing more than one timer variable can create concurrency issues.
+Introducing more than one timer variable can create concurrency issues.
 The timers are not guaranteed to affect the shared resources
 in a specific order every time the program executes.
 To handle different timer tasks that use the same resources,
@@ -49,7 +48,7 @@ objectToUseTimer);
 
 ### 3. Handle the different tasks in ```actionPerformed```
 
-First increment the value of ```timesCalled```.
+First, increment the value of ```timesCalled```.
 Then make use of the modulo operator (```%```)
 and if-statements to differentiate the tasks:
 
@@ -69,7 +68,7 @@ if what is implemented in ```actionPerformed``` is long.
 But for 95% of you,
 if you understand this approach,
 I am OK with you using this.
-In previous classes this is what I would recommend students to do.
+In previous classes, this is what I would recommend students do.
 
 ## Implementing multiple timers for tasks that work on unique resources
 
@@ -86,13 +85,13 @@ Timer mySecondTimer = new Timer(1000, otherClassToNotifyOfTimer);
 ```
 
 In this situation,
-both classes can will receive the ```actionPerformed``` method that corresponds to their own timer.
+both classes will receive the ```actionPerformed``` method that corresponds to their own timer.
 This would be the preferred way of implementing this.
 However,
 for many of you,
 you may want to have the same object listen to both timers.
 In that situation,
-you would setup the timers like this:
+you would set up the timers like this:
 
 ```java
 Timer myFirstTimer = new Timer(1000, objectToUseTimer);
