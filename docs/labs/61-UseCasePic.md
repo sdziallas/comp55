@@ -1,11 +1,12 @@
 # Use Case Diagram Mini-Lab
 
-For today's lab we are going to go the **use case diagram**,
+For today's lab, we are going to learn about the **use case diagram**,
 which is a part of **UML** which stands for *Unified Modeling Language*.
 
 ## UML Intro
 
-UML is good for getting a high level understanding of a piece of software and how different components interact with one anohter.
+UML is good for getting a high-level understanding of a piece of software
+and how different components interact with one another.
 While this can sound scary,
 *"UM-What?!? You want to introduce us to ANOTHER language!?!"*,
 don't fret.
@@ -18,7 +19,7 @@ like the name Karen for example.
 Many of you already have encountered and have experience with UML via the Traffic Jam assignment.
 There are many types of UML diagrams.
 That assignment showed mostly two,
-the UML Class Diagram and and the UML Sequence digrams.
+the UML Class Diagram and the UML Sequence diagrams.
 From those two types of diagrams,
 you were able to consistently check to make sure
 that you implemented the methods necessary
@@ -47,46 +48,49 @@ I've noticed a tendency for myself and the majority of students in this class
 to avoid drawing diagrams on a piece of paper.
 A majority of folks (but not all)
 when given the option started trying to draw diagrams on the computer -
-this often leaves many of us learning a new program that will allow us to to draw,
+this often leaves many of us learning a new program that will allow us to draw,
 correct,
 and then edit diagrams efficiently.
-While there are some programs that exist that are meant to help you draw UML diagrams,
+While programs exist to help you draw UML diagrams,
 I haven't found them to be great solutions for ensuring that the diagrams
-that students draw are in fact followng the UML standards.
+that students draw are in fact following the UML standards.
 For example,
 folks using these programs sometimes use ovals when they should use rectangles
 or create arrows when we shouldn't have some,
 and vice versa.
 Also,
-once we have created a diagram using a computer program like paint or powerpoint,
+once we have created a diagram using a computer program like paint or PowerPoint,
 if we need to make changes we tend to drag our feet,
 as it becomes all the more cumbersome for us to change the diagram.
 Therefore,
 from now on we will use the diagramming language **plantUML** to draw our diagrams.
-This will allow us to stay in text,
+This will allow us to stay in text
 but have a way to easily modify our diagrams and share the text with others,
 which means that they can be easily updated.
 
 ## The Use Case Diagram
 
-A Use Case Diagram typically gives us a 10,000-foot picture of a program
-and to give us an overall feel of what the program would do.
-The main components of a use case diagram involves an **actor**,
+A Use Case Diagram typically give us:
+
+1. a 10,000-foot picture of a program
+2. an overall feel of what the program does.
+
+One main component of a use case diagram is the **actor**,
 which would be viewed as an external entity that interacts with the program.
 While an actor is normally represented as a person,
-*actors can actually represent external systems* that a program has to interact with,
+*actors can represent external systems* that a program has to interact with,
 such as a stock market service.
-A use case diagram should have at least one,
+A use case diagram should have at least one actor
 but can have multiple actors to represent the different users and external components of the system.
 Another part of the diagram is the **use cases**,
 which are represented as ovals,
-and would be high level representations of interactions that you would expect to have in a program.
-Because we are using this diagram to represent a high level system,
+and would be high-level representations of interactions that you would expect to have in a program.
+Because we are using this diagram to represent a high-level system,
 use cases should represent the entire process that an actor is involved with
 when interacting with the system.
 For our purposes,
 we want to keep the number of use cases in a use case diagram to less than seven.
-Next we use lines in a use case diagram to connect actors to the use cases
+Next, we use lines in a use case diagram to connect actors to the use cases
 that they initiate or have **interactions** with.
 Finally,
 we use a rectangle to represent all of the use cases that are being implemented by our **system**.
@@ -97,7 +101,7 @@ that we will develop.
 ## Starting a PlantUML use case diagram
 
 To start,
-right click on [this webpage](http://plantuml.com)
+right-click on [this webpage](http://plantuml.com)
 and say *open in new window*.
 You may want to have the plantUML page and these instructions side-by-side
 (if you haven't done this using keyboard shortcuts,
@@ -106,7 +110,7 @@ and then click on the other webpage.)
 On the plantUML site,
 Once there,
 click on the online server option on the left sidebar.
-This will open up a plantUML webserver that has a sample sequence diagram,
+This will open up a plantUML web server that has a sample sequence diagram,
 which we'll discuss in the future.
 Notice how in the text editor,
 the beginning line is ```@startuml``` and the last line is ```@enduml```.
@@ -127,7 +131,7 @@ left to right direction
 actor "Partygoer" as p
 ```
 
-and you will see this at the bottom of the plantUML pane:
+and you will see this at the bottom of the plant URL pane:
 
 ![Partygoer use case diagram actor](lab61media/partygoer.png)
 
@@ -135,10 +139,9 @@ and you will see this at the bottom of the plantUML pane:
 
 The first line
 (```left to right direction```)
-is merely a directive to tell plantUML that we will be working in a horizontal fashion.
+is merely a directive to tell plantUML that we will be working horizontally.
 The second line introduces our first actor.
-For our use cases and actors,
-they will follow this format.
+Our use cases and actors follow this format.
 
 *```keyword "Name on Diagram"```* **```as```** *```varname```*
 
@@ -170,21 +173,21 @@ If we study the format that we learned above about how to introduce new parts,
 then creating the use cases themselves can be straightforward.
 Using the same format that we have above,
 you can introduce use cases.
-The only thing that is different than say an actor
+The only thing that is different from say an actor
 is that instead of us using the keyword ```actor```,
 we use the keyword ```usecase```.
-With your newfound knowledge of creating usecases,
-**go ahead and create three use cases in plantuml for:**
+With your newfound knowledge of creating use cases,
+**go ahead and create three use cases in plantUML for:**
 
 1. requesting a new song
 2. playing a song and
 3. voting on existing songs
 
-As for the variablnames,
+As for the variable names,
 you can use shorthand variable names.
-Some folks like to preface the shorthand with *```uc```* to stand for usecase.
+Some folks like to preface the shorthand with *```uc```* to stand for use case.
 Once you finish doing this,
-you will see three ovals representing the three use cases appear in your picture.
+you will see three ovals representing the three use cases that appear in your picture.
 **Make sure you have the three ovals before you continue**.
 Just as a reference,
 here's what the play song should look like.
@@ -204,14 +207,14 @@ I'm going to propose that you follow this overall format:
 
 *```left_varname```* ***```operator```*** *```right_varname```*
 
-Where the left and right variables names
-are for the actor and usecase names we created in the previous section,
-and operator would be special symbols that we can use to represent the relationships.
+Where the left and right variable names
+are for the actor and use-case names we created in the previous section,
+and the operator would be special symbols that we can use to represent the relationships.
 Note here that the **order matters**.
 If you decide to put the use case on the left and the actor on the right,
 *it will end up placing the actor to the right of the use case instead of the left*.
 
-Let's see how this would work in the context of adding something to our usecase diagram
+Let's see how this would work in the context of adding something to our use-case diagram
 to show the appropriate connections between actors and use cases.
 Let's think about the *voting on a song* use case,
 one may argue that that would be something that the *Partygoer* would primarily be responsible for,
@@ -219,7 +222,7 @@ so let's declare a connection between the two by using the hyphen operator (```-
 To do this,
 we merely add a line in the UML diagram that provides the variable names of your actor and use case,
 separated by a hyphen.
-Start with single hyphen between your ```Partygoer``` and ```vote on a song``` use case.
+Start with a single hyphen between your ```Partygoer``` and ```vote on a song``` use case.
 Once you see the diagram update,
 add a second hyphen and then look at the picture below.
 What just happened?
@@ -247,6 +250,6 @@ so you would have something like so.
 
 **Go ahead and enclose all 3 use cases into a rectangle and have the title be your name.**
 Make sure that for your picture,
-*the DJ ends up being on the right hand side, while the partygoer is on the left*.
+*the DJ ends up being on the right-hand side, while the partygoer is on the left*.
 To get credit for this lab,
 submit your screenshot to canvas.
