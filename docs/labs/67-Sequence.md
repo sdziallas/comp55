@@ -1,9 +1,9 @@
 # Sequence Diagram Mini-Lab
 
-For today's lab we are going to learn about the sequence diagram,
+For today's lab, we are going to learn about the sequence diagram,
 which is also part of the UML standard.
 Sequence diagrams allow us to think more about how objects are dynamically related to each other
-or more succintly,
+or more succinctly,
 sequence diagrams tell us who called what and when.
 
 ## plantUML Starter
@@ -29,7 +29,7 @@ To start **create a player actor** on the screen.
 In addition to actors,
 we'll also need to lay out the classes
 that will be interacting with each other based on what the actor is doing.
-Each one of these classes will be labelled
+Each one of these classes will be labeled
 with the keyword ```Participant``` instead of ```Actor```.
 **Create three classes (Ahem Participants) called ```GraphicsProgram```,
 ```Level``` and ```Board```.**
@@ -49,11 +49,10 @@ Place each of these statements in the order that the sequence would go in.
 The Obj can be the same object,
 which would just create something that would point to itself.
 Also,
-messages from actors to classes can be english,
-but I will expect to you to use the proper method name calls when making calls between participants.
+messages from actors to classes can be in English,
+but I expect you to use the proper names when making calls between participants.
 
-In fact,
-most of the time when we are establishing these connections between participants (aka classes),
+Most of the time when we are establishing these connections between participants (aka classes),
 we should make the following assumptions in such a model.
 
 ```plantuml
@@ -62,19 +61,19 @@ Obj1 -> Obj2 : Message
 
 1. Obj1 has access to Obj2,
 typically via an instance variable
-2. The Message included is actually a method that is present in Obj2
+1. The Message included is a method that is present in Obj2
 
 ### Returning values
 
 In sequence diagrams,
-if a method returns a value back,
+if a method returns a value,
 we generally show this by adding a second hyphen (to the arrow) to the connection.
-This will change the line style from a solid line to dashed,
+This will change the line style from a solid line to a dashed one,
 which helps refer to it as something that is being sent back.
 
 Another thing that I like to do
 is to use italics for any message
-that details what in fact is being return.
+that details what is being returned.
 I tend to place this into brackets,
 but that is not needed.
 But I do expect messages to be italicized,
@@ -97,7 +96,7 @@ as there are many
 [awesome options in the PlahtUML docs](https://plantuml.com/sequence-diagram).
 We won't cover them here,
 but the most popular for sequence diagrams
-is to group certain calls from clases with one another using alt or else.
+is to group certain calls from classes with one another using alt or else.
 **Search the documentation in plantUML to learn how to write this**.
 Having an ```alt``` or ```else``` as an alternate path
 is sometimes convenient for thinking about some alternate path
