@@ -4,10 +4,10 @@ If you are using a school computer skip down to Step 5.
 
 ## STEP 1: Remove any previous installations of Java that you have
 
-This class uses a very specific version of java,
-to help us in getting certain elements done quickly and efficiently.
+We all benefit when we use the same version of java.
+.
 To avoid confusion,
-please ***remove previous versions of java that you may have***
+please ***remove previous versions of java from your computer***
 so that they don't get used when installing eclipse.
 
 You can do this by:
@@ -44,7 +44,6 @@ Stick to the JRE specified in the list,
 and pick an appropriate place.
 You can also choose whether you want a start menu entry or a desktop icon.
 After clicking *Install* you can read the User Agreement or just click Accept Now.
-If you click Decide Later it will just pop up later in the process.
 
 Also,
 you may receive a warning about the process taking longer than usual,
@@ -52,8 +51,7 @@ have no fear,
 just let it keep working.
 
 Once it's finished installing,
-you'll then get a green *Launch* button.
-Click it to start Eclipse.
+Click the green *Launch* button to start Eclipse.
 
 ![green launch button](lab1media/media/greenlaunch.png)
 
@@ -61,28 +59,29 @@ Click it to start Eclipse.
 
 Since this is your first time running Eclipse here are a couple of things you want to know.
 
+- Eclipse likes to use the word ***workspace*** to mean the location where you store all of your code.
+  Think of it as the parent or base directory.
+- It breaks that directory or workspace down into ***projects***,
+  which is the code you'd write for different assignments or different projects.
+- Each project gets a directory,
+  you can think of the project as the solution from C++ or Visual Studio.
+- Eclipse allows you to have different workspaces and switch between them,
+  which is why it asks this question.
+
+When you double-click eclipse,
+after seeing the splash screen you will be greeted with the image below.
+
+Go ahead and pick the directory where you want your projects to live on your hard drive.
+**Click the checkbox to use as a default, and then click Launch.**
+
 *If you are using a school computer,
 make sure that you change the workspace
 to a **Comp 55** folder inside of your **Documents** folder.*
 
-When you double click eclipse,
-after seeing the splash screen you will be greeted with the image below.
-
-Eclipse likes to use the word ***workspace*** to mean the location where you store all of your code.
-Think of it as the parent or base directory.
-It breaks that directory or workspace down into ***projects***,
-which is the code you'd write for different assignments or different projects.
-Each project gets a directory,
-you can think of the project as the solution from C++ or Visual Studio.
-Eclipse allows you to have different workspaces and switch between them,
-which is why it asks this question.
-Go ahead and pick the directory where you want your projects to live on your hard drive.
-**Click the checkbox to use as a default, and then click Launch.**
-
 ![use this as the default workspace](lab1media/media/image5.png)
 
-Once clicked and Eclipse takes a bit to start up,
-Eclipse will then jump you to a screen that looks something like this:
+Once clicked and Eclipse takes its time to start up, because...you know, JAVA,
+Eclipse will display a screen that looks something like this:
 
 ![review IDE configuration settings](lab1media/media/image6.png)
 
@@ -95,17 +94,17 @@ these are the options that I ended up with in the end.
 
 ![review preferences wizard](lab1media/media/reviewprefs.png)
 
-The next thing we are going to do is change Eclipse's appearance.
+Next, let's change Eclipse's appearance.
 I have been using eclipse for a long time now and did not change this until this year.
-Eclipse is written in Java and so it does not have as clean of an interface
+Eclipse is open source and so it does not have as clean of an interface
 as some of the other programs that you have grown to love by now.
 Nonetheless,
-remember, this is open source,
 eclipse has been used heavily in the industry
 (and I'm sure you've probably come across at least a few open-source projects
 that just don't look as pretty but get the job done).
 I would not play around too much with the colors,
-but I will walk you through this one option because it will make it easier to follow along with these labs
+but I will walk you through this one option because it will make it easier
+to follow along with these labs
 if you change the appearance to match mine.
 **Please follow the options here to get full credit
 for the image you upload for credit at the end of this lab**
@@ -129,41 +128,46 @@ as the image below shows.
 
 ![darkest dark theme webpage](lab1media/media/installbyweb.gif)
 
-Once it finishes loading, follow the next set of images to *uncheck the CodeTogether bundle*.
-You'll have to accept another license agreement by picking the option before being able to finish.
+After loading,
+*uncheck the CodeTogether bundle*
+(you can follow the set of images below).
+You'll have to accept another license agreement before finishing.
 **Be sure to uncheck the *Devstyle with CodeTogether* bundle option,
 and watch the gif a few times.**
 
 ![darkest dark eclipse install](lab1media/media/darkestdark.gif)
 
 Once it finishes installing,
-Eclipse will ask you to restart eclipse to apply the software update,
+Eclipse will ask you to restart to apply the software update,
 click **Restart Now**
 
 ![restart eclipse prompt](lab1media/media/restarteclipse.png)
 
-Eclipse will close and start itself up again.
-Once it finishes you'll be greeted with this screen.
+After restarting,
+you'll be greeted with this welcome screen.
 
 ![darkest dark welcome splash](lab1media/media/darkestdarkwelcome.png)
 
-Go ahead and click next.
+Click **next**.
 You'll then be presented with some options.
 While your preferences are up to you,
 to match this website's color scheme and the labs,
-you will start this lab by following the directions here.
-After you submit your picture,
-then you can change the color scheme to your heart's content
-(That is a rabbit hole though, so you can see how to do this later).
+continue following the directions here to install our preferences.
+
+Sidenote: *But what if I won't like your preferences or want to change them?*
+After you submit the lab,
+then you can change the color scheme and other preferences to your heart's content
+(That is a rabbit hole of customizability,
+you've been warned!).
 While you can change the color scheme to whatever you want,
 just know the icons and any future screens you see may differ a little bit from what I have.
-**Please do not spend more than 10 minutes looking at all the color combinations
+**Please do not spend more than 15 minutes looking at all the color combinations
 after finishing the lab**
 
 Once you click next,
 you may get a scary-looking screen about windows defender possibly getting angry with you
 about directories that Darkest dark will change and offers a fix.
-I did just say *Fix Automatically*.
+I clicked *Fix Automatically*.
 (I'm not sure what happens if you click skip)
 
 ![Windows defender warning](lab1media/media/defenderwarning.png)
@@ -190,7 +194,7 @@ and you'll now be shown your new workspace.
 
 ![eclipse blank workspace dark](lab1media/media/eclipsedarkinit.png).
 
-If you didn't end up switching to this darkest dark theme,
+If you didn't switch to this darkest dark theme,
 then your eclipse would look more like the image below.
 This is from a previous version,
 so the windows open may be slightly different.
@@ -198,12 +202,13 @@ so the windows open may be slightly different.
 ![eclipse blank workspace light](lab1media/media/image7.png)
 
 Eclipse describes the different panels that you have as **windows**.
-The left window is called the package explorer,
+The left window is called the **package explorer**,
 where you will have all of your projects listed,
 and the middle window will bring up your code.
 Eclipse is different than Visual Studio in that when you start Eclipse,
 all of your projects will be listed,
-which I think makes it easier for you to look at past projects and explore other files you have written,
+which makes it easier to look at past projects
+and explore other files you have written,
 in case you need to look back
 at anything.
 
