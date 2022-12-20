@@ -19,4 +19,4 @@ jobs:
         with: 
           config: './lint/markdown.json'
           args: '**/*.md'
-          ignore: './README.md'
+          ignore: './README.md ./docs/index.md'
