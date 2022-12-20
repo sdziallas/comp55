@@ -10,7 +10,6 @@ then I would encourage you to ask me or others about them or see if you need any
     - [Debugging features review](#debugging-features-review)
     - [One Final Tip](#one-final-tip)
 
-
 ## Cool Eclipse Features
 
 - Eclipse has **many** features,
