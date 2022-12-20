@@ -20,7 +20,7 @@ I would say that they fit these pictures pretty well
 | C +                                                                                                             | Java                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | ![http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg](diffjavacpp/media/image1.jpeg) | ![http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg](diffjavacpp/media/image2.jpeg) |
-Source: *[pxleyes](http://www.pxleyes.com)* and *[cityofws](http://www.cityofws.org)*
+Source: left - *pxleyes.com*, right - *[cityofws](http://www.cityofws.org)*
 
 C++ just lets you do whatever you want,
 which is exciting
