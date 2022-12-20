@@ -55,9 +55,7 @@ which is always fun to do and can be done from the profile option in settings.
 
 ## Start GitHub Classroom
 
-Visit this URL:
-
-**<http://go.djosv.com/prelab>**
+Visit the **classroom GitHub link** that was provided to you in canvas.
 
 You'll be presented with a window like this:
 

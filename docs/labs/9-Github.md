@@ -52,7 +52,7 @@ Once you decide on an admin notify me.
 ### Everyone else – Review the mini-lab steps
 
 Team Admins,
-[go to this site](http://go.djosv.com/teamlab).
+**go to the link supplied via canvas**.
 There you'll accept the assignment,
 and it will ask you to create a team.
 Make a team with your team's name.
@@ -65,7 +65,7 @@ The next thing will be to let everyone know that they can now signup.
 ## Step 2: Everyone - Clone the new project
 
 Once your team admin has notified you that the team has been created,
-visit **[go.djosv.com/teamlab](http://go.djosv.com/teamlab)**.
+**visit the link that was provided to you in canvas**.
 Make sure that you **choose your correct group**.
 Once you've chosen the group and accepted the group assignment,
 you'll then be led to your new repository.

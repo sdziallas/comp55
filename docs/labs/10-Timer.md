@@ -29,8 +29,7 @@ how it works,
 and how to use it to make cool stuff.
 
 We're going to start with a very basic timer.
-You'll be able to get timers lab by checking out the repository from GitHub here:
-<http://go.djosv.com/timer>.
+You'll be able to get timers lab by checking out the repository from GitHub by clicking on the link that was provided in canvas.
 Once you accept the assignment,
 make sure to from eclipse use the
 [***File->Import->Git->Projects from Git*** process](lab8media/media/importrepo.gif)

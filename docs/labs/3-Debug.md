@@ -118,8 +118,8 @@ Remember also that there is a
 [video on null pointer exceptions I did a while back](https://youtu.be/x9JArfGJb8c)
 that explains more about what exceptions mean in general.
 
-Your grade for this lab will be based on your answers to a
-[google form](http://go.djosv.com/debuglab),
+Your grade for this lab will be based on your answers to the assignment
+that was linked to in canvas,
 your answers will include the number of bugs
 that you find and detail in the last section of that form.
 

@@ -20,7 +20,7 @@ so [go back to that lab](12-Hash.html) before continuing.
 
 ## Initial Setup
 
-[**Click here to start this part of the lab**](http://go.djosv.com/hashmap)
+**Click the link shared with you on canvas to start this part of the lab**
 and clone the repository into eclipse,
 [just like you've done](lab8media/media/importrepo.gif) before in
 [the other labs](lab8media/media/importfromgit.gif).

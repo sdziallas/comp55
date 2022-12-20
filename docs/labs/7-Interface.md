@@ -57,7 +57,7 @@ which will become useful when you want to tie two classes together in a more fle
 ## Working on our Simulator for this lab
 
 Let's start by downloading the **InterfacesLab.zip** file,
-which you can do from canvas or [directly from here](http://go.djosv.com/interface)
+which will be linked to from the canvas assignment page.
 
 Import that zip file [like you normally would](lab2media/media/image2.gif).
 

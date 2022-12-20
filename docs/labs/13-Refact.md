@@ -563,7 +563,7 @@ Once you have finished reading these questions,
 you can now download and take a program to try to do some refactoring:
 
 Your goal for the rest of class is to take these rules and apply them to
-[the project that I've given you](http://go.djosv.com/refactorlab),
+the linked project that I've shared with you on canvas,
 and by the deadline come up with a refactored solution that still works.
 **Don't spend your time playing and exploring the game**,
 but rather reading the code and making changes.
