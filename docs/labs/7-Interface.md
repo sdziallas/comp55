@@ -181,9 +181,9 @@ Here is what the diagram is going to look like.
 
 Everything in red shows what is new or is changing.
 Essentially what we are going to do is to
-first create an interface that has our three emotion methods - ```beCalm()```,
-```beHappy()```,
-and ```beAngry()```.
+first create an interface that has our three emotion methods - `beCalm()`,
+`beHappy()`,
+and `beAngry()`.
 We will then add some keywords
 to link up our ```EmotionalOval``` and our ```EmotionalRect```s to that interface.
 Finally,
