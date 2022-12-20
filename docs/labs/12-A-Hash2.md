@@ -1,25 +1,24 @@
 # Part 2 of the HashMap lab
 
-## Table of Contents
-
-- [Part 2 of the HashMap lab](#part-2-of-the-hashmap-lab)
-    - [Table of Contents](#table-of-contents)
-    - [Quick detour on Gradle](#quick-detour-on-gradle)
-    - [Reintroduction to Github](#reintroduction-to-github)
-    - [Let's get this party started](#lets-get-this-party-started)
-    - [Steps to take](#steps-to-take)
-        - [Step 1. Create an interface called ```Playable```](#step-1-create-an-interface-called-playable)
-        - [Step 2. Create a ```SoundEffect``` class that ```implements Playable```](#step-2-create-a-soundeffect-class-that-implements-playable)
-        - [Step 3. Play some audio](#step-3-play-some-audio)
-        - [Step 4. Setup the ```Hashmap```](#step-4-setup-the-hashmap)
-        - [Step 5. Make ```GLabel``` and ```SoundEffect``` objects](#step-5-make-glabel-and-soundeffect-objects)
-        - [Step 6. Link the ```GLabel```s to the ```SoundEffect```s](#step-6-link-the-glabels-to-the-soundeffects)
-        - [Step 7. Finish Implementing ```mousePressed```](#step-7-finish-implementing-mousepressed)
-    - [Bonus](#bonus)
-
 If you didn't read part 1 of the HashMaps lab,
 realize there are some puntos involved with that lab,
 so [go back to that lab](12-Hash.html) before continuing.
+
+- [Initial Setup](#initial-setup)
+- [Quick detour on Gradle](#quick-detour-on-gradle)
+- [Reintroduction to Github](#reintroduction-to-github)
+- [Let's get this party started](#lets-get-this-party-started)
+- [Steps to take](#steps-to-take)
+    - [Step 1. Create an interface called ```Playable```](#step-1-create-an-interface-called-playable)
+    - [Step 2. Create a ```SoundEffect``` class that ```implements Playable```](#step-2-create-a-soundeffect-class-that-implements-playable)
+    - [Step 3. Play some audio](#step-3-play-some-audio)
+    - [Step 4. Setup the ```Hashmap```](#step-4-setup-the-hashmap)
+    - [Step 5. Make ```GLabel``` and ```SoundEffect``` objects](#step-5-make-glabel-and-soundeffect-objects)
+    - [Step 6. Link the ```GLabel```s to the ```SoundEffect```s](#step-6-link-the-glabels-to-the-soundeffects)
+    - [Step 7. Finish Implementing ```mousePressed```](#step-7-finish-implementing-mousepressed)
+- [Bonus](#bonus)
+
+## Initial Setup
 
 [**Click here to start this part of the lab**](http://go.djosv.com/hashmap)
 and clone the repository into eclipse,

@@ -1,5 +1,25 @@
 # Debugging in Eclipse Lab
 
+- [Introduction](#introduction)
+- [Some advice](#some-advice)
+    - [Keep a calm mindset – You can do this](#keep-a-calm-mindset--you-can-do-this)
+    - [Follow the symptom backwards through the code (see right)](#follow-the-symptom-backwards-through-the-code-see-right)
+    - [Ask these questions when debugging](#ask-these-questions-when-debugging)
+    - [Invest time into learning how to use the debugger](#invest-time-into-learning-how-to-use-the-debugger)
+- [Debugging Mechanics...Things to ask yourself when you encounter a bug](#debugging-mechanicsthings-to-ask-yourself-when-you-encounter-a-bug)
+    - [1. If an exception was raised, What does the exception say? What line number and method is it from?](#1-if-an-exception-was-raised-what-does-the-exception-say-what-line-number-and-method-is-it-from)
+    - [2. If an error occurred, what is the state of the object (AKA receiver) and parameters?](#2-if-an-error-occurred-what-is-the-state-of-the-object-aka-receiver-and-parameters)
+    - [3. Comment Out / Mess With Code](#3-comment-out--mess-with-code)
+        - [Be willing to alter your code into absurd states to test a hypothesis](#be-willing-to-alter-your-code-into-absurd-states-to-test-a-hypothesis)
+        - [Problem 2 - Go back to the form to think of ways of altering your program to debug faster](#problem-2---go-back-to-the-form-to-think-of-ways-of-altering-your-program-to-debug-faster)
+- [The Debugging Lab](#the-debugging-lab)
+- [I fixed it!  Now it's gonna work! Wait what? Oh no](#i-fixed-it--now-its-gonna-work-wait-what-oh-no)
+- [I can now run the program without getting exceptions right away](#i-can-now-run-the-program-without-getting-exceptions-right-away)
+- [Setting a breakpoint](#setting-a-breakpoint)
+- [The Debug Shell/Display Pane](#the-debug-shelldisplay-pane)
+
+## Introduction
+
 Today you working on a topic often overlooked –
 How to Debug effectively.
 It's where you spend most of your time,

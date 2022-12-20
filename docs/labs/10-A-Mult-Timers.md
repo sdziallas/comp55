@@ -3,6 +3,15 @@
 If you haven't read the [previous lab on timers](10-Timer.html),
 then please go back and take a look at that.
 
+- [Introduction](#introduction)
+- [Simulating multiple tasks on shared resources at different times with a single timer](#simulating-multiple-tasks-on-shared-resources-at-different-times-with-a-single-timer)
+    - [1. Create and initialize a variable that keeps track of the number of times the timer is called](#1-create-and-initialize-a-variable-that-keeps-track-of-the-number-of-times-the-timer-is-called)
+    - [2. Ensure that the timer runs every second through its delay value (1000)](#2-ensure-that-the-timer-runs-every-second-through-its-delay-value-1000)
+    - [3. Handle the different tasks in ```actionPerformed```](#3-handle-the-different-tasks-in-actionperformed)
+- [Implementing multiple timers for tasks that work on unique resources](#implementing-multiple-timers-for-tasks-that-work-on-unique-resources)
+
+## Introduction
+
 As you continue working with timers,
 you may eventually want to utilize multiple timers within the same class for different purposes.
 

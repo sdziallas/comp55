@@ -1,5 +1,16 @@
 # Java and Eclipse Lab (Credit given if done by next class)
 
+- [STEP 1: Remove any previous installations of Java that you have](#step-1-remove-any-previous-installations-of-java-that-you-have)
+- [STEP 2: Download Eclipse](#step-2-download-eclipse)
+- [STEP 3: Run the Eclipse Installer](#step-3-run-the-eclipse-installer)
+- [STEP 4: Get Familiar with and start Eclipse](#step-4-get-familiar-with-and-start-eclipse)
+    - [Reviewing IDE configuration settings](#reviewing-ide-configuration-settings)
+- [STEP 5: Installing Darkest Dark Theme](#step-5-installing-darkest-dark-theme)
+- [STEP 6: Let's get a Hello World going](#step-6-lets-get-a-hello-world-going)
+- [STEP 7: Write and Run](#step-7-write-and-run)
+- [STEP 8: One Last Customization of the Color Theme](#step-8-one-last-customization-of-the-color-theme)
+- [STEP 9: Submit confirmation by uploading a picture to Canvas](#step-9-submit-confirmation-by-uploading-a-picture-to-canvas)
+
 If you are using a school computer skip down to Step 5.
 
 ## STEP 1: Remove any previous installations of Java that you have
@@ -324,7 +335,7 @@ Once you start editing it again it will re-apply the color scheme.
 But to be completely in line with this class and the color theme,
 we are going to do one last set of steps.
 
-## STEP 8 - One Last Customization of the Color Theme
+## STEP 8: One Last Customization of the Color Theme
 
 I will try to make this last color theme
 match as much as possible the site on which these labs are hosted,
@@ -363,7 +374,7 @@ I can't stress this enough,
 do not spend more time trying to pick colors now.
 You can do that at the end once you are finished with your solo assignments.
 
-## STEP 9 – Submit confirmation by uploading a picture to Canvas
+## STEP 9: Submit confirmation by uploading a picture to Canvas
 
 To get credit for this lab,
 submit an image of your entire eclipse running this hello world program to canvas,

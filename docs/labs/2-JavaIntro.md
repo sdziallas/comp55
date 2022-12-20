@@ -1,5 +1,13 @@
 # Intro to Java Lab
 
+- [Step -1: Generate a function/method in Hello.java](#step--1-generate-a-functionmethod-in-hellojava)
+- [STEP 0: Download the zip file from Canvas](#step-0-download-the-zip-file-from-canvas)
+- [STEP 1: Import the project into eclipse](#step-1-import-the-project-into-eclipse)
+- [STEP 2: Create a Fractions class](#step-2-create-a-fractions-class)
+- [STEP 3: Fill out the Fractions class](#step-3-fill-out-the-fractions-class)
+- [STEP 4: Override the toString() method](#step-4-override-the-tostring-method)
+- [STEP 5: Submit a picture of your program finishing](#step-5-submit-a-picture-of-your-program-finishing)
+
 ## Step -1: Generate a function/method in Hello.java
 
 We'll be using the words **function** & **method** interchangeably.

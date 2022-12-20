@@ -6,6 +6,14 @@ Sequence diagrams allow us to think more about how objects are dynamically relat
 or more succinctly,
 sequence diagrams tell us who called what and when.
 
+- [plantUML Starter](#plantuml-starter)
+- [Sequence Diagram basics](#sequence-diagram-basics)
+    - [Actors and Participant Objects](#actors-and-participant-objects)
+    - [Creating the sequence via connection arrows](#creating-the-sequence-via-connection-arrows)
+    - [Returning values](#returning-values)
+- [Fancy options](#fancy-options)
+- [Getting credit](#getting-credit)
+
 ## plantUML Starter
 
 We are going to continue using [plantUML](https://plantuml.com),

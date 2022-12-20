@@ -1,5 +1,20 @@
 # Refactoring Lab
 
+- [Rationale](#rationale)
+- [The biggest culprit *if statements*](#the-biggest-culprit-if-statements)
+    - [Principles to follow](#principles-to-follow)
+        - [1. If you see a comparison to a boolean, take it out](#1-if-you-see-a-comparison-to-a-boolean-take-it-out)
+        - [2. Avoid using negations](#2-avoid-using-negations)
+        - [3. Simplify if statements to use return when possible](#3-simplify-if-statements-to-use-return-when-possible)
+        - [4. Refactor out the duplicate parts of if statements](#4-refactor-out-the-duplicate-parts-of-if-statements)
+        - [5. Use variables to help you refactor code](#5-use-variables-to-help-you-refactor-code)
+        - [6. Use data instead of logic to store variations](#6-use-data-instead-of-logic-to-store-variations)
+        - [7. Methods can also make your code more readable](#7-methods-can-also-make-your-code-more-readable)
+        - [8. Make constants for repeating values](#8-make-constants-for-repeating-values)
+- [Refactoring Lab Directions](#refactoring-lab-directions)
+
+## Rationale
+
 By this point, you should have a feeling that there are many different ways for someone to write code,
 and one thing that we would like to do in this class
 (and for you to do in the future)

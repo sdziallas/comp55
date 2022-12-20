@@ -1,5 +1,14 @@
 # Use Case Diagram Mini-Lab
 
+- [UML Intro](#uml-intro)
+- [Wait, why plantUML again?](#wait-why-plantuml-again)
+- [The Use Case Diagram](#the-use-case-diagram)
+- [Starting a PlantUML use case diagram](#starting-a-plantuml-use-case-diagram)
+- [Explanation of the plantUML code](#explanation-of-the-plantuml-code)
+- [Introducing use cases](#introducing-use-cases)
+- [Making connections](#making-connections)
+- [Defining the System](#defining-the-system)
+
 For today's lab, we are going to learn about the **use case diagram**,
 which is a part of **UML** which stands for *Unified Modeling Language*.
 

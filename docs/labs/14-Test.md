@@ -1,5 +1,18 @@
 # Testing Lab
 
+- [Objectives](#objectives)
+- [Remember Traffic Jam?](#remember-traffic-jam)
+- [Date Testing](#date-testing)
+- [Junit 4 Framework](#junit-4-framework)
+- [Create a DateTest class using JUnit 4](#create-a-datetest-class-using-junit-4)
+- [Running the Junit Test](#running-the-junit-test)
+- [Building basic tests](#building-basic-tests)
+- [Coming up with Advanced Tests](#coming-up-with-advanced-tests)
+- [Assertions and GUI Testing (Optional)](#assertions-and-gui-testing-optional)
+- [Review Questions](#review-questions)
+
+## Objectives
+
 In this lab, you'll be developing your testing techniques.
 First, we'll discuss the notion of unit tests,
 and then we'll switch over to introducing you to the **JUnit** testing framework,
@@ -461,7 +474,7 @@ follow [this optional guide created by former COMP 55 students](14-A-TestOptiona
 
 ## Review Questions
 
-### (*Place your answers to these questions as comments in the TestDate.java file and upload them to canvas*)
+***Place your answers to these questions as comments in the TestDate.java file and upload them to canvas***
 
 1. How many Test methods did I have you make?
 2. What are the differences between those test methods?

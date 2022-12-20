@@ -1,12 +1,15 @@
 # Decomposition Lab
 
-- [Decomposition Lab](#decomposition-lab)
-    - [Let's get some movement going](#lets-get-some-movement-going)
-        - [Adding an oval to the screen](#adding-an-oval-to-the-screen)
-        - [Animating the oval to move in a straight line](#animating-the-oval-to-move-in-a-straight-line)
-        - [Animating the ball to move along a circular path](#animating-the-ball-to-move-along-a-circular-path)
-        - [Polar coordinates](#polar-coordinates)
-    - [Changing colors](#changing-colors)
+- [Overview](#overview)
+- [Decomposing the problem](#decomposing-the-problem)
+- [Let's get some movement going](#lets-get-some-movement-going)
+    - [Adding an oval to the screen](#adding-an-oval-to-the-screen)
+    - [Animating the oval to move in a straight line](#animating-the-oval-to-move-in-a-straight-line)
+    - [Animating the ball to move along a circular path](#animating-the-ball-to-move-along-a-circular-path)
+    - [Polar coordinates](#polar-coordinates)
+- [Changing colors](#changing-colors)
+
+## Overview
 
 Today you are going to recreate this animation and behavior:
 
@@ -29,6 +32,8 @@ I'm also going to use this opportunity to discuss some aspects of programming
 that some of you may not have had much interaction with
 (yet may be useful for your projects),
 like custom colors as well as movement using polar coordinates.
+
+## Decomposing the problem
 
 For this lab it may make sense to break down the problem initially into two parts:
 

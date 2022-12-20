@@ -1,5 +1,20 @@
 # Interface Lab
 
+- [Why Interfaces?](#why-interfaces)
+- [Working on our Simulator for this lab](#working-on-our-simulator-for-this-lab)
+- [Introducing the Interface](#introducing-the-interface)
+    - [Step 1: Make an Interface named ```Emotional```](#step-1-make-an-interface-named-emotional)
+    - [Step 2: Change ```EmotionalOval``` and Rect so that they both implement the interface](#step-2-change-emotionaloval-and-rect-so-that-they-both-implement-the-interface)
+    - [Step 3: Change ```EmotionalState``` and ```EmotionSimulator``` to use type ```Emotional``` instead of ```EmotionalOval```](#step-3-change-emotionalstate-and-emotionsimulator-to-use-type-emotional-instead-of-emotionaloval)
+    - [Step 4: Add an ```EmotionalRect``` to the ```EmotionalSimulator```](#step-4-add-an-emotionalrect-to-the-emotionalsimulator)
+    - [Step 5: Make an ```EmotionalCharacter```](#step-5-make-an-emotionalcharacter)
+        - [***Create and add a ```GImage``` to the screen in ```EmotionSimulator```***](#create-and-add-a-gimage-to-the-screen-in-emotionsimulator)
+        - [***Create a ```GImage``` instance variable in ```EmotionalCharacter```***](#create-a-gimage-instance-variable-in-emotionalcharacter)
+        - [***Create a constructor that passes in a ```GImage```***](#create-a-constructor-that-passes-in-a-gimage)
+        - [***Set the image in each of the three methods.***](#set-the-image-in-each-of-the-three-methods)
+        - [***Run the program***](#run-the-program)
+    - [Step 6: Add your own class that implements Emotional in a different way](#step-6-add-your-own-class-that-implements-emotional-in-a-different-way)
+
 ## Why Interfaces?
 
 The purpose of this lab is to introduce you to interfaces,

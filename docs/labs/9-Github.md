@@ -1,6 +1,24 @@
 # Git Team Lab
 
-## Points are given based on completing all steps with your team
+Points are given based on completing all steps with your team
+
+- [Introduction](#introduction)
+- [Step 0: Everyone - Pick roles and setup room](#step-0-everyone---pick-roles-and-setup-room)
+- [Step 1: Team Admins - setup repository](#step-1-team-admins---setup-repository)
+    - [Everyone else – Review the mini-lab steps](#everyone-else--review-the-mini-lab-steps)
+- [Step 2: Everyone - Clone the new project](#step-2-everyone---clone-the-new-project)
+- [Step 3: Everyone - make a change and reset (undo)](#step-3-everyone---make-a-change-and-reset-undo)
+- [Step 4: Martyr \& Hackslash - Martyr commits and Hackslash pulls afterward](#step-4-martyr--hackslash---martyr-commits-and-hackslash-pulls-afterward)
+- [Step 5: Everyone - Look at the results in the History](#step-5-everyone---look-at-the-results-in-the-history)
+- [Step 6: Hackslash - commit multiple times and then push](#step-6-hackslash---commit-multiple-times-and-then-push)
+- [Step 7: Procrastinator - Commit and Unsuccessfully Push](#step-7-procrastinator---commit-and-unsuccessfully-push)
+- [Step 8: Martyr \& Hackslash - commit and push the same line](#step-8-martyr--hackslash---commit-and-push-the-same-line)
+- [Step 9: Everyone - Successfully resolve a merge conflict](#step-9-everyone---successfully-resolve-a-merge-conflict)
+- [Step 10: Everyone - Be aware of a conflict problems](#step-10-everyone---be-aware-of-a-conflict-problems)
+- [Step 11: Everyone - Practice pushing and pulling](#step-11-everyone---practice-pushing-and-pulling)
+    - [More Git Theory (Optional)](#more-git-theory-optional)
+
+## Introduction
 
 While this is a team lab,
 each of you will need to do this on your computer.
@@ -31,7 +49,7 @@ Once you decide on an admin notify me.
 
 ## Step 1: Team Admins - setup repository
 
-## Everyone else – Review the mini-lab steps
+### Everyone else – Review the mini-lab steps
 
 Team Admins,
 [go to this site](http://go.djosv.com/teamlab).
@@ -146,7 +164,7 @@ Once all your team members make a change and reset
 so that they *no longer have a > sign on their project*,
 you can move on to step 4.
 
-## Step 4: Martyr commits and Hackslash pulls afterward
+## Step 4: Martyr & Hackslash - Martyr commits and Hackslash pulls afterward
 
 Let's have the Martyr make a commit -
 **if you don't remember your roles please review them now.**

@@ -1,11 +1,24 @@
 # Event Handlers and Listeners
 
-(Deliverable – export the entire interactivity lab as a zip file when you're done)
+- [Introduction](#introduction)
+- [Old I/O Programs](#old-io-programs)
+    - [Your computer once it needs to wait for your input](#your-computer-once-it-needs-to-wait-for-your-input)
+- [What's an event?](#whats-an-event)
+- [The Five Mouse Events](#the-five-mouse-events)
+    - [Our first event handler in Ball.java](#our-first-event-handler-in-balljava)
+- [The MouseEvent parameter](#the-mouseevent-parameter)
+- [Understanding when all events are called](#understanding-when-all-events-are-called)
+- [Mouse Motion Events](#mouse-motion-events)
+- [The Rubber Band](#the-rubber-band)
+- [Real Dragging](#real-dragging)
+- [Bonus: Getting the object to bounce correctly](#bonus-getting-the-object-to-bounce-correctly)
+
+## Introduction
 
 If you still feel uncomfortable with either the [ACM](4-ACM.html)
 or the [Intro to Java](2-JavaIntro.html) Labs,
 you should go back and revisit what was done in each.
-Today we're going to get you started on learning and about events
+Today we're going to get you started on learning about events
 that will allow us to add some dynamic content to our upcoming graphics program.
 
 ## Old I/O Programs

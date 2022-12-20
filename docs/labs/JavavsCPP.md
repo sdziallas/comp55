@@ -1,5 +1,19 @@
 # Differences in Java versus C++ cheatsheet
 
+- [Overall Comparison](#overall-comparison)
+- [Bools \& Arrays](#bools--arrays)
+- [Java Strings](#java-strings)
+- [Java has two meta-types - primitives and objects](#java-has-two-meta-types---primitives-and-objects)
+- [In Java, there is no pointer notation](#in-java-there-is-no-pointer-notation)
+- [All Objects you create in Java will be created on the Heap](#all-objects-you-create-in-java-will-be-created-on-the-heap)
+- [Java will take care of deleting objects for you](#java-will-take-care-of-deleting-objects-for-you)
+- [Output/Input stuff has changed](#outputinput-stuff-has-changed)
+- [Const/Final variables](#constfinal-variables)
+- [Java has programmed many things for you](#java-has-programmed-many-things-for-you)
+- [There is much to learn still](#there-is-much-to-learn-still)
+
+## Overall Comparison
+
 If I had to compare C++ and Java,
 I would say that they fit these pictures pretty well
 

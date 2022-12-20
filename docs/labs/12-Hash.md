@@ -1,4 +1,16 @@
-# HashMap Lab
+# HashMap Lab (Part 1)
+
+- [Objectives](#objectives)
+- [Hash-what?](#hash-what)
+- [Why didn't they just call it a hashtable then?](#why-didnt-they-just-call-it-a-hashtable-then)
+- [Basic HashMap Usage](#basic-hashmap-usage)
+- [Intermediate HashMap Usage](#intermediate-hashmap-usage)
+- [More advanced rules for HashMaps](#more-advanced-rules-for-hashmaps)
+- [But...what if there are multiple meanings for the same word?](#butwhat-if-there-are-multiple-meanings-for-the-same-word)
+- [Ok, so how do we use this?](#ok-so-how-do-we-use-this)
+- [Getting credit for part 1](#getting-credit-for-part-1)
+
+## Objectives
 
 This lab has two components.
 The first part is reading heavy,

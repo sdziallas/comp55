@@ -1,5 +1,17 @@
 # Intro to ACM Lab
 
+- [Introduction](#introduction)
+- [Modifying our label (Changing font, size and style)](#modifying-our-label-changing-font-size-and-style)
+    - [Extracting constants](#extracting-constants)
+- [Adding Shapes](#adding-shapes)
+- [GImage](#gimage)
+- [Applying Color](#applying-color)
+- [Overlapping Objects](#overlapping-objects)
+- [Making a robot (Upload your robot picture as your deliverable)](#making-a-robot-upload-your-robot-picture-as-your-deliverable)
+- [Ready to go beyond?](#ready-to-go-beyond)
+
+## Introduction
+
 By this point,
 you've completed the Java Lab and have done some work on the project.
 Congratulations!

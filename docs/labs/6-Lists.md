@@ -1,5 +1,13 @@
 # ArrayLists
 
+- [Pre-requisites](#pre-requisites)
+- [Introduction](#introduction)
+- [**Completing this mini-lab**](#completing-this-mini-lab)
+- [**Making all balls move**](#making-all-balls-move)
+- [**Bonus: What? The balls don't move independently?! I gotta make them all bounce around the screen!!!**](#bonus-what-the-balls-dont-move-independently-i-gotta-make-them-all-bounce-around-the-screen)
+
+## Pre-requisites
+
 **Before working on this lab, you'll need to make sure that you finish at least the [Ball portion of the interactivity lab](5-Interact.html), so that when you run that file, you are able to do this:**
 
 ![final ball animation](lab5media/media/finalball.gif)
@@ -9,6 +17,8 @@ please [go back](5-Interact.html) and get there first.
 You've been warned.
 
 ---
+
+## Introduction
 
 ```ArrayList``` is a special Java collection that makes keeping track of multiple items
 (what we normally use Arrays for)

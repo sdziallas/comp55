@@ -5,6 +5,12 @@ a former instructor of mine who is also the person behind codingbat.
 If there are terms here that you aren't familiar with,
 then I would encourage you to ask me or others about them or see if you need any additional help.
 
+- [Cool Eclipse Features](#cool-eclipse-features)
+    - [Closing/Removing/Quitting](#closingremovingquitting)
+    - [Debugging features review](#debugging-features-review)
+    - [One Final Tip](#one-final-tip)
+
+
 ## Cool Eclipse Features
 
 - Eclipse has **many** features,

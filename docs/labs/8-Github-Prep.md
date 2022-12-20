@@ -1,5 +1,21 @@
 # Preparation for Git Team Lab
 
+- [Overview](#overview)
+- [Signup for a GitHub account](#signup-for-a-github-account)
+- [Start GitHub Classroom](#start-github-classroom)
+- [Importing your new GitHub Repository into eclipse](#importing-your-new-github-repository-into-eclipse)
+    - [Help! I lost my GitHub URL](#help-i-lost-my-github-url)
+- [I have the URL but have yet to connect to GitHub](#i-have-the-url-but-have-yet-to-connect-to-github)
+    - [Generate a token and store it in secure store](#generate-a-token-and-store-it-in-secure-store)
+- [Opening your project](#opening-your-project)
+- [Examining ```user.name``` and ```user.email``` to your Git Preferences](#examining-username-and-useremail-to-your-git-preferences)
+    - [Look to see if you have user.name and user.email](#look-to-see-if-you-have-username-and-useremail)
+    - [Adding user.name and user.email if you don't have them](#adding-username-and-useremail-if-you-dont-have-them)
+- [Committing and pushing changes](#committing-and-pushing-changes)
+- [Verify your activity on GitHub](#verify-your-activity-on-github)
+
+## Overview
+
 This lab is a mishmash of steps
 that need to be completed individually before we meet again in class.
 We will be joining the wide world of sharing code repositories.

@@ -1,5 +1,29 @@
 # Timers Lab
 
+- [Overview](#overview)
+- [What is a timer?](#what-is-a-timer)
+- [The Three-Step Checklist Reference](#the-three-step-checklist-reference)
+    - [Step 1 - Create a timer object](#step-1---create-a-timer-object)
+    - [Step 2 - Setup the event handlers](#step-2---setup-the-event-handlers)
+    - [Step 3 - Call the timer's ```start``` method](#step-3---call-the-timers-start-method)
+- [MyFirstTimer.java](#myfirsttimerjava)
+    - [Let's first start by creating a Timer in the ```**run**``` method](#lets-first-start-by-creating-a-timer-in-the-run-method)
+    - [Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called](#lets-create-a-private-variable-numtimes-that-keeps-track-of-how-many-times-actionperformed-has-been-called)
+    - [Add a three-second delay before the timer starts](#add-a-three-second-delay-before-the-timer-starts)
+- [BallLauncher.java](#balllauncherjava)
+    - [Review of the Code](#review-of-the-code)
+    - [Setup a timer that moves all of the balls in our ```ArrayList```](#setup-a-timer-that-moves-all-of-the-balls-in-our-arraylist)
+    - [Adding a Ball Launch cooldown](#adding-a-ball-launch-cooldown)
+    - [Note](#note)
+- [DodgeBall.java](#dodgeballjava)
+    - [The next thing we want to do is to make the enemies have some type of movement](#the-next-thing-we-want-to-do-is-to-make-the-enemies-have-some-type-of-movement)
+- [Final required addition](#final-required-addition)
+- [Advanced reading on multiple timers](#advanced-reading-on-multiple-timers)
+- [Bonus](#bonus)
+    - [*"Hey! This is almost a game!"*](#hey-this-is-almost-a-game)
+
+## Overview
+
 In this lab, you'll begin to appreciate what a timer is,
 how it works,
 and how to use it to make cool stuff.
