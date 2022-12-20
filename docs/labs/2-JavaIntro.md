@@ -37,7 +37,7 @@ just have it in a temporary location.
 
 ## STEP 1: Import the project into eclipse
 
-The best way to do this is by downloading the file as a zip file and leaving it as is.
+You can download the file as a zip file and leave it as is.
 There is no need to unzip the contents.
 Once Eclipse is open,
 go to *File->Import* and click on *General->Existing projects into workspace*,
