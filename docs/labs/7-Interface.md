@@ -225,9 +225,9 @@ you can move on to the next step.
 
 Connection To Visual:
 On the UML diagram,
-```GRect```,
-```GOval```,
-```EmotionalRect```,
+`GRect`,
+`GOval`,
+`EmotionalRect`,
 and ```EmotionalOval``` are all part of the shapes
 that get displayed with the colors changing inside them.
 The ```EmotionSimulator``` takes in the information of the three emotions
