@@ -242,7 +242,7 @@ It should look something like the image below.
 
 That is all you need for this mini-lab.
 When that is done,
-you can submit the text of the java file online via canvas.
+you can follow the directions that are outlined on the canvas submission page.
 Just copy and paste the code into the editor into the canvas submission page for Balls.java.
 
 ## **Bonus: What? The balls don't move independently?! I gotta make them all bounce around the screen!!!**

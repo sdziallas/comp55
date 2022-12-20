@@ -234,7 +234,7 @@ Constants are nice because they make the code more readable,
 and they allow us to make more changes that make more sense based on the code.
 Let me show you an easy way that eclipse allows us to extract constants.
 Click anywhere on the first 300 your label,
-right click and choose *source->extract constant* or *refactor->extract constant*.
+right click and choose *refactor->extract constant* or *source->extract constant*.
 There,
 you'll get an option to name it something,
 I just named it ```START_X``` in caps,

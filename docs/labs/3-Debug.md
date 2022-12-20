@@ -11,7 +11,7 @@
     - [2. If an error occurred, what is the state of the object (AKA receiver) and parameters?](#2-if-an-error-occurred-what-is-the-state-of-the-object-aka-receiver-and-parameters)
     - [3. Comment Out / Mess With Code](#3-comment-out--mess-with-code)
         - [Be willing to alter your code into absurd states to test a hypothesis](#be-willing-to-alter-your-code-into-absurd-states-to-test-a-hypothesis)
-        - [Problem 2 - Go back to the form to think of ways of altering your program to debug faster](#problem-2---go-back-to-the-form-to-think-of-ways-of-altering-your-program-to-debug-faster)
+        - [Problem 2 - Go back to linked canvas assignment to think of ways of altering your program to debug faster](#problem-2---go-back-to-linked-canvas-assignment-to-think-of-ways-of-altering-your-program-to-debug-faster)
 - [The Debugging Lab](#the-debugging-lab)
 - [I fixed it!  Now it's gonna work! Wait what? Oh no](#i-fixed-it--now-its-gonna-work-wait-what-oh-no)
 - [I can now run the program without getting exceptions right away](#i-can-now-run-the-program-without-getting-exceptions-right-away)
@@ -33,14 +33,12 @@ READ THESE tips before you start on the lab,
 they were taken from the maker of CodingBat,
 Nick Parlante.
 
-You'll get credit for the lab for answering questions in the form.
-To encourage reading,
-I have moved the link to where the form is
-(you'll find out the link to the form as you read).
+You'll get credit for the lab for answering questions that are linked in the canvas lab.
+Please read the lab.
+There is good content here!
 As you read the lab,
-you'll be asked at times to visit a form at that moment,
-with a single problem being an entire section in the google form,
-which will be in bold.
+you'll be asked at times to answer a question,
+with a single problem being what you need to answer.
 You can work with one other person throughout the lab,
 **but each person must submit the form**.
 
@@ -115,19 +113,19 @@ The lines also show a stack trace of who called which method,
 *so that a function on a lower line will be directly responsible
 for calling the line above it in that particular exception's case.*
 Remember also that there is a
-[video on null pointer exceptions I did a while back](https://youtu.be/x9JArfGJb8c)
+[video on null pointer exceptions that was done a while back](https://youtu.be/x9JArfGJb8c)
 that explains more about what exceptions mean in general.
 
 Your grade for this lab will be based on your answers to the assignment
 that was linked to in canvas,
 your answers will include the number of bugs
-that you find and detail in the last section of that form.
+that you find and detail in the last section of that assignment.
 
-***Problem 1) Go to the online form and complete Problem 1
+***Problem 1) Go to the linked assignment and complete Problem 1
 (the entire section of it).
 Continue here once you are done.***
 
-The screenshot in the online form is very similar to what you'll see as you program.
+The screenshot in the linked assignment is very similar to what you'll see as you program.
 
 ### 2. If an error occurred, what is the state of the object (AKA receiver) and parameters?
 
@@ -156,7 +154,7 @@ write a ```for``` loop that makes many ```foo``` objects with a value of 1000.
 This code is not very logical for the proper functioning of the program,
 but it's a very fast way to test your hypothesis.
 
-#### Problem 2 - Go back to the form to think of ways of altering your program to debug faster
+#### Problem 2 - Go back to linked canvas assignment to think of ways of altering your program to debug faster
 
 ---
 
@@ -497,7 +495,6 @@ think of good test-cases that you can write in the code
 **(adding code is great when debugging)**
 and come up with additional tests that you can write to help you understand what the problems are
 and to ensure that your Fractions Program is truly working the way it should be.
-Your tests can be simple print statements like we've done with Traffic Jam.
 
 **Problem 8: Start debugging the code in full now, use the instructions provided online to document what you try.**
 

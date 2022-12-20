@@ -18,7 +18,7 @@
 - [DodgeBall.java](#dodgeballjava)
     - [The next thing we want to do is to make the enemies have some type of movement](#the-next-thing-we-want-to-do-is-to-make-the-enemies-have-some-type-of-movement)
 - [Final required addition](#final-required-addition)
-- [Advanced reading on multiple timers](#advanced-reading-on-multiple-timers)
+- [Advanced reading on multiple timers (Optional)](#advanced-reading-on-multiple-timers-optional)
 - [Bonus](#bonus)
     - [*"Hey! This is almost a game!"*](#hey-this-is-almost-a-game)
 
@@ -90,6 +90,7 @@ Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the a
 
 Any class that would like to be responsible for
 handling the alarm must implement the ```ActionListener``` interface.
+`ActionListener` is part of `java.awt.event`, so you may need to `import java.awt.event.*` to use it.
 The ```ActionListener``` interface has just one method:
 
 ```public void actionPerformed(ActionEvent e)```
@@ -147,8 +148,13 @@ you'll get a simple window with a label that does nothing.
     Having these two arguments means
     ```MyFirstTimer``` (```this```) will be notified every second (```1000```ms).
 4. Implement the ```ActionListener``` interface.
-    - Let's add ```implements ActionListener``` to line 8,
-    as well as an ```actionPerformed``` method.
+    - Let's add ```implements ActionListener``` to your MyFirstTimer class definition:
+
+    ```java
+    public class MyFirstTimer extends GraphicsProgram implements ActionListener {
+    ```
+
+    as well as an ```actionPerformed``` method inside the class.
 
     ```java
     public void actionPerformed(ActionEvent e) {
@@ -578,10 +584,10 @@ you should have your program make the squares disappear
 **and follow all the directions on when to push your code**.
 Make sure to push your final changes to your repository by the deadline.
 
-## Advanced reading on multiple timers
+## Advanced reading on multiple timers (Optional)
 
 If you're curious,
-[here's an explanation of how to implement multiple timers in your program](10-A-Mult-Timers.html)
+[here's an explanation of how to implement multiple timers in your program](10-A-Mult-Timers.html). Read this at your own risk.
 
 ## Bonus
 

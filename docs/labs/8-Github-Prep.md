@@ -331,8 +331,11 @@ Hooray!
 
 That's it for now!
 We'll do more with git in the future,
-but this is just meant to get you ready for when we start coding,
-which you should not do yet,
-since I have more code to give you to help you move along in the project,
-work on designing and coming up with classes and methods
-and the rest of your system design project instead!
+but this is just meant to get you ready for when we start coding.
+
+Before you start coding though, make sure that you have:
+
+- approval to start
+- updated starter code
+- updated methods and classes
+- finished the rest of your system design project.
