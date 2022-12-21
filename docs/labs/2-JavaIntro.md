@@ -10,18 +10,19 @@
 
 ## Step -1: Generate a function/method in Hello.java
 
-We'll be using the words **function** & **method** interchangeably.
 Before you go onto the java lab for today,
 *go into your hello world project in eclipse*
 and **make sure you feel comfortable writing at least one function/method**.
+We'll be using the words **function** & **method** interchangeably.
 
 You can check this by:
 
-1. Making the hello world command into a function (like ```sayHello()```)
+1. Making the "hello world" line into a function (like ```sayHello()```)
 2. Calling that function in ```main```
 3. Ensuring you get the same output when you re-run the program.
 
-Here is a review of functions, which you are expected to know.
+You are expected to know how to create general functions.
+Here's a refresher:
 
 ![princeton's java methods slide](lab2media/media/image1.png)
 *Image from Princeton's Intro Java Course*
@@ -31,7 +32,7 @@ but you will not be using it most of the time.
 
 ## STEP 0: Download the zip file from Canvas
 
-Make sure that you downloaded the zip file from the Lab Assignment Page.
+Make sure that you downloaded the zip file from the Lab Assignment Page on Canvas.
 No need to unzip it,
 just have it in a temporary location.
 
@@ -40,7 +41,8 @@ just have it in a temporary location.
 You can download the file as a zip file and leave it as is.
 There is no need to unzip the contents.
 Once Eclipse is open,
-go to *File->Import* and click on *General->Existing projects into workspace*,
+go to *File->Import*,
+then click on *General->Existing projects into workspace*,
 and then click *Next*.
 
 On this screen,
@@ -67,25 +69,29 @@ and say *close project*,
 instead of delete,
 which will keep the project in your workspace,
 but make files disappear from being edited or run.
-If you notice your COMP55IntroJava project will be shown on the left-hand side,
-but it will have several red X's, ![red x](lab2media/media/redx.png)
+Your COMP55IntroJava project will be shown on the left-hand side,
+but it will have several red X's ![red x](lab2media/media/redx.png) -
 that means that Java has found some issues for you.
 
-Eclipse is organized into lots of small areas,
+Eclipse is organized into many small areas,
 including a window that will show you both errors and warnings,
 so you could examine them if you wanted to.
-Go ahead and look at the problems in the window,
-or simply open up the file and double click on it and then hover over the red squiggly mark,
+Examine the problems in the window,
+or open up the file and double-click on it and then hover over the red squiggly mark,
 and you'll see an error.
-The next animation shows you how to do both versions.
+The next animation shows you how to do both.
 
 ![Navigating problems pane](lab2media/media/image4.gif)
 
-That error is something like,
+The error in the source code states something like,
 *Fraction cannot be resolved to a type* which means,
 "I have no clue what this Fraction is that you speak of".
 This is because we have yet to create a class to represent a Fraction.
-We'll go ahead and do that now.
+In Java, the Fraction class that we create will serve as a blueprint
+for how all Fractions will behave and what they will store.
+Placing code in classes that then can be instantiated via objects
+is the foundation of object-oriented programming.
+Let's start and create a class now.
 
 ## STEP 2: Create a Fractions class
 
@@ -144,6 +150,13 @@ Remember that **constructors** are a special set of instructions (like a method)
 that one could use to help set up a fraction.
 In this case, when we would like to say something like ```new Fraction(3, 4)```,
 it should use the 3 and the 4 passed in and set the numerator and denominator to those values.
+The fact that we will represent a fraction as two numbers
+(even though it is a single number)
+is an example of the object-oriented principle **abstraction**.
+In this scenario,
+we are finding a way of representing some data
+and working with it in a general
+(dare I say ***abstract***) way.
 To help us write this class, without knowing much java, we are going to rely on Eclipse.
 
 Now *right-click* on the error "*The constructor Fraction(int, int) is undefined*"
@@ -167,7 +180,7 @@ public class Fraction {
 Unlike C++,
 because we are working in the same file,
 we just add the word ```public```,
-as well as the name of the file and the arguments we want to create the constructor.
+as well as the name of the file and the arguments we want to create the constructor with.
 Also, make sure to *Save* (**Ctrl+S**) the file.
 Notice the comments look the same,
 but there is a comment followed by the ```TODO```,
@@ -219,6 +232,12 @@ which is an indication that they are instance variables instead of local variabl
 This is how you declare instance variables,
 just with the word ```private``` before each variable declaration and outside of any method.
 ```private``` and ```public``` work just like they did in C++.
+Also remember that with object-oriented programming,
+we want most of our variables to follow the object-oriented principle of **encapsulation**.
+We want those variables hidden from other classes
+so that if we want to change them in the future we can.
+Keeping the variables hidden also allows us to protect their values as well,
+since any attempts to change the data would have to be run through some logic.
 
 To help us write the **getters** and **setters** (AKA *accessors/mutators*),
 we'll also use Eclipse.
