@@ -163,7 +163,8 @@ To debug in eclipse
   (this happens when you *Debug* the program,
   not when you *Run* it).
   Inside the debug perspective,
-  the *Run->Add Java Exception Breakpoint* command allows you to edit which exceptions drop automatically into the debugger.
+  the *Run->Add Java Exception Breakpoint* command allows you to edit
+  which exceptions drop automatically into the debugger.
 
 ### One Final Tip
 
