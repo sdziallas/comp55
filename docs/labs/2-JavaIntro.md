@@ -1,14 +1,15 @@
 # Intro to Java Lab
 
-- [Step -1: Generate a function/method in Hello.java](#step--1-generate-a-functionmethod-in-hellojava)
-- [STEP 0: Download the zip file from Canvas](#step-0-download-the-zip-file-from-canvas)
-- [STEP 1: Import the project into eclipse](#step-1-import-the-project-into-eclipse)
-- [STEP 2: Create a Fractions class](#step-2-create-a-fractions-class)
-- [STEP 3: Fill out the Fractions class](#step-3-fill-out-the-fractions-class)
-- [STEP 4: Override the toString() method](#step-4-override-the-tostring-method)
-- [STEP 5: Submit a picture of your program finishing](#step-5-submit-a-picture-of-your-program-finishing)
+- [STEP 1: Generate a function/method in Hello.java](#step-1-generate-a-functionmethod-in-hellojava)
+- [STEP 2: Download the zip file from Canvas](#step-2-download-the-zip-file-from-canvas)
+- [STEP 3: Import the project into eclipse](#step-3-import-the-project-into-eclipse)
+- [STEP 4: Create a Fractions class](#step-4-create-a-fractions-class)
+- [STEP 5: Fill out the Fractions class](#step-5-fill-out-the-fractions-class)
+- [STEP 6: Override the toString() method](#step-6-override-the-tostring-method)
+- [STEP 7: Create multiple constructors and test code](#step-7-create-multiple-constructors-and-test-code)
+- [STEP 8: Submit a picture of your program finishing](#step-8-submit-a-picture-of-your-program-finishing)
 
-## Step -1: Generate a function/method in Hello.java
+## STEP 1: Generate a function/method in Hello.java
 
 Before you go onto the java lab for today,
 *go into your hello world project in eclipse*
@@ -30,13 +31,13 @@ Here's a refresher:
 We'll talk more about the use of the ```static``` keyword later,
 but you will not be using it most of the time.
 
-## STEP 0: Download the zip file from Canvas
+## STEP 2: Download the zip file from Canvas
 
 Make sure that you downloaded the zip file from the Lab Assignment Page on Canvas.
 No need to unzip it,
 just have it in a temporary location.
 
-## STEP 1: Import the project into eclipse
+## STEP 3: Import the project into eclipse
 
 You can download the file as a zip file and leave it as is.
 There is no need to unzip the contents.
@@ -93,7 +94,7 @@ Placing code in classes that then can be instantiated via objects
 is the foundation of object-oriented programming.
 Let's start and create a class now.
 
-## STEP 2: Create a Fractions class
+## STEP 4: Create a Fractions class
 
 Go ahead and create a **Fraction** class file.
 While you can do this as a *quick fix*.
@@ -124,7 +125,7 @@ whose ```main``` method you want to run and then go to -
 *Run As -> Java application.*
 Or you can use **Ctrl-F11** with the file that you want to run open in the editor.
 
-## STEP 3: Fill out the Fractions class
+## STEP 5: Fill out the Fractions class
 
 Once you click *Finish*,
 the Fraction class will be added to your project
@@ -235,9 +236,7 @@ just with the word ```private``` before each variable declaration and outside of
 Also remember that with object-oriented programming,
 we want most of our variables to follow the object-oriented principle of **encapsulation**.
 We want those variables hidden from other classes
-so that if we want to change them in the future we can.
-Keeping the variables hidden also allows us to protect their values as well,
-since any attempts to change the data would have to be run through some logic.
+so that if we want to change the variables in the future we could.
 
 To help us write the **getters** and **setters** (AKA *accessors/mutators*),
 we'll also use Eclipse.
@@ -271,28 +270,16 @@ For example:
 
 You should modify your code so that if someone asks to set the fraction's denominator to zero,
 it will just ignore the request.
-With all classes,
-you want to concentrate on adding the logic that makes sense for that particular class to have.
+Having setters in particular helps with encapsulation
+since we can introduce logic in our setter method
+to protect those hidden variables
+from having unwanted values.
+Concentrate on adding coherent and reasonable logic to a class.
 
 **Think about what the TestFraction code is doing.**
 *What will it print out?*
  Once you have an answer,
 **run ```TestFraction```** and see if you guessed correctly.
-
-## STEP 4: Override the toString() method
-
-Since you aren't working on the assignment just yet,
-I would just encourage you to explore and ask questions and use your classmates as a resource.
-I'll be putting up additional guides and resources of information for you in the future on Canvas
-so that you can make more sense of all the neat things Eclipse and Java can do for you.
-For this lab,
-I want you to explore making a super Fractions class.
-First,
-override the ```toString()``` method.
-Then,
-create multiple constructors to make the fractions class more flexible.
-Next,
-write test code that can help you make sure that your Fractions class is working.
 
 When you look at the output when you ran the program,
 the second line in the output is printing out something like ***Fraction@2a139a55***.
@@ -303,6 +290,8 @@ where that Fraction object currently resides on your local computer.
 To have the ```Fraction``` class print something more useful,
 *we have to override ```toString()```*.
 
+## STEP 6: Override the toString() method
+
 ```toString()``` is a method that returns a ```String``` and takes nothing as the arguments.
 You can generate the body of ```toString```
 by right-clicking on the file and going to *source->generatetoString()*,
@@ -312,7 +301,20 @@ which in our case will be something like ***1/3***.
 To combine variables with actual text and concatenate them,
 you can use the **```+```** operator to join two or more pieces together.
 
-## STEP 5: Submit a picture of your program finishing
+## STEP 7: Create multiple constructors and test code
+
+Now that I've shown you how to override the `toString`,
+I'd like you to create multiple constructors to make the fractions class more flexible.
+Finally,
+you'll need to write test code that can help you make sure that your `Fraction` class is working.
+
+As you are doing these steps,
+I urge you to explore and ask questions and use your classmates as a resource,
+as we won't have a full walkthrough of how to do these.
+I'll be putting up additional guides and resources of information for you in the future on Canvas
+so that you can make more sense of all the neat things Eclipse and Java can do for you.
+
+## STEP 8: Submit a picture of your program finishing
 
 To get credit for this lab,
 submit a picture after just having run your project,
