@@ -1,17 +1,15 @@
 # Debugging in Eclipse Lab
 
 - [Introduction](#introduction)
-- [Some advice](#some-advice)
-    - [Keep a calm mindset – You can do this](#keep-a-calm-mindset--you-can-do-this)
-    - [Follow the symptom backwards through the code (see right)](#follow-the-symptom-backwards-through-the-code-see-right)
-    - [Ask these questions when debugging](#ask-these-questions-when-debugging)
+- [Some advice when debugging](#some-advice-when-debugging)
+    - [You can do this - Keep a calm mindset](#you-can-do-this---keep-a-calm-mindset)
+    - [Follow the symptom backward through the code](#follow-the-symptom-backward-through-the-code)
     - [Invest time into learning how to use the debugger](#invest-time-into-learning-how-to-use-the-debugger)
-- [Debugging Mechanics...Things to ask yourself when you encounter a bug](#debugging-mechanicsthings-to-ask-yourself-when-you-encounter-a-bug)
+- [Debugging Mechanics](#debugging-mechanics)
     - [1. If an exception was raised, What does the exception say? What line number and method is it from?](#1-if-an-exception-was-raised-what-does-the-exception-say-what-line-number-and-method-is-it-from)
     - [2. If an error occurred, what is the state of the object (AKA receiver) and parameters?](#2-if-an-error-occurred-what-is-the-state-of-the-object-aka-receiver-and-parameters)
     - [3. Comment Out / Mess With Code](#3-comment-out--mess-with-code)
         - [Be willing to alter your code into absurd states to test a hypothesis](#be-willing-to-alter-your-code-into-absurd-states-to-test-a-hypothesis)
-        - [Problem 2 - Go back to linked canvas assignment to think of ways of altering your program to debug faster](#problem-2---go-back-to-linked-canvas-assignment-to-think-of-ways-of-altering-your-program-to-debug-faster)
 - [The Debugging Lab](#the-debugging-lab)
 - [I fixed it!  Now it's gonna work! Wait what? Oh no](#i-fixed-it--now-its-gonna-work-wait-what-oh-no)
 - [I can now run the program without getting exceptions right away](#i-can-now-run-the-program-without-getting-exceptions-right-away)
@@ -21,64 +19,61 @@
 ## Introduction
 
 Today you working on a topic often overlooked –
-How to Debug effectively.
+how to Debug effectively.
 It's where you spend most of your time,
-and often there's little training on it…
+and often there's little training on it. 😞
 
-This lab is partly about thinking through a couple of tricks
-and mental processes about Debugging and learning to use the Debugger.
+This lab is about:
+
+- learning to reason/think about Debugging
+- utilizing mental tricks to help you debug faster
+- learning how to use the Debugger.
+
 It will range from very philosophical to very practical.
 We'll start with debugging tips.
-READ THESE tips before you start on the lab,
-they were taken from the maker of CodingBat,
+These tips were taken from the maker of CodingBat,
 Nick Parlante.
 
-You'll get credit for the lab for answering questions that are linked in the canvas lab.
-Please read the lab.
+You'll get credit for the lab for answering questions that are linked in the canvas lab,
+as well as the number of bugs that you find and detail in the last section of that assignment.
+***Please read the lab.***
 There is good content here!
 As you read the lab,
-you'll be asked at times to answer a question,
-with a single problem being what you need to answer.
+you'll be asked at times to answer a question on the accompanying assignment (that is linked to on canvas).
 You can work with one other person throughout the lab,
-**but each person must submit the form**.
+**but each person must submit the assignment**.
 
-## Some advice
+## Some advice when debugging
 
-### Keep a calm mindset – You can do this
+### You can do this - Keep a calm mindset
 
 <img align="right" src="lab3media/media/image1.png" />
 
 Bugs may appear hopeless and impossible,
 but your code has a logical structure.
-The evidence may be obscure,
-but be consistent in pointing to the guilty code.
+The evidence may be obscure
+but will be consistent in pointing to the guilty code.
 Don't panic -- be methodical.
 Somehow others can figure it out,
 and they don't know more about your code than you do.
 You can sift through it.
 
-### Follow the symptom backwards through the code (see right)
+### Follow the symptom backward through the code
 
-You observe a symptom -- bad output, wrong function calls an exception.
+You observe a symptom:
+
+- bad output
+- wrong function calls
+- an exception.
+
 Track the symptom backward through the code path to find the bug.
 It may be helpful to draw it out on paper.
-
-### Ask these questions when debugging
-
-1. What method shows the symptom? What lines of code produce that symptom?
-2. If it's an exception, what does the exception error message say --
-    null pointer? array access?
-    Exceptions can be very informative.
-    Look at the line of code in the stack trace and identify what could be null there.
-    Anything with a ```.``` or ```[]``` could cause null pointer
-    exceptions.
-3. What is the state of the variables in that code? What values do the parameters have?
-    (a breakpoint is a quick way of seeing all those values)
 
 ### Invest time into learning how to use the debugger
 
 Is an exception giving you the blues? Use the debugger!
-On exceptions eclipse will stop at the line throwing the exception,
+On exceptions,
+Eclipse will stop at the line throwing the exception,
 which will let you look at the values of variables and parameters,
 giving you immediate clues as to what is wrong.
 *You'll learn to use the debugger in a bit.*
@@ -99,27 +94,28 @@ take a minute to override ```toString()```
 so you can get a faster way to view important details about an object,
 ```toString``` works both in the console and in the debugger.
 
-## Debugging Mechanics...Things to ask yourself when you encounter a bug
+## Debugging Mechanics
+
+Things to ask yourself when you encounter a bug
 
 ### 1. If an exception was raised, What does the exception say? What line number and method is it from?
 
 Exception printouts can look a bit cryptic,
-but there's often actual info in them --
-```nullPointer``` vs ```arrayOutOfBounds```.
+but they can be very informative.
+All exceptions have names like
+```nullPointer``` and ```arrayOutOfBounds```.
 Usually, the exception will list the file and line number where the exception occurred.
-Anything blue and underlined acts like hyperlinks,
-so clicking on them will immediately jump your editor to that file and line.
 The lines also show a stack trace of who called which method,
 *so that a function on a lower line will be directly responsible
 for calling the line above it in that particular exception's case.*
+Anything blue and underlined in the printout acts like hyperlinks,
+so clicking on them will immediately jump your editor to that file and line.
+Look at that top line of code in the stack trace at the top and identify what could be wrong.
+When looking at the code,
+any part that has a ```.``` or ```[]``` is typically responsible for many exceptions.
 Remember also that there is a
 [video on null pointer exceptions that was done a while back](https://youtu.be/x9JArfGJb8c)
 that explains more about what exceptions mean in general.
-
-Your grade for this lab will be based on your answers to the assignment
-that was linked to in canvas,
-your answers will include the number of bugs
-that you find and detail in the last section of that assignment.
 
 ***Problem 1) Go to the linked assignment and complete Problem 1
 (the entire section of it).
@@ -154,7 +150,8 @@ write a ```for``` loop that makes many ```foo``` objects with a value of 1000.
 This code is not very logical for the proper functioning of the program,
 but it's a very fast way to test your hypothesis.
 
-#### Problem 2 - Go back to linked canvas assignment to think of ways of altering your program to debug faster
+***Problem 2) Go back to the linked canvas assignment
+to think of ways of altering your program to debug faster***
 
 ---
 
