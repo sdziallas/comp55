@@ -493,7 +493,8 @@ think of good test-cases that you can write in the code
 and come up with additional tests that you can write to help you understand what the problems are
 and to ensure that your Fractions Program is truly working the way it should be.
 
-**Problem 8: Start debugging the code in full now, use the instructions provided online to document what you try.**
+**Problem 8: Start debugging the code in full now,
+use the instructions provided online to document what you try.**
 
 The last thing that I do want to mention is that with good debugging,
 comes good testing.

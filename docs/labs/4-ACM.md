@@ -123,7 +123,8 @@ public class ACMLab extends GraphicsProgram {
     // This makes constants very useful - make them often!
     ```
 
-- **public void init():** It doesn't make sense to get too into the internals of this method on lines 10-13.
+- **public void init():**
+  It doesn't make sense to get too into the internals of this method on lines 10-13.
   Be aware that it allows us to specify the size of the window before it gets created.
   This is useful in our case as we want to start with a larger window.
   The size is specified in pixels.

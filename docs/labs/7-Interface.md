@@ -5,7 +5,7 @@
 - [Introducing the Interface](#introducing-the-interface)
     - [Step 1: Make an Interface named ```Emotional```](#step-1-make-an-interface-named-emotional)
     - [Step 2: Change ```EmotionalOval``` and Rect so that they both implement the interface](#step-2-change-emotionaloval-and-rect-so-that-they-both-implement-the-interface)
-    - [Step 3: Change ```EmotionalState``` and ```EmotionSimulator``` to use type ```Emotional``` instead of ```EmotionalOval```](#step-3-change-emotionalstate-and-emotionsimulator-to-use-type-emotional-instead-of-emotionaloval)
+    - [Step 3: Use type ```Emotional``` instead of ```EmotionalOval```](#step-3-use-type-emotional-instead-of-emotionaloval)
     - [Step 4: Add an ```EmotionalRect``` to the ```EmotionalSimulator```](#step-4-add-an-emotionalrect-to-the-emotionalsimulator)
     - [Step 5: Make an ```EmotionalCharacter```](#step-5-make-an-emotionalcharacter)
         - [***Create and add a ```GImage``` to the screen in ```EmotionSimulator```***](#create-and-add-a-gimage-to-the-screen-in-emotionsimulator)
@@ -189,7 +189,8 @@ it would be ideal if there was some way for us
 to have our objects inherit from both the Graphical and Emotional counterparts.
 This is where the interface is going to come in,
 and what we are going to do is
-**refactor our existing code to separate out Emotional behaviors into an interface that we shall call ```Emotional```**.
+**refactor our existing code to separate out Emotional behaviors
+into an interface that we shall call ```Emotional```**.
 Here is what the diagram is going to look like.
 
 ![UML Diagram with interface](lab7media/media/UMLWithInterface.png)
@@ -277,7 +278,10 @@ that the name of your interface should now be green in both files.
 This is just coloring so that you are aware that you are dealing with an interface,
 and that color will appear throughout for ```Emotional```.
 
-### Step 3: Change ```EmotionalState``` and ```EmotionSimulator``` to use type ```Emotional``` instead of ```EmotionalOval```
+### Step 3: Use type ```Emotional``` instead of ```EmotionalOval```
+
+Change ```EmotionalState``` and ```EmotionSimulator```
+to use type ```Emotional``` instead of ```EmotionalOval```.
 
 The beauty with using an interface now is that we get the benefits of polymorphism.
 It's like what you could think of as being a superclass,
@@ -478,6 +482,7 @@ There is nothing in an interface about when it should be called or how it should
 Know that that it's a merely a collection of methods that one has to implement,
 which could lead to some great examples of polymorphism.
 To get credit for this lab,
-**you will take three screenshots of the three states, showing your four objects reacting to the three feelings**.
+**you will take three screenshots of the three states,
+showing your four objects reacting to the three feelings**.
 Upload all three images them as a zip,
 or stitch them together.

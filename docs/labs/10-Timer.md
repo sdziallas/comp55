@@ -53,7 +53,8 @@ we have to follow three steps.
 
 Anytime you create a timer,
 you'll need to do these three steps.
-**Please read these steps and use this as a reference, we'll go through the actual steps later in the lab.**
+**Please read these steps and use this as a reference,
+we'll go through the actual steps later in the lab.**
 
 ### Step 1 - Create a timer object
 
@@ -577,7 +578,8 @@ then we want to remove it not only from the screen (by calling **remove**)
 but also from the ```enemies```.
 Once you run this you should be able to make the green squares disappear
 by having the balls hit them!
-[You may also notice that some balls will not completely disappear unless the ball collides with that midpoint](lab10media/media/greenfinal.gif),
+You may also notice that some balls will not completely disappear unless the
+[ball collides with that midpoint](lab10media/media/greenfinal.gif),
 but that is sufficient for this lab.
 Once again,
 **commit and push** since you've added something cool,

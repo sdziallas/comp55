@@ -192,7 +192,8 @@ but this is very rare.
 
 So that we can make sure that you get credit for committing and working on the project,
 we're going to have you make one additional change to your Eclipse settings,
-**which you will need to do if you work on any other computers so that you get credit for all of your work**.
+**which you will need to do if you work on any other computers
+so that you get credit for all of your work**.
 Go to eclipse and click on *Window->Preferences*
 (If you are on a mac, this would be in *Eclipse->Preferences*.
 

@@ -431,7 +431,8 @@ with the code that we have.
 Now, every time that we press the mouse button,
 we create a new line,
 this means that our users can create a multitude of lines to form a picture.
-**Go ahead and make a small picture and follow the instructions provided on canvas for what you need to submit.**
+**Go ahead and make a small picture
+and follow the instructions provided on canvas for what you need to submit.**
 
 ![rubber band animation](lab5media/media/rubberband.gif)
 
@@ -453,7 +454,8 @@ The first thing that people tend to do from a dragging standpoint,
 is to simply override mouse dragged by getting the location of the object
 and possibly calling ```setLocation```.
 Go ahead and try to do this first.
-**Add these two lines to the ```mouseDragged``` event handler and then run the program, which will be buggy.**
+**Add these two lines to the ```mouseDragged``` event handler
+and then run the program, which will be buggy.**
 
 ```java
 toDrag = getElementAt(e.getX(), e.getY());
