@@ -584,5 +584,6 @@ Rather you should:
 This is not group work but teamwork.
 If you're unsure where to start,
 I would start by looking at any of the classes that have a *Pane* in the name of the java file.
-You should commit changes every time you have a factor that you'd like to propose…change it and then commit and push.
+You should commit changes every time you have a factor that you'd like to propose…
+change it and then commit and push.
 Good luck!

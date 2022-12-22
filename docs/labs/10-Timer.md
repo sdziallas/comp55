@@ -7,9 +7,9 @@
     - [Step 2 - Setup the event handlers](#step-2---setup-the-event-handlers)
     - [Step 3 - Call the timer's ```start``` method](#step-3---call-the-timers-start-method)
 - [MyFirstTimer.java](#myfirsttimerjava)
-    - [Let's first start by creating a Timer in the ```**run**``` method](#lets-first-start-by-creating-a-timer-in-the-run-method)
-    - [Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called](#lets-create-a-private-variable-numtimes-that-keeps-track-of-how-many-times-actionperformed-has-been-called)
-    - [Add a three-second delay before the timer starts](#add-a-three-second-delay-before-the-timer-starts)
+    - [First, create a Timer in the ```**run**``` method](#first-create-a-timer-in-the-run-method)
+    - [Second, create a numTimes instance variable](#second-create-a-numtimes-instance-variable)
+    - [Third, add a three-second delay before the timer starts](#third-add-a-three-second-delay-before-the-timer-starts)
 - [BallLauncher.java](#balllauncherjava)
     - [Review of the Code](#review-of-the-code)
     - [Setup a timer that moves all of the balls in our ```ArrayList```](#setup-a-timer-that-moves-all-of-the-balls-in-our-arraylist)
@@ -141,7 +141,7 @@ Notice that here we have a simple ```GraphicsProgram``` with a
 If you run the program,
 you'll get a simple window with a label that does nothing.
 
-### Let's first start by creating a Timer in the ```**run**``` method
+### First, create a Timer in the ```**run**``` method
 
 1. Name the timer anything you want
 2. Have the 1<sup>st</sup> argument be ```1000```
@@ -175,10 +175,10 @@ you'll get a simple window with a label that does nothing.
 If you don't see it move,
 make sure that you have done the steps we outlined above.
 
-### Let's create a private variable ```numTimes``` that keeps track of how many times ```actionPerformed``` has been called
+### Second, create a numTimes instance variable
 
-It's important to have a variable
-that keeps track of how many times ```actionPerformed``` has been called.
+Let's create a private variable ```numTimes```
+that keeps track of how many times ```actionPerformed``` has been called
 
 To do this in ```run()```,
 make sure to initialize that number to 0,
@@ -209,7 +209,7 @@ But for now, I want to direct you to two methods:
 
 It's best to add the delay before calling ```start```.
 
-### Add a three-second delay before the timer starts
+### Third, add a three-second delay before the timer starts
 
 While the concept of **stop** seems simple enough,
 it may not always make sense as to when or who should be able to make the timer stop.
@@ -537,7 +537,9 @@ we're going to work with a copy of it.
     and then have it move this much.
 
 2. Leveraging the code we have for ```moveAllBallsOnce```,
-    create a method calls ```moveAllEnemiesOnce``` that will cycle through the list of enemies and call move on each one,
+    create a method calls ```moveAllEnemiesOnce```
+    that will cycle through the list of enemies
+    and call move on each one,
     moving it 0 pixels in the ```x``` direction and a random integer (```SPEED```) in the ```y``` direction.
 
 3. Call ```moveAllEnemiesOnce``` in ```actionPerformed```.
@@ -618,4 +620,4 @@ with your changes.
 Hopefully, you see the powers that timers can have
 in making your programs more dynamic and expressive.
 
-![label showing score during gameplay in lower left](lab10media/media/image5.png)![label showing game over with score](lab10media/media/image6.png)
+![label showing score](lab10media/media/image5.png)![game over score](lab10media/media/image6.png)

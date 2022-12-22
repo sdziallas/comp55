@@ -92,7 +92,9 @@ it's best if you go back and refer to the images about
 [importing into eclipse](lab8media/media/importrepo.gif)
 and [following the import wizard](lab8media/media/importfromgit.gif).
 
-*Before moving to step 3 make sure everyone on your team has the group project and that it looks the same on everyone's computers*,
+*Before moving to step 3,
+make sure everyone on your team has the group project
+and that it looks the same on everyone's computers*,
 which means it should look something like this:
 ![correct project line with brackets](lab9media/media/step2check.png).
 There should be nothing to the left of the folder.

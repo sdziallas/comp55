@@ -495,7 +495,8 @@ which could make it so that once we call a drag event,
 the mouse cursor is already outside the bounds of the object,
 and so it is not on top of an object anymore.
 
-**One easy fix that we can use is to change our ```setLocation``` so that we set the location to be the center of the object.**
+**One easy fix that we can use is to change our ```setLocation```
+so that we set the location to be the center of the object.**
 Thus rather than say ```setLocation (x, y)```
 we need to subtract half of the shape's width and height from x and y,
 which are both defined as ```SHAPE_SIZE```.

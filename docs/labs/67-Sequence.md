@@ -93,7 +93,8 @@ like so.
 Obj2-->Obj1 : <i>[returnedObject]</i>
 ```
 
-**Ensure that you have at least one return statement that would make sense from one of the method calls you created previously**.
+**Ensure that you have at least one return statement
+that would make sense from one of the method calls you created previously**.
 
 ## Fancy options
 
