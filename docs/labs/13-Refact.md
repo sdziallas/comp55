@@ -98,7 +98,9 @@ yet one is more confusing to decipher.
 
 #### 3. Simplify if statements to use return when possible
 
-*If you have an if/else statement and all it's doing is returning ```true``` or ```false``` based on the condition, use a single ```return``` statement instead.*
+*If you have an if/else statement
+and all it's doing is returning ```true``` or ```false``` based on the condition,
+use a single ```return``` statement instead.*
 
 | 😱 | ❤️ |
 |:---|:---|

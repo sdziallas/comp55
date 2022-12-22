@@ -239,7 +239,9 @@ If you continue adding hyphens,
 you'll notice it will also get longer and longer.
 
 To help with creating linkages,
-I'd like you to **add at least 3 more linkages based on what you feel would be use cases where the Partygoer or DJ would be involved**.
+I'd like you to
+**add at least 3 more linkages based on what you feel would be use cases
+where the Partygoer or DJ would be involved**.
 This means that you should have at least 4 connections established.
 
 ## Defining the System

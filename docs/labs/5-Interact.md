@@ -267,7 +267,10 @@ which would mean that if we call ```getElementAt```
 and pass in the coordinates for the ```mousePressed``` event,
 ```getElementAt``` can detect whether or not we clicked on the ball.
 
-**To do this, let's change our ```mousePressed``` method to have an ```if``` statement where we check if the element at the mouse coordinates is in fact, the ball.**
+**To do this,
+let's change our ```mousePressed``` method to have an ```if``` statement
+where we check if the element at the mouse coordinates is in fact,
+the ball.**
 
 If it is, then we'll change the color.
 Otherwise, we'll move it to where our mouse cursor is.

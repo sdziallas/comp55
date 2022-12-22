@@ -8,7 +8,11 @@
 
 ## Pre-requisites
 
-**Before working on this lab, you'll need to make sure that you finish at least the [Ball portion of the interactivity lab](5-Interact.html), so that when you run that file, you are able to do this:**
+**Before working on this lab,
+you'll need to make sure that you finish at least the
+[Ball portion of the interactivity lab](5-Interact.html),
+so that when you run that file,
+you are able to do this:**
 
 ![final ball animation](lab5media/media/finalball.gif)
 
@@ -109,8 +113,10 @@ file from the Interactivity lab and paste it in that same project
 You can rename the file **Balls.java**,
 since your end goal will be to have multiple balls bouncing off the screen.
 
-**If you decide to copy and paste the code into another project, you should make sure to change the ```main``` method at the bottom, which should change from** ```newBall().start()```
-**to** ```new Balls().start()```.
+**If you decide to copy and paste the code into another project,
+you should make sure to change the ```main``` method at the bottom,
+which should change from**
+```newBall().start()``` **to** ```new Balls().start()```.
 **You should also delete all mouse handlers except**  
 ```mousePressed```.
 

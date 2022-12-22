@@ -295,7 +295,10 @@ A class that calls a function belonging to an interface and the function definit
 do not need to know anything about each other,
 which allows for both sides to be extremely flexible.
 
-***Open up ```EmotionalState``` and change the parameter ```being``` in the ```expressEmotion``` method from ```EmotionalOval``` to ```Emotional```***.
+***Open up ```EmotionalState```
+and change the parameter ```being``` in the ```expressEmotion``` method
+from ```EmotionalOval``` to ```Emotional```***.
+
 Then save the file.
 Other than the type changing color (if you are using our color scheme),
 there will be no other changes that will need to be made,

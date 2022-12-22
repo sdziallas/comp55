@@ -29,7 +29,8 @@ how it works,
 and how to use it to make cool stuff.
 
 We're going to start with a very basic timer.
-You'll be able to get timers lab by checking out the repository from GitHub by clicking on the link that was provided in canvas.
+You'll be able to get timers lab by checking out the repository from GitHub
+or by clicking on the link that was provided in canvas.
 Once you accept the assignment,
 make sure to from eclipse use the
 [***File->Import->Git->Projects from Git*** process](lab8media/media/importrepo.gif)
@@ -588,7 +589,8 @@ Make sure to push your final changes to your repository by the deadline.
 ## Advanced reading on multiple timers (Optional)
 
 If you're curious,
-[here's an explanation of how to implement multiple timers in your program](10-A-Mult-Timers.html). Read this at your own risk.
+[here's an explanation of how to implement multiple timers in your program](10-A-Mult-Timers.html).
+Read this at your own risk.
 
 ## Bonus
 
