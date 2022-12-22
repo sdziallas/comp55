@@ -424,7 +424,8 @@ java will know enough that it can coordinate between the two.
 However,
 if you decide to use ```pause```,
 java does not realize that you are just pausing to add some pizzazz to your movement.
-**So if the mouse is pressed, it will interrupt whatever loop it is in at the moment.**
+**So if the mouse is pressed,
+it will interrupt whatever loop it is in at the moment.**
 If you try to replace your timer with a pause and a while loop,
 you'll notice that once you run the program and click a couple of times,
 you'll get a ```ConcurrentModificationException```.
