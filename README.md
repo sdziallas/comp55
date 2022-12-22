@@ -6,9 +6,12 @@ More to come in the future about what's available and where
 
 Special credit goes to Afsoon Yousefi-Zowj, Sebastian Dziallas, and all of the COMP 129 and COMP 55 students throughout the years that have either contributed or have used the repository.
 
+## Setting up labs as github pages
 These labs work best when setup as a github pages site so that way certain links do not have to be modified and it follows best practice.
 Pages can be setup by visiting the settings part of your forked repo and enabling the settings provided below
 ![chnage branch and folder settings](https://user-images.githubusercontent.com/239024/208784665-eaf09153-6243-4abd-b1c6-745c679ba565.png)
+
+## Converting files to markdown
 
 I also [used pandoc](https://pandoc.org/getting-started.html) to switch files from word doc to github flavored markdown, the command that I used being:
 
