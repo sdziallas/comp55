@@ -114,7 +114,7 @@ Look at that top line of code in the stack trace at the top and identify what co
 When looking at the code,
 any part that has a ```.``` or ```[]``` is typically responsible for many exceptions.
 Remember also that there is a
-[video on null pointer exceptions that was done a while back](https://youtu.be/x9JArfGJb8c)
+[video on null pointer exceptions that was done a while back](https://youtu.be/aGf5ynXk7Lw)
 that explains more about what exceptions mean in general.
 
 ***Problem 1) Go to the linked assignment and complete Problem 1
