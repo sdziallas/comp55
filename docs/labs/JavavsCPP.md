@@ -96,11 +96,7 @@ Java will give you the entire string from the starting character given up until 
 ## Java has two meta-types - primitives and objects
 
 Primitives are the basic types you know and love from C++,
-things like
-```int```,
-```char```,
-```double```,
-and ```boolean```.
+things like ```int```, ```char```, ```double```, and ```boolean```.
 You can immediately identify them based on the case.
 Primitives are all in lower case while other types in Java,
 like ```String```,
