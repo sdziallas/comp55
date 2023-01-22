@@ -181,9 +181,7 @@ will outweigh the hours you spend trying to figure out freed memory exceptions.
 
 ## Output/Input stuff has changed
 
-I'm not gonna lie,
-```cout```,
-```cin``` was pretty easy to use.
+I'm not gonna lie, ```cout``` and ```cin``` were pretty easy to use.
 Java has recognized though that there are some potential dangers in getting input
 that isn't in the right type for example,
 so they have made getting input a little bit more difficult.
