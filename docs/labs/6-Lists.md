@@ -91,7 +91,7 @@ Here is some sample ArrayList code.
 void foo() {
     ArrayList<String> names = new ArrayList<String>();
     names.add("Osvaldo");
-    names.add("David");
+    names.add("Sebastian");
     printList(names);
     names.remove("Osvaldo");
     printList(names);
