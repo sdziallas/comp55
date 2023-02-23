@@ -248,7 +248,7 @@ so you would have something like so.
 
 **```rectangle```** *```"Title_Name"```* ```{```
 
-*<pre>  usecases in rectangle here</pre>*
+*```usecases in rectangle here```*
 
 ```}```
 
