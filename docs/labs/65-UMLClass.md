@@ -155,6 +155,7 @@ Using this format will draw the given relationship between the two classes.
 Here are some examples and what they normally mean.
 
 <!-- markdownlint-disable MD037 -->
+
 | symbol | association | example |
 | --- | --- | --- |
 | ```-```| creates a simple horizontal line between the two classes, which represents a very general assocation between the two classes. (A second hyphen changes the orientation of the classes and lines to be vertical, and even more hyphens means a greater distance between the two classes). Distance doesn't have any well regarded meaning but can be useful in helping you draw out particular relationships. | *```Student---Course```* |
