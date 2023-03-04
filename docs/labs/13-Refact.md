@@ -357,11 +357,11 @@ Here is an example of what that ```makeBall``` function could look like
 
 ```java
 void makeBall(double x, double y, double width, double height, Color col, boolean shouldFill) {
-        GOval ball = new GOval(x, y, width, height);
-        ball.setFilled(shouldFill);
-        ball.setColor(col);
-        add(ball)
-        listOfBalls.add(ball);
+    GOval ball = new GOval(x, y, width, height);
+    ball.setFilled(shouldFill);
+    ball.setColor(col);
+    add(ball)
+    listOfBalls.add(ball);
 }
 ```
 
