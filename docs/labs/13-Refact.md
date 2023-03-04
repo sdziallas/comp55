@@ -115,7 +115,7 @@ The easiest way to deal with this is when the code looks the same in both sectio
 
 | 😱 | ❤️ |
 |:---|:---|
-|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");</code>|
+|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x += 10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x -= 10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x += 10;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x -= 10;<br/>}<br/>System.out.println("another # plz");</code>|
 
 Most of the time you will have code at the beginning or the end of the curly braces
 that are in both sets of statements.
@@ -149,11 +149,11 @@ Let's elaborate on our previous example a little more.
 ```java
 if(x > 5) {
     System.out.println("I'm going to add 7 here");
-    x+=7;
+    x += 7;
     System.out.println("now pick the next number");
 } else {
     System.out.println("I'm going to subtract 10 here");
-    x-=10;
+    x -= 10;
     System.out.println("now pick the next number");
 }
 ```
@@ -186,7 +186,7 @@ if(x > 5) {
 }
 
 System.out.println("I'm going to " + action + Math.abs(amount) + "here");
-x+=amount;
+x += amount;
 System.out.println("now pick the next number");
 ```
 
@@ -233,7 +233,7 @@ if(x > 5) {
 
 private void takeAction(String action, int amount) {
     System.out.println("I'm going to " + action + Math.abs(amount) + "here");
-    x+=amount;
+    x += amount;
     System.out.println("now pick the next number");
 }
 ```
@@ -279,7 +279,7 @@ private void takeAction(int amount) {
     }
 
     System.out.println("I'm going to " + action + Math.abs(amount) + "here");
-    x+=amount;
+    x += amount;
     System.out.println("now pick the next number");
 }
 ```
@@ -292,7 +292,7 @@ you could go with the ternary operator as well to eliminate the extra lines of c
 ```java
 private void takeAction(int amount) {
     System.out.println("I'm going to " + (amount > 0)? "add":"subtract" + Math.abs(amount) + "here");
-    x+=amount;
+    x += amount;
     System.out.println("now pick the next number");
 }
 ```
