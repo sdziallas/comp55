@@ -104,7 +104,7 @@ use a single ```return``` statement instead.*
 
 | 😱 | ❤️ |
 |:---|:---|
-|<code lang="java">if(isLow) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;return true;<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;return false;<br/>}</code>|```return isLow;```
+|<code lang="java">if(isLow) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;return true;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;return false;<br/>}</code>|```return isLow;```
 
 #### 4. Refactor out the duplicate parts of if statements
 
@@ -115,7 +115,7 @@ The easiest way to deal with this is when the code looks the same in both sectio
 
 | 😱 | ❤️ |
 |:---|:---|
-|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");
+|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");
 </code>|
 
 Most of the time you will have code at the beginning or the end of the curly braces
@@ -152,7 +152,7 @@ if(x > 5) {
     System.out.println("I'm going to add 7 here");
     x+=7;
     System.out.println("now pick the next number");
-}else{
+} else {
     System.out.println("I'm going to subtract 10 here");
     x-=10;
     System.out.println("now pick the next number");
@@ -225,7 +225,7 @@ I would argue that the following code does a better job as it is more readable
 ```java
 if(x > 5) {
     takeAction("add", 5);
-}else{
+} else {
     takeAction("subtract", -10);
 }
 
@@ -266,7 +266,7 @@ while making it easy for your teammates to use.
 ```java
 if(x > 5) {
     takeAction(5);
-}else{
+} else {
     takeAction(-10);
 }
 
