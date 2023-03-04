@@ -478,8 +478,8 @@ Let's take this example:
 😱
 
 ```java
-body = new GOval(200, 400, 100, 100);
-head = new GOval(225, 350, 50, 50);
+GOval body = new GOval(200, 400, 100, 100);
+GOval head = new GOval(225, 350, 50, 50);
 ```
 
 While this situation is slightly more complex,
@@ -497,8 +497,8 @@ public static final int SIZE = 100;
 
 // ----------------------------------
 
-body = new GOval(200, 400, SIZE, SIZE);
-head = new GOval(225, 350, 50, 50);
+GOval body = new GOval(200, 400, SIZE, SIZE);
+GOval head = new GOval(225, 350, 50, 50);
 ```
 
 But why stop there? Use formulas to establish the relationships between all of these numbers,
@@ -513,8 +513,8 @@ public static final int BODY_Y = 400;
 
 // ----------------------------------
 
-body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
-head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
+GOval body = new GOval(BODY_X, BODY_Y, SIZE, SIZE);
+GOval head = new GOval(BODY_X+SIZE/4, BODY_Y-SIZE/2, SIZE/2, SIZE/2);
 ```
 
 Here,
