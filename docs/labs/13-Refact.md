@@ -547,13 +547,13 @@ public static final String IMG_PATH = "images/";
 // ----------------------------------
 
 private void drawCar(Vehicle v) {
-
     String suffix = IMG_EXTENSION;
     if(v.isVertical()) {
         suffix = V_IMG_ENDING + suffix;
     }
 
-    GImage g = new GImage(IMG_PATH + v.getVehicleType() + suffix, …)
+    GImage g = new GImage(IMG_PATH + v.getVehicleType() + suffix, ...)
+}
 ```
 
 ---
