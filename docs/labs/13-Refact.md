@@ -115,8 +115,7 @@ The easiest way to deal with this is when the code looks the same in both sectio
 
 | 😱 | ❤️ |
 |:---|:---|
-|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");
-</code>|
+|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");</code>|
 
 Most of the time you will have code at the beginning or the end of the curly braces
 that are in both sets of statements.
