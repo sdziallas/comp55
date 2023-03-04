@@ -90,7 +90,7 @@ which is here:
 
 | 😱 | ❤️ |
 |:---:|:---:|
-|```if(x != 4 \|\| x != 5)```|```if(!(x == 4 && x == 5))```|
+|```if(x != 4 || x != 5)```|```if(!(x == 4 && x == 5))```|
 
 Based on DeMorgan's laws,
 the two statements here are the same,
