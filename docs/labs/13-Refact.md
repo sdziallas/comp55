@@ -244,8 +244,7 @@ but in most situations,
 having this latter version is going to be better than the previous action that you created
 because we are reducing the amount of duplicate code.
 Ultimately,
-depending on what we were trying to do with the function,
-```takeAction```,
+depending on what we were trying to do with the function, ```takeAction```,
 we could decide to go further with that function
 by for example taking out the action to add or subtract
 as something that is being passed in as a string.
