@@ -35,13 +35,13 @@ which will make your code easier to test and debug.
 ## The biggest culprit *if statements*
 
 In case you don't know,
-I'm not a big fan of ```if``` statements.
+I'm not a big fan of `if` statements.
 If statements are often overused,
 especially by budding programmers.
 The most common issue I encounter with 55 students is their justification for an if statement
-that subsequently mutates into many ```if``` statements,
+that subsequently mutates into many `if` statements,
 when in fact if they re-thought their logic they most likely would need only one or two.
-This becomes very egregious when the ```if``` statements then lead to code
+This becomes very egregious when the `if` statements then lead to code
 that looks mostly the same in the different sections of the if statement,
 resulting in the loss of many kittens from all the copying and pasting that is being done.
 This lab will go over a set of steps that you can perform
@@ -62,16 +62,16 @@ simply use a negation
 
 | 😱 | ❤️ |
 |:---:|:---:|
-|```if(isLow == true)```|```if(isLow)```|
-|```if(isLow == false)```|```if(!isLow)```|
+|`if(isLow == true)`|`if(isLow)`|
+|`if(isLow == false)`|`if(!isLow)`|
 
 #### 2. Avoid using negations
 
 Negations can often be rewritten or restructured.
 For example,
 in the step above,
-if ```isLow``` is only being used once and you are constantly checking ```if(!isLow)```,
-then why not change the variable to make it ```isHigh```?
+if `isLow` is only being used once and you are constantly checking `if(!isLow)`,
+then why not change the variable to make it `isHigh`?
 There are usually ways for you to minimize the number of negations that you have,
 as negations just make things confusing.
 If you don't believe me,
@@ -90,7 +90,7 @@ which is here:
 
 | 😱 | ❤️ |
 |:---:|:---:|
-|```if(x != 4 || x != 5)```|```if(!(x == 4 && x == 5))```|
+|`if(x != 4 || x != 5)`|`if(!(x == 4 && x == 5))`|
 
 Based on DeMorgan's laws,
 the two statements here are the same,
@@ -99,12 +99,12 @@ yet one is more confusing to decipher.
 #### 3. Simplify if statements to use return when possible
 
 *If you have an if/else statement
-and all it's doing is returning ```true``` or ```false``` based on the condition,
-use a single ```return``` statement instead.*
+and all it's doing is returning `true` or `false` based on the condition,
+use a single `return` statement instead.*
 
 | 😱 | ❤️ |
 |:---|:---|
-|<code lang="java">if(isLow) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;return true;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;return false;<br/>}</code>|```return isLow;```
+|<code lang="java">if(isLow) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;return true;<br/>} else {<br/>&nbsp;&nbsp;&nbsp;&nbsp;return false;<br/>}</code>|`return isLow;`
 
 #### 4. Refactor out the duplicate parts of if statements
 
@@ -120,7 +120,7 @@ The easiest way to deal with this is when the code looks the same in both sectio
 Most of the time you will have code at the beginning or the end of the curly braces
 that are in both sets of statements.
 If it is the same at the beginning,
-take it out of the ```if``` statement,
+take it out of the `if` statement,
 and then place it either before or after the if statement depending on where it's located.
 
 While this example may seem highly trivial,
@@ -244,7 +244,7 @@ but in most situations,
 having this latter version is going to be better than the previous action that you created
 because we are reducing the amount of duplicate code.
 Ultimately,
-depending on what we were trying to do with the function, ```takeAction```,
+depending on what we were trying to do with the function, `takeAction`,
 we could decide to go further with that function
 by for example taking out the action to add or subtract
 as something that is being passed in as a string.
@@ -337,20 +337,20 @@ there are situations in which your program and all of your functions
 do not need to have access to every single one of those instance variables,
 so consider using local variables when a variable is only needed in one function.
 If you do need to have a collection of variables,
-like say when you need to keep track of multiple ```GObject```s on the screen,
+like say when you need to keep track of multiple `GObject`s on the screen,
 it may make more sense for you to create all of the objects and store them in a list,
-or potentially a ```HashMap```.
+or potentially a `HashMap`.
 This also makes it nice because then you could create a loop and function
 that will create a series of these objects.
 
 For example,
 you might remember a function in the [Timers Lab](10-Timer.html##BallLauncher.java)
-called ```makeBall```.
+called `makeBall`.
 What if instead, you create a more general function that passes in
-```(x, y, width, height, color, fill)``` as parameters,
-so that way you could just call ```makeBall``` and a ball appears?
+`(x, y, width, height, color, fill)` as parameters,
+so that way you could just call `makeBall` and a ball appears?
 
-Here is an example of what that ```makeBall``` function could look like
+Here is an example of what that `makeBall` function could look like
 
 ❤️
 
@@ -366,12 +366,12 @@ void makeBall(double x, double y, double width, double height, Color col, boolea
 
 If you are creating 5 balls,
 wouldn't it be nice to have a function that was like
-```makeBall(30, 30, SIZE, SIZE, Color.BLUE, true)```
+`makeBall(30, 30, SIZE, SIZE, Color.BLUE, true)`
 and then know it that it will just show up?  
 This does not even get to what you could do later,
 which is to store all of the information in an object,
 and then have that be passed into your for loop instead!
-Assume there was a simple ```BallSpec``` class that worked like simple classes before,
+Assume there was a simple `BallSpec` class that worked like simple classes before,
 meant to just hold some information and store it.
 Then look at what could happen to our code.
 
@@ -384,8 +384,8 @@ for(int i = 0; i < ballSpecs.length; i++) {
 }
 ```
 
-Then our ```makeBall``` fucntion would merely call getters
-for the ```x```, ```y```, ```width```, ```height```, ```color``` and ```shouldFill```
+Then our `makeBall` fucntion would merely call getters
+for the `x`, `y`, `width`, `height`, `color` and `shouldFill`
 for example to have that all be filled in.
 
 #### 7. Methods can also make your code more readable
@@ -417,7 +417,7 @@ public void mouseMoved(MouseEvent e) {
 Is it immediately clear what the above if statement does?
 Maybe, maybe not.
 It's difficult to understand without some context
-that the conditions check the location of ```e``` relative to ```frame```.
+that the conditions check the location of `e` relative to `frame`.
 However,
 using a function could make this code clearer.
 Rewriting the code above using a function could look something like this:
@@ -439,12 +439,12 @@ public void mouseMoved(MouseEvent e) {
 ```
 
 With this change,
-the ```if``` statement remains functionally the same.
+the `if` statement remains functionally the same.
 However,
 by removing the content of the if statement and putting it into a function,
-the ```if``` statement becomes more readable.
+the `if` statement becomes more readable.
 Additionally,
-the ```outsideOf``` function will be easy to test
+the `outsideOf` function will be easy to test
 and can be called again as needed in other parts of the code.
 
 To be honest,
