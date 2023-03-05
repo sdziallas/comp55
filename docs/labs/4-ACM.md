@@ -325,16 +325,17 @@ we would notice that we would have a picture like this.
 
 ![Picture with GOval, GLine, GRect, GLabel](lab4media/media/image4.png)
 
-There are a lot of other methods that ```GOval```, ```GLine```, ```GRect```, and ```GLabel```
-have access to that can be used to manipulate various attributes of each object beyond what
-we've done here. Thankfully, the University of Stanford offers a lot of nicely compiled summaries
-that condense this information in one place for easy access. If you want to see more specific
-documentation about these classes and their uses you can visit the university pages for them here:
+There are a lot of other methods that `GOval`, `GLine`, `GRect`, and `GLabel` have, which
+can be used to manipulate various attributes of each object beyond what we've done here.
+Thankfully, the University of Stanford offers a lot of nicely compiled summaries for them.
+If you want to see more specific documentation about these classes,
+then you can visit the university pages for them here:
 
-- [```GOval```](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GOval.html)
-- [```GLine```](https://cs.stanford.edu/people/eroberts/jtf/javadoc/complete/acm/graphics/GLine.html)
-- [```GRect```](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GRect.html)
-- [```GLabel```](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GLabel.html)
+- [`GOval`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GOval.html)
+- [`GLine`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/complete/acm/graphics/GLine.html)
+- [`GRect`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GRect.html)
+- [`GLabel`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GLabel.html)
+- [`GImage`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GImage.html)
 
 ## GImage
 
@@ -367,10 +368,9 @@ image.setSize(400, 400);
 add(image);
 ```
 
-Just like the other ACM classes we've introduced so far, ```GImage``` has a nicely compiled summary
-page [here](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GImage.html)
-that shows all of its methods and different uses. Documentation like this is handy for reference
-if you happen to forget anything specific.
+If you want to learn more about `GImage` remember: take a look at its documentation,
+which was linked to earlier when covering shapes!
+Documentation like that is handy for reference if you happen to forget anything specific.
 
 ## Applying Color
 
