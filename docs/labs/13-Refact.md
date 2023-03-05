@@ -92,7 +92,7 @@ which is here:
 |:---:|:---:|
 |```if(x != 4 \|\| x != 5)```|```if(!(x == 4 && x == 5))```|
 
-Based on DeMorgan's laws,
+Based on [De Morgan's Law](https://www.cuemath.com/data/de-morgans-law/),
 the two statements here are the same,
 yet one is more confusing to decipher.
 
@@ -575,11 +575,11 @@ Credit will be given to how much more readable,
 flexible and possibly simple the code is in relation to the original.
 **You can work on this project in pairs,
 but should not break up or attempt to break up the work.
-Rather you should:
+Rather you should:**
 
-1. work on it together,
-2. propose ideas to each other about how to refactor
-3. propose ideas on what should be refactored.**
+**1. work on it together,**<br>
+**2. propose ideas to each other about how to refactor,**<br>
+**3. propose ideas on what should be refactored.**
 
 This is not group work but teamwork.
 If you're unsure where to start,
