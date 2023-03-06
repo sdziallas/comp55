@@ -335,11 +335,11 @@ then you can visit the university pages for them here:
 - [`GLine`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/complete/acm/graphics/GLine.html)
 - [`GRect`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GRect.html)
 - [`GLabel`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GLabel.html)
-- [`GImage`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GImage.html)
 
 ## GImage
 
-The last class this lab will introduce today is ```GImage``` class,
+The last class this lab will introduce today is the
+[`GImage`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GImage.html) class,
 which lets us add rectangular images.
 ```GImage```s take three parameters,
 
@@ -368,8 +368,8 @@ image.setSize(400, 400);
 add(image);
 ```
 
-If you want to learn more about `GImage` remember: take a look at its documentation,
-which was linked to earlier when covering shapes!
+If you want to learn more about `GImage` remember to take a look at its documentation,
+which was linked to at the beginning of this section!
 Documentation like that is handy for reference if you happen to forget anything specific.
 
 ## Applying Color
