@@ -577,8 +577,10 @@ flexible and possibly simple the code is in relation to the original.
 but should not break up or attempt to break up the work.
 Rather you should:**
 
-**1. work on it together,**<br>
-**2. propose ideas to each other about how to refactor,**<br>
+**1. work on it together,**
+
+**2. propose ideas to each other about how to refactor,**
+
 **3. propose ideas on what should be refactored.**
 
 This is not group work but teamwork.
