@@ -137,9 +137,11 @@ for(Entry<String, String> entry : phobias.entrySet()){
     }
 }
 ```
+
 Resources:
-- https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html
-- https://tecadmin.net/java-hashmap-get-value-from-key/
+- [Official Documentation](https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html)
+- [Implementation](https://tecadmin.net/java-hashmap-get-value-from-key/)
+
 
 If you try to get a phobia
 that has not been introduced into this particular phobias map
