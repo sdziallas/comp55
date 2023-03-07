@@ -166,7 +166,7 @@ To debug in eclipse
   the *Run->Add Java Exception Breakpoint* command allows you to edit
   which exceptions drop automatically into the debugger.
   
- ## Cool Eclipse Keyboard shortcuts
+## Cool Eclipse Keyboard shortcuts
 
 - Eclipse has **many** cool keyboard shortcuts that can make navigation very easy,
   but here are a few cool ones.
@@ -195,7 +195,7 @@ To debug in eclipse
   | Command + T | Ctrl + T | Shows type hierarchy of the current java class |
   | Command + M | Ctrl + M | Maximize Java editor |
   | Command + Option + R | Alt + Shift + R | Rename of package, class etc |
-  | Command + Option + T |	Alt + Shift + T | Opens the quick refactoring menu |
+  | Command + Option + T | Alt + Shift + T | Opens the quick refactoring menu |
   
   This table was built using [Digital Ocean](https://www.digitalocean.com/community/tutorials/eclipse-shortcuts)
 
