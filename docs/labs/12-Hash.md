@@ -122,6 +122,13 @@ String def = phobias.get("ergophobia")
 // def now has the value "the abnormal fear of work"
 ```
 
+The ```get``` function can also be used reversly. In the case of say, a flashcard application, the definition can be retrieved to return the key.
+
+```java
+String key = phobias.get("the abnormal fear of work");
+// key now has the value "ergophobia"
+```
+
 If you try to get a phobia
 that has not been introduced into this particular phobias map
 like say this one
