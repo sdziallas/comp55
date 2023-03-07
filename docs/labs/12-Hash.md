@@ -118,7 +118,7 @@ Once in the HashMap,
 you can use ```get``` to retrieve the definition in the future.
 
 ```java
-String def = phobias.get("ergophobia")
+String def = phobias.get("ergophobia");
 // def now has the value "the abnormal fear of work"
 ```
 
@@ -134,7 +134,7 @@ that has not been introduced into this particular phobias map
 like say this one
 
 ```java
-String possibleDef = phobias.get("osvaldophobia")
+String possibleDef = phobias.get("osvaldophobia");
 ```
 
 The ```HashMap``` will return ```null```,
@@ -208,7 +208,7 @@ So how does this work when you have multiple objects that you want with similar 
 Let's try this first.
 
 ```java
-phobias.put("ponophobia", "the abnormal fear of work")
+phobias.put("ponophobia", "the abnormal fear of work");
 ```
 
 If you have been reading this document closely you may notice that we
