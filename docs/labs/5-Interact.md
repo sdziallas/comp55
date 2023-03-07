@@ -224,15 +224,15 @@ is commonly named ```e``` to stand for the event.
 To make our program more exciting,
 let's move the ball to where our mouse location is.
 Inside the `mousePressed` function,
-add a call to ```ball```'s `setLocation`.
+add a call to `ball`s `setLocation`.
 To set the location,
 we need to provide an `x` and a `y`.
 We will not move the ```x``` in this case,
 but just the `y` coordinate.
 To keep the horizontal movement,
-ask the ball for its x location by calling `getX()`
+ask the ball for its `x` location by calling `getX()`
 on the ball and then just set it back reflexively as its x location again.
-To get the y, however,
+To get the `y`, however,
 rather than calling `getY` on the ball,
 we are going to call `getY` on the `MouseEvent`,
 which will return to us the y coordinate of where the mouse was pressed.
