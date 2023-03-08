@@ -92,7 +92,7 @@ which is here:
 |:---:|:---:|
 |<code lang="java">if(x != 4 \\|\\| x != 5)</code>|`if(!(x == 4 && x == 5))`|
 
-Based on DeMorgan's laws,
+Based on [De Morgan's Law](https://www.cuemath.com/data/de-morgans-law/),
 the two statements here are the same,
 yet one is more confusing to decipher.
 
@@ -572,12 +572,14 @@ as much as practicing the refactoring principles I've given you here.
 Credit will be given to how much more readable,
 flexible and possibly simple the code is in relation to the original.
 **You can work on this project in pairs,
-but should not break up or attempt to break up the work.
+but should not break up or attempt to break up the work.**
 Rather you should:
 
-1. work on it together,
-2. propose ideas to each other about how to refactor
-3. propose ideas on what should be refactored.**
+**1. work on it together,**
+
+**2. propose ideas to each other about how to refactor,**
+
+**3. propose ideas on what should be refactored.**
 
 This is not group work but teamwork.
 If you're unsure where to start,
