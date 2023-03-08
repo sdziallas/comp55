@@ -55,7 +55,8 @@ between two items.
 Java has a ```HashTable``` class that is
 nearly identical to the ```HashMap``` class,
 but ```HashTable``` is now obsolete and still available for legacy reasons.
-Click [here](https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/) more information on the difference between ```HashMap``` and ```HashTable```.
+Click [here](https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/) 
+more information on the difference between ```HashMap``` and ```HashTable```.
 These two classes are not to be confused with Java's ```HashSet``` data structure,
 which uses hashing to implement Java's **Set** interface.
 All three data structures use a
