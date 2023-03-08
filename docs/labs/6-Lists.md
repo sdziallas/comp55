@@ -10,14 +10,14 @@
 
 **Before working on this lab,
 you'll need to make sure that you finish at least the
-[Ball portion of the interactivity lab](5-Interact.html),
+[Ball portion of the interactivity lab](5-Interact.md),
 so that when you run that file,
 you are able to do this:**
 
 ![final ball animation](lab5media/media/finalball.gif)
 
 If your program has not gotten to that stage,
-please [go back](5-Interact.html) and get there first.
+please [go back](5-Interact.md) and get there first.
 You've been warned.
 
 ---
@@ -103,6 +103,8 @@ void printList(ArrayList<String> list) {
     }
 }
 ```
+
+Here is a [comparison between Arrays and ArrayLists](https://www.w3schools.blog/difference-between-array-and-arraylist-in-java).
 
 ## **Completing this mini-lab**
 
