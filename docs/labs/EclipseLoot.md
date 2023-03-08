@@ -169,7 +169,7 @@ To debug in eclipse
 ## Cool Eclipse Keyboard shortcuts
 
 - Eclipse has **many** cool keyboard shortcuts that can make navigation very easy,
-  but here are a few cool ones
+  this table has a few of the coolest:
   
   | Shortcut Key Mac | Shortcut Key Windows | Description |
   | ---------------- | -------------------- | ----------- |
