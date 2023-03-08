@@ -574,7 +574,7 @@ as much as practicing the refactoring principles I've given you here.
 Credit will be given to how much more readable,
 flexible and possibly simple the code is in relation to the original.
 **You can work on this project in pairs,
-but should not break up or attempt to break up the work.
+but should not break up or attempt to break up the work.**
 Rather you should:**
 
 **1. work on it together,**
