@@ -370,7 +370,7 @@ add(image);
 
 If you want to learn more about `GImage` remember to take a look at its documentation,
 which was linked to at the beginning of this section!
-Documentation like that is handy for reference if you happen to forget anything specific.
+Documentation like this is handy for reference if you happen to forget anything specific.
 
 ## Applying Color
 
