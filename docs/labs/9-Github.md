@@ -203,6 +203,9 @@ and added a picture of yourself to the project so that you could use it.
 You may not necessarily want that picture to be added into git
 and stored on GitHub as once you add it to the repository,
 it's a bit more difficult to get it out.
+
+![Staging/unstaging files animation](https://github.com/comp129/comp55/blob/add-git-gif/docs/labs/lab9media/media/git_stage_moving_files.gif)
+
 Another thing could be certain development preferences
 that you have like having a certain text coloring theme.
 Git may not know much about your project,
