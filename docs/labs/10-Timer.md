@@ -631,15 +631,15 @@ in making your programs more dynamic and expressive.
 What if we want to create a ball launcher and
 move the location from which the balls are being launched up and down?
 Adding Keyboard Listeners would be the perfect solution.
-These listeners are similar to Mouse Listeners and can detect and 
+These listeners are similar to Mouse Listeners and can detect and
 respond to events such as key presses and releases.
-By implementing the ```KeyListener``` interface 
+By implementing the ```KeyListener``` interface
 and adding ```addKeyListeners()``` to the ```run()```
 method of your class, you can subscribe to keyboard event notifications.
 After calling ```addKeyListeners()```, your program will be notified of all keyboard events
 and you can interact with the program using the keyboard.
 To get started, you can create a blue square on the left side of the screen
-and use it as the launcher for the red balls. 
+and use it as the launcher for the red balls.
 Once you have added the launcher to the screen, you can easily move it using the keyboard keys.
 Similar to Mouse Listeners, you can define a method for KeyPressed that moves the launcher up or down
 based on the keys input given by the player.
