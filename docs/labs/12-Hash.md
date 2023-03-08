@@ -55,6 +55,7 @@ between two items.
 Java has a ```HashTable``` class that is
 nearly identical to the ```HashMap``` class,
 but ```HashTable``` is now obsolete and still available for legacy reasons.
+Click [here](https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/) more information on the difference between ```HashMap``` and ```HashTable```. 
 These two classes are not to be confused with Java's ```HashSet``` data structure,
 which uses hashing to implement Java's **Set** interface.
 All three data structures use a
@@ -62,26 +63,6 @@ All three data structures use a
 and there are still other
 [hashtable-esque objects meant for thread-safe operations](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html).
 
-Java's ```HashMap``` is often thought of or referred to
-as a **dictionary** or **associative array**,
-where the key is hashed.
-Like a dictionary,
-when you end up looking up a word in a dictionary,
-you get a definition for that word.
-In a way, it links or maps the word with the definition.
-In computer science lingo,
-the word would end up being called the **key**,
-while the definition would be called the **value**.
-To make ```HashMaps``` truly work,
-```HashMaps``` have a condition that a
-**key can only correspond to one value**.
-So for example,
-going back to the dictionary example the key *nomophobia* would be linked to a specific value:
-in our case,
-the value will be
-"*the fear of losing mobile phone service*".
-For a ```HashMap```,
-what you would do is put the key and value pairs into a map and then retrieve them in the future.
 
 ## Basic HashMap Usage
 
