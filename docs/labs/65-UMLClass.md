@@ -226,3 +226,6 @@ together {
 ```
 
 You can also use the keyword ```hidden``` as part of a relation to hide associations
+
+# Extra Information
+testing purposes
