@@ -157,25 +157,12 @@ you created a variable that holds a pointer only,
 but you didn't create space for the Fraction object itself.
 By calling ```new```.
 
-## All Objects you create in Java will be created on the Heap
-
-If you want to create an object,
-you will have to create it using the new operator.
-That will,
-like in C++,
-create the object that you want on the heap
-where you can then store information in it and call its values.
-So the easiest thing would be to just get in the habit of always initializing all of your variables.
-
-```java
-Fraction f1 = new Fraction(1, 1); //Remember to call new!
-f1.setDenominator(2); //now this will make the fraction ½
-```
-
 ### Functions, passing by reference and passing by value
 
-The side effect of having no pointer locations is that you cannot pass parameters into a function by reference in Java.
+The side effect of having no pointer locations is that you cannot pass parameters into a function by
+reference in Java.
 C++ supports passing parameters both by value and reference, so you can have multiple outputs in a function.
+
 ```cpp
 void myFunction(
   int a, // in
@@ -190,7 +177,23 @@ int main() {
   myFunction(a, &b, &c, &d);
 }
 ```
+
 Java does not support this, so if you wanted to return multiple values, an array is often used.
+
+## All Objects you create in Java will be created on the Heap
+
+If you want to create an object,
+you will have to create it using the new operator.
+That will,
+like in C++,
+create the object that you want on the heap
+where you can then store information in it and call its values.
+So the easiest thing would be to just get in the habit of always initializing all of your variables.
+
+```java
+Fraction f1 = new Fraction(1, 1); //Remember to call new!
+f1.setDenominator(2); //now this will make the fraction ½
+```
 
 ## Java will take care of deleting objects for you
 
