@@ -242,7 +242,7 @@ In this case, the word **dust** has two meanings.
 Let's say we want to create a map that has both.
 How would this be done?
 We could create some long string,
-but another approach we can do is simply create a different linkage,
+but we also merely create a different linkage,
 one in which we'll link a word
 with another storage mechanism that would allow us to store multiple definitions.
 The easiest structure you have for that is to use an ```ArrayList```.
