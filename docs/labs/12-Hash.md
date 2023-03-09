@@ -42,7 +42,7 @@ which means that no matter the size of the hashtable,
 you would be able to count on the running time not increasing
 (as long as the number of buckets is roughly equal to the
 number of items and you have a full hash function yada-yada).
-This is a picture that can help you understand hashmap more intuitively:
+Here's a picture that may help you understand a `HashMap` more intuitively:\
 ![Hashmap](https://user-images.githubusercontent.com/61854184/223947825-eec214e9-22e6-4163-aef8-f370d9cda147.png)
 
 ## Why didn't they just call it a hashtable then?
