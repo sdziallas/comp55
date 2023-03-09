@@ -467,8 +467,7 @@ and as long as you define those three methods,
 then you can participate in the EmotionalSimulator
 (as long as you create that object and add yourself to the list of ```individuals```).
 While our examples are simple,
-remember that they could also be quite complex (if you do something expensive time wise,
-it may make sense to spawn it off using ```SwingUtilities.```*```runLater```*.
+remember that they could also be quite complex.
 *You have complete control as to what you would like to do.*  So as the last step,
 **I would like you to create a new class and add it to the simulator,
 so that when it is called,
