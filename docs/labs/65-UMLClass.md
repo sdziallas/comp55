@@ -228,10 +228,10 @@ together {
 You can also use the keyword ```hidden``` as part of a relation to hide associations
 
 ### Extra Information
+
 Before getting familiar with this, keep in mind that the main focus of the course will be **PLANTUML**.
 This is just another extra information that might be helpful for your future projects and classes.
-Here I would like to introduce the [LucidChart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_us_mixed_search_brand_exact_&km_CPC_CampaignId=1457964857&km_CPC_AdGroupID=57044764032&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=354596046394&km_CPC_TargetID=aud-1660700197332:kwd-55720648523&km_CPC_Country=9032200&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=Cj0KCQiAgaGgBhC8ARIsAAAyLfE7mTDZl38nlV4X2SX8Arki7TyJ8BYCXJCSDfIz8vZjyHnDXlcfn00aApYTEALw_wcB) online software.
+Here I would like to introduce the [LucidChart](https://www.lucidchart.com) online software.
 Here are some functionalities of it:
 - Easily style shapes (drag and drop)
  - ![select-all-shapes](https://user-images.githubusercontent.com/101157079/223881056-673184ab-fc74-4f56-b057-230ca2148f0c.gif)
-
