@@ -349,7 +349,7 @@ Let's add something visual to our program.
     We will have it iterate through the balls `ArrayList`
     and move each one by SPEED in the X direction and 0 in the y.
 
-    - If you haven't tried doing a for loop using the **:** operator to iterate through a list,
+    - If you haven't tried doing a for loop using the **`:`** operator to iterate through a list,
     now would be a good time to try.*
 
     Once you handle the `actionPerformed` event by:
