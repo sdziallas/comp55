@@ -250,7 +250,8 @@ The shortest way of creating a new project is using **New** button. There you wi
 
 ![2new](https://user-images.githubusercontent.com/101157079/223920897-e064e753-1d37-4f38-b751-0971fef911a3.png)
 
-I would suggest to use blank document if you are planning to create UML diagrams. On the left side, second button will take you there directly
+I would suggest to use blank document if you are planning to create UML diagrams. 
+On the left side, second button will take you there directly
 
 ![3new](https://user-images.githubusercontent.com/101157079/223921908-3c754b43-11ca-4193-9d96-e9e9951520d3.png)
 
@@ -258,5 +259,7 @@ However, for different projects and chart types you can go to the templates opti
 
 ![4new](https://user-images.githubusercontent.com/101157079/223922666-cc2c5656-6eb6-4741-9cb2-de53b756526a.png)
 
-**NOTE: Lucid chart can be widely used and have many different functionalities, however, when it comes to UML diagrams, PlantUML is stronger and easier to use once you
-get used to the syntax of it. Lucid Charts can be used for many other purposes as well but I would not consider it as powerful as PlantUML**
+**NOTE: Lucid chart can be widely used and have many different functionalities, however,
+when it comes to UML diagrams, PlantUML is stronger and easier to use once you
+get used to the syntax of it.
+Lucid Charts can be used for many other purposes as well but I would not consider it as powerful as PlantUML**
