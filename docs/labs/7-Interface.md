@@ -162,7 +162,7 @@ This is what the new potential diagram would look like.
 While that may sound ok,
 what if we wanted to have another different emotional being?
 It sounds like a lot of copying and pasting,
-and we are better people that that.
+and we are better people than that.
 We don't want to harm anyone.
 So another solution would be
 to perhaps not have EmotionalRect and EmotionalOval subclass from GRect and GOval,
