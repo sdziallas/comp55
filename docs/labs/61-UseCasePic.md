@@ -84,28 +84,26 @@ A Use Case Diagram typically give us:
 1. a 10,000-foot picture of a program
 2. an overall feel of what the program does.
 
-One main component of a use case diagram is the **actor**,
-which would be viewed as an external entity that interacts with the program.
-While an actor is normally represented as a person,
-*actors can represent external systems* that a program has to interact with,
-such as a stock market service.
-A use case diagram should have at least one actor
-but can have multiple actors to represent the different users and external components of the system.
-Another part of the diagram is the **use cases**,
-which are represented as ovals,
-and would be high-level representations of interactions that you would expect to have in a program.
-Because we are using this diagram to represent a high-level system,
-use cases should represent the entire process that an actor is involved with
-when interacting with the system.
-For our purposes,
-we want to keep the number of use cases in a use case diagram to less than seven.
-Next, we use lines in a use case diagram to connect actors to the use cases
-that they initiate or have **interactions** with.
-Finally,
-we use a rectangle to represent all of the use cases that are being implemented by our **system**.
-In formal use case diagram terms,
-whatever is inside the rectangle is what we are proposing will be a part of the system
-that we will develop.
+Main Components of a use case diagram include: <br/>
+**actor** <br/>
+- External entity that interacts with the program
+- Can be represented as a person or external system
+- At least one actor required in a use case diagram
+- Multiple actors can represent different users and external components 
+
+**use cases** <br/>
+- Represented as ovals
+- High-level interactions expected in a program
+- Should represent the entire process an actor is involved in
+- Number of use cases should be kept to less than seven
+
+**interactions** <br/>
+- Used to connect actors to use cases they initiate or interact with
+- Shows the flow of interaction between actors and the system
+
+**system**<br/>
+- Represents all use cases being implemented by the system
+- Formal use case diagram terms: whatever is inside the rectangle is what will be developed as part of the system.
 
 ## Starting a PlantUML use case diagram
 
