@@ -32,7 +32,7 @@ Imagine you are a software developer working on a mobile banking app.
 To ensure that the application is designed and built to meet the needs of the end-users,
 you and your team would create a use-case diagram using UML to outline all the major interactions,
 like checking account balances to pay bills.
-Each interaction is a use case. The diagram will identify external systems tha app needs,
+Each interaction is a use case. The diagram will identify external systems that the app needs,
 like payment gateways or databases.
 By using UML, you get a high level view and ensure the app meets user needs.
 
