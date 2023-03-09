@@ -34,7 +34,7 @@ you and your team would create a use-case diagram using UML to outline all the m
 like checking account balances to pay bills.
 Each interaction is a use case. The diagram will identify external systems that the app needs,
 like payment gateways or databases.
-By using UML, you get a high level view and ensure the app meets user needs.
+By using UML, you get a high-level view and ensure the app meets user needs.
 
 Many of you already have encountered and have experience with UML via the Traffic Jam assignment.
 There are many types of UML diagrams.
