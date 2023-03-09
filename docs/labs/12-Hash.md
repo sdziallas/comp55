@@ -45,8 +45,6 @@ number of items and you have a full hash function yada-yada).
 This is a picture that can help you understand hashmap more intuitively:
 ![Hashmap](https://user-images.githubusercontent.com/61854184/223947825-eec214e9-22e6-4163-aef8-f370d9cda147.png)
 
-
-
 ## Why didn't they just call it a hashtable then?
 
 By calling it a ```HashMap```,
