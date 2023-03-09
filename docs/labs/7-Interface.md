@@ -436,7 +436,7 @@ that will have a ```GImage``` as a parameter.
 Then in that constructor make sure to add in a line
 that would set the parameter passed in to your instance variable,
 similar to what you did in your
-[early java lab](2-JavaIntro.html####step-4:-override-the-toString()-method)
+[early java lab](2-JavaIntro.html####step-6-override-the-tostring-method)
 
 #### ***Set the image in each of the three methods.***
 
