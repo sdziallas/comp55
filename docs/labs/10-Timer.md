@@ -185,7 +185,7 @@ To do this in `run()`,
 make sure to initialize that number to 0,
 and increment `numTimes` at the start of `actionPerformed`.
 Now just for fun,
-let's change the text of the label so that it updates the label with the ```numTimes```,
+let's change the text of the label so that it updates the label with the `numTimes`,
 we can do this by calling `setLabel` like this:
 
 ```java
