@@ -1,6 +1,4 @@
-#### Hello, these links will direct you to some of the websites with useful information that might help you with your assignments.
-
-
+# Hello, these links will direct you to some of the websites with useful information that might help you with your assignments
 
 [Class MouseEvent](https://www.beg.utexas.edu/lmod/agi.servlet/doc/detail/java/awt/event/MouseEvent.html)
 
