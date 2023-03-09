@@ -237,7 +237,7 @@ Think about the word ***dust***.
 Usually, it means to take off something, like to *dust* the furniture.
 However,
 the word *dust* can also mean to add something instead of taking it away!
-An example is that you may want to *dust* a pan with flour.
+For example, you may want to *dust* a pan with flour.
 In this case, the word **dust** has two meanings.
 Let's say we want to create a map that has both.
 How would this be done?
