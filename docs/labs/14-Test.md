@@ -469,8 +469,8 @@ that you have used previously,
 but Assertions can be done during run time instead of debugging.
 Also in addition to Unit Testing,
 it's important to know about GUI Testing.
-To learn more about assertions or GUI Testing,
-follow [this optional guide created by former COMP 55 students](14-A-TestOptional.html).
+To learn more about assertions,
+follow [this optional guide on assertions](https://www.programiz.com/java-programming/assertions).
 
 ## Review Questions
 
