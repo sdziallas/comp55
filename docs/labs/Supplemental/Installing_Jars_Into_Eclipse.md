@@ -14,7 +14,6 @@ In order to use the library, you have to manually add it.
 7. Click ***Apply and Close*** to enable the just added JAR file
 8. Try to run your code
 
-
 ![20230309_003217](https://user-images.githubusercontent.com/72991689/223967170-8119d305-4c50-4b69-856d-7e1578db9335.gif)
 Note: In the gif, there is an error in the console in Eclipse. This is due to how
 I tried to run the program without the JAR file in my build path.
