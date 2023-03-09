@@ -141,6 +141,7 @@ actor "Partygoer" as p
 and you will see this at the bottom of the plant URL pane:
 
 ![Partygoer use case diagram actor](lab61media/partygoer.png)
+![Gif for PlantUML](lab61media/My_Gif.gif)
 
 ## Explanation of the plantUML code
 
