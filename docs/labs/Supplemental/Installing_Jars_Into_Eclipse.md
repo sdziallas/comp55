@@ -18,4 +18,3 @@ In order to use the library, you have to manually add it.
 Note: In the gif, there is an error in the console in Eclipse. This is due to how
 I tried to run the program without the JAR file in my build path.
 After enabling the JAR, I am able to run my program without any errors
-
