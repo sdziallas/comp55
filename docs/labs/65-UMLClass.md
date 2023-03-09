@@ -234,4 +234,4 @@ This is just another extra information that might be helpful for your future pro
 Here I would like to introduce the [LucidChart](https://www.lucidchart.com) online software.
 Here are some functionalities of it:
 - Easily style shapes (drag and drop)
- - ![select-all-shapes](https://user-images.githubusercontent.com/101157079/223881056-673184ab-fc74-4f56-b057-230ca2148f0c.gif)
+- ![select-all-shapes](https://user-images.githubusercontent.com/101157079/223881056-673184ab-fc74-4f56-b057-230ca2148f0c.gif)
