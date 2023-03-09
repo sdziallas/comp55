@@ -470,7 +470,7 @@ but Assertions can be done during run time instead of debugging.
 Also in addition to Unit Testing,
 it's important to know about GUI Testing.
 To learn more about assertions or GUI Testing,
-follow [this optional guide on assertions](https://comp129.github.io/comp55/labs/14-A-TestOptional.html).
+follow [this optional guide on assertions created by former COMP 55 students](14-A-TestOptional.html).
 
 Assertions can help clarify initial assumptions and mistakes in code by letting developers check
 for abnormalities in their code. Utilizing this tool can lead to more efficient code by checking
