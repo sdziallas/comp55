@@ -256,7 +256,7 @@ On the left side, second button will take you there directly
 
 ![3new](https://user-images.githubusercontent.com/101157079/223921908-3c754b43-11ca-4193-9d96-e9e9951520d3.png)
 
-However, for different projects and chart types you can go to the templates option will open 
+However, for different projects and chart types you can go to the templates option will open
 many different kinds of graphs that might be useful for any projects
 
 ![4new](https://user-images.githubusercontent.com/101157079/223922666-cc2c5656-6eb6-4741-9cb2-de53b756526a.png)
