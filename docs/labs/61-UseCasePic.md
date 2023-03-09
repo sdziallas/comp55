@@ -30,7 +30,7 @@ For a more concrete example of how UML is used in software development,
 consider the following use case.
 Imagine you are a software developer working on a mobile banking app.
 To ensure that the application is designed and built to meet the needs of the end-users,
-you and your team would create a use case diagram using UML to outline all interactions
+you and your team would create a use-case diagram using UML to outline all the major interactions,
 like checking account balances to pay bills.
 Each interaction is a use case. The diagram will identify external systems tha app needs,
 like payment gateways or databases.
