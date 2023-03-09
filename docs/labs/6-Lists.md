@@ -104,7 +104,7 @@ void printList(ArrayList<String> list) {
 }
 ```
 
-Here is a [comparison between Arrays and ArrayLists](https://www.w3schools.blog/difference-between-array-and-arraylist-in-java).
+For more in-dpeth information about the differences between Arrays and ArrayLists, [click here](https://www.w3schools.blog/difference-between-array-and-arraylist-in-java).
 
 ## **Completing this mini-lab**
 
