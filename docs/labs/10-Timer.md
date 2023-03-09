@@ -630,7 +630,7 @@ in making your programs more dynamic and expressive.
 
 What if we want to create a ball launcher and
 move the location from which the balls are being launched up and down?
-Adding Keyboard Listeners would be the perfect solution.
+Adding ***Keyboard Listeners*** would be the perfect solution.
 These listeners are similar to Mouse Listeners and can detect and
 respond to events such as key presses and releases.
 By implementing the ```KeyListener``` interface
