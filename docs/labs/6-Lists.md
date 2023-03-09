@@ -10,7 +10,7 @@
 
 **Before working on this lab,
 you'll need to make sure that you finish at least the
-[Ball portion of the interactivity lab](5-Interact.md),
+[Ball portion of the interactivity lab](5-Interact.html),
 so that when you run that file,
 you are able to do this:**
 
