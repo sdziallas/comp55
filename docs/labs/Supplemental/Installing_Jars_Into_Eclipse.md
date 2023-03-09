@@ -1,9 +1,9 @@
-#How to Add the ACM.jar to Your Build Path
+# How to Add the ACM.jar to Your Build Path 
 
 If you wish to use the ACM library, it is not as simple as doing a `#include "acm.jar"`. 
 In order to use the library, you have to manually add it.
 
-##Instructions
+## Instructions 
 
 Step 1: Import the `acm.jar` into your program (the **IntroACMLab.zip**) \
 Step 2: Right click your project \
