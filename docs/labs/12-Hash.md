@@ -125,7 +125,7 @@ String def = phobias.get("ergophobia");
 In the case of say, a flashcard application,
 the definition can be retrieved to return the key using a `getKey` function.
 This method does require a for each loop to check all hashmap entries,
-as well as the importing of the Map.entry java utility[^1].
+as well as the importing of the `Map.entry` java utility[^1].
 The import allows us to use the `Entry` object
 as well as the `map.entrySet` method in order to iterate each hashmap entry[^2].
 
