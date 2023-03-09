@@ -474,8 +474,8 @@ follow [this optional guide on assertions](https://comp129.github.io/comp55/labs
 
 Assertions can help clarify initial assumptions and mistakes in code by letting developers check
 for abnormalities in their code. Utilizing this tool can lead to more efficient code by checking
-for errors early, accurately locating the errors, and you ensure that your conditions hold their
-expected values. [Avoiding Debugging](https://ocw.mit.edu/ans7870/6/6.005/s16/classes/08-avoiding-debugging/#assertions)
+for errors early, accurately locating the errors, and ensure that conditions hold their expected values. 
+[Avoiding Debugging](https://ocw.mit.edu/ans7870/6/6.005/s16/classes/08-avoiding-debugging/#assertions)
 
 ## Review Questions
 
