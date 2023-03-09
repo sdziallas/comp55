@@ -17,7 +17,7 @@ you are able to do this:**
 ![final ball animation](lab5media/media/finalball.gif)
 
 If your program has not gotten to that stage,
-please [go back](5-Interact.md) and get there first.
+please [go back](5-Interact.html) and get there first.
 You've been warned.
 
 ---
