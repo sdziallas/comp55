@@ -60,10 +60,10 @@ we'll go through the actual steps later in the lab.**
 
 We create timers using similar syntax that we've used previously to create other Java objects:
 
-`java
+```java
 import javax.swing.*;
 Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
-`
+```
 
 - Make sure that you're importing the `javax.swing.Timer` class.
 There are multiple classes that are named `Timer`.
@@ -130,9 +130,9 @@ by calling its `start` method.
 So to start the Timer,
 you'll see a line like this shortly after creating a `Timer` object.
 
-`java
+```java
 someTimerVar.start();
-`
+```
 
 ## MyFirstTimer.java
 
@@ -152,17 +152,17 @@ you'll get a simple window with a label that does nothing.
 4. Implement the `ActionListener` interface.
     - Let's add `implements ActionListener` to your MyFirstTimer class definition:
 
-    `java
+    ```java
     public class MyFirstTimer extends GraphicsProgram implements ActionListener {
-    `
+    ```
 
     as well as an `actionPerformed` method inside the class.
 
-    `java
+    ```java
     public void actionPerformed(ActionEvent e) {
         //TODO add what we want to do every two seconds
     }
-    `
+    ```
 
 5. Move the label horizontally every 1000ms.
     - Go ahead and have `myLabel` move 5 pixels to the right,
@@ -188,9 +188,9 @@ Now just for fun,
 let's change the text of the label so that it updates the label with the ```numTimes```,
 we can do this by calling `setLabel` like this:
 
-`java
+```java
 myLabel.setLabel("times called? " + numTimes);
-`
+```
 
 When you run the program again,
 you'll notice the text will slowly move
@@ -283,7 +283,7 @@ like so:
 
 The code that is in the file is the following:
 
-`java
+```java
 public class BallLauncher extends GraphicsProgram {
     public static final int SIZE = 25;
     
@@ -303,7 +303,7 @@ public class BallLauncher extends GraphicsProgram {
         return temp;
     }
 }
-`
+```
 
 ### Review of the Code
 
@@ -512,11 +512,11 @@ we're going to work with a copy of it.
     we can simply say every  40<sup>th</sup> time,
     go ahead and make a new enemy,
 
-    `java
+   ```java
     if(numTimes % 40 == 0) {
         addAnEnemy();
     }
-    `
+    ```
 
      - Normally I would want you to make 40 a constant,
     but you can leave it like this for today
