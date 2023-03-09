@@ -633,10 +633,10 @@ move the location from which the balls are being launched up and down?
 Adding ***Keyboard Listeners*** would be the perfect solution.
 These listeners are similar to Mouse Listeners and can detect and
 respond to events such as key presses and releases.
-By implementing the ```KeyListener``` interface
-and adding ```addKeyListeners()``` to the ```run()```
+By implementing the `KeyListener` interface
+and adding `addKeyListeners()` to the `run()`
 method of your class, you can subscribe to keyboard event notifications.
-After calling ```addKeyListeners()```, your program will be notified of all keyboard events
+After calling `addKeyListeners()`, your program will be notified of all keyboard events
 and you can interact with the program using the keyboard.
 To get started, you can create a blue square on the left side of the screen
 and use it as the launcher for the red balls.
@@ -644,6 +644,6 @@ Once you have added the launcher to the screen, you can easily move it using the
 Like Mouse Listeners, you can define a method for `keyPressed` that moves the launcher up or down
 based on the keys input given by the player.
 
-(Hint: ```keyCode``` for up arrow key is ```VK_UP``` and for down arrow key is ```VK_DOWN```)
+(Hint: `keyCode` for up arrow key is `VK_UP` and for down arrow key is `VK_DOWN`)
 
 ![keyListener](https://user-images.githubusercontent.com/114448502/223673022-b43d3418-bede-46af-973a-29a0965b9f06.gif)
