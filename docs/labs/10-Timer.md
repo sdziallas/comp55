@@ -438,7 +438,7 @@ something that you cannot do when you use the for loop with the `:` operator.
 I've given the bad example below of what your run shouldn't do
 (unless you want to get the `ConcurrentModificationException`).
 
-`java
+```java
 // This is buggy code
 public void run() {
     balls = new ArrayList<GOval>();
@@ -454,7 +454,7 @@ public void run() {
         }
     }
 }
-`
+```
 
 ## DodgeBall.java
 
