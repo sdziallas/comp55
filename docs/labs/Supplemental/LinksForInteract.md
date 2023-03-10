@@ -1,6 +1,6 @@
 # Hello, these links will direct you to some of the websites with useful information that might help you with your assignments
 
-[Class MouseEvent](https://docs.oracle.com/javase/8/docs/api/java/awt/event/MouseEvent.html#:~:text=Class%20MouseEvent&text=An%20event%20which%20indicates%20that,bounds%20when%20the%20action%20happens.)
+- [Class MouseEvent](https://docs.oracle.com/javase/8/docs/api/java/awt/event/MouseEvent.html#:~:text=Class%20MouseEvent&text=An%20event%20which%20indicates%20that,bounds%20when%20the%20action%20happens.)
 
 [How to Write a Mouse Listener](https://docs.oracle.com/javase/tutorial/uiswing/events/mouselistener.html)
 
