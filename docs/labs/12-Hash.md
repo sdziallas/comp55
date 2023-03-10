@@ -54,9 +54,11 @@ implements the ```Map``` interface.
 a bond,
 or mapping,
 between two items.
-Java has a ```HashTable``` class that is
-nearly identical to the ```HashMap``` class,
-but ```HashTable``` is now obsolete and still available for legacy reasons.
+Java has a [`HashTable`](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)
+class that is nearly identical to the
+[`HashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) class,
+but `HashTable` is now obsolete;
+it is still available for legacy reasons.
 These two classes are not to be confused with Java's ```HashSet``` data structure,
 which uses hashing to implement Java's **Set** interface.
 All three data structures use a
