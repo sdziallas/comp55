@@ -108,7 +108,7 @@ Main Components of a use case diagram include:
 ### System
 
 - Represents all use cases being implemented by the system
-- Formal use case diagram terms: whatever is inside the rectangle is what will 
+- Formal use case diagram terms: whatever is inside the rectangle is what will
 be developed as part of the system.
 
 ## Starting a PlantUML use case diagram
