@@ -163,7 +163,6 @@ The side effect of having no pointer locations is that you cannot pass parameter
 reference in Java.
 C++ supports passing parameters both by value and reference, so you can have multiple outputs in a function.
 
-```cpp
 Java does not support this, so if you wanted to return multiple values, an array is often used.
 
 ## All Objects you create in Java will be created on the Heap
