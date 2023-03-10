@@ -84,7 +84,7 @@ A Use Case Diagram typically give us:
 1. a 10,000-foot picture of a program
 2. an overall feel of what the program does.
 
-Main Components of a use case diagram include:
+The main Components of a use case diagram include:
 
 ### Actor
 
