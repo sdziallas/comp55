@@ -76,6 +76,7 @@ from now on we will use the diagramming language **plantUML** to draw our diagra
 This will allow us to stay in text
 but have a way to easily modify our diagrams and share the text with others,
 which means that they can be easily updated.
+
 ## The Use Case Diagram
 
 A Use Case Diagram typically give us:
