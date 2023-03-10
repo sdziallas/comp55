@@ -134,6 +134,8 @@ you'll see a line like this shortly after creating a `Timer` object.
 someTimerVar.start();
 ```
 
+Here is [Oracle's official documentation on the `Timer` class](https://docs.oracle.com/javase/8/docs/api/javax/swing/Timer.html).
+
 ## MyFirstTimer.java
 
 Let's go ahead and open up **MyFirstTimer.java** to start writing in the code.
