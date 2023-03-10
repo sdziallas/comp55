@@ -28,7 +28,7 @@ On the left side, the second button will take you there directly
 ![blank canvas for uml diagrams](https://user-images.githubusercontent.com/101157079/223921908-3c754b43-11ca-4193-9d96-e9e9951520d3.png)
 
 However, for different projects and chart types you can go to the templates option which will open
-many different kinds of graphs that might be useful for any projects
+many different kinds of graphs that might be useful for any project.
 
 ![Lucid chart templates](https://user-images.githubusercontent.com/101157079/223922666-cc2c5656-6eb6-4741-9cb2-de53b756526a.png)
 
