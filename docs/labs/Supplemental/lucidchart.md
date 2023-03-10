@@ -23,7 +23,7 @@ The shortest way of creating a new project is using **New** button. There you wi
 ![creating a new project](https://user-images.githubusercontent.com/101157079/223920897-e064e753-1d37-4f38-b751-0971fef911a3.png)
 
 I would suggest to use blank document if you are planning to create UML diagrams.
-On the left side, second button will take you there directly
+On the left side, the second button will take you there directly
 
 ![blank canvas for uml diagrams](https://user-images.githubusercontent.com/101157079/223921908-3c754b43-11ca-4193-9d96-e9e9951520d3.png)
 
