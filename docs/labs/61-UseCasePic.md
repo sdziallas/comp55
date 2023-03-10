@@ -86,7 +86,7 @@ A Use Case Diagram typically give us:
 
 The main Components of a use case diagram include:
 
-### Actor
+### Actors
 
 - External entity that interacts with the program
 - Can be represented as a person or external system
