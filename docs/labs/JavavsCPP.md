@@ -165,15 +165,20 @@ C++ supports passing parameters both by value and reference, so you can have mul
 
 ```cpp
 void myFunction(
-  int a, // in
-  int* b, // in
-  int* c, // out
-  int* d, // out
+  int a,
+  int* b,
+  int* c,
+  int* d,
 );
 
 int main() {
+  // Input variables
   int a;
-  int* b, c, d;
+  int* b
+  
+  // Output variables
+  int* c, d;
+  
   myFunction(a, &b, &c, &d);
 }
 ```
