@@ -1,4 +1,4 @@
-#Lucid Charts
+# Lucid Charts
 
 Before getting familiar with this, keep in mind that the main focus of the course will be **PLANTUML**.
 This is just another extra information that might be helpful for your future projects and classes.
