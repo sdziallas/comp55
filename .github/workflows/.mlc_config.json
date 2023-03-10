@@ -2,6 +2,9 @@
   "ignorePatterns": [
 	{
 		"pattern":"^([0-9]{1,2}-[0-9A-Za-z-]+.html)"
+	},
+	{
+		"pattern":"^(Supplemental/[0-9A-Za-z-_]+.html)"
 	}
   ],
   "retryOn429": true,
