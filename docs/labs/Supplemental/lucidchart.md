@@ -18,7 +18,7 @@ After the log in this window will show up on the screen
 
 ![new button navigation](https://user-images.githubusercontent.com/101157079/223916912-1b5d66c5-aeb2-4dcf-b1f7-632cae20697c.png)
 
-The shortest way of creating a new project is using **New** button. There you will have 2 options
+The shortest way of creating a new project is using the **New** button. There you will have 2 options
 
 ![creating a new project](https://user-images.githubusercontent.com/101157079/223920897-e064e753-1d37-4f38-b751-0971fef911a3.png)
 
