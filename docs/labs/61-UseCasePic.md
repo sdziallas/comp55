@@ -16,6 +16,7 @@ which is a part of **UML** which stands for *Unified Modeling Language*.
 
 UML is good for getting a high-level understanding of a piece of software
 and how different components interact with one another.
+If you want to learn more about UML, you can visit the [official UML website](https://www.uml.org/).
 While this can sound scary,
 *"UM-What?!? You want to introduce us to ANOTHER language!?!"*,
 don't fret.
@@ -24,6 +25,18 @@ The reason UML came about was to have a universal standard
 that everyone can follow when designing software,
 similar to how we use certain words or names to evoke certain meanings,
 like the name Karen for example.
+
+For a more concrete example of how UML is used in software development,
+consider the following use case.
+
+> Imagine you are a software developer working on a mobile banking app.
+To ensure that the application is designed and built to meet the needs of the end-users,
+you and your team would create a use-case diagram using UML to outline all the major interactions,
+like checking account balances to pay bills.
+
+Each interaction is a use case. The diagram will identify external systems that the app needs,
+like payment gateways or databases.
+By using UML, you get a high-level view and ensure the app meets user needs.
 
 Many of you already have encountered and have experience with UML via the Traffic Jam assignment.
 There are many types of UML diagrams.
