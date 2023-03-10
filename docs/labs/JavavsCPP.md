@@ -164,25 +164,6 @@ reference in Java.
 C++ supports passing parameters both by value and reference, so you can have multiple outputs in a function.
 
 ```cpp
-void myFunction(
-  int a,
-  int* b,
-  int* c,
-  int* d,
-);
-
-int main() {
-  // Input variables
-  int a;
-  int* b
-  
-  // Output variables
-  int* c, d;
-  
-  myFunction(a, &b, &c, &d);
-}
-```
-
 Java does not support this, so if you wanted to return multiple values, an array is often used.
 
 ## All Objects you create in Java will be created on the Heap
