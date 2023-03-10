@@ -230,4 +230,4 @@ You can also use the keyword ```hidden``` as part of a relation to hide associat
 ### Extra Information
 
 If you are interested in an extra-curricular software that might be useful for any other projects,
-please [follow this tutorial about Lucid Charts](Supplemental/lucidchart.html)
+please [follow this tutorial about Lucid Charts](Supplemental/lucidchart.md)
