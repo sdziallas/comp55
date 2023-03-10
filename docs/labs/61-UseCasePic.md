@@ -86,30 +86,29 @@ A Use Case Diagram typically give us:
 
 Main Components of a use case diagram include:
 
-**Actor**
+### Actor
 
 - External entity that interacts with the program
 - Can be represented as a person or external system
 - At least one actor required in a use case diagram
 - Multiple actors can represent different users and external components 
 
-**Use Cases**
+### Use Cases
 
 - Represented as ovals
 - High-level interactions expected in a program
 - Should represent the entire process an actor is involved in
 - Number of use cases should be kept to less than seven
 
-**Interactions**
+### Interactions
 
 - Used to connect actors to use cases they initiate or interact with
 - Shows the flow of interaction between actors and the system
-
-**System**
+### System
 
 - Represents all use cases being implemented by the system
-- Formal use case diagram terms: whatever is inside the rectangle is what will be developed as part of the system.
-
+- Formal use case diagram terms: whatever is inside the rectangle is what will 
+be developed as part of the system.
 
 ## Starting a PlantUML use case diagram
 
