@@ -76,7 +76,6 @@ from now on we will use the diagramming language **plantUML** to draw our diagra
 This will allow us to stay in text
 but have a way to easily modify our diagrams and share the text with others,
 which means that they can be easily updated.
-
 ## The Use Case Diagram
 
 A Use Case Diagram typically give us:
@@ -91,7 +90,7 @@ Main Components of a use case diagram include:
 - External entity that interacts with the program
 - Can be represented as a person or external system
 - At least one actor required in a use case diagram
-- Multiple actors can represent different users and external components 
+- Multiple actors can represent different users and external components
 
 ### Use Cases
 
@@ -104,6 +103,7 @@ Main Components of a use case diagram include:
 
 - Used to connect actors to use cases they initiate or interact with
 - Shows the flow of interaction between actors and the system
+
 ### System
 
 - Represents all use cases being implemented by the system
