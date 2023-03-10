@@ -105,7 +105,7 @@ The main Components of a use case diagram include:
 - Used to connect actors to use cases they initiate or interact with
 - Shows the flow of interaction between actors and the system
 
-### System
+### The System
 
 - Represents all use cases being implemented by the system
 - Formal use case diagram terms: whatever is inside the rectangle is what will
