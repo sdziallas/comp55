@@ -41,7 +41,9 @@ Hashtables allowed us to search and store items into a collection in constant O(
 which means that no matter the size of the hashtable,
 you would be able to count on the running time not increasing
 (as long as the number of buckets is roughly equal to the
-number of items and you have a full hash function yada-yada)
+number of items and you have a full hash function yada-yada).
+Here's a picture that may help you understand a `HashMap` more intuitively:\
+![Hashmap](https://user-images.githubusercontent.com/61854184/223947825-eec214e9-22e6-4163-aef8-f370d9cda147.png)
 
 ## Why didn't they just call it a hashtable then?
 
@@ -120,16 +122,42 @@ Once in the HashMap,
 you can use ```get``` to retrieve the definition in the future.
 
 ```java
-String def = phobias.get("ergophobia")
+String def = phobias.get("ergophobia");
 // def now has the value "the abnormal fear of work"
 ```
+
+In the case of say, a flashcard application,
+the definition can be retrieved to return the key using a `getKey` function.
+This method does require a for each loop to check all hashmap entries,
+as well as the importing of the `Map.entry` java utility[^1].
+The import allows us to use the `Entry` object
+as well as the `map.entrySet` method in order to iterate each hashmap entry[^2].
+
+```java
+import java.util.Map.Entry;
+
+...
+
+String def = "the abnormal fear of work";
+for(Entry<String, String> entry : phobias.entrySet()){
+    if(entry.getValue() == def){
+        String key = entry.getKey());
+        // key now has the value "ergophobia"
+    }
+}
+```
+
+Resources:
+
+[^1]: https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html
+[^2]: https://tecadmin.net/java-hashmap-get-value-from-key/
 
 If you try to get a phobia
 that has not been introduced into this particular phobias map
 like say this one
 
 ```java
-String possibleDef = phobias.get("osvaldophobia")
+String possibleDef = phobias.get("osvaldophobia");
 ```
 
 The ```HashMap``` will return ```null```,
@@ -203,7 +231,7 @@ So how does this work when you have multiple objects that you want with similar 
 Let's try this first.
 
 ```java
-phobias.put("ponophobia", "the abnormal fear of work")
+phobias.put("ponophobia", "the abnormal fear of work");
 ```
 
 If you have been reading this document closely you may notice that we
