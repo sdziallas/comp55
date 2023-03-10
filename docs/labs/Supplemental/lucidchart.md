@@ -9,7 +9,7 @@ Here are some functionalities of it:
 ![select-all-shapes](https://user-images.githubusercontent.com/101157079/223881056-673184ab-fc74-4f56-b057-230ca2148f0c.gif)
 - *Organizing diagrams with containers*
 ![diagrams with containers](https://user-images.githubusercontent.com/101157079/223914040-62d6f66b-f60d-4e08-8384-a8ae9c11829e.png)
-- *Ceate clean diagrams*
+- *Create clean diagrams*
 ![smart-lines](https://user-images.githubusercontent.com/101157079/223919857-a878c88d-2e39-4203-983d-f2e0999a5995.gif)
 - *And most importantly, collaborate with teammates*
 Please follow the following animation for setting it up. Good luck!
