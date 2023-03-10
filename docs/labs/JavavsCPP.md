@@ -17,7 +17,7 @@
 If I had to compare C++ and Java,
 I would say that they fit these pictures pretty well
 
-| C +                                                                                                             | Java                                                                                                  |
+| C++                                                                                                             | Java                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | ![http://www.pxleyes.com/images/users/S/Sarah06/3485/fullsize/4e5f610b59f3a.jpg](diffjavacpp/media/image1.jpeg) | ![http://www.cityofws.org/portals/0/images/police/storytime2\_233.jpg](diffjavacpp/media/image2.jpeg) |
 Source: left - *pxleyes.com*, right - *[cityofws](http://www.cityofws.org)*
@@ -156,6 +156,14 @@ You have to think of this as if just like in C++,
 you created a variable that holds a pointer only,
 but you didn't create space for the Fraction object itself.
 By calling ```new```.
+
+### Functions, passing by reference and passing by value
+
+The side effect of having no pointer locations is that you cannot pass parameters into a function by
+reference in Java.
+C++ supports passing parameters both by value and reference, so you can have multiple outputs in a function.
+
+Java does not support this, so if you wanted to return multiple values, an array is often used.
 
 ## All Objects you create in Java will be created on the Heap
 
