@@ -28,9 +28,6 @@ so it's important to work together.
 **Make sure that you can see what everyone else is doing so that you can help each other.**
 It's also important that all of you finished the [Git Prep Mini-Lab](8-Github-Prep.html),
 which was necessary to finish before starting here.
-You should also be part of this class's GitHub organization,
-if you didn't accept the invite,
-let me know and I can send you another one.
 
 ## Step 0: Everyone - Pick roles and setup room
 
