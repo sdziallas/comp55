@@ -569,7 +569,7 @@ git will use this notation:
 ```
 
 This notation lets you know you need to make a decision
-for all places where it notices a conflict on what she be used.
+for all places where it notices a conflict on what should be used.
 If you get into a conflicting state,
 it's your job to decide what code to keep
 (yours, the servers or some mix of the two).
