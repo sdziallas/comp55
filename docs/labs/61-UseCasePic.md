@@ -49,9 +49,11 @@ that will allow us to communicate the diagrams with others.
 
 ## Wait, why plantUML again?
 
-When drawing diagrams, having a sheet of paper with different folks can often lead to a collaborative and rich discussion.
-However, some folks like to avoid drawing diagrams on a piece of paper and prefer to draw them on the computer - but this often leaves many of us learning a new program that will allow us to draw,
-correct,
+When drawing diagrams, having a sheet of paper with different folks
+can often lead to a collaborative and rich discussion.
+However, some folks like to avoid drawing diagrams on a piece of paper
+and prefer to draw them on the computer - but this often leaves many of us
+learning a new program that will allow us to draw, correct,
 and then edit diagrams efficiently.
 While programs exist to help you draw UML diagrams,
 they aren't necessarily great solutions for ensuring that the diagrams
