@@ -339,24 +339,3 @@ you can then get the ```SoundEffect``` from the ```HashMap``` and then just play
 Test it to make sure it does in fact play the sound and voila!
 You are now one step closer to err...something.
 (~4 lines of code)
-
----
-
-## Bonus
-
-In class,
-you'll notice that I showed an explosion where the label shakes up and down,
-(if I haven't shown you this,
-please ask me to!).
-To implement this correctly,
-think about making a new class called
-```Explosion``` that inherits from ```SoundEffect```.
-You should also create a class ```LabelShaker```
-that has a ```GLabel``` as an instance variable
-and that ```implements ActionListener```.
-Then,
-in the ```play``` implementation,
-start the ```Timer```
-to move the label up and down,
-which uses the same mechanics from the dance simulator
-for moving the label back and forth on each call to ```actionPerformed```.
