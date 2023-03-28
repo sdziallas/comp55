@@ -222,8 +222,6 @@ when you don't pass the tests.
 Once you have something that is green.
 You can commit and push your code.
 **Make sure you do not edit the test files.**
-If you want to see GitHub in action,
-you can go back and ensure that you have a 1 point out of 3!
 
 ### Step 2. Create a ```SoundEffect``` class that ```implements Playable```
 
