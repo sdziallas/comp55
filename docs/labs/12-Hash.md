@@ -127,7 +127,7 @@ that has not been introduced into this particular phobias map
 like say this one
 
 ```java
-String possibleDef = phobias.get("osvaldophobia")
+String possibleDef = phobias.get("sebastianphobia")
 ```
 
 The ```HashMap``` will return ```null```,
