@@ -120,7 +120,7 @@ That will remove .project from the Unstaged changes and take away the ```>``` si
 ## Reintroduction to Github
 
 You can confirm that .project has in fact not changed,
-by revisiting your repo page on github and clickong on the code section.
+by revisiting your repo page on github and clicking on the code section.
 There you will see the .project file still says ```COMP55HashMapsLab```
 instead of ```hashmaps-lab-onzfonz```.
 This will also be your first experience using github actions.
