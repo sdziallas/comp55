@@ -1,8 +1,7 @@
 # Part 2 of the HashMap lab
 
 If you didn't read part 1 of the HashMaps lab,
-realize there are some puntos involved with that lab,
-so [go back to that lab](12-Hash.html) before continuing.
+[go back to that lab](12-Hash.html) before continuing.
 
 - [Initial Setup](#initial-setup)
 - [Quick detour on Gradle](#quick-detour-on-gradle)
