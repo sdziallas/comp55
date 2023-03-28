@@ -61,12 +61,9 @@ If you notice,
 most things are the same.
 What we are gaining by using gradle is a way to automatically install particular libraries.
 Remember how at the beginning of the semester
-I had you jump through a bunch of hoops to install eclipse and change settings here,
-or there,
-and some of you have also had to work to fix your java build path for example?
+I had you jump through a bunch of hoops to install eclipse and change settings here and there?
 **With gradle all of this is taken care of**.
-Instead of fiddling with your buildpath in eclipse,
-gradle uses a file called ```build.gradle```
+Gradle uses a file called ```build.gradle```
 that allows us to provide directions on what libraries are needed to build the project
 and we could provide additional instructions on how to get the project to run.
 For this lab and from here on out we need a library called **JavaFX**,
