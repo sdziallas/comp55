@@ -37,6 +37,11 @@ then click ***Apply and Close***.
 
 ![Gradle preferences window](lab12media/media/gradlespecificversion.png)
 
+You may also need to right-click on the project and select
+***Gradle->Refresh Gradle Project***. At this point, there shouldn't be
+a red x or error on src/main/java anymore (although src/main/test may
+still have one). If that's the case, you can proceed with the lab.
+
 ## Quick detour on Gradle
 
 **Make sure that your project folder looks like this** -
