@@ -105,7 +105,7 @@ Run the program and make sure that you get a ball on the screen.
 Now for step 2,
 on each ```actionPerformed```,
 move ```ball``` by a pixel or two.
-Don't' worry about setting the ball's color or anything.
+Don't worry about setting the ball's color or anything.
 Run the program and fix anything
 to make sure that have a ball that is just moving across the screen continuously.
 **Don't continue until you get the ball moving in a straight line across the screen.**
