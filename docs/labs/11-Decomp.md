@@ -204,7 +204,7 @@ we need to understand how colors are represented in computers.
 For the most part,
 colors for each pixel are represented using 3 values:
 red, green, and blue -
-where each value corresponds to the intensity of each of those three colors(RGB).
+where each value corresponds to the intensity of each of those three colors (RGB).
 In computers,
 you can adjust these three values to get different colors.
 The intensity of each color is represented by a value from 0 to 255 in most applications.
