@@ -314,7 +314,7 @@ some ideas are.
     If you need to,
     it may make sense for you to go back to doing the ```println```
     statements so that you end up getting an output like this,
-    then you can use those numbers as the RGB values in```setColor```.
+    then you can use those numbers as the RGB values in ```setColor```.
     For an additional challenge do this without any if statements.
     Submit your resulting code in text format.
     Good luck!
