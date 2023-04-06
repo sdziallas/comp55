@@ -195,7 +195,7 @@ you can now go on to tackle the Colors!
 While smooth color changing has become all the rage recently,
 especially with the adoption of LED lights in EVERYTHING,
 this wasn't always the case.
-In the early 200s,
+In the early 2000s,
 slowly transforming colors would generate a sense of awe.
 For this lab,
 let's pretend to be back in those olden times.
