@@ -328,7 +328,7 @@ but just having more tests outweigh some of the potential drawbacks in this scen
 In addition to ```assertTrue``` and ```assertFalse```,
 you also have available an ```assertEquals``` method,
 which compares the two parameters to make sure that they are equal to each other.
-There are also assertNull and ```assertNotNull```,
+There are also ```assertNull``` and ```assertNotNull```,
 which will just check for null or not null on a particular object.
 If you are ever unsure about what assert statements the JUnit framework has made available to you,
 the best thing to do is to use ***Ctrl-Space*** to look up the different assert statements
@@ -422,7 +422,7 @@ let's come up with some more complicated examples of tests for Dates.
     it's worth reading
     [this short article about leap years](https://www.infoplease.com/leap-year-explained).
 
-Let me know if you have any other questions about any of these steps
+Let me know if you have any other questions about any of these steps.
 
 ## Assertions and GUI Testing (Optional)
 
