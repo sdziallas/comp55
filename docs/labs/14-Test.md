@@ -26,25 +26,13 @@ Whether you appreciated doing something tricky,
 or whether it still haunts you in your sleep,
 we did traffic jam to give you something challenging to work on
 to get you introduced to the idea of working on a significant project in parts.
-Feel lucky that you weren't my first group of students at Pacific that got that assignment,
-where I asked them to
-**complete Traffic Jam without breaking it up and only giving them two weeks**!
-After giving the assignment a few times,
-what I've seen that what helps students much more than anything else I've done so far
-is the main functions that I wrote for them,
-to make sure that they test parts they've written before moving forward.
-Imagine writing all of traffic jam only to see the grid
-and the behavior of traffic jam be at best erratic,
-my first students didn't test as they went along,
-so when they ran the program,
-they had symptoms like:
-
-- dragging a vehicle to another spot and then having that vehicle disappear
-- dragging a vehicle vertically and backwards would cause the vehicle
-  to jump to the other side of the board **but horizontally**
+One of the things that can be particularly helpful is to make sure that
+you test parts of your code before moving forward.
+Imagine writing the entirety of traffic jam, only to see the grid
+and the behavior of traffic jam be at best erratic.
 
 If you think about the code that was provided,
-like this code for Space.java
+like this code for Location.java
 
 ```java
 //Small test code to put in Space.java to check to see if your class works
