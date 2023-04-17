@@ -145,7 +145,7 @@ Static methods don't operate on any data in a class,
 which makes them different from say something like ```move()```
 since that operates on a single oval object and changes the state of that oval.
 It makes one oval move.
-Static methods don't have those operations.
+Static methods don't have those operations
 and are typically written as being utility classes,
 where all the information that is needed is passed in.
 Since in our case we simply want to write a method
