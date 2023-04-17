@@ -32,14 +32,14 @@ Imagine writing the entirety of traffic jam, only to see the grid
 and the behavior of traffic jam be at best erratic.
 
 If you think about the code that was provided,
-like this code for Location.java
+like this code for Location.java:
 
 ```java
-//Small test code to put in Space.java to check to see if your class works
+//Small test code to put in Location.java to check to see if your class works
 
 public static void main(String[] args) {
-    Space one = new Space(3, 4);
-    Space two = new Space(1, 6);
+    Location one = new Location(3, 4);
+    Location two = new Location(1, 6);
     two.setRow(two.getRow()+1);
     two.setCol(two.getCol()-1);
     System.out.println("one r: " + one.getRow() + ", c: " + one.getCol());
@@ -47,25 +47,25 @@ public static void main(String[] args) {
 }
 ```
 
-And then this code snippet for Vehicle.java
+And then this code snippet for Vehicle.java:
 
 ```java
-Vehicle someTruck = new Vehicle(VehicleType.TRUCK, true, 3, 1, 1);
-Vehicle someAuto = new Vehicle(VehicleType.AUTO, false, 2, 2, 2);
+Vehicle someTruck = new Vehicle(VehicleType.TRUCK, 1, 1, true, 3);
+Vehicle someAuto = new Vehicle(VehicleType.AUTO, 2, 2, false, 2);
 
-System.out.println("This next test is for spacesOccupied: ");
+System.out.println("This next test is for locationsOn: ");
 
 System.out.println("vert truck at r1c1 should give you r1c1; r2c1; r3c1 as the 
-                    spaces occupied:does it?");
-printSpaces(someTruck.spacesOccupied());
+                    locations it's on top of... does it?");
+printSpaces(someTruck.locationsOn());
 
-System.out.println("horiz auto at r2c2 should give you r2c2; r2c3 as the spaces 
-                    occupied:does it?");
-printSpaces(someAuto.spacesOccupied());
+System.out.println("horiz auto at r2c2 should give you r2c2; r2c3 as the locations 
+                    it's on top of... does it?");
+printSpaces(someAuto.locationsOn());
 
 System.out.println("if we were to move horiz auto -2 it should give you at least 
-                    r2c0; r2c1; it may also add r2c2; r2c3 to its answer:does it?");
-printSpaces(someAuto.spacesOccupiedOnTrail(-2));
+                    r2c0; r2c1; it may also add r2c2; r2c3 to its answer... does it?");
+printSpaces(someAuto.locationsPath(-2));
 ```
 
 These snippets of code allowed you to test part of your functionality
