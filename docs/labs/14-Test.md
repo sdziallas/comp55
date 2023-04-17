@@ -424,16 +424,6 @@ let's come up with some more complicated examples of tests for Dates.
 
 Let me know if you have any other questions about any of these steps.
 
-## Assertions and GUI Testing (Optional)
-
-An advanced tool for testing is using Assertions similar to the assert functions
-that you have used previously,
-but Assertions can be done during run time instead of debugging.
-Also in addition to Unit Testing,
-it's important to know about GUI Testing.
-To learn more about assertions or GUI Testing,
-follow [this optional guide created by former COMP 55 students](14-A-TestOptional.html).
-
 ## Review Questions
 
 ***Place your answers to these questions as comments in the TestDate.java file and upload them to canvas***
