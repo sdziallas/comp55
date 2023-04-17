@@ -187,37 +187,14 @@ you can optionally [read about them here](https://sormuras.github.io/blog/2018-0
 
 ## Create a DateTest class using JUnit 4
 
-If you followed real close the gif from before where you created a new JUnit Test Case.
-
 Sometimes when you run unit tests,
 you may want to read certain information from a file
 or load another object or create something else first
 before you start doing any tests or before you do each test.
-Similarly, you might have to clean up after a test
-if say you were testing whether or not some information was written to a file,
-you may have to delete that information or restore how the file was before
-to make sure that things are nice and tidy.
-If you have in your JUnit test case these methods,
-they would be called during each of these different times.
-The typical scenario for how the files work is:
-
-1. ```setUpBeforeClass()```
-2. ```setUp()```
-3. ```test1()```
-4. ```tearDown()```
-5. ```setUp()```
-6. ```test2()```
-7. ```tearDown()```
-8. ….
-    *Keeps going for each test you have,
-    once all the tests have been
-        written then you go to*
-9. ```tearDownAfterClass()```
-
-Notice that the **same** ```setUp()``` and ```tearDown()``` are being called.
-If you have something more convoluted,
-it might make sense to talk to me about it as you don't necessarily want to have more
-than 1 ```@Before``` and 1 ```@BeforeClass``` directives.
+Similarly, you might have to clean up after a test.
+For example, if you were testing whether or not some information
+was written to a file, you may have to delete that information or
+restore how the file was before to make sure that things are nice and tidy.
 
 At this point you should be back in eclipse with your trusty new Junit Test Case file,
 where you'll see some code that looks something like this:
