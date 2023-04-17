@@ -72,9 +72,9 @@ These snippets of code allowed you to test part of your functionality
 before having the entire assignment done.
 This type of testing is typically called **unit testing**,
 because we are checking for the most part if a unit
-(be it a class or method like the ```Space```,
+(be it a class or method like the ```Location```,
 or the ```Vehicle```,
-or ```spacesOccupied```)
+or ```locationsOn```)
 is behaving as it should.
 While these tests themselves are still a bit general,
 by running these in your code,
