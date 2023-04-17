@@ -291,15 +291,12 @@ where we provide a very basic example of a ```Date```.
 Because we are starting with basic tests,
 what we want to start with first is to think of tests
 that should be easy for our method to be able to figure out.
-For example,
-come up with a basic Date example that the computer should recognize as a Date.
-For example,
-something like the example I posted above,
-```4-15-2017```.
-For that example,
-what we want to do is assert
-that when we call ```isValidDate``` on ```4-15-2017``` it will return ```true```.
-Thus the line would change to something like this.
+For example, come up with a basic Date example that the
+computer should recognize as a Date. For example, something like
+the example I posted above, ```4-15-2017```.
+For that example, what we want to do is assert
+that when we call ```isValidDate``` on ```4-15-2017``` it will
+return ```true```. Thus the line would change to something like this.
 
 ```java
 assertTrue(Date.isValidDate(4, 15, 2017));
