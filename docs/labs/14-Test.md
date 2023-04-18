@@ -205,12 +205,10 @@ where you'll see some code that looks something like this:
 
 Notice that what you see is java code,
 with a couple of minor differences which I'll go over.
-The first thing you may notice is this ```import static``` command on line 3,
+The first thing you may notice is this ```import static``` command,
 which is slightly different than import.
 As you know ```import``` allows us to specify and use libraries,
-so you would be aware that there is a class called *Test.java*
-and once we import it we can then use it in our file,
-Java knows where to look.
+so we  we can then use them in our file.
 ```import static``` allows us to use methods and variables that are declared
 ```public static``` without having to use the qualifier.
 So in this case,
@@ -224,22 +222,20 @@ it's the *Not yet implemented*).
 Notice that we have no "**.**"
 operator or anything else to qualify where the ```fail``` method came from.
 This is because we had the ```import static```,
-otherwise, if we were to change line 3 to ```import org.junit.Assert```,
-we would have to change line 8 to say ```Assert.fail("not yet implemented")```.
+otherwise, if we were to change the line to ```import org.junit.Assert```,
+we would have to say ```Assert.fail("not yet implemented")```.
 You can try that if you like,
 but make sure to change it back.
-So ```import static``` is for convenience,
-almost like how we had ```using namespace std``` in C++.
 
-Next notice on line 9 that we have the ```@Test``` directive.
+Next, notice that we have the ```@Test``` directive.
 This is a special annotation that Java has introduced more recently that lets java know
 that the next method under it is one that we would like JUnit to test.
 Because it knows that it will need to test it,
 we can name the method whatever we like.
 Go ahead and change the method name to ```testIsValidDateBasic```,
 since we'll be making more methods in the future.
-The final thing to look at is from line 11,
-which is simply a command to let JUnit know that we should not pass by calling fail.
+The final thing to look at is the fail command, 
+which is simply to let JUnit know that we should not pass by calling fail.
 Anytime java reaches a line that says fail,
 think of that as being a return statement,
 where the computer immediately exits and returns a fail result.
@@ -265,13 +261,9 @@ Above the bar, you can notice that we won't just get whether or not everything p
 but you'll get a much more detailed look at how many of the tests passed,
 which will be organized into methods.
 
-Next in the window below,
-for each error that you get,
-clicking on them in the upper window will give you the exact line where the error occurred.
-In this case,
-we can see that is on line 8 since it says at the end (DateTest.java:8)
-and then it gives us the error,
-Here it's the failure that we knew was going to happen as
+Next in the window below, for each error that you get, clicking on them in the upper window
+will give you the exact line where the error occurred at the end of the file name, as well as the
+error that occurred. Here, it's the failure that we knew was going to happen as
 that raised an **Assertion Error** and gave us the message
 that we have yet to implement ```DateTest```.
 This is how we will get to know whether or not our code is working.
@@ -285,8 +277,8 @@ then we can go ahead and check it out by clicking on one of the methods.
 ## Building basic tests
 
 Let's start the code by building some basic tests for you to run.
-The first thing we are going to do is to delete the fail statement on line 8
-(try using **Ctrl-D** if you haven't by clicking somewhere on line 8 and
+The first thing we are going to do is to delete the fail statement
+(try using **Ctrl-D** if you haven't by clicking somewhere on the line and
 then doing Ctrl-D.) In its place,
 let's go ahead and type an ```assertTrue``` clause,
 where we provide a very basic example of a ```Date```.
@@ -320,7 +312,7 @@ You can come up with any type of basic result,
 but even something like ```55-8-2017``` should not be considered a valid Date.
 In its simplest terms,
 such a thing would be considered a simple test.
-At this point, you could copy and paste line 8,
+At this point, you could copy and paste this line,
 but then change the ```assertTrue``` to an ```assertFalse``` instead,
 and change ```4,15,2017``` to ```55,8,2017```.
 There are some disadvantages to copying and pasting code
