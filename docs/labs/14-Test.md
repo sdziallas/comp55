@@ -107,7 +107,9 @@ which you can call **TestingLab** if you'd like.
 This can be accomplished by going to the file menu and saying
 *File->New->Project*.
 Then from there,
-Select ***Gradle Project*** and select the desired folder.
+Select ***Gradle Project*** and select the desired folder. (Depending on your Gradle
+version, you may find a TestingLab and a TestingLab-lib project. If that's the case,
+your java files will be in ***TestingLab-lib***.)
 Then open ***src/main/java*** and rename the Library.java file that was created to **Date.java**.
 For now,
 it should have just one method,
