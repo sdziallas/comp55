@@ -426,7 +426,7 @@ Let me know if you have any other questions about any of these steps.
 
 ## Review Questions
 
-***Place your answers to these questions as comments in the TestDate.java file and upload them to canvas***
+***Place your answers to these questions as comments in the DateTest.java file and upload them to canvas***
 
 1. How many Test methods did I have you make?
 2. What are the differences between those test methods?
