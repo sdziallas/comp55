@@ -234,7 +234,7 @@ Because it knows that it will need to test it,
 we can name the method whatever we like.
 Go ahead and change the method name to ```testIsValidDateBasic```,
 since we'll be making more methods in the future.
-The final thing to look at is the fail command, 
+The final thing to look at is the fail command,
 which is simply to let JUnit know that we should not pass by calling fail.
 Anytime java reaches a line that says fail,
 think of that as being a return statement,
