@@ -38,9 +38,8 @@ In case you don't know,
 I'm not a big fan of ```if``` statements.
 If statements are often overused,
 especially by budding programmers.
-The most common issue I encounter with 55 students is their justification for an if statement
-that subsequently mutates into many ```if``` statements,
-when in fact if they re-thought their logic they most likely would need only one or two.
+One of the common issues is using too many ```if``` statements,
+when in fact you would only need one or two.
 This becomes very egregious when the ```if``` statements then lead to code
 that looks mostly the same in the different sections of the if statement,
 resulting in the loss of many kittens from all the copying and pasting that is being done.
@@ -140,9 +139,7 @@ by storing the different information in variables?"*
 I get it,
 the last example was quite trivial,
 which we are doing for the sake of having a short lab,
-but many COMP 55 students are guilty of doing something slightly more extravagant,
-but I would call equally into question.
-Let's elaborate on our previous example a little more.
+but let's elaborate on our previous example a little more.
 
 😱
 
@@ -201,19 +198,6 @@ which is trying to separate only what is different between the two cases.
 where code in different if sections is the same,
 and then to figure out what does not have to be repeated over and over again.
 Whatever both pieces share should seriously be considered for rewriting.**
-
-Also,
-for those of you who are curious,
-the reason that we have this as a single if statement
-is because of traditional languages forcing you to declare variables
-in both the if and the else statements.
-In our case,
-since we need the variables,
-we simply start by declaring them
-and then having an if handle the alternate case to change their values.
-Otherwise,
-if we were using other languages,
-we could do an if else at the top if you wanted to.
 
 Again,
 while the previous code may not feel like much of an improvement,
@@ -296,17 +280,9 @@ private void takeAction(int amount) {
 }
 ```
 
-The ternary operator is not something that is used frequently however as it makes the code dense.
-Again,
-as previously mentioned,
+The ternary operator is not something that is used frequently however as it can make
+the code dense and more difficult to follow. Again, as previously mentioned,
 writing code is expressive and there are different options or strategies that you can take.
-*However, the biggest thing that I would like you to get out of this class is
-to stop repeating and pasting so much code.*
-For this class,
-I'm going to be looking a lot at the code that you are writing
-and making sure that there isn't much repetition in it.
-**<u>The amount of repetition that you have in your code will impact
-your final project grade.</u>**
 
 #### 6. Use data instead of logic to store variations
 
@@ -327,10 +303,6 @@ Sure it's convenient to give everyone a key,
 but it's not secure,
 and more importantly, when you're trying to debug and figure out who borrowed your Playstation,
 it makes it that much more difficult to find out who it was and when it happened.
-Also,
-it could lead to situations where people start using your room for other purposes
-that you wouldn't necessarily want
-(feel free to let your imagination wander for a minute here if you want).
 
 Like with your dorm room,
 there are situations in which your program and all of your functions
@@ -447,19 +419,12 @@ Additionally,
 the ```outsideOf``` function will be easy to test
 and can be called again as needed in other parts of the code.
 
-To be honest,
-I think a lot of the issues
-that I see with student code in COMP 55 is the lack of methods/functions
-that they tend to create for a variety of reasons.
-I understand that making them takes time,
-but again,
+Indeed, one of the common issues is a lack of methods/functions
+I understand that making them takes time, but again,
 remember that eclipse does offer the *Alt-Shift-M* keyboard shortcut
 to help you make or extract a method out of a piece of code,
 so I would encourage you to use that to make things more readable and more
 testable.
-Having more methods easily outweighs any insignificant
-(if any at all)
-performance hit you'd get from having them.
 
 #### 8. Make constants for repeating values
 
