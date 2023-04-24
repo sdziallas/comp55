@@ -244,9 +244,8 @@ but in most situations,
 having this latter version is going to be better than the previous action that you created
 because we are reducing the amount of duplicate code.
 Ultimately,
-depending on what we were trying to do with the function,
-```takeAction```,
-we could decide to go further with that function
+depending on what we were trying to do with the function ```takeAction```, we could
+decide to go further with that function
 by for example taking out the action to add or subtract
 as something that is being passed in as a string.
 I only provide that here to show how the refactoring would be done.
@@ -572,10 +571,10 @@ This isn't as much about testing and looking for bugs or critiquing
 as much as practicing the refactoring principles I've given you here.
 Credit will be given to how much more readable,
 flexible and possibly simple the code is in relation to the original.
+
 **You can work on this project in pairs,
 but should not break up or attempt to break up the work.
 Rather you should:
-
 1. work on it together,
 2. propose ideas to each other about how to refactor
 3. propose ideas on what should be refactored.**
@@ -583,6 +582,6 @@ Rather you should:
 This is not group work but teamwork.
 If you're unsure where to start,
 I would start by looking at any of the classes that have a *Pane* in the name of the java file.
-You should commit changes every time you have a factor that you'd like to propose…
+You should commit  every time you have a change that you'd like to propose…
 change it and then commit and push.
 Good luck!
