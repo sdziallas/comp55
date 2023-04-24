@@ -83,14 +83,14 @@ if(x != 4 || x != 5) //😱😱😱
 ```
 
 While many of you look at it and think that the *statement evaluates to true with numbers
-that aren't equal to four or five*
-*That is incorrect. It works for all numbers.*
+that aren't equal to four or five,*
+*that is incorrect. It works for all numbers.*
 You can use some boolean theory to extract this statement to its equivalent version,
 which is here:
 
 | 😱 | ❤️ |
 |:---:|:---:|
-|```if(x != 4 \|\| x != 5)```|```if(!(x == 4 && x == 5))```|
+|```if(x != 4 || x != 5)```|```if(!(x == 4 && x == 5))```|
 
 Based on DeMorgan's laws,
 the two statements here are the same,
@@ -115,8 +115,7 @@ The easiest way to deal with this is when the code looks the same in both sectio
 
 | 😱 | ❤️ |
 |:---|:---|
-|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");
-</code>|
+|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("another # plz");<br/>}</code>|<code lang="java">if(x > 5) {<br/>&nbsp;&nbsp;&nbsp;&nbsp;x+=10;<br/>}else{<br/>&nbsp;&nbsp;&nbsp;&nbsp;x-=10;<br/>}<br/>System.out.println("another # plz");</code>|
 
 Most of the time you will have code at the beginning or the end of the curly braces
 that are in both sets of statements.
