@@ -539,10 +539,11 @@ flexible and possibly simple the code is in relation to the original.
 
 **You can work on this project in pairs,
 but should not break up or attempt to break up the work.
-Rather you should:
-1. work on it together,
-2. propose ideas to each other about how to refactor
-3. propose ideas on what should be refactored.**
+Rather you should:**
+
+1. **work on it together,**
+2. **propose ideas to each other about how to refactor**
+3. **propose ideas on what should be refactored.**
 
 This is not group work but teamwork.
 If you're unsure where to start,
