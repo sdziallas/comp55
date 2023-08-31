@@ -283,6 +283,13 @@ private void takeAction(int amount) {
 The ternary operator is not something that is used frequently however as it can make
 the code dense and more difficult to follow. Again, as previously mentioned,
 writing code is expressive and there are different options or strategies that you can take.
+*However, the biggest thing that I would like you to get out of this class is
+to stop repeating and pasting so much code.*
+For this class,
+I'm going to be looking a lot at the code that you are writing
+and making sure that there isn't much repetition in it.
+**<u>The amount of repetition that you have in your code will impact
+your final project grade.</u>**
 
 #### 6. Use data instead of logic to store variations
 
