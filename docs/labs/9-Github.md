@@ -40,9 +40,6 @@ Each one of you will take on one of these four roles:
 3. procrastinator
 4. martyr (git team admin will take on this role for 3-person teams)
 
-If your group has five team members,
-the fifth team member will still need to follow along
-and complete the parts of the lab that involve everyone.
 
 In addition to feeling comfortable with computers,
 your git team admin should also feel comfortable searching for things in google.
