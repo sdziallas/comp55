@@ -5,14 +5,14 @@
 - [The Three-Step Checklist Reference](#the-three-step-checklist-reference)
     - [Step 1 - Create a timer object](#step-1---create-a-timer-object)
     - [Step 2 - Setup the event handlers](#step-2---setup-the-event-handlers)
-    - [Step 3 - Call the timer's ```start``` method](#step-3---call-the-timers-start-method)
+    - [Step 3 - Call the timer's `start` method](#step-3---call-the-timers-start-method)
 - [MyFirstTimer.java](#myfirsttimerjava)
-    - [First, create a Timer in the ```**run**``` method](#first-create-a-timer-in-the-run-method)
+    - [First, create a Timer in the `**run**` method](#first-create-a-timer-in-the-run-method)
     - [Second, create a numTimes instance variable](#second-create-a-numtimes-instance-variable)
     - [Third, add a three-second delay before the timer starts](#third-add-a-three-second-delay-before-the-timer-starts)
 - [BallLauncher.java](#balllauncherjava)
     - [Review of the Code](#review-of-the-code)
-    - [Setup a timer that moves all of the balls in our ```ArrayList```](#setup-a-timer-that-moves-all-of-the-balls-in-our-arraylist)
+    - [Setup a timer that moves all of the balls in our `ArrayList`](#setup-a-timer-that-moves-all-of-the-balls-in-our-arraylist)
     - [Adding a Ball Launch cooldown](#adding-a-ball-launch-cooldown)
     - [Note](#note)
 - [DodgeBall.java](#dodgeballjava)
@@ -41,11 +41,11 @@ as I'll be asking you to commit and push at various parts while you're working o
 
 ## What is a timer?
 
-A **```Timer```** is a Java class whose sole responsibility is to wake up every X milliseconds.
+A **`Timer`** is a Java class whose sole responsibility is to wake up every X milliseconds.
 You end up specifying how often you want a timer to wake up.
 From an analogy standpoint,
 it's very much like a repeating alarm.
-Since a ```Timer``` is a class,
+Since a `Timer` is a class,
 to create one of these alarms,
 we have to follow three steps.
 
@@ -65,49 +65,49 @@ import javax.swing.*;
 Timer someTimerVar = new Timer(1000, objectToBeWokenUp);
 ```
 
-- Make sure that you're importing the ```javax.swing.Timer``` class.
-There are multiple classes that are named ```Timer```.
-- Instead of writing ```import javax.swing.*;```,
+- Make sure that you're importing the `javax.swing.Timer` class.
+There are multiple classes that are named `Timer`.
+- Instead of writing `import javax.swing.*;`,
 remember that you can use ***Ctrl-Shift-O*** to have eclipse add the necessary imports for you.
 You may need it below for the class,
-```ActionEvent```.
+`ActionEvent`.
 
-There are two arguments for a ```Timer```:
+There are two arguments for a `Timer`:
 
 1. The number of milliseconds that should pass before it wakes up
 
-    - ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+    - `Timer someTimerVar = new Timer(1000, objectToBeWokenUp);`
     - Number of milliseconds = **1000 milliseconds**
 
 2. Which class should be woken up
 
-    - ```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+    - `Timer someTimerVar = new Timer(1000, objectToBeWokenUp);`
     - Class to be woken up = **objectToBeWokenUp**
-    - ```Timer someTimerVar = new Timer(1000, this);```
+    - `Timer someTimerVar = new Timer(1000, this);`
     - Class to be woken up = **this** (The class that you're currently in)
 
 ### Step 2 - Setup the event handlers
 
-Setup event handlers - ```ActionListener``` and ```actionPerformed``` - in the appropriate class
+Setup event handlers - `ActionListener` and `actionPerformed` - in the appropriate class
 
 Any class that would like to be responsible for
-handling the alarm must implement the ```ActionListener``` interface.
+handling the alarm must implement the `ActionListener` interface.
 `ActionListener` is part of `java.awt.event`, so you may need to `import java.awt.event.*` to use it.
-The ```ActionListener``` interface has just one method:
+The `ActionListener` interface has just one method:
 
-```public void actionPerformed(ActionEvent e)```
+`public void actionPerformed(ActionEvent e)`
 
 So every time the timer wakes up,
-it calls the ```objectToBeWokenUp```'s ```actionPerformed``` method.
-The structure that you follow is very similar to implementing ```mouseDragged```,
+it calls the `objectToBeWokenUp`'s `actionPerformed` method.
+The structure that you follow is very similar to implementing `mouseDragged`,
 except that rather than you responding to mouse events,
-you are responding to events that the ```Timer``` is initiating.
+you are responding to events that the `Timer` is initiating.
 
 *We don't want to spend too much time doing anything complicated in mouse events
-or handlers like ```actionPerformed```.*
+or handlers like `actionPerformed`.*
 
 If you are curious,
-put a `for` loop that counts from 0 to a billion in ```mousePressed```,
+put a `for` loop that counts from 0 to a billion in `mousePressed`,
 and watch the program lock up.
 It does this because java treats timers and mouse events as being very important,
 so important that it stops doing other things
@@ -117,46 +117,48 @@ So what you do in each should be small,
 and not have too many nested for loops or very long loops
 so that your program doesn't hang.
 
-### Step 3 - Call the timer's ```start``` method
+### Step 3 - Call the timer's `start` method
 
-```Timer someTimerVar = new Timer(1000, objectToBeWokenUp);```
+`Timer someTimerVar = new Timer(1000, objectToBeWokenUp);`
 
-While the new ```Timer``` line shown above sets up the ```Timer```,
+While the new `Timer` line shown above sets up the `Timer`,
 it does not turn the timer on.
 
-To start the timer so that it repeatedly calls ```actionPerformed```,
+To start the timer so that it repeatedly calls `actionPerformed`,
 you must tell that particular timer to start,
-by calling its ```start``` method.
+by calling its `start` method.
 So to start the Timer,
-you'll see a line like this shortly after creating a ```Timer``` object.
+you'll see a line like this shortly after creating a `Timer` object.
 
 ```java
 someTimerVar.start();
 ```
 
+Here is [Oracle's official documentation on the `Timer` class](https://docs.oracle.com/javase/8/docs/api/javax/swing/Timer.html).
+
 ## MyFirstTimer.java
 
 Let's go ahead and open up **MyFirstTimer.java** to start writing in the code.
-Notice that here we have a simple ```GraphicsProgram``` with a
-```GLabel``` added to the screen.
+Notice that here we have a simple `GraphicsProgram` with a
+`GLabel` added to the screen.
 If you run the program,
 you'll get a simple window with a label that does nothing.
 
-### First, create a Timer in the ```**run**``` method
+### First, create a Timer in the `**run**` method
 
 1. Name the timer anything you want
-2. Have the 1<sup>st</sup> argument be ```1000```
-3. Have the 2<sup>nd</sup> argument be **```this```**
+2. Have the 1<sup>st</sup> argument be `1000`
+3. Have the 2<sup>nd</sup> argument be **`this`**
     Having these two arguments means
-    ```MyFirstTimer``` (```this```) will be notified every second (```1000```ms).
-4. Implement the ```ActionListener``` interface.
-    - Let's add ```implements ActionListener``` to your MyFirstTimer class definition:
+    `MyFirstTimer` (`this`) will be notified every second (`1000`ms).
+4. Implement the `ActionListener` interface.
+    - Let's add `implements ActionListener` to your MyFirstTimer class definition:
 
     ```java
     public class MyFirstTimer extends GraphicsProgram implements ActionListener {
     ```
 
-    as well as an ```actionPerformed``` method inside the class.
+    as well as an `actionPerformed` method inside the class.
 
     ```java
     public void actionPerformed(ActionEvent e) {
@@ -165,9 +167,9 @@ you'll get a simple window with a label that does nothing.
     ```
 
 5. Move the label horizontally every 1000ms.
-    - Go ahead and have ```myLabel``` move 5 pixels to the right,
+    - Go ahead and have `myLabel` move 5 pixels to the right,
     while moving it zero pixels in the y direction.
-6. Make sure that you call ```start()``` on the timer you created in ```run()```.
+6. Make sure that you call `start()` on the timer you created in `run()`.
 
 *If you added in all of these steps, you should see this when you run the program.*
 
@@ -178,15 +180,15 @@ make sure that you have done the steps we outlined above.
 
 ### Second, create a numTimes instance variable
 
-Let's create a private variable ```numTimes```
-that keeps track of how many times ```actionPerformed``` has been called
+Let's create a private variable `numTimes`
+that keeps track of how many times `actionPerformed` has been called
 
-To do this in ```run()```,
+To do this in `run()`,
 make sure to initialize that number to 0,
-and increment ```numTimes``` at the start of ```actionPerformed```.
+and increment `numTimes` at the start of `actionPerformed`.
 Now just for fun,
-let's change the text of the label so that it updates the label with the ```numTimes```,
-we can do this by calling ```setLabel``` like this:
+let's change the text of the label so that it updates the label with the `numTimes`,
+we can do this by calling `setLabel` like this:
 
 ```java
 myLabel.setLabel("times called? " + numTimes);
@@ -202,25 +204,25 @@ The **Timer** objects in java have a lot of flexibility
 and so I encourage you to later look at all the ways you can use and leverage a timer.
 But for now, I want to direct you to two methods:
 
-- **```stop```** (Stops the timer)
+- **`stop`** (Stops the timer)
     - Stops the timer
-- **```setInitialDelay```**
+- **`setInitialDelay`**
     - Takes an integer for how many milliseconds you want to delay
       before constantly running the timer.
 
-It's best to add the delay before calling ```start```.
+It's best to add the delay before calling `start`.
 
 ### Third, add a three-second delay before the timer starts
 
 While the concept of **stop** seems simple enough,
 it may not always make sense as to when or who should be able to make the timer stop.
 
-1. Add a call to stop the timer in ```actionPerformed```.
+1. Add a call to stop the timer in `actionPerformed`.
 2. We declared our Timer as a local variable;
    convert the timer to an instance variable instead.
-3. Use an ```if``` statement to say
-   that we want to stop the timer when ```numTimes``` has reached 10.
-    - ```actionPerformed``` is called many times,
+3. Use an `if` statement to say
+   that we want to stop the timer when `numTimes` has reached 10.
+    - `actionPerformed` is called many times,
     so we want to check for a specific time that we would want to stop the timer.
 
 In this situation,
@@ -264,7 +266,7 @@ I suggest for now that you have a single timer and call it more often.*
 For example:
 
 If you only need something to happen every second (1000ms) and your timer is happening every 500 ms,
-create a ```numTimes``` variable and check to see if ```numTimes``` is even.
+create a `numTimes` variable and check to see if `numTimes` is even.
 
 Let's go through a slightly more complicated example by opening up
 **BallLauncher.java**:
@@ -308,51 +310,51 @@ public class BallLauncher extends GraphicsProgram {
 ### Review of the Code
 
 Most of this should be a refresher,
-the one thing to notice is how we are using a constant ```SIZE``` to create a circle.
+the one thing to notice is how we are using a constant `SIZE` to create a circle.
 Remember that since we want the circle to appear at the center of where we click,
-we are subtracting ```SIZE/2```,
+we are subtracting `SIZE/2`,
 from where we click,
 which will cause where we click to be the center of the circle instead of the top left.
-```makeBall``` is just a convenience method to help make a red-filled ball.
+`makeBall` is just a convenience method to help make a red-filled ball.
 What we are going to do is to move all of the balls that are created to the right.
 To start this,
-we want to make an ```ArrayList``` of ```GOval```s,
-which we can call ```balls```.
-Go ahead and declare a new ```ArrayList``` as a private instance variable at the top,
-initializing it in ```run```.
-The other thing we want to do is after ```makeBall``` is called,
+we want to make an `ArrayList` of `GOval`s,
+which we can call `balls`.
+Go ahead and declare a new `ArrayList` as a private instance variable at the top,
+initializing it in `run`.
+The other thing we want to do is after `makeBall` is called,
 we want to add that ball to our list of balls
-by calling the ```add``` method that pertains to the ```ArrayList```.
+by calling the `add` method that pertains to the `ArrayList`.
 Visually at this point,
 nothing would have changed if you run the program.
 
 Let's add something visual to our program.
 
-### Setup a timer that moves all of the balls in our ```ArrayList```
+### Setup a timer that moves all of the balls in our `ArrayList`
 
 1. Make two more constants
 
-    - ```public static final int MS```
-        - ```MS``` stores how often we want the timer to be woken up
-        (set this to ```50```)
-    - ```public static final int SPEED```
-        - ```SPEED``` tells us how much to move each ball by each time
-        (set this to ```2```).
+    - `public static final int MS`
+        - `MS` stores how often we want the timer to be woken up
+        (set this to `50`)
+    - `public static final int SPEED`
+        - `SPEED` tells us how much to move each ball by each time
+        (set this to `2`).
 
 2. Make a **Timer** object and start it.
     - (Can't remember how to do this?  [Go back and review.](#myfirsttimerjava))
 
 3. Just like in the first file,
-    you will make ```BallLauncher``` the one to respond to the timer.
+    you will make `BallLauncher` the one to respond to the timer.
 
-    - Our ```actionPerformed``` method will be fairly simple.
-    We will have it iterate through the balls ```ArrayList```
+    - Our `actionPerformed` method will be fairly simple.
+    We will have it iterate through the balls `ArrayList`
     and move each one by SPEED in the X direction and 0 in the y.
 
-    - If you haven't tried doing a for loop using the **:** operator to iterate through a list,
+    - If you haven't tried doing a for loop using the **`:`** operator to iterate through a list,
     now would be a good time to try.*
 
-    Once you handle the ```actionPerformed``` event by:
+    Once you handle the `actionPerformed` event by:
 
     - moving all the balls in the list
     - creating and starting the timer
@@ -382,10 +384,10 @@ what we are going to do is simply:
 
 - Cycle through the list of balls
 - Look to see if any have an x coordinate that is less than 100
-    - By calling ```getX()``` on a single ball
+    - By calling `getX()` on a single ball
     - If there is a ball that has an x coordinate that is less than 100,
-    then we know ```mousePressed``` was just recently launched,
-    so we can just return from ```mousePressed```,
+    then we know `mousePressed` was just recently launched,
+    so we can just return from `mousePressed`,
     and ignore the user's press of the mouse button.
 
 Doing this will cause your program
@@ -397,17 +399,17 @@ Once you fix that and **read the note below**,
 - As part of your commit,
     *in your own words*,
     ***write a sentence or two in the commit message text that would describe what would happen
-    if you were to use ```pause``` in an ```actionPerformed``` method.***
+    if you were to use `pause` in an `actionPerformed` method.***
 
-***"OK, Bye ```pause```!"***
+***"OK, Bye `pause`!"***
 
 ### Note
 
 One thing some of you might have remembered
-is that ```GraphicsProgram``` has a ```pause()``` method
+is that `GraphicsProgram` has a `pause()` method
 that would simply pause the program for a certain amount of time.
 
-***Why do we have to go through all this trouble of doing timers if we can simply call ```pause()```?***
+***Why do we have to go through all this trouble of doing timers if we can simply call `pause()`?***
 
 The reason is because of how mouse events work together with animations.
 To make things animate and still respond to mouse events,
@@ -419,24 +421,24 @@ what would happen when you click the mouse
 while the program is going through the list and moving all of the balls?
 In the case of having the timer,
 the program will wait until it is done with the
-```actionPerformed``` before it calls ```mousePressed```,
+`actionPerformed` before it calls `mousePressed`,
 so that it feels like both work at the same time (aka concurrently).
 Because mouse events and our timers both involve the user interface,
 java will know enough that it can coordinate between the two.
 However,
-if you decide to use ```pause```,
+if you decide to use `pause`,
 java does not realize that you are just pausing to add some pizzazz to your movement.
 **So if the mouse is pressed,
 it will interrupt whatever loop it is in at the moment.**
 If you try to replace your timer with a pause and a while loop,
 you'll notice that once you run the program and click a couple of times,
-you'll get a ```ConcurrentModificationException```.
+you'll get a `ConcurrentModificationException`.
 
 This exception means that you are trying to modify the list of balls,
 while the program is currently cycling through and moving them,
-something that you cannot do when you use the for loop with the ```:``` operator.
+something that you cannot do when you use the for loop with the `:` operator.
 I've given the bad example below of what your run shouldn't do
-(unless you want to get the ```ConcurrentModificationException```).
+(unless you want to get the `ConcurrentModificationException`).
 
 ```java
 // This is buggy code
@@ -474,45 +476,45 @@ we're going to work with a copy of it.
     let's try to have our users aim those balls at others.
 
     To help us with this,
-    I ended up adding an ```ArrayList``` of ```GRects``` called ```enemies```,
+    I ended up adding an `ArrayList` of `GRects` called `enemies`,
     which are just going to be green rectangles.
-    I have already added the code to create the empty list of enemies in ```run```.
+    I have already added the code to create the empty list of enemies in `run`.
 
-    There is also an analogous ```makeEnemy```
+    There is also an analogous `makeEnemy`
     function which will create a green square to represent our enemies.
     To make it easier to use,
     I only have it provide a **y** coordinate,
     and the method automatically places the enemy on the right-hand side of the screen.
 
-    You'll also notice that we have a ```RandomGenerator rgen``` that we have created.
+    You'll also notice that we have a `RandomGenerator rgen` that we have created.
     One last refactoring that you'll see is
-    that I created both ```addABall``` and ```addAnEnemy``` functions,
-    each of which will call their respective ```make____``` functions,
+    that I created both `addABall` and `addAnEnemy` functions,
+    each of which will call their respective `make____` functions,
     and then add them to the screen and their respective lists.
 
     Lastly,
     I moved the ball movement for loop into its own method,
-    ```moveAllBallsOnce()```.
-    The last thing is that you'll see that I have an ```if``` statement
+    `moveAllBallsOnce()`.
+    The last thing is that you'll see that I have an `if` statement
     that acts like the cooldown you wrote earlier.
 
-2. Call ```addAnEnemy``` in our timer.
+2. Call `addAnEnemy` in our timer.
 
     - However,
-    we don't want to call ```addAnEnemy```,
-    every time ```actionPerformed``` is called,
+    we don't want to call `addAnEnemy`,
+    every time `actionPerformed` is called,
     but rather every once in a while.
-    - This is where something like that ```%``` operator works great
-    if we add a ```numTimes``` instance variable that works similarly to what we implemented in the
+    - This is where something like that `%` operator works great
+    if we add a `numTimes` instance variable that works similarly to what we implemented in the
     [first timer example](#myfirsttimerjava),
-    (feel free to initialize ```numTimes``` to ```-1``` if you want the enemy to appear faster,
+    (feel free to initialize `numTimes` to `-1` if you want the enemy to appear faster,
     or to decrease it from 40 to say 5,
     [as I did here](lab10media/media/greenpopulate.gif)).
-    - Because we are keeping track of the number of times ```actionPerformed``` is called,
+    - Because we are keeping track of the number of times `actionPerformed` is called,
     we can simply say every  40<sup>th</sup> time,
     go ahead and make a new enemy,
 
-    ```java
+   ```java
     if(numTimes % 40 == 0) {
         addAnEnemy();
     }
@@ -522,7 +524,7 @@ we're going to work with a copy of it.
     but you can leave it like this for today
     (or you can just click on 40 and then click *Refactor->Constant* in the menu).
 
-3. Once you add these lines of code in ```actionPerformed```,
+3. Once you add these lines of code in `actionPerformed`,
     run the code again and watch the green squares slowly take over!
 
 4. When the squares appear **commit and push your code again**
@@ -534,16 +536,16 @@ we're going to work with a copy of it.
 ### The next thing we want to do is to make the enemies have some type of movement
 
 1. Have each enemy randomly move between say a -2 and +2
-    - Use ```rgen.nextInt``` to give us a random number between these
+    - Use `rgen.nextInt` to give us a random number between these
     and then have it move this much.
 
-2. Leveraging the code we have for ```moveAllBallsOnce```,
-    create a method calls ```moveAllEnemiesOnce```
+2. Leveraging the code we have for `moveAllBallsOnce`,
+    create a method calls `moveAllEnemiesOnce`
     that will cycle through the list of enemies
     and call move on each one,
-    moving it 0 pixels in the ```x``` direction and a random integer (```SPEED```) in the ```y``` direction.
+    moving it 0 pixels in the `x` direction and a random integer (`SPEED`) in the `y` direction.
 
-3. Call ```moveAllEnemiesOnce``` in ```actionPerformed```.
+3. Call `moveAllEnemiesOnce` in `actionPerformed`.
 
     Once you run the program now, the enemies will come to life!
     [Here's a version where the enemies are being generated more quickly,
@@ -564,8 +566,8 @@ so I'm going to explain a very simple way of checking to see if the ball may hav
 
 One thing you can do is that for every red ball -
 when it's their time to move,
-check a point just outside of the ball and call ```getElementAt```.
-If the object that is given back is an ```instanceof``` a ```GRect```,
+check a point just outside of the ball and call `getElementAt`.
+If the object that is given back is an `instanceof` a `GRect`,
 we could say it's an enemy and then make that enemy disappear.
 In this case,
 we'll want to check the red point in the picture below:
@@ -573,9 +575,9 @@ we'll want to check the red point in the picture below:
 ![diagram showing point ahead of ball](lab10media/media/checkball.png)
 
 Turns out that if we do have a potential enemy in front of us
-(by calling ```getElementAt``` using the measurements shown above),
+(by calling `getElementAt` using the measurements shown above),
 then we want to remove it not only from the screen (by calling **remove**)
-but also from the ```enemies```.
+but also from the `enemies`.
 Once you run this you should be able to make the green squares disappear
 by having the balls hit them!
 You may also notice that some balls will not completely disappear unless the
@@ -604,16 +606,16 @@ While this does not yet have the polish of some of the games you may
 tend to play,
 there are many things you can do to make it more polished.
 For example,
-you could add a label that is continually updated or set in ```actionPerformed```
+you could add a label that is continually updated or set in `actionPerformed`
 that would update the number of green squares that you have removed from the screen
 (see the version on the left).
 Or you could instead (or in addition)
-add in checks to say if there are more than ```MAX_ENEMIES``` on the screen,
+add in checks to say if there are more than `MAX_ENEMIES` on the screen,
 then stop the timer,
 remove everything and add a message telling them they lost.
 Lastly,
 it's fairly simple to give them some indicator of progress or score.
-On game over, present them with the ```numTimes``` variable,
+On game over, present them with the `numTimes` variable,
 which is representative of how long they were able to last in playing the game
 (see version below).
 Hopefully, you can see how easy this is to extend
@@ -623,3 +625,27 @@ Hopefully, you see the powers that timers can have
 in making your programs more dynamic and expressive.
 
 ![label showing score](lab10media/media/image5.png)![game over score](lab10media/media/image6.png)
+
+## Bonus 2
+
+### *"Hey! Want to go further?"*
+
+What if we want to create a ball launcher and
+move the location from which the balls are being launched up and down?
+Adding ***Keyboard Listeners*** would be the perfect solution.
+These listeners are similar to Mouse Listeners and can detect and
+respond to events such as key presses and releases.
+By implementing the `KeyListener` interface
+and adding `addKeyListeners()` to the `run()`
+method of your class, you can subscribe to keyboard event notifications.
+After calling `addKeyListeners()`, your program will be notified of all keyboard events
+and you can interact with the program using the keyboard.
+To get started, you can create a blue square on the left side of the screen
+and use it as the launcher for the red balls.
+Once you have added the launcher to the screen, you can easily move it using the keyboard keys.
+Like Mouse Listeners, you can define a method for `keyPressed` that moves the launcher up or down
+based on the keys input given by the player.
+
+(Hint: `keyCode` for up arrow key is `VK_UP` and for down arrow key is `VK_DOWN`)
+
+![keyListener](https://user-images.githubusercontent.com/114448502/223673022-b43d3418-bede-46af-973a-29a0965b9f06.gif)
