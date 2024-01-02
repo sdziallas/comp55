@@ -327,9 +327,8 @@ we would notice that we would have a picture like this.
 
 There are a lot of other methods that `GOval`, `GLine`, `GRect`, and `GLabel` have, which
 can be used to manipulate various attributes of each object beyond what we've done here.
-Thankfully, the University of Stanford offers a lot of nicely compiled summaries for them.
-If you want to see more specific documentation about these classes,
-then you can visit the university pages for them here:
+Thankfully, the documentation offers a lot of nicely compiled summaries for them.
+If you want to see more specifics about these classes, you can visit the pages here:
 
 - [`GOval`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GOval.html)
 - [`GLine`](https://cs.stanford.edu/people/eroberts/jtf/javadoc/complete/acm/graphics/GLine.html)

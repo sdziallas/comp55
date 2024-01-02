@@ -16,7 +16,6 @@ which is a part of **UML** which stands for *Unified Modeling Language*.
 
 UML is good for getting a high-level understanding of a piece of software
 and how different components interact with one another.
-If you want to learn more about UML, you can visit the [official UML website](https://www.uml.org/).
 While this can sound scary,
 *"UM-What?!? You want to introduce us to ANOTHER language!?!"*,
 don't fret.

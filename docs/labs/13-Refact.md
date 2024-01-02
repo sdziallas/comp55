@@ -91,7 +91,7 @@ which is here:
 |:---:|:---:|
 |```if(x != 4 || x != 5)```|```if(!(x == 4 && x == 5))```|
 
-Based on [De Morgan's Law](https://www.cuemath.com/data/de-morgans-law/),
+Based on De Morgan's Law,
 the two statements here are the same,
 yet one is more confusing to decipher.
 
