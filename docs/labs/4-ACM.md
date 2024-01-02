@@ -483,4 +483,4 @@ that we didn't go over if you want to create some other animations,
 like for example ```GArc``` and ```GPolygon```.
 You can find out more about those and other items in the graphics library here:
 
-<http://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/package-summary.html>
+<https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/package-summary.html>
