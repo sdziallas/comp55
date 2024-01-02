@@ -16,6 +16,7 @@ which is a part of **UML** which stands for *Unified Modeling Language*.
 
 UML is good for getting a high-level understanding of a piece of software
 and how different components interact with one another.
+If you want to learn more about UML, you can visit the [official UML website](https://www.uml.org/).
 While this can sound scary,
 *"UM-What?!? You want to introduce us to ANOTHER language!?!"*,
 don't fret.
@@ -24,6 +25,18 @@ The reason UML came about was to have a universal standard
 that everyone can follow when designing software,
 similar to how we use certain words or names to evoke certain meanings,
 like the name Karen for example.
+
+For a more concrete example of how UML is used in software development,
+consider the following use case.
+
+> Imagine you are a software developer working on a mobile banking app.
+To ensure that the application is designed and built to meet the needs of the end-users,
+you and your team would create a use-case diagram using UML to outline all the major interactions,
+like checking account balances to pay bills.
+
+Each interaction is a use case. The diagram will identify external systems that the app needs,
+like payment gateways or databases.
+By using UML, you get a high-level view and ensure the app meets user needs.
 
 Many of you already have encountered and have experience with UML via the Traffic Jam assignment.
 There are many types of UML diagrams.
@@ -79,28 +92,32 @@ A Use Case Diagram typically give us:
 1. a 10,000-foot picture of a program
 2. an overall feel of what the program does.
 
-One main component of a use case diagram is the **actor**,
-which would be viewed as an external entity that interacts with the program.
-While an actor is normally represented as a person,
-*actors can represent external systems* that a program has to interact with,
-such as a stock market service.
-A use case diagram should have at least one actor
-but can have multiple actors to represent the different users and external components of the system.
-Another part of the diagram is the **use cases**,
-which are represented as ovals,
-and would be high-level representations of interactions that you would expect to have in a program.
-Because we are using this diagram to represent a high-level system,
-use cases should represent the entire process that an actor is involved with
-when interacting with the system.
-For our purposes,
-we want to keep the number of use cases in a use case diagram to less than seven.
-Next, we use lines in a use case diagram to connect actors to the use cases
-that they initiate or have **interactions** with.
-Finally,
-we use a rectangle to represent all of the use cases that are being implemented by our **system**.
-In formal use case diagram terms,
-whatever is inside the rectangle is what we are proposing will be a part of the system
-that we will develop.
+The main Components of a use case diagram include:
+
+### Actors
+
+- External entity that interacts with the program
+- Can be represented as a person or external system
+- At least one actor required in a use case diagram
+- Multiple actors can represent different users and external components
+
+### Use Cases
+
+- Represented as ovals
+- High-level interactions expected in a program
+- Should represent the entire process an actor is involved in
+- Number of use cases should be kept to less than seven
+
+### Interactions
+
+- Used to connect actors to use cases they initiate or interact with
+- Shows the flow of interaction between actors and the system
+
+### The System
+
+- Represents all use cases being implemented by the system
+- Formal use case diagram terms: whatever is inside the rectangle is what will
+be developed as part of the system.
 
 ## Starting a PlantUML use case diagram
 
@@ -138,6 +155,7 @@ actor "Partygoer" as p
 and you will see this at the bottom of the plant URL pane:
 
 ![Partygoer use case diagram actor](lab61media/partygoer.png)
+![Gif for PlantUML](lab61media/My_Gif.gif)
 
 ## Explanation of the plantUML code
 

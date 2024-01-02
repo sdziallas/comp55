@@ -41,7 +41,9 @@ Hashtables allowed us to search and store items into a collection in constant O(
 which means that no matter the size of the hashtable,
 you would be able to count on the running time not increasing
 (as long as the number of buckets is roughly equal to the
-number of items and you have a full hash function yada-yada)
+number of items and you have a full hash function yada-yada).
+Here's a picture that may help you understand a `HashMap` more intuitively:\
+![Hashmap](https://user-images.githubusercontent.com/61854184/223947825-eec214e9-22e6-4163-aef8-f370d9cda147.png)
 
 ## Why didn't they just call it a hashtable then?
 
@@ -52,9 +54,11 @@ implements the ```Map``` interface.
 a bond,
 or mapping,
 between two items.
-Java has a ```HashTable``` class that is
-nearly identical to the ```HashMap``` class,
-but ```HashTable``` is now obsolete and still available for legacy reasons.
+Java has a [`HashTable`](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)
+class that is nearly identical to the
+[`HashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) class,
+but `HashTable` is now obsolete;
+it is still available for legacy reasons.
 These two classes are not to be confused with Java's ```HashSet``` data structure,
 which uses hashing to implement Java's **Set** interface.
 All three data structures use a
@@ -118,16 +122,42 @@ Once in the HashMap,
 you can use ```get``` to retrieve the definition in the future.
 
 ```java
-String def = phobias.get("ergophobia")
+String def = phobias.get("ergophobia");
 // def now has the value "the abnormal fear of work"
 ```
+
+In the case of say, a flashcard application,
+the definition can be retrieved to return the key using a `getKey` function.
+This method does require a for each loop to check all hashmap entries,
+as well as the importing of the `Map.entry` java utility[^1].
+The import allows us to use the `Entry` object
+as well as the `map.entrySet` method in order to iterate each hashmap entry[^2].
+
+```java
+import java.util.Map.Entry;
+
+...
+
+String def = "the abnormal fear of work";
+for(Entry<String, String> entry : phobias.entrySet()){
+    if(entry.getValue() == def){
+        String key = entry.getKey());
+        // key now has the value "ergophobia"
+    }
+}
+```
+
+Resources:
+
+[^1]: https://docs.oracle.com/javase/8/docs/api/java/util/Map.Entry.html
+[^2]: https://tecadmin.net/java-hashmap-get-value-from-key/
 
 If you try to get a phobia
 that has not been introduced into this particular phobias map
 like say this one
 
 ```java
-String possibleDef = phobias.get("sebastianphobia")
+String possibleDef = phobias.get("sebastianphobia");
 ```
 
 The ```HashMap``` will return ```null```,
@@ -201,7 +231,7 @@ So how does this work when you have multiple objects that you want with similar 
 Let's try this first.
 
 ```java
-phobias.put("ponophobia", "the abnormal fear of work")
+phobias.put("ponophobia", "the abnormal fear of work");
 ```
 
 If you have been reading this document closely you may notice that we
@@ -227,26 +257,23 @@ it would be replaced with this longer definition.
 
 ## But...what if there are multiple meanings for the same word?
 
-In that case, if you want to store multiple meanings,
-you'll have to select an object or class that will allow you to store multiple meanings.
+If you want to store multiple meanings,
+you'll have to select an object or class that will allow you to do so.
 For example,
-you can have a word that has multiple meanings sometimes even contradictory.
+you can have a word with multiple, sometimes even contradictory meanings.
 Let's start up another ```HashMap```,
 this time for contronyms which are words that often have opposite meanings.
-For example,
-think about the word ***dust***.
-Usually, it means to take off something right?
-For example,
-when you want to *dust* the furniture.
+Think about the word ***dust***.
+Usually, it means to take off something, like to *dust* the furniture.
 However,
 the word *dust* can also mean to add something instead of taking it away!
 For example, you may want to *dust* a pan with flour.
 In this case, the word **dust** has two meanings.
 Let's say we want to create a map that has both.
 How would this be done?
-In this situation, we could create some long string,
-but what we can do is simply create a different linkage,
-one in which we'll link a word,
+We could create some long string,
+but we also merely create a different linkage,
+one in which we'll link a word
 with another storage mechanism that would allow us to store multiple definitions.
 The easiest structure you have for that is to use an ```ArrayList```.
 So we are going to link a key which will be a ```String```
