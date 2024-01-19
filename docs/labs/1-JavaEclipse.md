@@ -148,7 +148,10 @@ and watch the gif a few times.**
 
 ![darkest dark eclipse install](lab1media/media/darkestdark.gif)
 
-Once it finishes installing,
+You may also need to let Eclipse know that you approve the download from a new server.
+To do so, select *Select All* and *Trust Selected*.
+
+Then, once it finishes installing,
 Eclipse will ask you to restart to apply the software update,
 click **Restart Now**
 
