@@ -150,9 +150,6 @@ write a ```for``` loop that makes many ```foo``` objects with a value of 1000.
 This code is not very logical for the proper functioning of the program,
 but it's a very fast way to test your hypothesis.
 
-***Problem 2) Go back to the linked canvas assignment
-to think of ways of altering your program to debug faster***
-
 ---
 
 ## The Debugging Lab
@@ -326,7 +323,7 @@ and then debug the program.
 
 Now your program will stop when it reaches that line.
 
-**Problem 3) Provide a full eclipse screenshot
+**Problem 2) Provide a full eclipse screenshot
 that shows the program stopped at the line ```takeAction(option);```
 which is in the ```infiniteMenu``` method.**
 *Make sure that you are in the debug perspective,
@@ -412,7 +409,7 @@ usually it's easier to use the id values that eclipse gives in the value column
 which works like a memory address.
 Variables with the **same id are pointing to the same address** in memory.
 
-<br>***Go online and answer questions 4-6***<br><br>
+<br>***Go online and answer questions 3-5***<br><br>
 
 ## The Debug Shell/Display Pane
 
@@ -476,7 +473,7 @@ Rather than make the change and hope that it works.
 I set a breakpoint on whichever line of code I'm running, debug,
 and then use the debug shell to figure out the exact code before writing it in.
 
-<br>**Problem 7 – Go online to answer the next question**<br><br>
+<br>**Problem 6 – Go online to answer the next question**<br><br>
 
 This makes sure to me that you know how the Display tool works and that you can use it.
 Use the variables that are currently in the method you are debugging
@@ -493,7 +490,7 @@ think of good test-cases that you can write in the code
 and come up with additional tests that you can write to help you understand what the problems are
 and to ensure that your Fractions Program is truly working the way it should be.
 
-**Problem 8: Start debugging the code in full now,
+**Problem 7: Start debugging the code in full now,
 use the instructions provided online to document what you try.**
 
 The last thing that I do want to mention is that with good debugging,
