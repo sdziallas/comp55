@@ -431,8 +431,6 @@ with the code that we have.
 Now, every time that we press the mouse button,
 we create a new line,
 this means that our users can create a multitude of lines to form a picture.
-**Go ahead and make a small picture
-and follow the instructions provided on canvas for what you need to submit.**
 
 ![rubber band animation](lab5media/media/rubberband.gif)
 
