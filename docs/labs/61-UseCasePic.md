@@ -201,7 +201,7 @@ With your newfound knowledge of creating use cases,
 **go ahead and create three use cases in plantUML for:**
 
 1. requesting a new song
-2. playing a song and
+2. playing a song
 3. voting on existing songs
 
 As for the variable names,
