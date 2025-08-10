@@ -255,8 +255,7 @@ your code should be able to pass the first and second sets of tests.
 ### Step 3. Play some audio
 
 In the play method for ```SoundEffect```,
-fill out the ```playSound``` method,
-by using the ```AudioPlayer```.
+add the ```playSound``` method by using the ```AudioPlayer```.
 If you use the same ```player``` variable,
 this could be started by adding this line into the ```play``` method.
 
