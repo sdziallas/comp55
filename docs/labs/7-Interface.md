@@ -38,10 +38,6 @@ However:
 - In ```Guitar```,
 ```timesPlayed``` is counting the \# of times *Stairway to Heaven* has been performed
 
-![No stairway to heaven sign](lab7media/media/nostairway.png)
-<br>
-*Source: [Giphy](https://giphy.com/gifs/fxLuTQsx3zQKk/media)*
-
 In this case,
 which version of ```timesPlayed``` should ```ToyGuitar```
 inherit or modify when you reference ```ToyGuitar```?
