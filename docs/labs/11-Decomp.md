@@ -279,7 +279,7 @@ some ideas are.
     (if you want to be fancy,
     you can do this without an if statement at all
     - to try this,
-    write down the numbers from say 0 to 7 and then start with 3,
+    write down the numbers from say 0 to 3 and then start with 3,
     have it go down to zero and then have it come back up to 3.
     - If you think of using the mod operator and try to come up with a pattern,
     with enough time you should be able to find a calculation
