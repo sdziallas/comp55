@@ -195,7 +195,7 @@ we're going to have you make one additional change to your Eclipse settings,
 **which you will need to do if you work on any other computers
 so that you get credit for all of your work**.
 Go to eclipse and click on *Window->Preferences*
-(If you are on a mac, this would be in *Eclipse->Preferences*.
+(If you are on a mac, this would be in *Eclipse->Settings*)
 
 Once there,
 you'll see this window,
