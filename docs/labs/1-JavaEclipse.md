@@ -9,12 +9,9 @@
 - [STEP 6: Write and Run](#step-6-write-and-run)
 - [STEP 7: Submit confirmation by uploading a picture to Canvas](#step-7-submit-confirmation-by-uploading-a-picture-to-canvas)
 
-If you are using a school computer skip down to Step 5.
-
 ## STEP 1: Remove any previous installations of Java that you have
 
 We all benefit when we use the same version of java.
-.
 To avoid confusion,
 please ***remove previous versions of java from your computer***
 so that they don't get used when installing eclipse.
@@ -98,8 +95,7 @@ Eclipse will display a screen that looks something like this:
 
 Since all of you have had some previous experiences with other IDEs,
 Eclipse allows you to review some settings that depending on how you work you may want to change.
-In case you are curious,
-these are the options that I ended up with in the end.
+I recommend activating all of the options except for the last one (the Preference Recorer).
 
 ![review preferences wizard](lab1media/media/reviewprefs.png)
 
