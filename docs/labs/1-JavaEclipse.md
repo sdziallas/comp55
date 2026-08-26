@@ -5,11 +5,9 @@
 - [STEP 3: Run the Eclipse Installer](#step-3-run-the-eclipse-installer)
 - [STEP 4: Get Familiar with and start Eclipse](#step-4-get-familiar-with-and-start-eclipse)
     - [Reviewing IDE configuration settings](#reviewing-ide-configuration-settings)
-- [STEP 5: Installing Darkest Dark Theme](#step-5-installing-darkest-dark-theme)
-- [STEP 6: Let's get a Hello World going](#step-6-lets-get-a-hello-world-going)
-- [STEP 7: Write and Run](#step-7-write-and-run)
-- [STEP 8: One Last Customization of the Color Theme](#step-8-one-last-customization-of-the-color-theme)
-- [STEP 9: Submit confirmation by uploading a picture to Canvas](#step-9-submit-confirmation-by-uploading-a-picture-to-canvas)
+- [STEP 5: Let's get a Hello World going](#step-5-lets-get-a-hello-world-going)
+- [STEP 6: Write and Run](#step-6-write-and-run)
+- [STEP 7: Submit confirmation by uploading a picture to Canvas](#step-7-submit-confirmation-by-uploading-a-picture-to-canvas)
 
 If you are using a school computer skip down to Step 5.
 
@@ -105,21 +103,6 @@ these are the options that I ended up with in the end.
 
 ![review preferences wizard](lab1media/media/reviewprefs.png)
 
-Next, let's change Eclipse's appearance.
-I have been using eclipse for a long time now and did not change this until this year.
-Eclipse is open source and so it does not have as clean of an interface
-as some of the other programs that you have grown to love by now.
-Nonetheless,
-eclipse has been used heavily in the industry
-(and I'm sure you've probably come across at least a few open-source projects
-that just don't look as pretty but get the job done).
-I would not play around too much with the colors,
-but I will walk you through this one option because it will make it easier
-to follow along with these labs
-if you change the appearance to match mine.
-**Please follow the options here to get full credit
-for the image you upload for credit at the end of this lab**
-
 <!-- ### OPTIONAL: If you prefer the standard theme, skip to
 [Step 6](##step-6:-let's-get-a-hello-world-going.).
 
@@ -127,93 +110,6 @@ You don't need to download this from the Eclipse Marketplace if you prefer the d
 but understand that most of the pictures
 that we have in the tutorials will use the theme we're asking you to download here.
 -->
-
-## STEP 5: Installing Darkest Dark Theme
-
-Once you are back you should be at the main page where we clicked to review the IDE preferences.
-Go ahead and [click here](https://marketplace.eclipse.org/content/darkest-dark-theme-devstyle)
-to open a webpage on the eclipse marketplace for the darkest dark theme.
-The eclipse marketplace is a variety of third-party add-ons for Eclipse.
-Here what you are going to do is to drag the install button into your open version of eclipse,
-as the image below shows.
-
-![darkest dark theme webpage](lab1media/media/installbyweb.gif)
-
-After loading,
-*uncheck the CodeTogether bundle*
-(you can follow the set of images below).
-You'll have to accept another license agreement before finishing.
-**Be sure to uncheck the *Devstyle with CodeTogether* bundle option,
-and watch the gif a few times.**
-
-![darkest dark eclipse install](lab1media/media/darkestdark.gif)
-
-You may also need to let Eclipse know that you approve the download from a new server.
-To do so, select *Select All* and *Trust Selected*.
-
-Then, once it finishes installing,
-Eclipse will ask you to restart to apply the software update,
-click **Restart Now**
-
-![restart eclipse prompt](lab1media/media/restarteclipse.png)
-
-After restarting,
-you'll be greeted with this welcome screen.
-
-![darkest dark welcome splash](lab1media/media/darkestdarkwelcome.png)
-
-Click **next**.
-You'll then be presented with some options.
-While your preferences are up to you,
-to match this website's color scheme and the labs,
-continue following the directions here to install our preferences.
-
-Sidenote: *But what if I won't like your preferences or want to change them?*
-After you submit the lab,
-then you can change the color scheme and other preferences to your heart's content
-(That is a rabbit hole of customizability,
-you've been warned!).
-While you can change the color scheme to whatever you want,
-just know the icons and any future screens you see may differ a little bit from what I have.
-**Please do not spend more than 15 minutes looking at all the color combinations
-after finishing the lab**
-
-Once you click next,
-you may get a scary-looking screen about windows defender possibly getting angry with you
-about directories that Darkest dark will change and offers a fix.
-I clicked *Fix Automatically*.
-(I'm not sure what happens if you click skip)
-
-![Windows defender warning](lab1media/media/defenderwarning.png)
-
-If you do allow it to fix automatically,
-you'll have to allow for elevated privileges from Genuitec LLC,
-which is the maker of Darkest Dark.  
-
-Then eclipse will fire up with Darkest Dark one last time to ask you about your options.
-I left all of this the same,
-except for checking the box "Show breadcrumbs",
-which just helps with navigation,
-then finish.
-Once you do,
-you'll see the same launch screen as before,
-but if you picked the theme,
-you'll see some of the windows in a different color.
-
-![eclipse's welcome screen with dark](lab1media/media/eclipsestartdark.png)
-
-If you didn't already,
-go ahead and click hide,
-and you'll now be shown your new workspace.
-
-![eclipse blank workspace dark](lab1media/media/eclipsedarkinit.png).
-
-If you didn't switch to this darkest dark theme,
-then your eclipse would look more like the image below.
-This is from a previous version,
-so the windows open may be slightly different.
-
-![eclipse blank workspace light](lab1media/media/image7.png)
 
 Eclipse describes the different panels that you have as **windows**.
 The left window is called the **package explorer**,
@@ -226,7 +122,7 @@ and explore other files you have written,
 in case you need to look back
 at anything.
 
-## STEP 6: Let's get a Hello World going
+## STEP 5: Let's get a Hello World going
 
 To start programming in any language,
 it's best to start with a simple thing like "Hello, world",
@@ -266,7 +162,7 @@ option are the only two things you need to do before you click **Finish**.
 
 Once you do, you'll get the code at the end that you see in the image above.
 
-## STEP 7: Write and Run
+## STEP 6: Write and Run
 
 Notice that the file Hello.java is now your HelloWorld Project.
 That file has also been opened in the editor,
@@ -328,63 +224,14 @@ which will show on the bottom of the screen.
 Congrats you've written and run your first Java application!
 Java doesn't have a separate compile and run step as you had in C++,
 it's all combined into one step.
-Like I mentioned to you before,
-the whole colors thing is a big rabbit hole.
-If you notice in the picture that I ran,
-the text that should be colored is not,
-which may happen.
-That is ok.
-Once you start editing it again it will re-apply the color scheme.
-But to be completely in line with this class and the color theme,
-we are going to do one last set of steps.
 
-## STEP 8: One Last Customization of the Color Theme
-
-I will try to make this last color theme
-match as much as possible the site on which these labs are hosted,
-with a couple of added preferences
-to keep it in line with some of the things that I've seen with Eclipse.
-So to that end,
-I'd like you to **[download this file](lab1media/media/COMP55LabColorScheme.xml)**
-which you'll have to do by right-clicking and saying *Save link as...*.
-Make sure you have the XML extension when you save the file.  
-
-Then once you have that,
-you're going to go to *Window->preferences->DevStyle->Color Themes* for PC
-or *Eclipse->preferences->DevStyle->Color Themes* for Mac.
-Once there I made two changes.
-I decided I wanted my icons to be a little bit more subdued,
-so I went with the pastels option.
-More importantly,
-let's get the color scheme to be closer to the theme here on this website.
-**Import the XML file you downloaded and then click *Apply***.
-Eclipse will ask to restart and once you do,
-you'll notice that the colors changed
-and have the same style as the final ones in the static image below.
-
-![final color adjustments](lab1media/media/finalcolorchanges.gif)
-
-![final color theme](lab1media/media/finallook.png)
-
-While you are in those preferences,
-there is also a DevStyle privacy option that should you wish, you can opt out of.
-I will only be supporting these colors, so in the future,
-all guides will be using the DarkStyle with this XML layout and the pastel icons.
-If you wish to go with another scheme,
-I will not answer any questions about where those icons are.
-Please again,
-I can't stress this enough,
-do not spend more time trying to pick colors now.
-You can do that at the end once you are finished with your solo assignments.
-
-## STEP 9: Submit confirmation by uploading a picture to Canvas
+## STEP 7: Submit confirmation by uploading a picture to Canvas
 
 To get credit for this lab,
 submit an image of your entire eclipse running this hello world program to canvas,
 but using your name instead.
 The image should be of the program,
-similar to the one in the image above,
-and the source code should be shown with the step 8 color scheme.
+similar to the one in the image above.
 However, to get full credit:
 
 1. **use** a for loop
