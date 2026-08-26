@@ -30,7 +30,7 @@ Go to the eclipse site: <http://www.eclipse.org/downloads>
 
 ![eclipse webpage](lab1media/media/image3.png)
 
-Click the orange **Download 64-bit** button (your version will provide the latest year).
+Click the orange **Download 64-bit** button. If you're on a recent Mac, you can click **AArch64** instead.
 It will take you to another page
 where you need to click the big orange download button again at the top.
 
