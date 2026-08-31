@@ -263,10 +263,6 @@ Once you hit the debug button
 and the program runs without immediately crashing,
 then you can move on**.
 
-- Remember that when you start modifying the code you should consider switching back
-  to the java perspective
-  ![eclipse java perspective icon](lab3media/media/javaperspective.png)
-
 If you need help,
 make sure to ask your classmates or the instructor.
 
@@ -389,8 +385,7 @@ that are associated with that function.
 To view other variables and their state,
 you can just click on the function name in the *Debug* window
 and you'll be shown that function's variables.
-To see the instance variables
-(the variables colored in blue),
+To see the instance variables,
 you'll have to click the down arrow for the ```this``` variable,
 like we did with ```options```.
 Here's a different screenshot from another program of what the variables window might look like.
