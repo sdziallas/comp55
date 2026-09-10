@@ -248,7 +248,8 @@ It should look something like the image below.
 That is all you need for this mini-lab.
 When that is done,
 you can follow the directions on the canvas submission page.
-Please upload the Balls.java file there. You can export it via File - Export - File System and by selecting the file.
+Please upload the Balls.java file there.
+You can export it via File - Export - File System and by selecting the file.
 
 ## **Bonus: What? The balls don't move independently?! I gotta make them all bounce around the screen!!!**
 
