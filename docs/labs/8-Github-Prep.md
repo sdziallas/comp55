@@ -8,9 +8,6 @@
 - [I have the URL but have yet to connect to GitHub](#i-have-the-url-but-have-yet-to-connect-to-github)
     - [Generate a token and store it in secure store](#generate-a-token-and-store-it-in-secure-store)
 - [Opening your project](#opening-your-project)
-- [Examining ```user.name``` and ```user.email``` to your Git Preferences](#examining-username-and-useremail-to-your-git-preferences)
-    - [Look to see if you have user.name and user.email](#look-to-see-if-you-have-username-and-useremail)
-    - [Adding user.name and user.email if you don't have them](#adding-username-and-useremail-if-you-dont-have-them)
 - [Committing and pushing changes](#committing-and-pushing-changes)
 - [Verify your activity on GitHub](#verify-your-activity-on-github)
 
@@ -130,23 +127,15 @@ This will be used in place of your password.
 
 ![generating a token](lab8media/media/generatetoken.png)
 
-Because you'll need to enter your credentials often,
-it may make sense to just store them in the secure store,
-which means that the credentials are stored on your computer.
-If you are super worried about safety,
-please just store them there and use this account as a throwaway account for this class.
-I've had to deal with many more students forgetting their GitHub passwords,
-having expired tokens and locking themselves over their accounts,
-than having students whose computers have been hacked
-and whose GitHub credentials have been rickrolled.
-So please check the option **Store in Secure Store** so that way your password is saved.
-As part of this,
-Eclipse may ask you for some recovery questions
-(which you can skip),
-but regardless ***save your password in the secure store***,
-the only scenario where I can see this being an issue is
-if you are sharing an eclipse program with another developer who has a different login,
-and that should be quite rare.
+Because you'll need to enter your GitHub credentials when working with your repository,
+it makes sense to store them in Eclipse's Secure Store
+so that you don't have to enter them every time.
+If you're using your own computer, please check the option **Store in Secure Store**
+to save your credentials.
+Eclipse may ask you to set up recovery questions, which you can skip.
+
+Remember that your personal access token should be treated like a password,
+so don't share it with anyone.
 
 ![entering uri for importing](lab8media/media/image9.png)
 
@@ -258,15 +247,11 @@ which will look something like this:
 ![Git Staging View](lab8media/media/gitstaging.png)
 
 If you look,
-**staged** changes are files that git has identified
-as needing to be updated once you click the commit button,
-while **unstaged** changes
-are files that git has identified as being different than what's on the server,
-but will not be updated after clicking commit.
+**staged** changes are changes that you've selected to include in your next commit,
+while **unstaged** changes are changes
+that Git has detected but that haven't been selected yet.
+Only staged changes will be included when you commit.
 *You need to be careful of what you decide to put in staged changes versus unstaged changes.*
-When you try to commit,
-git looks at all files in your current directory to see what is new or what has changed.
-Anything it doesn't know what to do will be put in the unstaged changes area.
 
 In the picture above,
 the right area is the commit message,
@@ -275,8 +260,8 @@ in this case, you can simply put something like:
 
 ```Changed the text to reflect the final assignment```
 
-*Make sure the author/committer has the name and email
-that you stored in your preferences settings*.
+If Eclipse asks you to provide your name and email address when committing,
+enter your name and an email address associated with your GitHub account.
 Finally, near the bottom right of the image,
 you'll find two buttons:
 ***Commit and Push*** and ***Commit***.
@@ -305,11 +290,12 @@ follow the gif below:
 
 Like the image,
 you should see your changes.
-If github.com has the change you pushed that's part of the credit.
-The other part of the credit will come from the settings.
 In github.com you can go to your repository and click on the **commits**,
 where you'll see a list of the changes that you've made to the project.
 You should see a commit that has your picture and name on it at the top.
+
+Once you've successfully pushed your changes to GitHub,
+Classmoji should also automatically recognize your submission.
 
 <!--
 Like the gif above click on the text that has your commit message
