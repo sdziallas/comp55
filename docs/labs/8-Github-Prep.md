@@ -2,7 +2,7 @@
 
 - [Overview](#overview)
 - [Signup for a GitHub account](#signup-for-a-github-account)
-- [Start GitHub Classroom](#start-github-classroom)
+- [Start Classmoji](#start-classmoji)
 - [Importing your new GitHub Repository into eclipse](#importing-your-new-github-repository-into-eclipse)
     - [Help! I lost my GitHub URL](#help-i-lost-my-github-url)
 - [I have the URL but have yet to connect to GitHub](#i-have-the-url-but-have-yet-to-connect-to-github)
@@ -23,7 +23,7 @@ we'll learn about git,
 which is a way of being able to keep track of our code changes,
 and we're also going to learn about and use GitHub,
 which is one of the leading companies to host git repositories (think projects) online.
-*Some of the images here are taken directly from GitHub itself.*
+*Some of the images here are taken directly from GitHub and Classmoji itself.*
 
 ## Signup for a GitHub account
 
@@ -33,7 +33,7 @@ The easiest way to do this is by going here:
 
 If you already have a GitHub account,
 you can still get the pack (and you should!),
-but you can also just jump to [start GitHub classroom](#start-github-classroom).
+but you can also just jump to [start Classmoji](#start-classmoji).
 
 Some of these are just awesome technologies
 that might be of use later when you are writing programs to take over the world.
@@ -52,46 +52,38 @@ then your email is verified.
 The other thing you should do is give yourself an icon picture,
 which is always fun to do and can be done from the profile option in settings.
 
-## Start GitHub Classroom
+## Start Classmoji
 
-Visit the **classroom GitHub link** that was provided to you in canvas.
+You should have received an email invitation from Classmoji,
+which is the platform we will use for any GitHub assignments
+in this course.
 
-You'll be presented with a window like this:
+You can access it via this link (make sure to sign in with GitHub):
 
-![Join the GitHub classroom](lab8media/media/classroominit.png)
+**<https://app.classmoji.io/>**
 
-Select your email from the list below,
-and continue,
-making sure to accept any of the authorizations that are present and to accept the assignment.
+Next, follow the instructions to verify your school email,
+join our classroom in Classmoji,
+and to join the course's GitHub organization.
 
-![accept the classroom assignment screenshot](lab8media/media/classroomaccept.png)
+Once you've joined the classroom, you can click on assignments
+to see any open assignments
 
-This is going to have you enter the comp55 organization.
-If you have already signed up for an account it may ask you to re-enter your credentials.
-Once accepted you'll be greeted with this image asking you to refresh.
+![classmoji assignment view](https://classmoji.io/_astro/img-student-assignments.CK2l9Yf0.png)
+<br> *Source: Classmoji*
 
-![Accepted the assignment wait for refresh](lab8media/media/gitprepminilab.png)
-
-Wait a minute or two,
-and then follow the lead given by GitHub,
-refresh the page,
-then click on the repo name,
-which will have your own GitHub handle on it as part of the link.
-That will take you to the GitHub site where you will see your repository,
-with your handle at the end of the repository name.
+From the assignment page, you can get to the GitHub site
+where you will see your repository.
 Click on the green code button ![green code button](lab8media/media/greencode.png)
 and then the copy button ![copy button](lab8media/media/image8.png)
-to copy the URL,
-as shown here:
-
-![Git accept copy clone animation](lab8media/media/gitacceptcopy.gif)
+to copy the URL.
 
 Make sure to save this URL that was just created specifically for you.
 You will need it in the next step,
 so please also just keep this page open.
 Otherwise, if you close it,
 you'll need to navigate back through it
-by going to the classroom.github.com link provided and logging in.
+by going to the app.classmoji.io link provided and logging in.
 
 ## Importing your new GitHub Repository into eclipse
 
@@ -113,9 +105,9 @@ When you get there,
 or if you log back in you just need to access your repositories,
 which will be listed on the right once you log in.
 You can also use the search page up top,
-if you type ```comp55``` you'll be able to see your repo.
+if you type ```comp55-classmoji``` you'll be able to see your repo.
 Once you locate the repo,
-copy the URI like it was shown in the lab previously.
+copy the URL like it was shown in the lab previously.
 
 ## I have the URL but have yet to connect to GitHub
 
@@ -131,7 +123,7 @@ to access their information outside of GitHub's website.
 
 Go back to [GitHub](http://github.com) and log in,
 then click on your profile icon in the upper right,
-and then go to *Settings->Developer settings->Personal Access Token->Create New Token*.
+and then go to *Settings->Developer settings->Personal Access Token->Tokens (classic)->Generate new token (classic)*.
 Then give the token a name,
 set expiration to *No expiration* or *90 days* and select the ```all repos``` checkbox at the top.
 This will be used in place of your password.
