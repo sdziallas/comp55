@@ -122,10 +122,10 @@ to access their information outside of GitHub's website.
 ### Generate a token and store it in secure store
 
 Go back to [GitHub](http://github.com) and log in,
-then click on your profile icon in the upper right,
-and then go to *Settings->Developer settings->Personal Access Token->Tokens (classic)->Generate new token (classic)*.
+then click on your profile icon in the upper right, and then go to
+*Settings->Developer settings->Personal Access Token->Tokens (classic)->Generate new token (classic)*.
 Then give the token a name,
-set expiration to *No expiration* or *90 days* and select the ```all repos``` checkbox at the top.
+set expiration to *No expiration* or *90 days* and select the ```repo``` checkbox at the top.
 This will be used in place of your password.
 
 ![generating a token](lab8media/media/generatetoken.png)
@@ -179,6 +179,7 @@ If it doesn't,
 you may have to change some preferences on your eclipse,
 but this is very rare.
 
+<!--
 ## Examining ```user.name``` and ```user.email``` to your Git Preferences
 
 So that we can make sure that you get credit for committing and working on the project,
@@ -220,6 +221,7 @@ then you can click ***Apply and Close***.
 *You need to do this with every computer
 that you have so that you can get credit for your submissions.*
 Make sure to use the same name and email for all your computers!
+-->
 
 ## Committing and pushing changes
 
@@ -309,6 +311,7 @@ In github.com you can go to your repository and click on the **commits**,
 where you'll see a list of the changes that you've made to the project.
 You should see a commit that has your picture and name on it at the top.
 
+<!--
 Like the gif above click on the text that has your commit message
 and you'll see the changes that you committed and how your commit changed the file,
 which you can immediately identify.
@@ -320,6 +323,7 @@ then simply make an additional change to one of the files
 while [editing the user preferences as outlined earlier](#examining-username-and-useremail-to-your-git-preferences).
 There's no need to upload anything to canvas as all your changes will be stored on GitHub.
 Hooray!
+-->
 
 That's it for now!
 We'll do more with git in the future,
