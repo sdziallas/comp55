@@ -306,7 +306,8 @@ then you'll get the rest of the credit.
 If you don't,
 then simply make an additional change to one of the files
 (adding a line or a space)
-while [editing the user preferences as outlined earlier](#examining-username-and-useremail-to-your-git-preferences).
+while [editing the user preferences as outlined earlier]
+(#examining-username-and-useremail-to-your-git-preferences).
 There's no need to upload anything to canvas as all your changes will be stored on GitHub.
 Hooray!
 -->
@@ -315,9 +316,11 @@ That's it for now!
 We'll do more with git in the future,
 but this is just meant to get you ready for when we start coding.
 
+<!--
 Before you start coding though, make sure that you have:
 
 - approval to start
 - updated starter code
 - updated methods and classes
 - finished the rest of your system design project.
+-->
