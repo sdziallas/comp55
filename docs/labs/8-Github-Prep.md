@@ -16,15 +16,14 @@
 
 ## Overview
 
-This lab is a mishmash of steps
-that need to be completed individually before we meet again in class.
+This lab is a mishmash of steps that need to be completed individually.
 We will be joining the wide world of sharing code repositories.
 To do that,
 we'll learn about git,
-which is a way being able to keep track of our code changes,
+which is a way of being able to keep track of our code changes,
 and we're also going to learn about and use GitHub,
 which is one of the leading companies to host git repositories (think projects) online.
-*Some of the images that are here are taken directly from or sourced directly from GitHub itself.*
+*Some of the images here are taken directly from GitHub itself.*
 
 ## Signup for a GitHub account
 
