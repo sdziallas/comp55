@@ -134,6 +134,9 @@ If you're using your own computer, please check the option **Store in Secure Sto
 to save your credentials.
 Eclipse may ask you to set up recovery questions, which you can skip.
 
+If you're on Windows, you may need to *right-click->Paste*
+rather than using *CTRL+V* to paste your token into Eclipse.
+
 Remember that your personal access token should be treated like a password,
 so don't share it with anyone.
 
