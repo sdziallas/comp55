@@ -114,6 +114,13 @@ but I tend not to use them too much
 because then we get into this idea of having lots of logic in our sequence diagrams,
 which then makes it more difficult to understand.
 
+You can also use the following to remove the duplicated boxes
+at the bottom of the sequence diagram:
+
+```plantuml
+hide footbox
+```
+
 ## Getting credit
 
 To get credit for this lab,
