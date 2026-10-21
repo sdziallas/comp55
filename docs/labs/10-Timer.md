@@ -162,7 +162,7 @@ you'll get a simple window with a label that does nothing.
 
     ```java
     public void actionPerformed(ActionEvent e) {
-        //TODO add what we want to do every two seconds
+        //TODO add what we want to do every second
     }
     ```
 
