@@ -4,18 +4,16 @@ Points are given based on completing all steps with your team
 
 - [Introduction](#introduction)
 - [Step 0: Everyone - Pick roles and setup room](#step-0-everyone---pick-roles-and-setup-room)
-- [Step 1: Team Admins - setup repository](#step-1-team-admins---setup-repository)
-    - [Everyone else – Review the mini-lab steps](#everyone-else--review-the-mini-lab-steps)
-- [Step 2: Everyone - Clone the new project](#step-2-everyone---clone-the-new-project)
-- [Step 3: Everyone - make a change and reset (undo)](#step-3-everyone---make-a-change-and-reset-undo)
-- [Step 4: Martyr & Hackslash - Martyr commits and Hackslash pulls afterward](#step-4-martyr--hackslash---martyr-commits-and-hackslash-pulls-afterward)
-- [Step 5: Everyone - Look at the results in the History](#step-5-everyone---look-at-the-results-in-the-history)
-- [Step 6: Hackslash - commit multiple times and then push](#step-6-hackslash---commit-multiple-times-and-then-push)
-- [Step 7: Procrastinator - Commit and Unsuccessfully Push](#step-7-procrastinator---commit-and-unsuccessfully-push)
-- [Step 8: Martyr & Hackslash - commit and push the same line](#step-8-martyr--hackslash---commit-and-push-the-same-line)
-- [Step 9: Everyone - Successfully resolve a merge conflict](#step-9-everyone---successfully-resolve-a-merge-conflict)
-- [Step 10: Everyone - Be aware of a conflict problems](#step-10-everyone---be-aware-of-a-conflict-problems)
-- [Step 11: Everyone - Practice pushing and pulling](#step-11-everyone---practice-pushing-and-pulling)
+- [Step 1: Everyone - Clone the new project](#step-1-everyone---clone-the-new-project)
+- [Step 2: Everyone - make a change and reset (undo)](#step-2-everyone---make-a-change-and-reset-undo)
+- [Step 3: Martyr & Hackslash - Martyr commits and Hackslash pulls afterward](#step-3-martyr--hackslash---martyr-commits-and-hackslash-pulls-afterward)
+- [Step 4: Everyone - Look at the results in the History](#step-4-everyone---look-at-the-results-in-the-history)
+- [Step 5: Hackslash - commit multiple times and then push](#step-5-hackslash---commit-multiple-times-and-then-push)
+- [Step 6: Procrastinator - Commit and Unsuccessfully Push](#step-6-procrastinator---commit-and-unsuccessfully-push)
+- [Step 7: Martyr & Hackslash - commit and push the same line](#step-7-martyr--hackslash---commit-and-push-the-same-line)
+- [Step 8: Everyone - Successfully resolve a merge conflict](#step-8-everyone---successfully-resolve-a-merge-conflict)
+- [Step 9: Everyone - Be aware of a conflict problems](#step-9-everyone---be-aware-of-a-conflict-problems)
+- [Step 10: Everyone - Practice pushing and pulling](#step-10-everyone---practice-pushing-and-pulling)
     - [More Git Theory (Optional)](#more-git-theory-optional)
 
 ## Introduction
@@ -44,29 +42,10 @@ In addition to feeling comfortable with computers,
 your git team admin should also feel comfortable searching for things in google.
 Once you decide on an admin notify me.
 
-## Step 1: Team Admins - setup repository
+## Step 1: Everyone - Clone the new project
 
-### Everyone else – Review the mini-lab steps
-
-Team Admins,
-**go to the link supplied via canvas**.
-There you'll accept the assignment,
-and it will ask you to create a team.
-Make a team with your team's name.
-Once you [continue](lab9media/media/acceptteam.gif),
-you'll eventually be asked to wait a little bit while GitHub creates the repository.
-[After refreshing the page](lab9media/media/repomade.gif)
-you'll get the default files that I have provided for all of you for this lab.
-The next thing will be to let everyone know that they can now signup.
-
-## Step 2: Everyone - Clone the new project
-
-Once your team admin has notified you that the team has been created,
-**visit the link that was provided to you in canvas**.
-Make sure that you **choose your correct group**.
-Once you've chosen the group and accepted the group assignment,
-you'll then be led to your new repository.
-At this point, you'll want to **clone** your team's new project.
+**Go to the lab repository via Classmoji**
+and **clone** your team's new project.
 
 To check out the project,
 you'll need the URL from GitHub,
@@ -89,14 +68,14 @@ it's best if you go back and refer to the images about
 [importing into eclipse](lab8media/media/importrepo.gif)
 and [following the import wizard](lab8media/media/importfromgit.gif).
 
-*Before moving to step 3,
+*Before moving to step 2,
 make sure everyone on your team has the group project
 and that it looks the same on everyone's computers*,
 which means it should look something like this:
 ![correct project line with brackets](lab9media/media/step2check.png).
 There should be nothing to the left of the folder.
 
-## Step 3: Everyone - make a change and reset (undo)
+## Step 2: Everyone - make a change and reset (undo)
 
 This may seem silly,
 but mistakes happen.
@@ -161,9 +140,9 @@ and you are getting into situations where you are getting errors
 and don't feel like you've done much with the code.
 Once all your team members make a change and reset
 so that they *no longer have a > sign on their project*,
-you can move on to step 4.
+you can move on to step 3.
 
-## Step 4: Martyr & Hackslash - Martyr commits and Hackslash pulls afterward
+## Step 3: Martyr & Hackslash - Martyr commits and Hackslash pulls afterward
 
 Let's have the Martyr make a commit -
 **if you don't remember your roles please review them now.**
@@ -240,7 +219,7 @@ selecting the Pull option that does not have the three dots next to it).
 If hackslash does have the > sign on their project,
 have them do a hard reset as we did in step 2 before pulling.
 
-## Step 5: Everyone - Look at the results in the History
+## Step 4: Everyone - Look at the results in the History
 
 Open up the history view to view the changes.
 
@@ -270,7 +249,7 @@ depending on whether they pulled or committed or did nothing.
 That is because *git uses your local copy of the repository to bring up the history.*
 It does not give you the latest version unless you ask it to fetch the latest version or pull it.
 
-## Step 6: Hackslash - commit multiple times and then push
+## Step 5: Hackslash - commit multiple times and then push
 
 Let's have the hackslash,
 who just pulled in the previous step,
@@ -353,7 +332,7 @@ This is important before moving on,
 if not you can just repeat this step to make additional changes to the code.
 No need to revert.
 
-## Step 7: Procrastinator - Commit and Unsuccessfully Push
+## Step 6: Procrastinator - Commit and Unsuccessfully Push
 
 Let's have the procrastinator push changes
 
@@ -498,7 +477,7 @@ on solving the merge steps,
 which just consists of pulling and then pushing,
 when a push is rejected.
 
-## Step 8: Martyr & Hackslash - commit and push the same line
+## Step 7: Martyr & Hackslash - commit and push the same line
 
 🔥Let's cause some havoc 🔥
 
@@ -615,7 +594,7 @@ The safest thing is always to save and commit your code.
 Note that in certain situations after committing you may have to resolve multiple conflicts.
 This happens when you haven't touched or been active in working with the code in a long time.
 
-## Step 9: Everyone - Successfully resolve a merge conflict
+## Step 8: Everyone - Successfully resolve a merge conflict
 
 Wreak 🔥 More 🔥 Havoc 🔥
 
@@ -633,7 +612,7 @@ Also make sure that no one tries to pull after each push,
 assume they don't know the changes have been pushed.
 So that the last person will be possibly many commits behind everyone else.
 
-## Step 10: Everyone - Be aware of a conflict problems
+## Step 9: Everyone - Be aware of a conflict problems
 
 While this is the end of the official lab,
 I want you to be aware of one more issue that seems to pop up a lot when folks are using git,
@@ -677,7 +656,7 @@ Then just like you saw before in the package explorer,
 you'll be able to see the number of commits that are you behind from your server,
 with a down arrow to show them.
 
-## Step 11: Everyone - Practice pushing and pulling
+## Step 10: Everyone - Practice pushing and pulling
 
 Practice the workflow!
 
