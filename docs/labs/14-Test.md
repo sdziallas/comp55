@@ -244,9 +244,11 @@ where the computer immediately exits and returns a fail result.
 
 ## Running the Junit Test
 
+<!--
 Since we're using JUnit 4, you'll initially need to **right-click** on your project
 and select *Run As->Run Configuration...*. Then change the test runner from
 JUnit 5 to JUnit 4 and apply the changes.
+-->
 
 To run a Junit test going forward,
 you can either use the command shortcut ***Alt-Shift-X, T***,
